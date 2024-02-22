@@ -1,0 +1,67 @@
+.main {
+  display: grid;
+  background-color: var(--background-color);
+  color: var(--dark-text-color);
+  width: 100%;
+  padding-inline: 20vw;
+  padding-block-end: 5vw;
+
+  grid-template-columns: 1fr;
+  grid-template-rows: 5rem 4rem;
+  grid-auto-rows: min-content;
+}
+
+.publicationsTitle {
+  grid-row: 1;
+  font-size: var(--subtitle-font-size);
+  font-weight: bold;
+  margin-top: 5vh;
+}
+
+.yearBtn {
+  font-size: var(--small-paragraph-font-size);
+  margin-inline-end: 2rem;
+  height: min-content;
+  width: min-content;
+  padding-inline: 1.2rem;
+  padding-block: 0.5rem;
+  background: var(--secondary-color);
+  border-radius: var(--small-button-border-radius);
+  color: var(--light-text-color);
+  text-decoration: underline;
+}
+
+.citationLink {
+  text-decoration: underline;
+  color: var(--secondary-color);
+}
+
+.yearBtnList {
+  align-self: end;
+  grid-row: 2;
+  display: flex;
+  flex-direction: row;
+}
+.yearHeader {
+  font-size: var(--big-paragraph-font-size);
+  margin-block-start: 2rem;
+}
+
+.citation {
+  padding-inline: 1.8rem;
+  padding-block: 1rem;
+  align-self: center;
+  font-size: var(--smaller-paragraph-font-size);
+}
+
+.citationNormalBg {
+  background: var(--background-color);
+}
+
+.citationDarkerBg {
+  background: var(--darker-background-color);
+}
+
+.citationRoundedCorners {
+  border-radius: 8px 8px 0 0;
+}

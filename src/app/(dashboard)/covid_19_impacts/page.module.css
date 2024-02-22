@@ -1,0 +1,137 @@
+.main {
+  display: grid;
+  background-color: var(--background-color);
+  width: 100%;
+  padding-block-end: 5vh;
+  grid-template-columns: 50rem 50rem;
+  justify-content: center;
+  column-gap: 3rem;
+}
+
+.title {
+  font-size: var(--subtitle-font-size);
+  font-weight: bold;
+  margin-top: 2vh;
+  text-align: center;
+}
+
+.horizontalInfoBox {
+  margin-block-start: 5rem;
+  position: relative;
+  height: 20rem;
+  width: 60%;
+  display: grid;
+  grid-template-rows: 4rem 1fr;
+  grid-template-columns: 1fr 1fr;
+  color: var(--light-text-color);
+  padding: 2rem;
+  border-radius: var(--blurb-border-radius);
+}
+
+.leafImg {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  z-index: 1;
+  transform: translate(100%, -50%);
+}
+
+.schoolImg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  transform: translate(-90%, 20%);
+}
+
+.mapImg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  transform: translate(95%, -25%);
+}
+
+.lunchImg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  transform: translate(5%, 80%);
+}
+
+.maskImg {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  transform: translate(50%, 90%);
+}
+
+.leafImg {
+  position: absolute;
+}
+
+.impactCOVID19Box {
+  width: 80%;
+}
+
+.spanBothColumns {
+  grid-column: span 2;
+}
+.backgroundBlue {
+  background-color: var(--covid-blue);
+}
+
+.backgroundGreen {
+  background-color: var(--covid-green);
+}
+
+.backgroundRed {
+  background-color: var(--covid-red);
+}
+
+.verticalInfoBox {
+  position: relative;
+  height: max-content;
+  width: 55%;
+  display: grid;
+  padding: 2rem;
+  color: var(--light-text-color);
+  margin-block-start: 2rem;
+  border-radius: var(--blurb-border-radius);
+  justify-content: center;
+  row-gap: 2rem;
+  grid-auto-rows: max-content;
+}
+
+.rightAlign {
+  justify-self: end;
+}
+
+.leftAlign {
+  justify-self: start;
+}
+
+.centerAlign {
+  justify-self: center;
+}
+
+.infoHeader {
+  font-weight: 500;
+  font-size: var(--big-paragraph-font-size);
+}
+
+.infoText {
+  background: rgba(255, 255, 255, 0.3);
+  padding: 2rem;
+  width: 25rem;
+  border-radius: var(--blurb-border-radius);
+  font-size: var(--small-paragraph-font-size);
+  text-align: left;
+  place-self: center;
+}
+
+.verticalInfoWidth {
+  width: 20rem;
+}

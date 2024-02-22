@@ -1,0 +1,85 @@
+.main {
+  display: grid;
+  width: 100%;
+  padding-bottom: 6rem;
+  background-color: var(--background-color);
+  grid-template-columns: 3fr 1fr 9fr;
+  grid-template-rows: 5rem 5rem 1fr;
+  color: var(--dark-text-color);
+}
+
+#map {
+  grid-row: span 3;
+  margin-block: 2rem;
+  min-width: 30rem;
+  max-width: 90rem;
+  height: 80vh;
+  margin-inline: 3rem;
+  grid-column: 3;
+  width: 90%;
+  object-fit: contain;
+}
+
+#aboutText {
+  grid-row: 1;
+  grid-column: 1 / span 2;
+  text-align: end;
+  margin-top: 2rem;
+  margin-left: 3rem;
+}
+
+#helperText {
+  grid-row: 2;
+  grid-column: 1;
+  text-align: center;
+  align-self: end;
+  margin-bottom: 1rem;
+}
+
+#foldableLegend {
+  justify-self: center;
+  grid-row: 3;
+  grid-column: 1;
+  padding: 1rem 2rem 2rem 2rem;
+  margin-inline-start: 1rem;
+  border-radius: var(--small-card-border-radius);
+  width: 85%;
+  max-width: 20rem;
+  min-width: 15rem;
+  height: min-content;
+  box-shadow: var(--card-shadow);
+  background: var(--secondary-color);
+  color: var(--light-text-color);
+}
+
+.item {
+  background: var(--secondary-color);
+}
+
+#foldableLegend span {
+  color: var(--light-text-color);
+}
+
+#foldableLegend hr {
+  background-color: var(--background-color);
+}
+
+#foldableLegend p {
+  margin-bottom: 0.5rem;
+}
+
+#legendTitle {
+  font-size: var(--big-paragraph-font-size);
+  font-weight: 500;
+}
+
+.greyRectangle {
+  grid-row: 4; 
+  grid-column: 3 / span 1; 
+  margin-inline-end: 35rem;
+  height: 3rem; 
+  background-color: var(--background-color); 
+  border-radius: 5px;
+  margin-top: 1rem; 
+  transform: translateY(-23rem);
+}

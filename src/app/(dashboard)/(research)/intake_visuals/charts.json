@@ -1,0 +1,203 @@
+  [
+    {
+      "category": "Category 1",
+      "charts": [
+        {
+          "name": "School Food Programs offered",
+          "url": "https://app.powerbi.com/view?r=eyJrIjoiZjg4YjNkZDgtYmM4MS00NDJkLWJkYWEtZmI4ODA4MDVhMzk3IiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
+          "blurb": "This chart highlights the distribution of the School Food Programs Offered in the GTA."
+        },
+        {
+          "name": "Parental Enrolment of Children",
+          "url": "https://app.powerbi.com/view?r=eyJrIjoiZmE3NmNlYWUtZjkyYy00OTRjLThmYjgtZDZkZGVmYzlkNGVjIiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
+          "blurb": "Description for Data Visual 1."
+        },
+        {
+          "name": "Parental Opposition",
+          "url": "https://app.powerbi.com/view?r=eyJrIjoiNDg2M2Y5NDAtZjM3YS00ZTZiLWFkMTYtZmI0YmI1MzlkMDI5IiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
+          "blurb": "Description for Data Visual 2."
+        },
+        {
+          "name": "Times That the Programs Are Offered",
+          "url": "https://app.powerbi.com/view?r=eyJrIjoiZDg3NmMyODAtOGQ2Mi00OTQwLTg1YTMtNTE4NzY3YTllYjk4IiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
+          "blurb": "Description for Data Visual 3."
+        },
+        {
+          "name": "% of Schools Implementing SFP",
+          "url": "https://app.powerbi.com/view?r=eyJrIjoiMThlZWUyMWUtNDg0MS00ODFlLTk2YzMtMmE5OTlhYWQ2YWIyIiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
+          "blurb": "Description for Data Visual 2."
+        },
+        {
+          "name": "Frequency of SFP Per Week",
+          "url": "https://app.powerbi.com/view?r=eyJrIjoiZjc2ODk0YmMtNDBmYS00YTgyLTk2ZGUtYmMzYWQ1NGZkMTkzIiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
+          "blurb": "Description for Data Visual 3."
+        }
+      ]
+    },
+    {
+      "category": "Category 2.1",
+      "charts": [
+        {
+          "name": "Willingness to partipcate in SFP",
+          "url": "https://app.powerbi.com/view?r=eyJrIjoiNjA5MDc4ZjUtZjgwMi00OWE1LWE2MDItMGVhYWU0NjNiNGNmIiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
+          "blurb": "Description for Data Visual 2."
+        },
+        {
+          "name": "Comfort from SFP",
+          "url": "https://app.powerbi.com/view?r=eyJrIjoiOTZhM2QzMmEtYzAwYi00ZTRlLTgyYzMtYWI4MTBkMDVkMDgwIiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
+          "blurb": "Description for Data Visual 3."
+        },
+        {
+          "name": "Preparing School meals",
+          "url": "https://app.powerbi.com/view?r=eyJrIjoiMGRlNjZjMDUtMDM3Ni00MTc2LWEwYzUtYWM1YzE1OTZhYjBiIiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
+          "blurb": "Description for Data Visual 3."
+        }
+      ]
+    },
+    {
+      "category": "Category 2.2",
+      "charts": [
+        {
+          "name": "Maximum Cost can be afforded",
+          "url": "https://app.powerbi.com/view?r=eyJrIjoiNmM2YzFlM2MtNjFjNi00MDc2LTljMzAtNDk0ZTM0NjhiNWYwIiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
+          "blurb": "Description for Data Visual 2."
+        },
+        {
+          "name": "Preferred Funding Models",
+          "url": "https://app.powerbi.com/view?r=eyJrIjoiNmM2YzFlM2MtNjFjNi00MDc2LTljMzAtNDk0ZTM0NjhiNWYwIiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
+          "blurb": "Description for Data Visual 3."
+        },
+        {
+          "name": "Parental Preference for offered SFP",
+          "url":  "https://app.powerbi.com/view?r=eyJrIjoiNzhjMWVmMDUtZDU4Yi00MTNjLThjYzItYjNkMmQyODE2MmI3IiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
+          "blurb": "Description for Data Visual 3."
+        },
+        {
+          "name": "Parental Prefered Timings for SFP",
+          "url": "https://app.powerbi.com/view?r=eyJrIjoiMWM3ODA0YzEtOTE3Yi00NTgwLWJiNzEtMjdkNTM5MjA5Zjc3IiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
+          "blurb": "Description for Data Visual 3."
+        }
+      ]
+    },
+    {
+      "category": "Category 2.3",
+      "charts": [
+        {
+          "name": "Menu Aligns Canada Food Guide",
+          "url": "https://app.powerbi.com/view?r=eyJrIjoiNjFmZGZkZTItNzBlMi00ZDRlLTkyYjMtZTIxMzdmOWJjOGFiIiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
+          "blurb": "Description for Data Visual 2."
+        },
+        {
+          "name": "Opinion on Culturally Appropriate food",
+          "url": "https://app.powerbi.com/view?r=eyJrIjoiMDY5ZDZkYzEtZWMzMy00ZGExLThhN2MtNGU0ZTM0OTc5NzMzIiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
+          "blurb": "Description for Data Visual 3."
+        },
+        {
+          "name": "Minimally processed meals and snacks",
+          "url": "https://app.powerbi.com/view?r=eyJrIjoiY2RmM2UyMTEtMWZmYy00ODhiLTk0MDQtMzExNzUxYjA0NjE2IiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
+          "blurb": "Description for Data Visual 3."
+        },
+        {
+          "name": "Various Food Portions offered",
+          "url": "https://app.powerbi.com/view?r=eyJrIjoiYWZmYmRkZjEtY2JlNi00OGQ1LWJiNDgtY2Q0ZjI5YzNhNTA0IiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
+          "blurb": "Description for Data Visual 3."
+        },
+        {
+          "name": "Meals coming with beverage",
+          "url": "https://app.powerbi.com/view?r=eyJrIjoiMWI3NThlMDAtZTE5NC00ZTQwLTk4MDktZDFmZjdjYmQ3NjI3IiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
+          "blurb": "Description for Data Visual 3."
+        },
+        {
+          "name": "Meals have have low  sugar, salt and fat",
+          "url": "https://app.powerbi.com/view?r=eyJrIjoiN2QyMGE2MjgtZTEyZi00Y2E4LTkwZDgtZTY3M2MwODBhNjNhIiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
+          "blurb": "Description for Data Visual 3."
+        },
+        {
+          "name": "Meals are free or low cost",
+          "url": "https://app.powerbi.com/view?r=eyJrIjoiMWQwMDU0MzUtOGRkOC00NjM1LWJhZGMtNzAzM2JiYmI3MjYxIiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
+          "blurb": "Description for Data Visual 3."
+        },
+        {
+          "name": "All or most of the children in the school can participate",
+          "url": "",
+          "blurb": "Description for Data Visual 3."
+        },
+        {
+          "name": "SFP unique to the specific needs ",
+          "url": "",
+          "blurb": "Description for Data Visual 3."
+        },
+        {
+          "name": "Parental Opinions Food Accomodations",
+          "url": "https://app.powerbi.com/view?r=eyJrIjoiNDYyOWJhNzItNWU3Yy00ZTkyLWJkYzEtMjhhNjgzMjkwYjAzIiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
+          "blurb": "Description for Data Visual 3."
+        },
+        {
+          "name": "Parental Opinions Locally Grown & Sustainable",
+          "url": "https://app.powerbi.com/view?r=eyJrIjoiOWE3N2Q2YmMtZTA2ZS00OGY4LTgxODItMDQ1MDdiNzZjYzEwIiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
+          "blurb": "Description for Data Visual 3."
+        },
+        {
+          "name": "Parental Opinions Children Learning",
+          "url": "https://app.powerbi.com/view?r=eyJrIjoiZTc5NmRmZjktMmUzYy00MTkzLTg5N2MtYzU4MzgyMDVmYjIyIiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
+          "blurb": "Description for Data Visual 3."
+        },
+        {
+          "name": "Parental Opinions Children Involvement",
+          "url": "https://app.powerbi.com/view?r=eyJrIjoiNmEwNjM5MmQtOTE5Yi00M2MxLWJiMTctODNlZWI3Yzc2N2MyIiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
+          "blurb": "Description for Data Visual 3."
+        },
+        {
+          "name": "Parental Opinions Socializing With Adults",
+          "url": "https://app.powerbi.com/view?r=eyJrIjoiY2ViYTc3YjMtMjE1NS00OGVjLTk0MTYtZTQ4ZjE1ZDlhYjhmIiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
+          "blurb": "Description for Data Visual 3."
+        },
+        {
+          "name": "Parental Opinions Nutritional Standards",
+          "url": "https://app.powerbi.com/view?r=eyJrIjoiMDVhZTg1NDgtZGIyNC00OTRkLThjNjEtYjZiYTFmZDU1YTUwIiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
+          "blurb": "Description for Data Visual 3."
+        }
+      ]
+    },
+    {
+      "category": "Other",
+      "charts": [
+        {
+          "name": "Analyzing the Origins of GTA Kids' Meals",
+          "url": "https://app.powerbi.com/view?r=eyJrIjoiNzdjYzgzYjctYmE1OS00ZTI5LThmZjktODZmYWI1NGJkNThmIiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
+          "blurb": "Description for Data Visual 2."
+        },
+        {
+          "name": "Serving Methods Across Meal Types",
+          "url": "https://app.powerbi.com/view?r=eyJrIjoiOGY2MDM3ODYtNmVlMC00MzU1LWIwZTMtZWI5MTNkOGQzNDBjIiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
+          "blurb": "Description for Data Visual 2."
+        },
+        {
+          "name": "Factors Determining Food Served",
+          "url": "https://app.powerbi.com/view?r=eyJrIjoiYzA1YzY3YTYtZDk5MS00YWNkLWEzZGYtZjg0NzMyYTE2MzU2IiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
+          "blurb": "Description for Data Visual 2."
+        },
+        {
+          "name": "Number Of Food Programs Offered",
+          "url": "https://app.powerbi.com/view?r=eyJrIjoiOGNhYWRkZWItZjU5Mi00ZGE1LWI5NmEtMzcyZTUxODk1NzA4IiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
+          "blurb": "Description for Data Visual 2."
+        },
+        {
+          "name": "Types of Nutrition Education",
+          "url": "https://app.powerbi.com/view?r=eyJrIjoiY2I2Mzk0NGQtYWY0Yy00NTdiLThlMjYtMjkxOTE2MDE0NjBlIiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
+          "blurb": "Description for Data Visual 2."
+        },
+        {
+          "name": "Most Common GTA SFP Payment Models",
+          "url": "https://app.powerbi.com/view?r=eyJrIjoiNmZiOTMwODUtYzdjYS00NDZlLWFlNTMtZWIyYTU1M2UxOGU4IiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
+          "blurb": "Description for Data Visual 2."
+        },
+        {
+          "name": "Common Funding Models for GTA SFPs",
+          "url": "https://app.powerbi.com/view?r=eyJrIjoiOGU2ODQzZGMtNWI3YS00ZjM4LWFkNTQtMmQwYTUzNGNkZGYxIiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
+          "blurb": "Description for Data Visual 2."
+        }
+      ]
+    }
+  ]
+  

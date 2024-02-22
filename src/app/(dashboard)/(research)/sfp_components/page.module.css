@@ -1,0 +1,218 @@
+.main {
+    display: grid;
+    background-color: var(--background-color);
+    width: 100%;
+    padding-inline: 18vw;
+    padding-block-end: 5vh;
+  
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+    grid-auto-rows: min-content;
+    position: relative;
+  }
+  
+  .card1Title {
+    grid-row: 200;
+    font-size: var(--subtitle-font-size);
+    font-weight: bold;
+    margin-top: 5vh;
+    margin-bottom: 1.5vh;
+    color: #082454;
+    /* text-align: center; Change to center if wanted */
+  }
+  .card2Title {
+    grid-row: 350;
+    font-size: var(--subtitle-font-size);
+    font-weight: bold;
+    margin-top: 6vh;
+    margin-bottom: 1.5vh;
+    color: #082454;
+  }
+  .card3Title {
+    grid-row: 450;
+    font-size: var(--subtitle-font-size);
+    font-weight: bold;
+    margin-top: 6vh;
+    margin-bottom: 1.5vh;
+    color: #082454;
+  }
+  .card4Title {
+    grid-row: 550;
+    font-size: var(--subtitle-font-size);
+    font-weight: bold;
+    margin-top: 6vh;
+    margin-bottom: 1.5vh;
+    color: #082454;
+  }
+  .card5Title {
+    grid-row: 650;
+    font-size: var(--subtitle-font-size);
+    font-weight: bold;
+    margin-top: 6vh;
+    margin-bottom: 1.5vh;
+    color: #082454;
+  }
+  .card6Title {
+    grid-row: 750;
+    font-size: var(--subtitle-font-size);
+    font-weight: bold;
+    margin-top: 6vh;
+    margin-bottom: 1.5vh;
+    color: #082454;
+  }
+  
+  .cardSubtitle {
+    margin-inline-start: 2rem;
+    margin-block-start: 1rem;
+    margin-block-end: 0;
+    color: var(--black-text-color);
+    font-size: var(--small-paragraph-font-size);
+    font-weight: 500;
+  }
+  
+  .card1 {
+    grid-row: 300;
+    min-height: 65vh;
+    width: 100%;
+    justify-self: center;
+    overflow: hidden;
+    background-color: white;
+    border-radius: var(--card-border-radius);
+    z-index: 1;
+    border: 2px solid #082454;
+  }
+  .card2 {
+    grid-row: 400;
+    min-height: 68vh;
+    width: 100%;
+    justify-self: center;
+    overflow: hidden;
+    background-color: white;
+    border-radius: var(--card-border-radius);
+    border: 2px solid #082454;
+  }
+  .card3 {
+    grid-row: 500;
+    min-height: 50vh;
+    width: 100%;
+    justify-self: center;
+    overflow: hidden;
+    background-color: white;
+    border-radius: var(--card-border-radius);
+    border: 2px solid #082454;
+  }
+  .card4 {
+    grid-row: 600;
+    min-height: 72vh;
+    width: 100%;
+    justify-self: center;
+    overflow: hidden;
+    background-color: white;
+    border-radius: var(--card-border-radius);
+    border: 2px solid #082454;
+  }
+  .card5 {
+    grid-row: 700;
+    min-height: 50vh;
+    width: 100%;
+    justify-self: center;
+    overflow: hidden;
+    background-color: white;
+    border-radius: var(--card-border-radius);
+    border: 2px solid #082454;
+  }
+  .card6 {
+    grid-row: 800;
+    min-height: 75vh;
+    width: 100%;
+    justify-self: center;
+    overflow: hidden;
+    background-color: white;
+    border-radius: var(--card-border-radius);
+    border: 2px solid #082454;
+  }
+  
+  .definitionsText {
+    font-size: 1rem;
+    color: #333;
+    text-align: left;
+    margin: 0;
+    padding-inline-start: 2rem;
+    padding-inline-end: 2rem;
+    padding-block-start: 0;
+    padding-block-end: 0;
+  }
+  
+  .carousel {
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+  }
+  .carouselContainer {
+    display: flex;
+    height: 100%;
+  }
+  .carouselSlide {
+    flex: 0 0 100%;
+    display: grid;
+    padding-inline: 1vw;
+    grid-template-rows: 1fr;
+  }
+  
+  .prevSVGButton {
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+    top: 20%;
+    transform: translateY(-50%);
+    left: 4rem;
+    color:#002254;
+  }
+  .nextSVGButton {
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+    top: 20%;
+    transform: translateY(-50%);
+    right: 4rem;
+    color:#002254;
+  }
+  
+  .componentRow {
+    grid-row: 1;
+    display: grid;
+    grid-template-columns: 45fr 0vw 4fr;
+  }
+  
+  .quotationsText {
+    padding-inline-start:7rem;
+    padding-inline-end: 2rem;
+    padding-block-start: 2;
+    padding-block-end: 2;
+  
+    margin-block-start:3rem;
+    color: var(--grey-text-color);
+    font-size: 1.0rem;
+    font-style: italic;
+    text-align: center; 
+  }
+  
+  .paginationDots {
+    height: 1rem;
+    bottom: 1rem;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .paginationDot {
+    height: 0.5rem;
+    width: 0.5rem;
+    margin-inline: 0.2rem;
+    border-radius: 1rem;
+    background-color: var(--pagination-dots-unselected);
+  }
+  .paginationDotSelected {
+    background-color: var(--pagination-dots-selected);
+  }
+  
+  

@@ -1,0 +1,132 @@
+.main {
+  display: grid;
+  width: 100%;
+  padding-top: 4rem;
+  padding-bottom: 7rem;
+  background-color: var(--background-color);
+  color: var(--dark-text-color);
+}
+
+.fixedMenuContainer {
+  width: max-content;
+  position: absolute;
+  top: 0;
+  right: 50%;
+  pointer-events: none;
+}
+
+.shortcutMenu {
+  pointer-events: all;
+  transform: translateX(-80%);
+  padding: 1rem 2rem 2rem 1rem;
+  margin-inline-end: 3rem;
+  margin-block-start: 11rem;
+  border-radius: 5px;
+  width: 18rem;
+  height: 85vh;
+  max-height: 60rem;
+  display: grid;
+  grid-auto-rows: min-content;
+  background: var(--background-color);
+  color: var(--dark-text-color);
+  font-size: var(--smaller-paragraph-font-size);
+  border-style: solid;
+  border-width: 1px;
+  border-color: var(--primary-color);
+  overflow: auto;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 2rem;
+  overflow-wrap: break-word;
+}
+
+.shortcutMenuSeparator {
+  background-color: var(--primary-color);
+  margin-block-start: 0.5rem;
+  margin-block-end: 1rem;
+  height: 3px;
+}
+
+.spacing {
+  height: 1rem;
+}
+
+.shortcutCategoryHeader {
+  font-weight: 500;
+  font-size: var(--small-paragraph-font-size);
+}
+
+.chartColumn {
+  justify-self: center;
+  transform: translateX(23%);
+  height: max-content;
+  display: grid;
+  grid-template-rows: auto;
+}
+
+.chartCategoryHeader {
+  font-weight: 500;
+  font-size: var(--small-paragraph-font-size);
+}
+
+.chartArea {
+  margin-block-end: 3rem;
+  border-style: solid;
+  border-width: 1px;
+  border-color: var(--primary-color);
+  background-color: white;
+  height: 30rem;
+  width: 50rem;
+  justify-self: start;
+  position: relative;
+}
+
+.returnToTopButton {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 30px;
+  background-color: white;
+  box-shadow: var(--card-shadow);
+  z-index: 1;
+}
+
+.tooltipContainer {
+  position: relative;
+}
+
+.tooltipButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  background-color: #27319e;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-decoration: solid;
+}
+
+.tooltip {
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  transform: translateY(-50%);
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: none;
+  width: 200px;
+}
+
+.tooltipContainer:hover .tooltip {
+  display: block;
+}

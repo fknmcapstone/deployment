@@ -1,0 +1,76 @@
+{
+    "Steering Committee": [
+      {
+        "name": "Mavra Ahmed",
+        "imageUrl": "/people/mavra.png",
+        "content": "Dr. Mavra Ahmed is a Research Associate at the Department of Nutritional Sciences and Joannah and Brian Lawson Centre for Child Nutrition, University of Toronto and an Adjunct Professor at Ontario Tech University. With expertise in food and nutrition policy, Dr. Ahmed’s research focuses on driving equity-focused policy shifts by determining the relationships between determinants of health, dietary patterns/intakes and nutrition-related behaviours and knowledge to improve the health of vulnerable populations, particularly children and adolescents. She is leading the Feeding Kids, Nourishing Minds school nutrition research initiative that aims to provide a comprehensive overview of school food programs in Canada and identify best practices in relation to the design, delivery, and measurement of school food programs. Mavra has a passion for assessing the impact of digital technology for promotion of healthier dietary behaviours (currently, investigating the impact of an updated version of the smartphone app, FoodFlip©, on enabling consumers to make healthier food choices).Mavra obtained her PhD from the University of Toronto, specializing in characterization of dietary assessments of Canadian Armed Forces and evaluation of novel technologies for dietary assessments. She also holds a CIHR Fellowship in the Strategic Training Program in Public Health Policy and a CIHR Fellowship in Artificial Intelligence for Public Health from the Dalla Lana School of Public Health."
+      },
+      {
+        "name": "Amy Bilton",
+        "imageUrl": "/people/Amy-bilton.jpg",
+        "content":"Amy Bilton directs the Centre for Global Engineering (CGEN). CGEN fosters community practice to develop innovative solutions to the problems which plague the world’s most vulnerable people. Her research interests include energy systems, water purification, design for the developing world, computer-aided design methods, design optimization and control system design. Appointments Associate Professor, Mechanical Engineering Dean’s Catalyst Professor Director, Centre for Global Engineering (CGEN)"
+      },
+      {
+        "name": "Zulfiqar Bhutta",
+        "imageUrl": "/people/zulfiqar.jpg",
+        "content":"Zulfiqar Bhutta co-directs The Hospital for Sick Children’s Centre for Global Child Health as senior scientist of Child Health Evaluative Sciences and leads large research groups based in Toronto, Karachi, and Nairobi with a special interest in research synthesis, scaling up evidence-based interventions in community settings and implementation research in health systems."
+      },
+      {
+        "name": "Catherine Birken",
+        "imageUrl": "/people/Catherine.jpg",
+        "content":"Catherine Birken studies obesity prevention through primary care practice and advancing care for children with severe obesity. She holds grants from the Canadian Institutes of Health Research and Physician Services Inc. for the PROMOTE project, which looks at early identification of preschoolers' risk for obesity and cardiometabolic factors, and a grant from CIHR for the Fit for School, Fit for Life project. "
+      },
+      {
+        "name": "Barbara Fallon",
+        "imageUrl": "/people/barbara.jpg",
+        "content":"Barbara Fallon is a Professor and holds the Canada Research Chair in Child Welfare. Her research focuses on sharing of reliable, valid national and provincial data to provide an evidence-based understanding of the trajectories of children and families in the child welfare system."
+      },
+      {
+        "name": "Sloane Freeman",
+        "imageUrl": "/people/sloane.jpg",
+        "content":"Sloane Freeman is a pediatrician at St. Michael’s Hospital Inner City Health Program. She has expertise in social pediatrics, developmental and school issues and care of medically complex children. She is the founder and lead of the Model School Pediatric Health Initiative (MSPHI) and the primary investigator for the Feasibility Study on the Model Schools Pediatric Health Initiative. "
+      },
+      {
+        "name": "Jill Hamilton",
+        "imageUrl": "/people/jill.jpg",
+        "content":"Jill Hamilton is the Head of the Division of Endocrinology and Senior Associate Scientist at the Research Institute at the Hospital for Sick Children. She is the medical director of the SickKids Team Obesity Management Program (STOMP) and the director of the Centre for Healthy Active Kids at SickKids. She studies metabolic complications of obesity in childhood; biologic and psychosocial determinants of obesity; mechanisms of weight regulation in hypothalamic obesity; and obesity treatment outcomes and interventions"
+      },
+      {
+        "name": "Jennifer Jenkins",
+        "imageUrl": "/people/jennifer.png",
+        "content":"Jennifer Jenkins is a professor in the Department of Applied Psychology and Human Development and the Atkinson Chair of Early Child Development and Education at the Ontario Institute for Studies in Education (OISE). Her expertise is child development, family systems and developmental psychopathology. She runs the Kids, Families, Places Study        "
+      }
+    ],
+    "Research Team": [
+      {
+        "name": "Person 2",
+        "imageUrl": "https://media.istockphoto.com/id/1320751178/vector/profile-placeholder-image-gray-silhouette-no-photo.jpg?s=612x612&w=0&k=20&c=ZbP6p5pWjS2skfdRHrH_fE_jm6ymX-6LiZ__9Wb40pw=",
+        "content": "This is the popover content for Person 2"
+      },
+      {
+        "name": "Person 3",
+        "imageUrl": "https://media.istockphoto.com/id/1320751178/vector/profile-placeholder-image-gray-silhouette-no-photo.jpg?s=612x612&w=0&k=20&c=ZbP6p5pWjS2skfdRHrH_fE_jm6ymX-6LiZ__9Wb40pw=",
+        "content": "This is the popover content for Person 3"
+      }
+    ],
+    "Administrative Support": [
+      {
+        "name": "Person 4",
+        "imageUrl": "https://media.istockphoto.com/id/1320751178/vector/profile-placeholder-image-gray-silhouette-no-photo.jpg?s=612x612&w=0&k=20&c=ZbP6p5pWjS2skfdRHrH_fE_jm6ymX-6LiZ__9Wb40pw=",
+        "content": "This is the popover content for Person 4"
+      }
+    ],
+    "website Team": [
+      {
+        "name": "Person 5",
+        "imageUrl": "https://media.istockphoto.com/id/1320751178/vector/profile-placeholder-image-gray-silhouette-no-photo.jpg?s=612x612&w=0&k=20&c=ZbP6p5pWjS2skfdRHrH_fE_jm6ymX-6LiZ__9Wb40pw=",
+        "content": "This is the popover content for Person 5"
+      },
+      {
+        "name": "Person 6",
+        "imageUrl": "https://media.istockphoto.com/id/1320751178/vector/profile-placeholder-image-gray-silhouette-no-photo.jpg?s=612x612&w=0&k=20&c=ZbP6p5pWjS2skfdRHrH_fE_jm6ymX-6LiZ__9Wb40pw=",
+        "content": "This is the popover content for Person 6"
+      }
+    ]
+  }
+  

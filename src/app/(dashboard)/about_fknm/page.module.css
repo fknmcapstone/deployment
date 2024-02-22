@@ -1,0 +1,121 @@
+.main {
+  display: grid;
+  background-color: var(--background-color);
+  width: 100%;
+  height: 100%;
+  padding-block-end: 5vh;
+  grid-template-rows: auto;
+  color: var(--dark-text-color);
+}
+
+.heading {
+  text-align: center;
+  font-size: var(--subtitle-font-size);
+  font-weight: bold;
+  margin-top: 4rem;
+}
+
+.textContent {
+  width: 70rem;
+  justify-self: center;
+  text-align: left;
+  font-size: var(--small-paragraph-font-size);
+  margin-top: 2vh;
+}
+
+.accordion {
+  margin-block-start: 2rem;
+  width: 80rem;
+  justify-self: center;
+}
+
+.accordionItem {
+  background-color: #ebe9e9 !important;
+}
+
+.popover {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  flex-direction: row;
+  gap: 1rem;
+  margin-bottom: 2vh;
+  justify-content: space-around;
+  align-content: space-around;
+}
+
+.modalText {
+  color: black !important;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-bottom: 5%;
+}
+
+.modalHeader{
+align-items: center;
+display: flex;
+flex-direction: column;
+margin-top: 0.25rem;
+}
+
+.popoverTrigger {
+  padding: 1dvh;
+  width: auto;
+  height: auto;
+  flex-direction: column;
+}
+
+.collabContainer {
+  justify-self: center;
+  display: flex;
+  flex-direction: row;
+}
+
+.logo {
+  align-self: center;
+  margin: 0.5rem;
+  border-radius: var(--card-border-radius);
+  background-color: rgba(255, 255, 255, 0.65);
+  padding: 1rem;
+  box-shadow: var(--card-shadow);
+}
+
+.cardButton {
+  border: none;
+  background: none;
+  padding-top: 70%;
+  padding-bottom: 70%;
+  padding-right: 2%;
+  padding-left: 2%;
+  cursor: pointer;
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cardContent {
+  width: 130px;
+  height: 200px; 
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.profileImage {
+  width: 120px; 
+  height: 120px; 
+  border-radius: 50%; 
+  overflow: hidden; 
+}
+
+
+.profileName {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.modalHeader{
+  color: black;
+}
