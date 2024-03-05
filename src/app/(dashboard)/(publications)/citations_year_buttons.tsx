@@ -7,9 +7,13 @@ export function sortPublications(data: any): {
   [key: string]: { [key: string]: string }[];
 } {
   var yearToCitationsMap: { [key: string]: { [key: string]: string }[] } = {};
+// Creates a generic type, essentially it is okay for the type to be "any"
+  type Entries<T> = {
+    [K in keyof T]: [K, T[K]];
+  }[keyof T][];
 
-  Object.entries(data).map(([_, year]) => {
-    Object.entries(year).map(([y, citationData]) => {
+  (Object.entries(data) as Entries<typeof data>).map(([_, year]) => {
+    (Object.entries(year) as Entries<typeof year>).map(([y, citationData]) => {
       yearToCitationsMap[y] = citationData;
     });
   });
@@ -49,10 +53,10 @@ export function citationsList(sources: {
             key={year + sourceIndex}
             className={[
               styles.citation,
-              sourceIndex % 2 == 0
+               Number(sourceIndex) % 2 == 0
                 ? styles.citationDarkerBg
                 : styles.citationNormalBg,
-              sourceIndex == 0 ? styles.citationRoundedCorners : null,
+              Number(sourceIndex) == 0 ? styles.citationRoundedCorners : null,
             ].join(" ")}
           >
             {sourceList[sourceIndex].citation}{" "}
