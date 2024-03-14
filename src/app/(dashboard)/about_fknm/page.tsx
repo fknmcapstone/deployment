@@ -14,8 +14,18 @@ import {
 import styles from "./page.module.css";
 import Image from "next/image";
 
+interface Person {
+  name: string;
+  imageUrl: string;
+  content: string;
+}
 
-function ProfileCard({ name, imageURL, content }:{ name: string, imageURL: string, content: string } ) {
+interface PeopleData {
+  [committee: string]: Person[];
+}
+
+
+function ProfileCard({ name, imageURL, content }: Person ) {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
@@ -56,7 +66,7 @@ function ProfileCard({ name, imageURL, content }:{ name: string, imageURL: strin
 }
 
 export default function AboutFKNM() {
-  const peopleData = require("./people.json");
+   const peopleData: PeopleData = require("./people.json");
 
   return (
     <main className={styles.main}>
