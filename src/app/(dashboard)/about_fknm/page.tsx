@@ -15,7 +15,7 @@ import styles from "./page.module.css";
 import Image from "next/image";
 
 
-function ProfileCard({ name, imageURL, content }) {
+function ProfileCard({ name, imageURL, content }:{ name: string, imageURL: string, content: string } ) {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
