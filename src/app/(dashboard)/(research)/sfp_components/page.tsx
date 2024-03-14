@@ -137,6 +137,9 @@ const options: any = {
   layout: {
     padding: {
       top: 20,
+      left: 0,
+      right: 0,
+      bottom: 0,
     },
   },
   plugins: {
@@ -274,7 +277,9 @@ const options: any = {
       };
 
       const sectionId = labelToSectionId[label];
-	@@ -262,92 +280,208 @@ const options = {
+
+      if (sectionId) {
+        const sectionElement = document.getElementById(sectionId);
         if (sectionElement) {
           // Calculate the offset position
           const offset = 1;
@@ -292,6 +297,15 @@ const options: any = {
     }
   },
 };
+
+if (window.innerWidth < 768) {
+  options.layout.padding.top = 20;
+  options.layout.padding.left = 10;
+  options.layout.padding.right = 520;
+  options.layout.padding.bottom = 10;
+  options.plugins.datalabels.font.size = 9;
+  options.plugins.datalabels.font.weight = 'normal';
+}
 
 ChartJS.register(ArcElement, Title, Tooltip, Legend, ChartDataLabels);
 
