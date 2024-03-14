@@ -16,7 +16,7 @@ import Image from "next/image";
 
 interface Person {
   name: string;
-  imageUrl: string;
+  imageURL: string;
   content: string;
 }
 
