@@ -10,6 +10,12 @@
     grid-auto-rows: min-content;
     position: relative;
   }
+  @media only screen and (max-width: 768px) {
+    .main {
+        padding-inline: 10vw;
+        padding-block-end: 3vh;
+    }
+  }
   
   .card1Title {
     grid-row: 200;
@@ -18,7 +24,6 @@
     margin-top: 5vh;
     margin-bottom: 1.5vh;
     color: #082454;
-    /* text-align: center; Change to center if wanted */
   }
   .card2Title {
     grid-row: 350;
@@ -60,15 +65,76 @@
     margin-bottom: 1.5vh;
     color: #082454;
   }
+  @media only screen and (max-width: 600px) {
+  .card1Title {
+      grid-row: 200;
+      font-size: 17px;
+      font-weight: bold;
+      margin-top: 1vh;
+      margin-bottom: 0vh;
+      color: #082454;
+  }
+  .card2Title {
+    grid-row: 350;
+    font-size: 17px;
+    font-weight: bold;
+    margin-top: 1vh;
+    margin-bottom: 0vh;
+    color: #082454;
+  }
+  .card3Title {
+    grid-row: 450;
+    font-size: 17px;
+    font-weight: bold;
+    margin-top: 1vh;
+    margin-bottom: 0vh;
+    color: #082454;
+  }
+  .card4Title {
+    grid-row: 550;
+    font-size: 17px;
+    font-weight: bold;
+    margin-top: 1vh;
+    margin-bottom: 0vh;
+    color: #082454;
+  }
+  .card5Title {
+    grid-row: 650;
+    font-size: 17px;
+    font-weight: bold;
+    margin-top: 1vh;
+    margin-bottom: 0vh;
+    color: #082454;
+  }
+  .card6Title {
+    grid-row: 750;
+    font-size: 17px;
+    font-weight: bold;
+    margin-top: 1vh;
+    margin-bottom: 0vh;
+    color: #082454;
+  }
+}
   
   .cardSubtitle {
     margin-inline-start: 2rem;
     margin-block-start: 1rem;
     margin-block-end: 0;
-    color: var(--black-text-color);
+    color: #000000;
     font-size: var(--small-paragraph-font-size);
     font-weight: 500;
   }
+  @media only screen and (max-width: 600px) {
+  .cardSubtitle {
+      font-size: 15px;
+      font-weight: bold;
+      margin-top: 1.5vh;
+      margin-bottom: 0.5vh;
+      margin-inline-start: 1rem;
+      margin-block-start: 1rem;
+      color: #000000;
+  }
+}
   
   .card1 {
     grid-row: 300;
@@ -131,6 +197,64 @@
     border-radius: var(--card-border-radius);
     border: 2px solid #082454;
   }
+
+  @media only screen and (max-width: 600px) {
+  .card1 {
+      grid-row: 210;
+      min-height: auto; 
+      width: 35%; 
+      margin-top: 1.5vh; 
+      margin-bottom: 5vh; 
+      border: 1px solid #082454; 
+      justify-self: left;
+  }
+  .card2 {
+      grid-row: 360;
+      min-height: auto;
+      width: 35%;
+      margin-top: 1.5vh; 
+      margin-bottom: 5vh; 
+      border: 1px solid #082454; 
+      justify-self: left;
+  }
+  .card3 {
+    grid-row: 460;
+    min-height: auto;
+    width: 35%;
+    margin-top: 1.5vh; 
+    margin-bottom: 5vh; 
+    border: 1px solid #082454; 
+    justify-self: left;
+  }
+  .card4 {
+    grid-row: 560;
+    min-height: auto;
+    width: 35%;
+    margin-top: 1.5vh; 
+    margin-bottom: 5vh; 
+    border: 1px solid #082454; 
+    justify-self: left;
+  }
+  .card5 {
+    grid-row: 660;
+    min-height: auto;
+    width: 35%;
+    margin-top: 1.5vh; 
+    margin-bottom: 5vh; 
+    border: 1px solid #082454; 
+    justify-self: left;
+  }
+  .card6 {
+    grid-row: 760;
+    min-height: auto;
+    width: 35%;
+    margin-top: 1.5vh; 
+    margin-bottom: 5vh; 
+    border: 1px solid #082454; 
+    justify-self: left;
+  }
+}
+
   
   .definitionsText {
     font-size: 1rem;
@@ -141,6 +265,14 @@
     padding-inline-end: 2rem;
     padding-block-start: 0;
     padding-block-end: 0;
+  }
+  
+  @media only screen and (max-width: 600px) {
+    .definitionsText {
+        font-size: 0.8rem;
+        padding-inline-start: 1rem; 
+        padding-inline-end: 1rem; 
+    }
   }
   
   .carousel {
@@ -157,6 +289,12 @@
     display: grid;
     padding-inline: 1vw;
     grid-template-rows: 1fr;
+  }
+  
+  @media only screen and (max-width: 600px) {
+    .carouselSlide {
+        padding-inline: 0; 
+    }
   }
   
   .prevSVGButton {
@@ -178,6 +316,24 @@
     color:#002254;
   }
   
+  @media only screen and (max-width: 600px) {
+  .prevSVGButton {
+      position: absolute;
+      width: 0.5rem; 
+      height: 0.5rem; 
+      bottom: 10%; 
+      left: 1rem; 
+      right: 1rem; 
+  }
+  .nextSVGButton {
+    position: absolute;
+    width: 0.5rem; 
+    height: 0.5rem; 
+    bottom: 10%; 
+    right: 1rem; 
+  }
+}
+  
   .componentRow {
     grid-row: 1;
     display: grid;
@@ -196,6 +352,17 @@
     font-style: italic;
     text-align: center; 
   }
+  
+  @media only screen and (max-width: 600px) {
+  .quotationsText {
+      font-size: 0.8rem;
+      padding-inline-start: 2rem; 
+      padding-inline-end: 1rem; 
+      margin-block-start:2.5rem;
+      margin-block-end:1.5rem;
+      text-align: center; 
+  }
+}
   
   .paginationDots {
     height: 1rem;
