@@ -15,6 +15,9 @@ import data from "./sfp_components.json";
 import { SFPComponent } from "./sfp_components_widgets_buttons";
 import ToTopButton from "../../common_elements";
 
+// Function to check if window is defined
+const isWindowDefined = () => typeof window !== "undefined";
+
 // Data for the Layered Donut Chart
 const doughnutData = {
   datasets: [
@@ -108,7 +111,7 @@ let innerLabels = [
   "Procurement Strategies",
   "  Methods of  Distribution",
 ];
-if (typeof window !== "undefined" && window.innerWidth < 768) {
+if (isWindowDefined() && window.innerWidth < 768) {
   innerLabels = [
     "   Food    Literacy",
     "Cultural Aspects",
@@ -139,7 +142,7 @@ let outerLabels = [
   "Prioritize Mealtimes",
 ];
 
-if (typeof window !== "undefined" && window.innerWidth < 768) {
+if (isWindowDefined() && window.innerWidth < 768) {
   outerLabels = [
     "Nutrition Education",
     " Food  Skills",
@@ -328,8 +331,7 @@ const options: any = {
     }
   },
 };
-
-if (window.innerWidth < 768) {
+if (isWindowDefined() && window.innerWidth < 768) {
   options.layout.padding.right = 550;
   options.plugins.datalabels.font.size = 9;
   options.plugins.datalabels.font.weight = "normal";
