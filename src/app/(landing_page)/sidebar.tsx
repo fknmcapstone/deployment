@@ -1,7 +1,7 @@
+/* eslint-disable react/react-in-jsx-scope */
 "use client";
 
 import Link from "next/link";
-import { useEffect, useState, useRef } from "react";
 import styles from "./page.module.css";
 
 const Sidebar = ({

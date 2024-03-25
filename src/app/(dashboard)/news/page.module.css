@@ -10,6 +10,12 @@
   grid-template-rows: 5rem;
   grid-auto-rows: min-content;
 }
+@media only screen and (max-width: 768px) {
+  .main {
+      padding-inline: 10vw;
+      padding-block-end: 3vh;
+  }
+}
 
 .newsTitle {
   grid-row: 1;
@@ -41,6 +47,12 @@
   background-color: white;
   border-radius: var(--card-border-radius);
 }
+@media only screen and (max-width: 600px) {
+  .recentNewsCard {
+      height: 30vh;
+      justify-self: left;
+  }
+}
 
 .carousel {
   overflow: hidden;
@@ -56,6 +68,7 @@
   display: grid;
   padding-inline: 1vw;
   grid-template-rows: 1fr;
+  font-weight: bold;
 }
 
 .prevSVGButton {
@@ -76,10 +89,31 @@
   right: 4rem;
 }
 
+@media only screen and (max-width: 600px) {
+  .prevSVGButton {
+    width: 1rem; 
+    height: 1rem; 
+    top: 85%;
+    left: 1rem; 
+    right: 1rem; 
+  }
+  .nextSVGButton {
+    width: 1rem; 
+    height: 1rem; 
+    top: 85%; 
+    right: 1rem; 
+  }
+}
+
 .recentArticleRow {
   grid-row: 1;
   display: grid;
   grid-template-columns: 1fr 20vw 15vw 1fr;
+}
+@media only screen and (max-width: 600px) {
+  .recentArticleRow {
+    grid-template-columns: 1fr 20vw 20vw 1fr;
+  }
 }
 
 .recentArticleTitle {
@@ -88,11 +122,22 @@
   grid-template-rows: min-content min-content;
   align-content: center;
 }
+@media only screen and (max-width: 600px) {
+  .recentArticleTitle {
+    grid-column: 5;
+    align-content: right;
+  }
+}
 
 .recentArticleTitleText {
   grid-row: 1;
   font-weight: 600;
   font-size: var(--big-paragraph-font-size);
+}
+@media only screen and (max-width: 600px) {
+  .recentArticleTitleText {
+    font-size: 15px;
+  }
 }
 
 .recentArticleTitleText:hover .recentLinkArrow {
@@ -126,6 +171,13 @@
   display: grid;
   place-content: center;
 }
+@media only screen and (max-width: 600px) {
+  .recentArticleImage {
+    justify-self: start;
+    margin-inline-start: 1rem;
+    width: 9rem;
+  }
+}
 
 .paginationAllDots {
   height: 1rem;
@@ -158,6 +210,13 @@
   border-radius: var(--card-border-radius);
   margin-block-start: 3vh;
 }
+@media only screen and (max-width: 600px) {
+  .allNewsCard {
+    grid-template-rows: 2rem auto;
+    height: auto;
+    padding-bottom: 2rem; 
+  }
+}
 
 .allNewsArticles {
   display: grid;
@@ -165,6 +224,12 @@
   grid-auto-rows: min-content;
   grid-auto-flow: row;
   height: min-content;
+}
+@media only screen and (max-width: 600px) {
+  .allNewsArticles {
+    grid-template-columns: 1fr;
+    height: auto; 
+  }
 }
 
 .article {
@@ -183,6 +248,16 @@
   display: grid;
   place-content: center;
 }
+@media only screen and (max-width: 600px) {
+  .articleImage {
+    grid-column: 2;
+    align-self: start; 
+    height: 5rem;
+    width: 14rem;
+    margin-top: 20px;
+    margin-bottom: 35px;
+  }
+}
 
 .articleTitle {
   grid-column: 2;
@@ -190,11 +265,26 @@
   align-self: center;
   grid-template-rows: min-content 1fr;
 }
+@media only screen and (max-width: 600px) {
+  .articleTitle {
+    grid-column: 1 / span 2;
+    align-self: start;
+    grid-template-rows: min-content 1fr;
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+}
 
 .articleTitleText {
   grid-row: 1;
   font-weight: 500;
   font-size: var(--small-paragraph-font-size);
+}
+@media only screen and (max-width: 600px) {
+  .articleTitleText {
+    font-size: 14px;
+    text-align: center;
+  }
 }
 
 .linkArrow {
@@ -216,6 +306,12 @@
   color: var(--grey-text-color);
   font-size: var(--smaller-paragraph-font-size);
 }
+@media only screen and (max-width: 600px) {
+  .articleDateText {
+    text-align: center;
+    font-size: 12px;
+  }
+}
 
 .pageAllNumbers {
   display: flex;
@@ -226,6 +322,12 @@
   left: 50%;
   transform: translateX(-50%);
   border-bottom: 0.12rem solid var(--pagination-dots-unselected);
+}
+@media only screen and (max-width: 600px) {
+  .pageAllNumbers {
+    height: 4rem;
+    bottom: -1rem;
+  }
 }
 
 .pageNumber {
@@ -251,6 +353,11 @@
   font-weight: 400;
   color: var(--pagination-dots-selected);
 }
+@media only screen and (max-width: 600px) {
+  .prevTextButton {
+    margin-inline-end: auto;
+  }
+}
 
 .prevTextButton:disabled {
   opacity: 0.3;
@@ -263,6 +370,11 @@
   font-size: var(--small-paragraph-font-size);
   font-weight: 400;
   color: var(--pagination-dots-selected);
+}
+@media only screen and (max-width: 600px) {
+  .nextTextButton {
+    margin-inline-start: auto;
+  }
 }
 
 .nextTextButton:disabled {

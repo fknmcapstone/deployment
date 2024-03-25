@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import styles from "./page.module.css";
 import React from "react";
 import { EmblaOptionsType } from "embla-carousel";
@@ -12,16 +14,11 @@ type PropType = {
   children?: any;
 };
 
-export function SFPComponent({
-  quote,
-}: {
-  quote: string;
-}) {
+export function SFPComponent({ quote }: { quote: string }) {
   return (
     <div className={styles.carouselSlide}>
       <div className={styles.componentRow}>
         <p className={styles.quotationsText}>{quote}</p>
-
       </div>
     </div>
   );
@@ -78,6 +75,3 @@ export const DotButton: React.FC<PropType> = (props) => {
 
   return <button type="button" {...restProps}></button>;
 };
-
-
-

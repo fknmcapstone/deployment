@@ -1,3 +1,4 @@
+/* eslint-disable react/react-in-jsx-scope */
 import styles from "../page.module.css";
 import data from "../publications.json";
 import {
@@ -5,14 +6,15 @@ import {
   sortPublications,
   yearBtnList,
 } from "../citations_year_buttons";
+import ToTopButton from "../../common_elements";
 
-let sources: { [key: string]: { [key: string]: string }[] } = sortPublications(
-  data.manuscripts
-);
+const sources: { [key: string]: { [key: string]: string }[] } =
+  sortPublications(data.manuscripts);
 
 export default function Manuscripts() {
   return (
     <main className={styles.main}>
+      <ToTopButton />
       <p data-cy="manuscripts_title" className={styles.publicationsTitle}>
         Manuscripts
       </p>

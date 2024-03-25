@@ -3,12 +3,19 @@
   background-color: var(--background-color);
   color: var(--dark-text-color);
   width: 100%;
+  min-height: 100lvh;
   padding-inline: 20vw;
   padding-block-end: 5vw;
-
+  min-height: 100vh;
   grid-template-columns: 1fr;
-  grid-template-rows: 5rem 4rem;
+  grid-template-rows: 5rem min-content;
   grid-auto-rows: min-content;
+}
+
+@media only screen and (max-width: 600px) {
+  .main {
+    padding-inline: 8vw;
+  }
 }
 
 .publicationsTitle {
@@ -16,6 +23,12 @@
   font-size: var(--subtitle-font-size);
   font-weight: bold;
   margin-top: 5vh;
+}
+
+@media only screen and (max-width: 600px) {
+  .publicationsTitle {
+    font-size: 19px;
+  }
 }
 
 .yearBtn {
@@ -29,6 +42,14 @@
   border-radius: var(--small-button-border-radius);
   color: var(--light-text-color);
   text-decoration: underline;
+  margin-bottom: 1lvh;
+}
+
+@media only screen and (max-width: 600px) {
+  .yearBtn {
+    font-size: 15px;
+    margin-inline-end: 1.5rem;
+  }
 }
 
 .citationLink {
@@ -41,10 +62,17 @@
   grid-row: 2;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
 }
 .yearHeader {
   font-size: var(--big-paragraph-font-size);
   margin-block-start: 2rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .yearHeader {
+    font-size: 19px;
+  }
 }
 
 .citation {
@@ -52,6 +80,13 @@
   padding-block: 1rem;
   align-self: center;
   font-size: var(--smaller-paragraph-font-size);
+}
+
+@media only screen and (max-width: 600px) {
+  .citation {
+    font-size: 14px;
+    width: 100%;
+  }
 }
 
 .citationNormalBg {

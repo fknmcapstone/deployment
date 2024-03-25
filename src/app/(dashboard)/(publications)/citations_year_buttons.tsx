@@ -1,15 +1,23 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable react/react-in-jsx-scope */
 import styles from "./page.module.css";
 import Link from "next/link";
 
 // Returns a map where the key is the year and the value is a list of manuscripts associated with that year
 // Each manuscript has a citation string and a link string
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export function sortPublications(data: any): {
   [key: string]: { [key: string]: string }[];
 } {
-  var yearToCitationsMap: { [key: string]: { [key: string]: string }[] } = {};
+  const yearToCitationsMap: { [key: string]: { [key: string]: string }[] } = {};
 
-  Object.entries(data).map(([_, year]) => {
-    Object.entries(year).map(([y, citationData]) => {
+  // Creates a generic type, essentially it is okay for the type to be "any"
+  type Entries<T> = {
+    [K in keyof T]: [K, T[K]];
+  }[keyof T][];
+
+  (Object.entries(data) as Entries<typeof data>).map(([_, year]) => {
+    (Object.entries(year) as Entries<typeof year>).map(([y, citationData]) => {
       yearToCitationsMap[y] = citationData;
     });
   });
@@ -36,23 +44,23 @@ export function citationsList(sources: {
   return Object.entries(sources)
     .reverse()
     .map(([year, sourceList]) => {
-      var manuscriptList = [];
+      const manuscriptList = [];
       manuscriptList.push(
-        <div key={"year_" + year} className={styles.yearHeader}>
+        <div id={"year_" + year} className={styles.yearHeader}>
           {year}
         </div>
       );
 
-      for (var sourceIndex in sourceList) {
+      for (const sourceIndex in sourceList) {
         manuscriptList.push(
           <div
             key={year + sourceIndex}
             className={[
               styles.citation,
-              sourceIndex % 2 == 0
+              Number(sourceIndex) % 2 == 0
                 ? styles.citationDarkerBg
                 : styles.citationNormalBg,
-              sourceIndex == 0 ? styles.citationRoundedCorners : null,
+              Number(sourceIndex) == 0 ? styles.citationRoundedCorners : null,
             ].join(" ")}
           >
             {sourceList[sourceIndex].citation}{" "}

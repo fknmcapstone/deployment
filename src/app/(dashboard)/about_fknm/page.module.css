@@ -1,18 +1,40 @@
 .main {
   display: grid;
   background-color: var(--background-color);
-  width: 100%;
+  width: 100vw;
   height: 100%;
   padding-block-end: 5vh;
   grid-template-rows: auto;
   color: var(--dark-text-color);
+}
+@media only screen and (max-width: 768px) {
+  .main {
+    padding-inline: 10vw;
+    padding-block-end: 3vh;
+    place-items: center;
+  }
 }
 
 .heading {
   text-align: center;
   font-size: var(--subtitle-font-size);
   font-weight: bold;
-  margin-top: 4rem;
+  margin-top: 2.5rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .heading {
+    font-size: 19px;
+    margin-top: 2rem;
+  }
+}
+
+.separator {
+  background-color: var(--primary-color);
+  margin-inline: 20lvw;
+  margin-block-end: 1rem;
+  height: 1px;
+  border: none;
 }
 
 .textContent {
@@ -23,21 +45,41 @@
   margin-top: 2vh;
 }
 
+@media only screen and (max-width: 600px) {
+  .textContent {
+    width: 98%;
+    font-size: 15px;
+    white-space: initial;
+  }
+}
+
 .accordion {
+  border: none;
   margin-block-start: 2rem;
-  width: 80rem;
+  width: 70lvw;
   justify-self: center;
+  margin-block-end: 2rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .accordion {
+    width: 98%;
+  }
 }
 
 .accordionItem {
-  background-color: #ebe9e9 !important;
+  border-color: var(--tertiary-color);
+  padding-inline: 1.5lvw;
 }
 
 .popover {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  padding-inline-end: 1.5lvw;
+  padding-inline-start: 1lvw;
+  padding-block-end: 1lvh;
   flex-direction: row;
-  gap: 1rem;
+  gap: 2lvw;
   margin-bottom: 2vh;
   justify-content: space-around;
   align-content: space-around;
@@ -48,13 +90,14 @@
   padding-left: 5%;
   padding-right: 5%;
   padding-bottom: 5%;
+  white-space: pre-wrap;
 }
 
-.modalHeader{
-align-items: center;
-display: flex;
-flex-direction: column;
-margin-top: 0.25rem;
+.modalHeader {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-top: 0.25rem;
 }
 
 .popoverTrigger {
@@ -66,56 +109,83 @@ margin-top: 0.25rem;
 
 .collabContainer {
   justify-self: center;
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
 }
 
 .logo {
   align-self: center;
-  margin: 0.5rem;
-  border-radius: var(--card-border-radius);
-  background-color: rgba(255, 255, 255, 0.65);
   padding: 1rem;
-  box-shadow: var(--card-shadow);
 }
 
 .cardButton {
-  border: none;
-  background: none;
-  padding-top: 70%;
-  padding-bottom: 70%;
-  padding-right: 2%;
-  padding-left: 2%;
+  background: #fdfdfd;
+  border-width: 2px;
+  border-radius: 2px;
+  padding-block: 75%;
+  padding-inline: 4lvw;
   cursor: pointer;
-  display: flex; 
-  flex-direction: column; 
-  align-items: center; 
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
 }
 
 .cardContent {
   width: 130px;
-  height: 200px; 
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  padding: 10px;
+  height: 200px;
   text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .profileImage {
-  width: 120px; 
-  height: 120px; 
-  border-radius: 50%; 
-  overflow: hidden; 
+  width: 120px;
+  height: 120px;
+  margin-inline: 5px;
+  padding-inline: 5px;
+  border-radius: 50%;
 }
-
 
 .profileName {
   margin-top: 10px;
   font-weight: bold;
+  white-space: initial;
+  padding-inline: 5px;
+}
+.profileSubTitle {
+  margin-top: 3px;
+  font-weight: bold;
+  line-height: 1.5em;
+  max-height: 3em;
+  white-space: initial;
+  color: var(--grey-text-color);
+  padding-inline: 5px;
 }
 
-.modalHeader{
+@media only screen and (max-width: 600px) {
+  .popover {
+    grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+  }
+
+  .cardButton {
+    height: 20lvh;
+    font-size: 15px;
+  }
+
+  .profileImage {
+    margin-inline: 20px;
+    padding-inline: 5px;
+    width: 85px;
+    height: 85px;
+  }
+}
+
+.modalHeader {
   color: black;
+}
+
+.modalSubheader {
+  color: var(--grey-text-color);
+  margin-top: 2px;
+  font-size: var(--small-paragraph-font-size);
 }

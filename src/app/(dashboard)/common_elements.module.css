@@ -1,0 +1,18 @@
+.toTopButton {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 30px;
+  background-color: white;
+  box-shadow: var(--card-shadow);
+  z-index: 1;
+}
+
+@media only screen and (max-width: 600px) {
+  .toTopButton {
+    bottom: 1rem;
+    right: 1rem;
+  }
+}

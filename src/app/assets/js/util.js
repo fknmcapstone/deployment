@@ -1,3 +1,8 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable valid-typeof */
+/* eslint-disable indent */
+/* eslint-disable no-undef */
+/* eslint-disable quotes */
 (function ($) {
   /**
    * Generate an indented list of links from a nav. Meant for use with panel().

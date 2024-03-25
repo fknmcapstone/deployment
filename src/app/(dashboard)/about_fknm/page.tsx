@@ -1,5 +1,7 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/no-var-requires */
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import {
   Accordion,
   AccordionItem,
@@ -7,15 +9,24 @@ import {
   ModalContent,
   ModalHeader,
   ModalBody,
-  ModalFooter,
   Button,
   useDisclosure,
 } from "@nextui-org/react";
 import styles from "./page.module.css";
 import Image from "next/image";
 
+interface Person {
+  name: string;
+  subtitle: string;
+  imageURL: string;
+  content: string;
+}
 
-function ProfileCard({ name, imageURL, content }) {
+interface PeopleData {
+  [committee: string]: Person[];
+}
+
+function ProfileCard({ name, subtitle, imageURL, content }: Person) {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
@@ -31,9 +42,17 @@ function ProfileCard({ name, imageURL, content }) {
             priority
           />
           <div className={styles.profileName}>{name}</div>
+          <div className={styles.profileSubTitle}>{subtitle}</div>
         </div>
       </Button>
-      <Modal size="5xl" isOpen={isOpen} onClose={onClose}>
+      <Modal
+        size="5xl"
+        isOpen={isOpen}
+        onClose={onClose}
+        className={styles.modal}
+        placement="top-center"
+        scrollBehavior="outside"
+      >
         <ModalContent>
           <ModalHeader className={styles.modalHeader}>
             <Image
@@ -45,9 +64,10 @@ function ProfileCard({ name, imageURL, content }) {
               priority
             />
             <div className={styles.modalHeader}>{name}</div>
+            <div className={styles.modalSubheader}>{subtitle}</div>
           </ModalHeader>
           <ModalBody>
-            <div className={styles.modalText}>{content}</div>
+            <p className={styles.modalText}>{content}</p>
           </ModalBody>
         </ModalContent>
       </Modal>
@@ -56,7 +76,7 @@ function ProfileCard({ name, imageURL, content }) {
 }
 
 export default function AboutFKNM() {
-  const peopleData = require("./people.json");
+  const peopleData: PeopleData = require("./people.json");
 
   return (
     <main className={styles.main}>
@@ -79,22 +99,26 @@ export default function AboutFKNM() {
         Choice Children’s Charity. Through a landscape policy analysis and
         series of systematic reviews, a comprehensive overview of school meal
         and snack programs in Canada is being organised in an interactive
-        dashboard including consideration of equity indicators. Key stakeholders
-        (e.g., schools, schoolboards, teachers, funding agencies) have been
-        engaged to identify facilitators, barriers and user groups of school
-        food programs and essential dashboard indicators needed to inform
-        program design. The impact of the COVID-19 pandemic, including changes
-        in policies and programs, highlight the lessons learned and
+        dashboard including consideration of equity indicators.
+        <br />
+        <br />
+        Key stakeholders (e.g., schools, schoolboards, teachers, funding
+        agencies) have been engaged to identify facilitators, barriers and user
+        groups of school food programs and essential dashboard indicators needed
+        to inform program design. The impact of the COVID-19 pandemic, including
+        changes in policies and programs, highlight the lessons learned and
         opportunities for leveraging these programs and improving resiliency in
-        marginalized communities. The FKNM is informing the guidance of a
-        framework for a national school food program policy.
+        marginalized communities. <br />
+        <br />
+        The FKNM is informing the guidance of a framework for a national school
+        food program policy.
       </div>
 
       <div className={styles.heading} data-cy="meet_header">
         Meet The Team
       </div>
       <Accordion
-        variant="splitted"
+        variant="light"
         selectionMode="multiple"
         className={styles.accordion}
       >
@@ -110,6 +134,7 @@ export default function AboutFKNM() {
               {members.map((person: any, index: number) => (
                 <ProfileCard
                   key={index}
+                  subtitle={person.subtitle}
                   name={person.name}
                   imageURL={person.imageUrl}
                   content={person.content}

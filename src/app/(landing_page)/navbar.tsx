@@ -1,6 +1,8 @@
+/* eslint-disable react/react-in-jsx-scope */
 import Link from "next/link";
 import styles from "./page.module.css";
 
+// eslint-disable-next-line react/prop-types
 function Separator({ height = 1 }) {
   return (
     <hr
@@ -14,14 +16,10 @@ function Separator({ height = 1 }) {
   );
 }
 
-const Navbar = ({ width }: { width: number }) => {
+const Navbar = () => {
   return (
     <>
-      <div
-        data-cy="nav_bar"
-        className={styles.navigationbar}
-        style={{ display: width < 1024 ? "none" : "block" }}
-      >
+      <div data-cy="nav_bar" className={styles.navigationbar}>
         <div className={styles.navigationbarContent}>
           <Link
             data-cy="nav_school_food_programs"

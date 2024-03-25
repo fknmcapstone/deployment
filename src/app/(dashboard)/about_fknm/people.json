@@ -1,76 +1,304 @@
 {
-    "Steering Committee": [
-      {
-        "name": "Mavra Ahmed",
-        "imageUrl": "/people/mavra.png",
-        "content": "Dr. Mavra Ahmed is a Research Associate at the Department of Nutritional Sciences and Joannah and Brian Lawson Centre for Child Nutrition, University of Toronto and an Adjunct Professor at Ontario Tech University. With expertise in food and nutrition policy, Dr. Ahmed’s research focuses on driving equity-focused policy shifts by determining the relationships between determinants of health, dietary patterns/intakes and nutrition-related behaviours and knowledge to improve the health of vulnerable populations, particularly children and adolescents. She is leading the Feeding Kids, Nourishing Minds school nutrition research initiative that aims to provide a comprehensive overview of school food programs in Canada and identify best practices in relation to the design, delivery, and measurement of school food programs. Mavra has a passion for assessing the impact of digital technology for promotion of healthier dietary behaviours (currently, investigating the impact of an updated version of the smartphone app, FoodFlip©, on enabling consumers to make healthier food choices).Mavra obtained her PhD from the University of Toronto, specializing in characterization of dietary assessments of Canadian Armed Forces and evaluation of novel technologies for dietary assessments. She also holds a CIHR Fellowship in the Strategic Training Program in Public Health Policy and a CIHR Fellowship in Artificial Intelligence for Public Health from the Dalla Lana School of Public Health."
-      },
-      {
-        "name": "Amy Bilton",
-        "imageUrl": "/people/Amy-bilton.jpg",
-        "content":"Amy Bilton directs the Centre for Global Engineering (CGEN). CGEN fosters community practice to develop innovative solutions to the problems which plague the world’s most vulnerable people. Her research interests include energy systems, water purification, design for the developing world, computer-aided design methods, design optimization and control system design. Appointments Associate Professor, Mechanical Engineering Dean’s Catalyst Professor Director, Centre for Global Engineering (CGEN)"
-      },
-      {
-        "name": "Zulfiqar Bhutta",
-        "imageUrl": "/people/zulfiqar.jpg",
-        "content":"Zulfiqar Bhutta co-directs The Hospital for Sick Children’s Centre for Global Child Health as senior scientist of Child Health Evaluative Sciences and leads large research groups based in Toronto, Karachi, and Nairobi with a special interest in research synthesis, scaling up evidence-based interventions in community settings and implementation research in health systems."
-      },
-      {
-        "name": "Catherine Birken",
-        "imageUrl": "/people/Catherine.jpg",
-        "content":"Catherine Birken studies obesity prevention through primary care practice and advancing care for children with severe obesity. She holds grants from the Canadian Institutes of Health Research and Physician Services Inc. for the PROMOTE project, which looks at early identification of preschoolers' risk for obesity and cardiometabolic factors, and a grant from CIHR for the Fit for School, Fit for Life project. "
-      },
-      {
-        "name": "Barbara Fallon",
-        "imageUrl": "/people/barbara.jpg",
-        "content":"Barbara Fallon is a Professor and holds the Canada Research Chair in Child Welfare. Her research focuses on sharing of reliable, valid national and provincial data to provide an evidence-based understanding of the trajectories of children and families in the child welfare system."
-      },
-      {
-        "name": "Sloane Freeman",
-        "imageUrl": "/people/sloane.jpg",
-        "content":"Sloane Freeman is a pediatrician at St. Michael’s Hospital Inner City Health Program. She has expertise in social pediatrics, developmental and school issues and care of medically complex children. She is the founder and lead of the Model School Pediatric Health Initiative (MSPHI) and the primary investigator for the Feasibility Study on the Model Schools Pediatric Health Initiative. "
-      },
-      {
-        "name": "Jill Hamilton",
-        "imageUrl": "/people/jill.jpg",
-        "content":"Jill Hamilton is the Head of the Division of Endocrinology and Senior Associate Scientist at the Research Institute at the Hospital for Sick Children. She is the medical director of the SickKids Team Obesity Management Program (STOMP) and the director of the Centre for Healthy Active Kids at SickKids. She studies metabolic complications of obesity in childhood; biologic and psychosocial determinants of obesity; mechanisms of weight regulation in hypothalamic obesity; and obesity treatment outcomes and interventions"
-      },
-      {
-        "name": "Jennifer Jenkins",
-        "imageUrl": "/people/jennifer.png",
-        "content":"Jennifer Jenkins is a professor in the Department of Applied Psychology and Human Development and the Atkinson Chair of Early Child Development and Education at the Ontario Institute for Studies in Education (OISE). Her expertise is child development, family systems and developmental psychopathology. She runs the Kids, Families, Places Study        "
-      }
-    ],
-    "Research Team": [
-      {
-        "name": "Person 2",
-        "imageUrl": "https://media.istockphoto.com/id/1320751178/vector/profile-placeholder-image-gray-silhouette-no-photo.jpg?s=612x612&w=0&k=20&c=ZbP6p5pWjS2skfdRHrH_fE_jm6ymX-6LiZ__9Wb40pw=",
-        "content": "This is the popover content for Person 2"
-      },
-      {
-        "name": "Person 3",
-        "imageUrl": "https://media.istockphoto.com/id/1320751178/vector/profile-placeholder-image-gray-silhouette-no-photo.jpg?s=612x612&w=0&k=20&c=ZbP6p5pWjS2skfdRHrH_fE_jm6ymX-6LiZ__9Wb40pw=",
-        "content": "This is the popover content for Person 3"
-      }
-    ],
-    "Administrative Support": [
-      {
-        "name": "Person 4",
-        "imageUrl": "https://media.istockphoto.com/id/1320751178/vector/profile-placeholder-image-gray-silhouette-no-photo.jpg?s=612x612&w=0&k=20&c=ZbP6p5pWjS2skfdRHrH_fE_jm6ymX-6LiZ__9Wb40pw=",
-        "content": "This is the popover content for Person 4"
-      }
-    ],
-    "website Team": [
-      {
-        "name": "Person 5",
-        "imageUrl": "https://media.istockphoto.com/id/1320751178/vector/profile-placeholder-image-gray-silhouette-no-photo.jpg?s=612x612&w=0&k=20&c=ZbP6p5pWjS2skfdRHrH_fE_jm6ymX-6LiZ__9Wb40pw=",
-        "content": "This is the popover content for Person 5"
-      },
-      {
-        "name": "Person 6",
-        "imageUrl": "https://media.istockphoto.com/id/1320751178/vector/profile-placeholder-image-gray-silhouette-no-photo.jpg?s=612x612&w=0&k=20&c=ZbP6p5pWjS2skfdRHrH_fE_jm6ymX-6LiZ__9Wb40pw=",
-        "content": "This is the popover content for Person 6"
-      }
-    ]
-  }
-  
+  "Steering Committee": [
+    {
+      "name": "Amy Bilton",
+      "subtitle": "PhD, P. Eng",
+      "imageUrl": "/people/Amy_Bilton.jpg",
+      "content": "Amy Bilton directs the Centre for Global Engineering (CGEN). CGEN fosters community practice to develop innovative solutions to the problems which plague the world’s most vulnerable people. Her research interests include energy systems, water purification, design for the developing world, computer-aided design methods, design optimization and control system design. Appointments Associate Professor, Mechanical Engineering Dean’s Catalyst Professor Director, Centre for Global Engineering (CGEN)"
+    },
+    {
+      "name": "Zulfiqar Bhutta",
+      "subtitle": "PhD, MBBS, FRCPCH, FAAP",
+      "imageUrl": "/people/Zulfiqar_Bhutta.jpg",
+      "content": "Zulfiqar Bhutta co-directs The Hospital for Sick Children’s Centre for Global Child Health as senior scientist of Child Health Evaluative Sciences and leads large research groups based in Toronto, Karachi, and Nairobi with a special interest in research synthesis, scaling up evidence-based interventions in community settings and implementation research in health systems."
+    },
+    {
+      "name": "Catherine Birken",
+      "subtitle": "MD, MSc, FRCPC",
+      "imageUrl": "/people/Catherine_Birken.jpg",
+      "content": "Catherine Birken studies obesity prevention through primary care practice and advancing care for children with severe obesity. She holds grants from the Canadian Institutes of Health Research and Physician Services Inc. for the PROMOTE project, which looks at early identification of preschoolers' risk for obesity and cardiometabolic factors, and a grant from CIHR for the Fit for School, Fit for Life project. "
+    },
+    {
+      "name": "Barbara Fallon",
+      "subtitle": "PhD",
+      "imageUrl": "/people/Barbara_Fallon.jpg",
+      "content": "Barbara Fallon is a Professor and holds the Canada Research Chair in Child Welfare. Her research focuses on sharing of reliable, valid national and provincial data to provide an evidence-based understanding of the trajectories of children and families in the child welfare system."
+    },
+    {
+      "name": "Sloane Freeman",
+      "subtitle": "MD, FRCPC, MSc",
+      "imageUrl": "/people/Sloane_Freeman.jpg",
+      "content": "Sloane Freeman is a pediatrician at St. Michael’s Hospital Inner City Health Program. She has expertise in social pediatrics, developmental and school issues and care of medically complex children. She is the founder and lead of the Model School Pediatric Health Initiative (MSPHI) and the primary investigator for the Feasibility Study on the Model Schools Pediatric Health Initiative. "
+    },
+    {
+      "name": "Jill Hamilton",
+      "subtitle": "MD",
+      "imageUrl": "/people/Jill_Hamilton.jpg",
+      "content": "Jill Hamilton is the Head of the Division of Endocrinology and Senior Associate Scientist at the Research Institute at the Hospital for Sick Children. She is the medical director of the SickKids Team Obesity Management Program (STOMP) and the director of the Centre for Healthy Active Kids at SickKids. She studies metabolic complications of obesity in childhood; biologic and psychosocial determinants of obesity; mechanisms of weight regulation in hypothalamic obesity; and obesity treatment outcomes and interventions"
+    },
+    {
+      "name": "Jennifer Jenkins",
+      "subtitle": "PhD",
+      "imageUrl": "/people/Jennifer_Jenkins.png",
+      "content": "Jennifer Jenkins is a professor in the Department of Applied Psychology and Human Development and the Atkinson Chair of Early Child Development and Education at the Ontario Institute for Studies in Education (OISE). Her expertise is child development, family systems and developmental psychopathology. She runs the Kids, Families, Places Study        "
+    },
+    {
+      "name": "Mary L’Abbé",
+      "subtitle": "PhD",
+      "imageUrl": "/people/Mary_LAbbe.png",
+      "content": "Mary L’Abbé’s food and nutrition policy for population health research program provides an evidence base to support public health nutrition policy in areas such as health claims on foods, front-of-pack labelling, children's marketing on foods, nutritional quality of packaged and restaurant foods, menu labelling, food fortification, food-like natural health products, trans fat, sodium, and sugar."
+    },
+    {
+      "name": "Audrey Laporte",
+      "subtitle": "PhD",
+      "imageUrl": "/people/Audrey_Laporte.png",
+      "content": "Audrey Laporte directs the Institute of Health Policy, Management and Evaluation at the Dalla Lana School of Public Health. Her research focus is the general development of microeconomic theory and the application of micro econometric methods to address questions of policy interest and health care."
+    },
+    {
+      "name": "Aisha Lofters",
+      "subtitle": "MD, PhD",
+      "imageUrl": "/people/Aisha_Lofters.png",
+      "content": "Aisha Lofters is a family physician and scientist at Women’s College Hospital. Her areas of interest include cancer screening, health equity, immigrant health clinical epidemiology and implementation science and using a broad range of methods such as secondary database analysis and community-based participatory research."
+    },
+    {
+      "name": "Jonathon Maguire",
+      "subtitle": "MD, M.Sc., FRCPC ",
+      "imageUrl": "/people/Jonathon_Maguire.png",
+      "content": "Jonathon Maguire is a staff pediatrician in the Department of Pediatrics at St. Michael’s Hospital, with a pediatric hospitalist and outpatient clinical practice. He conducts clinical trials to improve nutrition and development in young children, and to create tools to facilitate evidence informed child health practice. He co-leads TARGet Kids! the largest primary care research network for children in Canada."
+    },
+    {
+      "name": "Vasanti Malik",
+      "subtitle": "ScD",
+      "imageUrl": "/people/Vasanti_Malik.png",
+      "content": "Vasanti Malik is an assistant professor in the Department of Nutritional Sciences and Canada Research Chair in Nutrition and Chronic Disease Prevention. Her research focuses on nutrition and chronic disease epidemiology across the life-course. She evaluates risk factors for obesity, type 2 diabetes, and cardiovascular disease with an emphasis on diet quality. She holds an Adjunct position in the Department of Nutrition at the Harvard Chan School of Public Health."
+    },
+    {
+      "name": "Katerina Maximova",
+      "subtitle": "PhD",
+      "imageUrl": "/people/Katerina_Maximova.png",
+      "content": "Katerina Maximova is the Murphy Family Foundation Chair in Early Life Interventions at the MAP Centre for Urban Health Solutions at the Li Ka Shing Knowledge Institute of St. Michael’s Hospital.  Her research focuses on primary prevention of chronic disease through solutions to improve early life experiences, development and well-being of children experiencing poverty. Her work includes evaluating the APPLE Schools (A Project Promoting healthy Living for Everyone in Schools) intervention program, which targets physical activity, healthy eating and mental health among marginalized children in Canada."
+    },
+    {
+      "name": "Deborah O’Connor",
+      "subtitle": "PhD, RD",
+      "imageUrl": "/people/Deborah_OConnor.png",
+      "content": "Deborah O’Connor is a Registered Dietitian and the Chair of the Department of Nutritional Sciences at the University of Toronto. Her research focus is maternal and infant nutrition."
+    },
+    {
+      "name": "Patricia Parkin",
+      "subtitle": "MD, FRCPC ",
+      "imageUrl": "/people/Patricia_Parkin.png",
+      "content": "Professor Parkin is a paediatrician and scientist at The Hospital for Sick Children, as well as the research director of the Sick Kids Paediatric Outcomes Research Team. She is also an investigator with the Applied Research Group for Kids (TARGet Kids!)."
+    },
+    {
+      "name": "Daniel Sellen",
+      "subtitle": "PhD, FSfAA ",
+      "imageUrl": "/people/Daniel_Sellen.png",
+      "content": "Daniel Sellen directs the Joannah & Brian Lawson Centre for Child Nutrition at the University of Toronto. He specializes in design, testing and evaluation of large-scale programs to improve infant, child, adolescent, and maternal nutrition security."
+    },
+    {
+      "name": "Arjumand Siddiqi",
+      "subtitle": "MPH, ScD ",
+      "imageUrl": "/people/Arjumand_Siddiqi.png",
+      "content": "Arjumand Siddiqi is a Social Epidemiologist. She is Professor and Division Head of Epidemiology at the Dalla Lana School of Public Health and she holds the Canada Research Chair in Population Health Equity. Her research focus is understanding why health inequities are so pervasive and persistent, and what can be done about it."
+    }
+  ],
+  "Research Team": [
+    {
+      "name": "Mavra Ahmed",
+      "subtitle": "MSc, PhD",
+      "imageUrl": "/people/Mavra_Ahmed.png",
+      "content": "Dr. Mavra Ahmed is a Research Associate at the Department of Nutritional Sciences and Joannah and Brian Lawson Centre for Child Nutrition, University of Toronto and an Adjunct Professor at Ontario Tech University. With expertise in food and nutrition policy, Dr. Ahmed’s research focuses on driving equity-focused policy shifts by determining the relationships between determinants of health, dietary patterns/intakes and nutrition-related behaviours and knowledge to improve the health of vulnerable populations, particularly children and adolescents. She is leading the Feeding Kids, Nourishing Minds school nutrition research initiative that aims to provide a comprehensive overview of school food programs in Canada and identify best practices in relation to the design, delivery, and measurement of school food programs. Mavra has a passion for assessing the impact of digital technology for promotion of healthier dietary behaviours (currently, investigating the impact of an updated version of the smartphone app, FoodFlip©, on enabling consumers to make healthier food choices).\n\nMavra obtained her PhD from the University of Toronto, specializing in characterization of dietary assessments of Canadian Armed Forces and evaluation of novel technologies for dietary assessments. She also holds a CIHR Fellowship in the Strategic Training Program in Public Health Policy and a CIHR Fellowship in Artificial Intelligence for Public Health from the Dalla Lana School of Public Health."
+    },
+    {
+      "name": "Yu Chen",
+      "subtitle": "MA, PhD",
+      "imageUrl": "/people/Yu_Chen.jpg",
+      "content": "Yu Chen is a postdoctoral research associate at University of Toronto’s Centre for Global Engineering (CGEN). He received his Ph.D. in sociology and M.A. in Latin American Studies from the University of Texas at Austin, USA. His research bridges urbanization, sustainability, global development, and environmental justice. He has conducted ethnographic research in Mexico, Cuba, and China. Yu Chen is currently leading CGEN’s interdisciplinary research initiative “Sustainable Peri-Urbanization”. His current research focuses on sustainability challenges and community-based ecotechnology initiatives in Mexico City’s peri-urban informal settlements."
+    },
+    {
+      "name": "Jessica Omand",
+      "subtitle": "PhD, RD",
+      "imageUrl": "/people/Jessica_Omand.jpg",
+      "content": "Jessica Omand is a limited term faculty in the School of Nutrition, Toronto Metropolitan University.  Following her clinical training at St. Michael’s Hospital Jessica completed her MSc and PhD in the Department of Nutritional Sciences at the University of Toronto with funding support from CIHR and the Clinician Scientist Training Program at the Hospital for Sick Children. During her PhD, Jessica led the inaugural linkage of the TARGet Kids! database with health administrative data at the Institute for Clinical Evaluative Sciences. Using these linked datasets, she examined whether vitamin D was associated with health service utilization for respiratory diseases. The specific aims of her postdoctoral fellowship are to determine if nutritional risk in early life are associated with a child’s school outcomes including their readiness to start school and academic achievement."
+    },
+    {
+      "name": "Amira Khan",
+      "subtitle": "MPH, MD",
+      "imageUrl": "/people/Amira_Khan.png",
+      "content": "Amira Khan is pursuing a PhD at the Department of Nutritional Sciences, University of Toronto, with a Collaborative Specialization in Global Health. Dr. Khan obtained her MD from the University of Punjab, Pakistan and holds a Diploma in Child Health from Quaid-e-Azam University and a Master of Public Health from University of Waterloo. Currently, she is assisting in the coordination, and management of the Integrated Immunization and Primary Health Care for Enteric Pathogen Control: Naunehal research project led by Dr. Zulfiqar Bhutta’s lab in three high-risk union councils of Pakistan."
+    },
+    {
+      "name": "Selina Mae Quibrantar",
+      "subtitle": "HBSc",
+      "imageUrl": "/people/Selina_Mae_Quibrantar.jpg",
+      "content": "Selina graduated from the University of Toronto Scarborough (UTSC) with an Honours Bachelor of Science with high distinction. She majored in human biology and population health and has experience in conducting qualitative research and experiential learning in different settings. Among these, she conducted an applied research project with Black Creek Community Farm as part of the City of Toronto Food by Ward initiative that focused on food insecurity and was the recipient of the University of Toronto COVID-19 Student Engagement Award for her qualitative investigation of best approaches used by global and local organizations to address food insecurity during COVID-19. Selina is currently a global classroom intern with the University of Toronto Global Health Innovation lab. Her goal is to foster change at the local and global level through research, health promotion and policy innovation that contributes to improving the health of all individuals."
+    },
+    {
+      "name": "Annette Blais",
+      "subtitle": "HBSc",
+      "imageUrl": "/people/Annette_Blais.jpeg",
+      "content": "Annette is a second year MSc student in the Malik Lab in the Department of Nutritional Sciences at the University of Toronto and a research trainee in the Feeding Kids Nourishing Minds school-based nutrition research initiative. Her research is focused on assessing the characteristics and nutritional quality of school food programs across Canada, specifically their alignment with national nutrition guidelines. Prior to joining the Malik Lab, Annette completed her HBSc in Kinesiology at the University of Waterloo and gained practical policy implementation experience at the Employment and Social Development Branch of the federal government. Annette is passionate about the importance of child nutrition and the role for policy in shaping positive child health trajectories. "
+    },
+    {
+      "name": "Emily Ziraldo",
+      "subtitle": "",
+      "imageUrl": "/people/Emily_Ziraldo.png",
+      "content": "Emily is a third year PhD student in the L’Abbé Lab in the Department of Nutritional Sciences at the University of Toronto (UofT) and a research trainee in the Feeding Kids Nourishing Minds school-based nutrition research initiative. Her research focuses on understanding nutrient intakes of children while at school and assessing the nutritional quality of foods and beverages against provincial school food standards. Prior to joining the L’Abbé Lab, Emily completed her HBSc and the Master of Management of Innovation (MMI) program at UofT."
+    },
+    {
+      "name": "Hayun (Sarah) Jeong",
+      "subtitle": "",
+      "imageUrl": "/people/Hayun_Jeong.png",
+      "content": "Hayun is a second year PhD student in the L’Abbe Lab in the Department of Nutritional Sciences at the University of Toronto and a research trainee in the Feeding Kids Nourishing Minds school-based nutrition research initiative. Her research is centred around the development of a comprehensive Canadian School Food Audit Tool to evaluate school food environments and determinants of student food and nutrition behaviours. The insights gained from the audits can help to inform the design of Canada’s national school food policy. Prior to joining the L’Abbe Lab, Sarah completed her HBSc in Nutritional Sciences and Psychology at the University of Toronto. "
+    },
+    {
+      "name": "Truc (Trudy) Tran",
+      "subtitle": "BSc",
+      "imageUrl": "/people/Truc_Tran.jpg",
+      "content": "Trudy Tran is a registered dietitian with diverse experience in both clinical and public health nutrition. Trudy completed her Bachelor of Science in dietetics at the University of Alberta where she received several awards including The Elizabeth Donald Bar None Scholarship for Integrated Dietetic Internship in Rural Alberta and The Mary (Davidson) Howard Bar None Award. In additional to her experience in clinical and public health settings, Trudy found a passion for research through holding positions in a various practice-based research projects and organizations including Local Health Integration Network, Public Health Ontario, Eat.Play.Live research study, annual Alberta’s Nutrition Report Card project, Food Marketing in Canadian Recreation Centres. Currently, Trudy is working on several research projects with a broad range of public health nutritional topics including food insecurity and child nutrition under the supervision of Dr. Katerina Maximova at St. Michael’s Hospital MAP Centre for Urban Solutions. Trudy is also pursuing a master’s degree in public health–Epidemiology Stream–at the Dalla Lana School of Public Health. Her goal is to employ epidemiological methods and apply them in public health nutrition research to provide findings which will lay groundwork to advocate for public policies to reduce food insecurity and improve health outcomes."
+    },
+    {
+      "name": "Keiko Marshall",
+      "subtitle": "HBSc",
+      "imageUrl": "/people/Keiko_Marshall.jpg",
+      "content": "Keiko Marshall is currently completing the second year of her Master of Public Health (MPH) degree in Epidemiology at the Dalla Lana School of Public Health and the University of Toronto. Prior to this, she completed her HBSc also at the University of Toronto, majoring in Nutritional Sciences in Global Health. She has continued to hone her interests in nutrition, global health, and non-communicable diseases throughout her MPH, working under Dr. Zulfiqar Bhutta at the SickKids Centre for Global Child Health on projects looking at non-communicable diseases in Kyrgyzstan, and trends in maternal and child health in Nigeria. She has also been a part of research groups within both the Department of Immunology and Department of Nutritional Science at U of T.  Outside of academia, Keiko previously competed at the national level in figure skating and is in her fifth year as captain of the University of Toronto Varsity Figure Skating Team. She also judges figure skating competitions across Ontario."
+    },
+    {
+      "name": "Tammy Lai",
+      "subtitle": "MPH",
+      "imageUrl": "/people/Tammy_Lai.jpeg",
+      "content": "Tammy is a research assistant with the Joannah & Brian Lawson Centre for Child Nutrition. She completed her Master of Public Health, Social and Behavioural Health Sciences (Health Promotion) at the University of Toronto’s Dalla Lana School of Public Health."
+    },
+    {
+      "name": "Nicole Weber",
+      "subtitle": "MPH, RD, PHEc",
+      "imageUrl": "/people/Nicole_Weber.jpeg",
+      "content": "Nicole Weber is a registered dietitian and professional home economist with a Master of Public Health degree in Nutrition and Dietetics from the Dalla Lana School of Public Health at the University of Toronto, with Collaborative Specializations in Public Health Policy and Community Development. Inspired by her two-year experience abroad with Japan's comprehensive school food program, she focused her undergraduate and graduate degrees on researching school food programs, food education, and public health policies for Canadian schools.\n\nAlong with her colleague Nina Trask, she has supported the development of a national school food program (SFP) by researching SFP characteristics and operations both locally and globally through positions with the Coalition for Healthy School Food, George Brown College, and University of Toronto. She is the recipient of the University of Toronto's Heather Milne Nielsen Scholarship for those in Nutrition and Dietetics who demonstrated long term strategic thinking skills related to understanding the multifactorial causes of nutritional issues. Nicole and Nina joined the Feeding Kids, Nourishing Minds study through the Joannah and Brian Lawson Centre for Child Nutrition (UofT) as researchers to co-lead a Stakeholder Analysis that gathers insights with Canadian SFP coordinators.  Their work aspires to inform key decision-makers on how to create meaningful change for public health by increasing nutritious food access and addressing the loss of food knowledge and skills amongst Canadian youth. "
+    },
+    {
+      "name": "Nina Trask",
+      "subtitle": "MPH, RD, PHEc",
+      "imageUrl": "/people/Nina_Trask.jpg",
+      "content": "Nina is a research assistant with the Joannah & Brian Lawson Centre for Child Nutrition. She is a Registered Dietitian and completed her Masters of Public Health in Nutrition and Dietetics and a Collaborative Specialization in Public Health Policy at the Dalla Lana School of Public Health."
+    },
+    {
+      "name": "Samantha Cheng",
+      "subtitle": "",
+      "imageUrl": "/people/Samantha_Cheng.jpg",
+      "content": "Samantha is a third-year undergraduate student in the Honours Health Sciences Program at McMaster University.  "
+    },
+    {
+      "name": "Aria Panchal",
+      "subtitle": "",
+      "imageUrl": "/people/Aria_Panchal.jpg",
+      "content": "Aria is a fourth year Bachelor of Science student at the University of Toronto. She is currently pursuing a double major in Physiology and Health and Disease with a minor in Literature and Critical Theory."
+    },
+    {
+      "name": "Emma Wedekind",
+      "subtitle": "MPH, BASc",
+      "imageUrl": "/people/Emma_Wedekind.jpg",
+      "content": ""
+    },
+    {
+      "name": "Bianca Carducci",
+      "subtitle": "PhD, MSc",
+      "imageUrl": "/people/Bianca_Carducci.jpeg",
+      "content": ""
+    },
+    {
+      "name": "Christina Oh",
+      "subtitle": "MSc",
+      "imageUrl": "/people/Christina_Oh.jpeg",
+      "content": ""
+    },
+    {
+      "name": "Emily Kidd",
+      "subtitle": "MMASc",
+      "imageUrl": "/people/Emily_Kidd.jpg",
+      "content": ""
+    },
+    {
+      "name": "Alana Richardson",
+      "subtitle": "",
+      "imageUrl": "/people/Alana_Richardson.jpg",
+      "content": ""
+    },
+    {
+      "name": "Enioluwa Aminu",
+      "subtitle": "",
+      "imageUrl": "/people/Enioluwa_Aminu.jpg",
+      "content": "Enioluwa Aminu is a third-year undergraduate student at the University of Toronto. She is currently pursuing a double major in Global Health and Psychology. "
+    },
+    {
+      "name": "Jessica Riad",
+      "subtitle": "",
+      "imageUrl": "https://media.istockphoto.com/id/1320751178/vector/profile-placeholder-image-gray-silhouette-no-photo.jpg?s=612x612&w=0&k=20&c=ZbP6p5pWjS2skfdRHrH_fE_jm6ymX-6LiZ__9Wb40pw=",
+      "content": ""
+    },
+    {
+      "name": "Georgia Dominguez",
+      "subtitle": "MSc",
+      "imageUrl": "/people/Georgia_Dominguez.jpeg",
+      "content": ""
+    }
+  ],
+  "Administrative Support": [
+    {
+      "name": "Chelsea McPherson",
+      "subtitle": "MAN, RD",
+      "imageUrl": "/people/Chelsea_Mcpherson.jpeg",
+      "content": "Project Manager, Joannah & Brian Lawson Centre for Child Nutrition"
+    },
+    {
+      "name": "Julie Vickerman",
+      "subtitle": "",
+      "imageUrl": "/people/Julie_Vickerman.jpeg",
+      "content": "Director at Temerty Faculty of Medicine, Donor Engagement"
+    },
+    {
+      "name": "Slavica Jovanovic",
+      "subtitle": "MBA, CPA, CGA",
+      "imageUrl": "/people/Slavica_Jovanovic.png",
+      "content": "Business Manager, Department of Nutritional Sciences"
+    },
+    {
+      "name": "Jennifer Drouillard Duce",
+      "subtitle": "",
+      "imageUrl": "/people/Jennifer_Duce.jpeg",
+      "content": "Sr. Development Officer (2014-2022)"
+    },
+    {
+      "name": "Department of utritional Sciences Administrative Team",
+      "subtitle": "",
+      "imageUrl": "/people/department.png",
+      "content": ""
+    }
+  ],
+  "Website Team": [
+    {
+      "name": "Ysabelle Kmiec",
+      "subtitle": "",
+      "imageUrl": "/people/Ysabelle_Kmiec.jpeg",
+      "content": "Ysabelle is an undergraduate student currently attending the University of Toronto. She is in her fourth year of electrical and computer engineering and specializing in software. As part of the team creating the FKNM dashboard, this capstone project has pushed her to grow her UI development skills and she plans to pursue a similar career path. Her interests also include natural language processing and neurological disorders. She will be finishing her degree in April, 2024."
+    },
+    {
+      "name": "Jhanavi Gera",
+      "subtitle": "",
+      "imageUrl": "/people/Jhanavi_Gera.jpg",
+      "content": "Jhanavi is a fourth-year student at the University of Toronto, currently pursuing a Bachelor's in Computer Engineering with a minor in Engineering Business and a certificate in Artificial Intelligence. Her passion lies in Software and Website Development, and she is constantly driven to learn and apply her skills to real-world projects. As a member of the FKNM Dashboard team, she has further developed her skills in UI/UX design, full-stack web development, and data engineering by contributing to the development of the website and its integration with Microsoft's Power BI. Upon graduating in April 2024, she looks forward to applying her knowledge to future challenges and contributing meaningfully to the world of technology."
+    },
+    {
+      "name": "Kavya Kadi",
+      "subtitle": "",
+      "imageUrl": "/people/Kavya_Kadi.jpg",
+      "content": "Kavya is currently completing her Bachelor's degree in Computer Engineering at the University of Toronto's St. George campus, graduating in April 2024. As part of the team developing the FKNM dashboard, she has honed her skills in data processing, data analysis, UI design, and front-end website development. Her specializations are in software and artificial intelligence, particularly deep learning and computer vision which she aims to pursue further after graduation. Through her contributions to the dashboard website, she has gained practical experience applying her academic knowledge to a valuable real-world project."
+    },
+    {
+      "name": "Mahiliny Santhirakumar",
+      "subtitle": "",
+      "imageUrl": "/people/Mahiliny_Santhirakumar.jpg",
+      "content": "Mahiliny is currently in her final year as a Computer Engineering student at the University of Toronto. Within her degree, she specializes in the areas of computer software and hardware, while also pursuing a minor in Engineering Business and a certificate in Artificial Intelligence. Working on the FKNM dashboard has allowed her to delve deeper into dashboard design, broadening her skillset within software design."
+    }
+  ]
+}

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import styles from "./page.module.css";
 import Link from "next/link";
 import React from "react";
@@ -10,6 +11,7 @@ type PropType = {
   onClick: () => void;
   disabled?: boolean;
   className?: string;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   children?: any;
 };
 

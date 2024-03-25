@@ -1,3 +1,5 @@
+/* eslint-disable react/react-in-jsx-scope */
+/* eslint-disable react/jsx-key */
 "use client";
 // This directive is required due to a bug with NextUI Accordion
 // See: https://github.com/nextui-org/nextui/issues/1403
@@ -5,7 +7,7 @@
 import styles from "./page.module.css";
 import { Accordion, AccordionItem } from "@nextui-org/accordion";
 
-let keyOutcomes = [
+const keyOutcomes = [
   "A - Anthropometric",
   "D - Dietary Intake",
   "E - Environment",
@@ -17,7 +19,7 @@ let keyOutcomes = [
   "S - Food Sold",
 ];
 
-let equityIndicators = [
+const equityIndicators = [
   "A - Age",
   "S - Sex",
   "E - Ethnicity",
@@ -27,17 +29,17 @@ let equityIndicators = [
   "SES - Socioeconomic Status",
 ];
 
-let qualityAssessment = ["ROB - Risk of Bias"];
+const qualityAssessment = ["ROB - Risk of Bias"];
 
-let keyOutcomesElementList = keyOutcomes.map((outcome) => {
+const keyOutcomesElementList = keyOutcomes.map((outcome) => {
   return <p data-cy="key_outcomes_item">{outcome}</p>;
 });
 
-let equityIndicatorsElementList = equityIndicators.map((indicator) => {
+const equityIndicatorsElementList = equityIndicators.map((indicator) => {
   return <p data-cy="indicator_item">{indicator}</p>;
 });
 
-let qualityAssessmentElementList = qualityAssessment.map((assessment) => {
+const qualityAssessmentElementList = qualityAssessment.map((assessment) => {
   return <p data-cy="assessment_item">{assessment}</p>;
 });
 
@@ -45,9 +47,17 @@ export default function CurrentPrograms() {
   return (
     <main className={styles.main}>
       <div id={styles.aboutText}>
-        <p>This systematic review aimed to synthesize and appraise literature on Canadian school food and nutrition interventions, policies and programs and their effects on diets and nutritional status.Overall, the literature remains largely heterogenous and primarily focused on nutrition education programs which use subjective assessments to infer changes in nutrition.</p>
+        <p>
+          This systematic review aimed to synthesize and appraise literature on
+          Canadian school food and nutrition interventions, policies and
+          programs and their effects on diets and nutritional status.Overall,
+          the literature remains largely heterogenous and primarily focused on
+          nutrition education programs which use subjective assessments to infer
+          changes in nutrition.
+        </p>
       </div>
       <div id={styles.helperText}>
+        Hover over the map to see more information.
       </div>
       <div data-cy="legend" id={styles.foldableLegend}>
         <p id={styles.legendTitle}>Legend</p>
@@ -75,14 +85,15 @@ export default function CurrentPrograms() {
         <iframe
           data-cy="chart_frame"
           title="Track_3_Map"
-          width="1096"
-          height="680"
+          width="100%"
+          height="100%"
           src="https://app.powerbi.com/view?r=eyJrIjoiZDUxMmU5MmYtZGVlMi00MzZmLTljMjctYjI0MjBjMGQ5OTI2IiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9"
           frameBorder="0"
           allowFullScreen={true}
         ></iframe>
+        <div className={styles.greyRectangle} />
+        {/* grey rectangle */}
       </div>
-      <div className={styles.greyRectangle}></div> {/* grey rectangle */}
     </main>
   );
 }

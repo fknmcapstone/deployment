@@ -1,5 +1,4 @@
 .main {
-  display: grid;
   background-color: var(--background-color);
   width: 100%;
   padding-block-end: 5vh;
@@ -7,12 +6,35 @@
   justify-content: center;
   column-gap: 3rem;
 }
+@media only screen and (min-width: 760px) {
+  .main {
+    display: grid ;
 
+  }
+}
+@media only screen and (max-width: 760px) {
+  .main {
+      grid-template-columns: 50rem;
+      column-gap: 10rem;
+      padding-block-end: 3vh;
+
+
+  }
+}
 .title {
   font-size: var(--subtitle-font-size);
   font-weight: bold;
   margin-top: 2vh;
   text-align: center;
+  color: #082454;
+}
+@media only screen and (max-width: 600px) {
+  .title {
+      display: grid ;
+      font-size: 20px;
+      font-weight: 800;
+
+  }
 }
 
 .horizontalInfoBox {
@@ -22,10 +44,45 @@
   width: 60%;
   display: grid;
   grid-template-rows: 4rem 1fr;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr ;
   color: var(--light-text-color);
   padding: 2rem;
   border-radius: var(--blurb-border-radius);
+}
+
+@media only screen and (max-width: 760px) {
+  .horizontalInfoBox {
+    margin-block-start: 3rem;
+    grid-template-columns: 1fr ;
+    height: auto;
+    width: 100%;
+    row-gap: 2rem;
+    justify-content: center;
+    grid-auto-rows: max-content;
+    border-radius: var(--blurb-border-radius);
+    text-align: center;
+  }
+}
+
+
+
+.infoBox_rightAlign{
+  justify-self: end;
+}
+
+@media only screen and (max-width: 760px) {
+  .infoBox_rightAlign {
+    justify-self: center;
+  }
+}
+.infoBox_leftAlign {
+  justify-self: start;
+}
+
+@media only screen and (max-width: 760px) {
+  .infoBox_leftAlign {
+    justify-self: center;
+  }
 }
 
 .leafImg {
@@ -34,6 +91,11 @@
   right: 0;
   z-index: 1;
   transform: translate(100%, -50%);
+}
+@media only screen and (max-width: 760px) {
+  .leafImg {
+    display: none;
+  }
 }
 
 .schoolImg {
@@ -44,12 +106,24 @@
   transform: translate(-90%, 20%);
 }
 
+@media only screen and (max-width: 760px) {
+  .schoolImg {
+    display: none;
+  }
+}
+
 .mapImg {
   position: absolute;
   top: 0;
   right: 0;
   z-index: 1;
   transform: translate(95%, -25%);
+}
+
+@media only screen and (max-width: 760px) {
+  .mapImg {
+    display: none;
+  }
 }
 
 .lunchImg {
@@ -60,12 +134,24 @@
   transform: translate(5%, 80%);
 }
 
+@media only screen and (max-width: 760px) {
+  .lunchImg {
+    display: none;
+  }
+}
+
 .maskImg {
   position: absolute;
   bottom: 0;
   right: 0;
   z-index: 1;
   transform: translate(50%, 90%);
+}
+@media only screen and (max-width: 760px) {
+  .maskImg {
+    padding-right: 5rem;
+    right: 2rem;
+  }
 }
 
 .leafImg {
@@ -76,9 +162,25 @@
   width: 80%;
 }
 
+@media only screen and (max-width: 760px) {
+  .impactCOVID19Box {
+    width: 100%;
+  }
+}
 .spanBothColumns {
   grid-column: span 2;
 }
+
+.spanBothColumns_box {
+  grid-column: span 2;
+}
+@media only screen and (max-width: 760px) {
+  .spanBothColumns_box {
+    grid-column: span 1;    
+  }
+}
+
+
 .backgroundBlue {
   background-color: var(--covid-blue);
 }
@@ -103,6 +205,21 @@
   justify-content: center;
   row-gap: 2rem;
   grid-auto-rows: max-content;
+  
+}
+
+@media only screen and (max-width: 760px) {
+  .verticalInfoBox {
+    grid-template-columns: 1fr ;
+    height: max-content;
+    width: 100%;
+    padding: 2rem;
+    color: var(--light-text-color);
+    margin-block-start: 3rem;
+    border-radius: var(--blurb-border-radius);
+    text-align: center;
+
+  }
 }
 
 .rightAlign {
@@ -132,6 +249,13 @@
   place-self: center;
 }
 
+@media only screen and (max-width: 760px) {
+  .infoText {
+    width: 20rem;
+  }
+}
+
 .verticalInfoWidth {
   width: 20rem;
 }
+

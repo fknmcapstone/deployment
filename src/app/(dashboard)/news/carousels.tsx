@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-key */
 import styles from "./page.module.css";
 import React from "react";
 import useEmblaCarousel from "embla-carousel-react";
@@ -54,7 +55,7 @@ export const RecentNewsCarousel = () => {
     emblaApi.on("select", onSelect);
   }, [emblaApi, onInit, onSelect]);
 
-  let articles = Object.values(data.recent_articles).map((article) => {
+  const articles = Object.values(data.recent_articles).map((article) => {
     return [
       <RecentArticle
         title={article.title}
@@ -135,7 +136,7 @@ export const AllNewsCarousel = () => {
     emblaApi.on("select", onSelect);
   }, [emblaApi, onInit, onSelect]);
 
-  let articles = Object.values(data.all_articles).map((article) => {
+  const articles = Object.values(data.all_articles).map((article) => {
     return [
       <Article
         title={article.title}
@@ -148,7 +149,7 @@ export const AllNewsCarousel = () => {
   });
 
   // TODO: Have this number per page change based on screen size
-  let carouselSlides = [];
+  const carouselSlides = [];
   const articlesPerPage = 6;
   for (let i = 0; i < articles.length; i += articlesPerPage) {
     const articlesInPage = articles.slice(i, i + articlesPerPage);

@@ -1,18 +1,18 @@
 /* eslint-disable react/react-in-jsx-scope */
 import styles from "./page.module.css";
 import Link from "next/link";
-import ToTopButton from "./reveal";
+import ToTopButton from "../../common_elements";
 
 import chartData from "./charts.json";
 import { JSX } from "react";
 
 let NUM_CHARTS = 0;
-for (var category of chartData) {
+for (const category of chartData) {
   NUM_CHARTS += category.charts.length;
 }
 
 function shortcutMenuList() {
-  let shortcuts: JSX.Element[] = [];
+  const shortcuts: JSX.Element[] = [];
 
   chartData.forEach((categoryData) => {
     const { category, charts } = categoryData;
@@ -33,7 +33,12 @@ function shortcutMenuList() {
 
     charts.forEach((chart) => {
       shortcuts.push(
-        <Link key={chart.name} href={`#${category}${chart.name}`}>
+        <Link
+          key={chart.name.replace(/ /g, "_").replace(/[^a-zA-Z ]/g, "")}
+          href={`#${category.replace(/ /g, "_")}${chart.name
+            .replace(/ /g, "_")
+            .replace(/[^a-zA-Z ]/g, "")}`}
+        >
           {chart.name}
         </Link>
       );
@@ -48,7 +53,7 @@ function shortcutMenuList() {
 }
 
 function chartList() {
-  let charts: JSX.Element[] = [];
+  const charts: JSX.Element[] = [];
 
   chartData.forEach((categoryData) => {
     const { category, charts: categoryCharts } = categoryData;
@@ -71,8 +76,12 @@ function chartList() {
     categoryCharts.forEach((chart) => {
       charts.push(
         <div
-          key={`${category}${chart.name}`}
-          data-cy={`${category}${chart.name}`}
+          id={`${category.replace(/ /g, "_")}${chart.name
+            .replace(/ /g, "_")
+            .replace(/[^a-zA-Z ]/g, "")}`}
+          data-cy={`${category.replace(/ /g, "_")}${chart.name
+            .replace(/ /g, "_")
+            .replace(/[^a-zA-Z ]/g, "")}`}
           className={styles.chartArea}
         >
           <div className={styles.tooltipContainer}>
@@ -113,6 +122,9 @@ export default function IntakeVisuals() {
           {shortcutMenuList()}
         </div>
       </h1>
+      <div data-cy="mobile_shortcut_menu" className={styles.mobileShortcutMenu}>
+        {shortcutMenuList()}
+      </div>
 
       <div className={styles.chartColumn}>{chartList()}</div>
     </main>

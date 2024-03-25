@@ -1,3 +1,4 @@
+/* eslint-disable react/react-in-jsx-scope */
 import Image from "next/image";
 import styles from "./page.module.css";
 
@@ -14,7 +15,7 @@ export default function COVID19Impacts() {
         className={[
           styles.horizontalInfoBox,
           styles.backgroundBlue,
-          styles.rightAlign,
+          styles.infoBox_rightAlign,
           styles.spanBothColumns,
         ].join(" ")}
       >
@@ -29,8 +30,8 @@ export default function COVID19Impacts() {
           data-cy="header1"
           className={[
             styles.infoHeader,
-            styles.rightAlign,
-            styles.spanBothColumns,
+            styles.infoBox_rightAlign,
+            styles.spanBothColumns_box,
           ].join(" ")}
         >
           What is a School Food Program?
@@ -48,7 +49,7 @@ export default function COVID19Impacts() {
         className={[
           styles.horizontalInfoBox,
           styles.backgroundGreen,
-          styles.leftAlign,
+          styles.infoBox_leftAlign,
           styles.spanBothColumns,
         ].join(" ")}
       >
@@ -77,8 +78,8 @@ export default function COVID19Impacts() {
           data-cy="header2"
           className={[
             styles.infoHeader,
-            styles.leftAlign,
-            styles.spanBothColumns,
+            styles.infoBox_leftAlign,
+            styles.spanBothColumns_box,
           ].join(" ")}
         >
           Canadian School Food Programs
@@ -105,7 +106,7 @@ export default function COVID19Impacts() {
           className={[
             styles.infoHeader,
             styles.centerAlign,
-            styles.spanBothColumns,
+            styles.spanBothColumns_box,
           ].join(" ")}
         >
           The Impact of COVID-19

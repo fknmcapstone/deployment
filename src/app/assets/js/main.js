@@ -1,3 +1,6 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable quotes */
+/* eslint-disable no-undef */
 /*
 	Phantom by HTML5 UP
 	html5up.net | @ajlkn

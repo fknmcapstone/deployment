@@ -1,6 +1,7 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable react/react-in-jsx-scope */
 "use client";
 
-import { outfit } from "./fonts";
 import "./globals.css";
 import Image from "next/image";
 import styles from "./(landing_page)/page.module.css";
@@ -9,6 +10,8 @@ import { Providers } from "./providers";
 import Navbar from "./(landing_page)/navbar";
 import { useEffect, useState } from "react";
 import Sidebar from "./(landing_page)/sidebar";
+import localFont from "next/font/local";
+const TradeGothic = localFont({ src: "./TradeGothic.woff2" });
 
 export default function RootLayout({
   children,
@@ -48,68 +51,50 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="en" className={outfit.className}>
+    <html lang="en" className={TradeGothic.className}>
       <body>
         <Providers>
           <section>
             {/* Include shared UI here e.g. a header or sidebar */}
             <nav>
-              <div
-                data-cy="header"
-                className={styles.header}
-                style={{ padding: width < 1024 ? "0.5rem" : "2rem" }}
-              >
+              <div data-cy="header" className={styles.header}>
                 <Link href="/">
-                  <div
-                    data-cy="header_logo"
-                    style={{ paddingRight: width < 1024 ? "0.8rem" : "2rem" }}
-                  >
-                    <Image
+                  <div data-cy="header_logo">
+                    <img
                       src="/fknm_logo.png"
                       alt="FKNM Logo"
-                      width={width < 1024 ? 50 : 70}
-                      height={width < 1024 ? 50 : 70}
-                      priority
+                      className={styles.headerLogo}
                     />
                   </div>
                 </Link>
                 <Link data-cy="header_title" href="/">
-                  {width < 1024 ? (
-                    <p style={{ fontSize: 1 + "rem" }}>
-                      Feeding Kids,
-                      <br />
-                      Nourishing Minds
-                    </p>
-                  ) : (
-                    <p style={{ fontSize: 2 + "rem" }}>
-                      Feeding Kids, Nourishing Minds
-                    </p>
-                  )}
+                  <p>
+                    Feeding Kids,
+                    <br className={styles.headerBreak} />
+                    Nourishing Minds
+                  </p>
                 </Link>
-                {width < 1024 ? (
-                  <div className={styles.menuButtonContainer}>
-                    <div className={styles.menuButton} onClick={toggle}>
-                      {/* Menu icon */}
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="40"
-                        height="40"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          fill="#fff"
-                          d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"
-                        />
-                      </svg>
-                    </div>
+
+                <div className={styles.menuButtonContainer}>
+                  <div className={styles.menuButton} onClick={toggle}>
+                    {/* Menu icon */}
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="40"
+                      height="40"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="#fff"
+                        d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"
+                      />
+                    </svg>
                   </div>
-                ) : (
-                  <div />
-                )}
+                </div>
               </div>
+              <Navbar />
+              <Sidebar isOpen={isOpen} toggle={toggle} />
             </nav>
-            <Navbar width={width} />
-            {width < 1024 ? <Sidebar isOpen={isOpen} toggle={toggle} /> : null}
 
             {children}
           </section>

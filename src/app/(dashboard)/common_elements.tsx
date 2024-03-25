@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import styles from "./page.module.css";
+import styles from "./common_elements.module.css";
 
 const ToTopButton = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -27,9 +27,11 @@ const ToTopButton = () => {
 
   return (
     <button
+      className={styles.toTopButton}
       data-cy="return_to_top_button"
-      className={styles.returnToTopButton}
-      style={{ display: isVisible ? "block" : "none" }}
+      style={{
+        display: isVisible ? "block" : "none",
+      }}
       onClick={scrollToTop}
     >
       <svg viewBox="-8 -8 40 40" fill="none">
@@ -38,7 +40,7 @@ const ToTopButton = () => {
           fill="#626262"
           stroke="#626262"
           strokeWidth="1"
-          stroke-linejoin="round"
+          strokeLinejoin="round"
         />
       </svg>
     </button>
