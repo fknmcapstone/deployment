@@ -84,10 +84,10 @@ export default function CurrentPrograms() {
       <div id={styles.map}>
         <iframe
           data-cy="chart_frame"
-          title="Track_3_Map"
+          title="School Food Programs"
           width="100%"
           height="100%"
-          src="https://app.powerbi.com/view?r=eyJrIjoiZDUxMmU5MmYtZGVlMi00MzZmLTljMjctYjI0MjBjMGQ5OTI2IiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9"
+          src="https://app.powerbi.com/view?r=eyJrIjoiYWI1NzhmYzYtYTQwZS00MjIwLWEyNDgtZTFiNDkzZmIzNTNhIiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9"
           frameBorder="0"
           allowFullScreen={true}
         ></iframe>
