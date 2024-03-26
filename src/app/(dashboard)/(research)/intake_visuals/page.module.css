@@ -7,7 +7,7 @@
   color: var(--dark-text-color);
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 892px) {
   .main {
     padding-top: 2rem;
   }
@@ -17,13 +17,13 @@
   width: max-content;
   position: absolute;
   top: 0;
-  right: 50%;
+  right: 65lvw;
   pointer-events: none;
 }
 
 .shortcutMenu {
   pointer-events: all;
-  transform: translateX(-80%);
+  /* transform: translateX(-80%); */
   padding: 1rem 2rem 2rem 1rem;
   margin-inline-end: 3rem;
   margin-block-start: 11rem;
@@ -46,6 +46,12 @@
   overflow-wrap: break-word;
 }
 
+@media only screen and (max-width: 1020px) {
+  .shortcutMenu {
+    width: 27lvw;
+  }
+}
+
 .shortcutMenuSeparator {
   background-color: var(--primary-color);
   margin-block-start: 0.5rem;
@@ -66,7 +72,7 @@
   display: none;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 892px) {
   .fixedMenuContainer,
   .shortcutMenu {
     display: none;
@@ -113,13 +119,15 @@
   border-width: 1px;
   border-color: var(--primary-color);
   background-color: white;
-  height: 30rem;
-  width: 50rem;
+  max-width: 55rem;
+  max-height: 35rem;
+  height: 35lvw;
+  width: 60lvw;
   justify-self: start;
   position: relative;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 892px) {
   .chartColumn {
     transform: none;
     width: 85%;
@@ -161,7 +169,30 @@
   padding: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   display: none;
-  width: 200px;
+  width: 10lvw;
+  height: fit-content;
+}
+
+@media only screen and (max-width: 1530px) {
+  .tooltip {
+    top: 6lvh;
+    left: none;
+    right: 0;
+    transform: translateX(-80%);
+    width: 30lvw;
+  }
+}
+
+@media only screen and (max-width: 1358px) {
+  .tooltip {
+    transform: translateX(-90%);
+  }
+}
+
+@media only screen and (max-width: 1250px) {
+  .tooltip {
+    transform: translateX(-100%);
+  }
 }
 
 .tooltipContainer:hover .tooltip {
