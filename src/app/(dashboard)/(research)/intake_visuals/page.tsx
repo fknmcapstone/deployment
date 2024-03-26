@@ -116,7 +116,7 @@ export default function IntakeVisuals() {
 
       <h1
         className={styles.fixedMenuContainer}
-        style={{ height: 36 * NUM_CHARTS + "rem" }}
+        style={{ height: 33.6 * NUM_CHARTS + "lvw" }}
       >
         <div data-cy="shortcut_menu" className={styles.shortcutMenu}>
           {shortcutMenuList()}

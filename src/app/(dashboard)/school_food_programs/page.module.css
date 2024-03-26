@@ -2,28 +2,34 @@
   display: grid;
   width: 100%;
   background-color: var(--background-color);
-  grid-template-columns: 3fr 1fr 9fr;
-  grid-template-rows: max-content 5rem 1fr;
+  grid-template-columns: 1fr;
+  grid-template-rows: max-content min-content min-content;
   color: var(--dark-text-color);
+  min-height: 100lvh;
 }
 
 #map {
   position: relative;
-  grid-row: span 3;
-  margin-block: 2rem;
+  justify-self: center;
+  margin-block: 1rem;
   margin-inline: 3rem;
-  grid-column: 3;
-  height: 41.5rem;
-  width: 68.5rem;
+  grid-row: 3;
+  grid-column: 1;
+  height: 35lvw;
+  width: 60lvw;
   object-fit: contain;
 }
 
 #aboutText {
   grid-row: 1;
-  grid-column: 1 / span 2;
-  text-align: end;
+  grid-column: 1 / span 1;
+  text-align: center;
+  max-width: 60lvw;
+  justify-self: center;
   margin-top: 2rem;
   margin-left: 3rem;
+  margin: 3rem;
+  margin-bottom: 1rem;
 }
 
 #helperText {
@@ -31,12 +37,11 @@
   grid-column: 1;
   text-align: center;
   align-self: end;
-  margin-bottom: 0.5rem;
 }
 
 #foldableLegend {
   justify-self: center;
-  grid-row: 3;
+  grid-row: 4;
   grid-column: 1;
   padding: 1rem 2rem 2rem 2rem;
   margin-inline-start: 1rem;
@@ -73,42 +78,30 @@
 
 .greyRectangle {
   position: absolute;
-  top: 0;
+  bottom: 0;
   left: 0;
   width: 100%;
   z-index: 4;
   height: 2.5rem;
   background-color: var(--background-color);
-  transform: translateY(40rem);
 }
 
 @media screen and (max-width: 600px) {
-  .main{
-    grid-template-columns: 1fr;
-    grid-template-rows: max-content min-content min-content;
+  .greyRectangle {
+    display: none;
   }
-  #aboutText {
-    grid-row: 1;
-    grid-column: 1 / span 1;
-    text-align: center;
-    margin-top: 2rem;
-    margin-left: 3rem;
-    margin: 3rem;
-    margin-bottom: 1rem;
-  }
-  
-  #map {
-    grid-row: 3;
-    grid-column: 1;
-    height: 17.5rem;
-    width: 32rem;
-  }
-  #foldableLegend{
-    grid-row: 4;
-  }
-  
-.greyRectangle{
-  display: none;
 }
 
+@media screen and (max-width: 1280px) {
+  #map {
+    height: 45lvw;
+    width: 70lvw;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #map {
+    height: 55lvw;
+    width: 85lvw;
+  }
 }
