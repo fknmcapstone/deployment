@@ -10,17 +10,17 @@
         {
           "name": "Parents Enrolling Children in SFPs",
           "url": "https://app.powerbi.com/view?r=eyJrIjoiZmE3NmNlYWUtZjkyYy00OTRjLThmYjgtZDZkZGVmYzlkNGVjIiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
-          "blurb": "This chart highlights parental enrollment of their children in School Food Programs."
+          "blurb": "This chart highlights parental enrollment of their children in School Food Programs categorized by the childrens' age."
         },
         {
           "name": "Parents Declining Enrollment in SFPs",
           "url": "https://app.powerbi.com/view?r=eyJrIjoiNDg2M2Y5NDAtZjM3YS00ZTZiLWFkMTYtZmI0YmI1MzlkMDI5IiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
-          "blurb": "This chart highlights parental declining of enrollment of their children in School Food Programs."
+          "blurb": "This chart highlights parental refusal of enrollment of their children in School Food Programs categorized by the childrens' age."
         },
         {
           "name": "School Food Program Timings",
           "url": "https://app.powerbi.com/view?r=eyJrIjoiZDg3NmMyODAtOGQ2Mi00OTQwLTg1YTMtNTE4NzY3YTllYjk4IiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
-          "blurb": "This chart highlights the various times that School Food Programs are offered."
+          "blurb": "This chart highlights the various times throughout the school day that School Food Programs are offered."
         },
         {
           "name": "% of Schools Implementing SFPs",
@@ -40,7 +40,7 @@
         {
           "name": "Parental SFP Participation Preference",
           "url": "https://app.powerbi.com/view?r=eyJrIjoiNjA5MDc4ZjUtZjgwMi00OWE1LWE2MDItMGVhYWU0NjNiNGNmIiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
-          "blurb": "This chart highlights parental preference for their child(ren)'s participation in School Food Programs."
+          "blurb": "This chart highlights parents' preference for their child(ren) to participate in School Food Programs."
         },
         {
           "name": "Parental Comfort with SFP Food",
@@ -50,7 +50,7 @@
         {
           "name": "Time & Effort for School Meal Prep",
           "url": "https://app.powerbi.com/view?r=eyJrIjoiMGRlNjZjMDUtMDM3Ni00MTc2LWEwYzUtYWM1YzE1OTZhYjBiIiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
-          "blurb": "This chart highlights how the required extensive time and labour from parents in preparing school meals for their child(ren)."
+          "blurb": "This chart highlights the intensity of the required time and labour from parents in preparing school meals for their child(ren)."
         }
       ]
     },
@@ -64,12 +64,12 @@
         },
         {
           "name": "Preferred SFP Funding Models",
-          "url": "https://app.powerbi.com/view?r=eyJrIjoiNmM2YzFlM2MtNjFjNi00MDc2LTljMzAtNDk0ZTM0NjhiNWYwIiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
+          "url": "https://app.powerbi.com/view?r=eyJrIjoiNzhjMWVmMDUtZDU4Yi00MTNjLThjYzItYjNkMmQyODE2MmI3IiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
           "blurb": "This chart highlights parents' preferred funding models for School Food Programs."
         },
         {
           "name": "Parental Preference for Offered SFPs",
-          "url":  "https://app.powerbi.com/view?r=eyJrIjoiNzhjMWVmMDUtZDU4Yi00MTNjLThjYzItYjNkMmQyODE2MmI3IiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
+          "url":  "https://app.powerbi.com/view?r=eyJrIjoiZDY0YzExZjQtOGU4ZS00MDMxLTkwMmMtZGFmZGUwOTQ3YWRlIiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
           "blurb": "This chart highlights parents' preference of offered School Food Programs."
         },
         {
@@ -118,24 +118,24 @@
           "blurb": "This chart higlights parents' opinions on having meals be offered for free or at a low cost."
         },
         {
-          "name": "All or most of the children in the school can participate",
-          "url": "",
-          "blurb": "Description for Data Visual 3."
+          "name": "Children's Ability to Participate",
+          "url": "https://app.powerbi.com/view?r=eyJrIjoiN2M4MjJiMDAtODczOS00ZjRjLTlhZjMtMzA5MjUzMzNmNzUxIiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
+          "blurb": "This chart higlights parents' opinions on having all or most children at school able to participate in School Food Programs."
         },
         {
-          "name": "SFP unique to the specific needs ",
-          "url": "",
-          "blurb": "Description for Data Visual 3."
+          "name": "SFPs Unique to Childrens' Needs ",
+          "url": "https://app.powerbi.com/view?r=eyJrIjoiOGMzNGIwMjktMWUzNS00NzQ5LTk4MTktZGVhOTIwY2U1ZWE0IiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
+          "blurb": "This chart higlights parents' opinions on having School Food Programs cater to childrens' specific needs."
         },
         {
           "name": "Customizable Food Selection",
           "url": "https://app.powerbi.com/view?r=eyJrIjoiYjNmMWY2MmEtNDY5NS00MDQ2LWI1OWEtMTNlZThiMGU5NDlhIiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
-          "blurb": "This chart higlights parents' opinions on having the choice of selecting their child(rens)' food types."
+          "blurb": "This chart higlights parents' opinions on having them and their child(ren) choose the type of food served."
         },
         {
           "name": "Food Accomodations & Flexibility",
           "url": "https://app.powerbi.com/view?r=eyJrIjoiNDYyOWJhNzItNWU3Yy00ZTkyLWJkYzEtMjhhNjgzMjkwYjAzIiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
-          "blurb": "This chart higlights parents' opinions on there being accomodations being made for allergies, intolerances, and/or religious dietary practices."
+          "blurb": "This chart higlights parents' opinions on there being accomodations made for childrens' allergies, intolerances, and/or religious dietary practices."
         },
         {
           "name": "Locally Grown & Sustainable Food",
@@ -145,7 +145,7 @@
         {
           "name": "Children Nutrition Education",
           "url": "https://app.powerbi.com/view?r=eyJrIjoiZTc5NmRmZjktMmUzYy00MTkzLTg5N2MtYzU4MzgyMDVmYjIyIiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
-          "blurb": "This chart higlights parents' opinions on shildren learning how food is grown and ends up on their plate."
+          "blurb": "This chart higlights parents' opinions on children learning how food is grown and ends up on their plate."
         },
         {
           "name": "Children Involvement in Food Prep",
@@ -165,7 +165,7 @@
         {
           "name": "National Program Evaluation",
           "url": "https://app.powerbi.com/view?r=eyJrIjoiZmZhNzFhYTUtNjFmMi00ZjMzLTg2YWItYTJlYzc1NTI0MzM3IiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
-          "blurb": "This chart higlights parents' opinions on there being consistent Canada-wide program evaluation."
+          "blurb": "This chart higlights parents' opinions on there being consistent Canada-wide School Food Program evaluation."
         },
         {
           "name": "Feedback on School Food Programs",

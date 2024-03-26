@@ -22,11 +22,12 @@
   }
 }
 .title {
+  grid-row: 1;
   font-size: var(--subtitle-font-size);
   font-weight: bold;
-  margin-top: 2vh;
   text-align: center;
-  color: #082454;
+  margin-top: 2vh;
+  color: #000000;
 }
 @media only screen and (max-width: 600px) {
   .title {

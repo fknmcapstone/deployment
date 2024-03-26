@@ -177,7 +177,6 @@
 }
 
 /* CSS for Landing Page */
-
 .landingPageContent {
   display: grid;
   grid-template-rows: 85vh min-content min-content min-content min-content;
@@ -467,7 +466,7 @@
 }
 
 .sectionTitle0 {
-  padding: 1rem;
+  padding: 0rem;
   font-weight: 500;
   display: flex;
   grid-column: span 1;
@@ -475,7 +474,7 @@
   font-weight: bold;
 }
 .sectionTitle {
-  padding: 1rem;
+  padding: 0rem;
   font-weight: 500;
   grid-column: span 2;
   align-items: center;
