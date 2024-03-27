@@ -19,8 +19,15 @@
 
 .doughnutChart {
   justify-self: center;
-  height: 200px;
-  width: auto;
+  width: 900px;
+  height: 780px;
+}
+@media only screen and (max-width: 768px) {
+  .doughnutChart {
+    justify-self: start;
+    width: 880px;
+    height: 750px;
+  }
 }
 
 .card1Title {
@@ -74,7 +81,7 @@
 @media only screen and (max-width: 600px) {
   .card1Title {
     grid-row: 200;
-    font-size: 17px;
+    font-size: 16px;
     font-weight: bold;
     margin-top: 1vh;
     margin-bottom: 0vh;
@@ -82,7 +89,7 @@
   }
   .card2Title {
     grid-row: 350;
-    font-size: 17px;
+    font-size: 16px;
     font-weight: bold;
     margin-top: 1vh;
     margin-bottom: 0vh;
@@ -90,7 +97,7 @@
   }
   .card3Title {
     grid-row: 450;
-    font-size: 17px;
+    font-size: 16px;
     font-weight: bold;
     margin-top: 1vh;
     margin-bottom: 0vh;
@@ -98,7 +105,7 @@
   }
   .card4Title {
     grid-row: 550;
-    font-size: 17px;
+    font-size: 16px;
     font-weight: bold;
     margin-top: 1vh;
     margin-bottom: 0vh;
@@ -106,7 +113,7 @@
   }
   .card5Title {
     grid-row: 650;
-    font-size: 17px;
+    font-size: 16px;
     font-weight: bold;
     margin-top: 1vh;
     margin-bottom: 0vh;
@@ -114,7 +121,7 @@
   }
   .card6Title {
     grid-row: 750;
-    font-size: 17px;
+    font-size: 16px;
     font-weight: bold;
     margin-top: 1vh;
     margin-bottom: 0vh;

@@ -333,7 +333,7 @@ const options: any = {
 };
 if (isWindowDefined() && window.innerWidth < 768) {
   options.layout.padding.right = 550;
-  options.plugins.datalabels.font.size = 9;
+  options.plugins.datalabels.font.size = 8.5;
   options.plugins.datalabels.font.weight = "normal";
   options.aspectRatio = 1.8;
 }
@@ -375,10 +375,7 @@ export default function QualitativeData() {
   return (
     <main className={styles.main}>
       <ToTopButton />
-      <div
-        style={{ width: "900px", height: "780px" }}
-        className={styles.doughnutChart}
-      >
+      <div className={styles.doughnutChart}>
         <Doughnut data={doughnutData} options={options} />
       </div>
       <p id="food-literacy" className={styles.card1Title}>
