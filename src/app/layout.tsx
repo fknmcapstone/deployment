@@ -3,12 +3,11 @@
 "use client";
 
 import "./globals.css";
-import Image from "next/image";
 import styles from "./(landing_page)/page.module.css";
 import Link from "next/link";
 import { Providers } from "./providers";
 import Navbar from "./(landing_page)/navbar";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Sidebar from "./(landing_page)/sidebar";
 import localFont from "next/font/local";
 const TradeGothic = localFont({ src: "./TradeGothic.woff2" });
@@ -18,40 +17,20 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const [width, setWidth] = useState(0);
-
-  const updateWidth = () => {
-    const newWidth = window.innerWidth;
-    setWidth(newWidth);
-  };
-
-  useEffect(() => {
-    window.addEventListener("resize", updateWidth);
-    updateWidth();
-  }, []);
-
-  // change between the logo and the button when the user scrolls
-  const [showButton, setShowButton] = useState(false);
-
-  const changeNavButton = () => {
-    if (window.scrollY >= 400 && window.innerWidth < 768) {
-      setShowButton(true);
-    } else {
-      setShowButton(false);
-    }
-  };
-
-  useEffect(() => {
-    window.addEventListener("scroll", changeNavButton);
-  }, []);
-
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => {
     setIsOpen(!isOpen);
   };
 
   return (
-    <html lang="en" className={TradeGothic.className}>
+    <html
+      lang="en"
+      className={TradeGothic.className}
+      style={{
+        overflow: isOpen ? "hidden" : "scroll",
+        height: isOpen ? "100%" : "none",
+      }}
+    >
       <body>
         <Providers>
           <section>
