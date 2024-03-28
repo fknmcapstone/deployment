@@ -1,21 +1,12 @@
   [
     {
-      "category": "Category 1",
+      "category": "SFPs General Information",
+      "subtitle": "The following charts and graphs offer a multifaceted exploration of the landscape of school food programs to better understand their implications for student nutrition and well-being. These visuals provide a comprehensive view of how schools approach the vital task of nourishing their students, and the potential impacts of these programs on children's dietary habits, academic performance, and overall health.",
       "charts": [
         {
           "name": "Offered School Food Programs",
           "url": "https://app.powerbi.com/view?r=eyJrIjoiZjg4YjNkZDgtYmM4MS00NDJkLWJkYWEtZmI4ODA4MDVhMzk3IiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
           "blurb": "This chart highlights the distribution of the School Food Programs offered in the GTA."
-        },
-        {
-          "name": "Parents Enrolling Children in SFPs",
-          "url": "https://app.powerbi.com/view?r=eyJrIjoiZmE3NmNlYWUtZjkyYy00OTRjLThmYjgtZDZkZGVmYzlkNGVjIiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
-          "blurb": "This chart highlights parental enrollment of their children in School Food Programs categorized by the childrens' age."
-        },
-        {
-          "name": "Parents Declining Enrollment in SFPs",
-          "url": "https://app.powerbi.com/view?r=eyJrIjoiNDg2M2Y5NDAtZjM3YS00ZTZiLWFkMTYtZmI0YmI1MzlkMDI5IiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
-          "blurb": "This chart highlights parental refusal of enrollment of their children in School Food Programs categorized by the childrens' age."
         },
         {
           "name": "School Food Program Timings",
@@ -31,56 +22,99 @@
           "name": "Frequency of SFPs Offered Per Week",
           "url": "https://app.powerbi.com/view?r=eyJrIjoiZjc2ODk0YmMtNDBmYS00YTgyLTk2ZGUtYmMzYWQ1NGZkMTkzIiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
           "blurb": "This chart highlights the frequency of School Food Programs offered in a week."
+        },
+        {
+          "name": "Number of SFPs Offered per School",
+          "url": "https://app.powerbi.com/view?r=eyJrIjoiOGNhYWRkZWItZjU5Mi00ZGE1LWI5NmEtMzcyZTUxODk1NzA4IiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
+          "blurb": "This chart highlights the number of School Food Programs offered at each school in the GTA."
+        },
+        {
+          "name": "Types of School Nutrition Education",
+          "url": "https://app.powerbi.com/view?r=eyJrIjoiY2I2Mzk0NGQtYWY0Yy00NTdiLThlMjYtMjkxOTE2MDE0NjBlIiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
+          "blurb": "This chart higlights the various types of nutrition education offered in GTA schools."
+        },
+        {
+          "name": "Most Common SFP Payment Models",
+          "url": "https://app.powerbi.com/view?r=eyJrIjoiNmZiOTMwODUtYzdjYS00NDZlLWFlNTMtZWIyYTU1M2UxOGU4IiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
+          "blurb": "This chart highlights the most common School Food Program payment models in the GTA."
+        },
+        {
+          "name": "Most Common SFP Funding Models",
+          "url": "https://app.powerbi.com/view?r=eyJrIjoiOGU2ODQzZGMtNWI3YS00ZjM4LWFkNTQtMmQwYTUzNGNkZGYxIiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
+          "blurb": "This chart highlights the most common School Food Program funding models in the GTA."
         }
       ]
     },
     {
-      "category": "Category 2.1",
+      "category": "SFPs Food Breakdown",
+      "subtitle": "The following charts and graphs shed light on various aspects of children's nutrition. These visuals delve into the origins of GTA children's meals, serving methods, factors determining food choices, and the top energy-rich food categories, all of which influence policies and initiatives working to improve children's health and well-being.",
       "charts": [
         {
-          "name": "Parental SFP Participation Preference",
+          "name": "Origins of GTA Childrens' Meals",
+          "url": "https://app.powerbi.com/view?r=eyJrIjoiNzdjYzgzYjctYmE1OS00ZTI5LThmZjktODZmYWI1NGJkNThmIiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
+          "blurb": "This chart highlights and analyzes the various origins of meals of children in the GTA."
+        },
+        {
+          "name": "Serving Methods Across Meal Types",
+          "url": "https://app.powerbi.com/view?r=eyJrIjoiOGY2MDM3ODYtNmVlMC00MzU1LWIwZTMtZWI5MTNkOGQzNDBjIiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
+          "blurb": "This chart highlights the various serving methods across different meal types."
+        },
+        {
+          "name": "Factors Determining Food Served",
+          "url": "https://app.powerbi.com/view?r=eyJrIjoiYzA1YzY3YTYtZDk5MS00YWNkLWEzZGYtZjg0NzMyYTE2MzU2IiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
+          "blurb": "This chart highlights the various factors that determine and influence the food served in School Food Programs."
+        },
+        {
+          "name": "Top 10 Energy-Rich Food Categories",
+          "url": "https://app.powerbi.com/view?r=eyJrIjoiM2IwMjBiZDMtMjI2OS00YmZiLTk1OTItZTAzZjdiZDk0ZGRiIiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
+          "blurb": "This chart higlights the top 10 food categories for energy at school."
+        }
+      ]
+    },
+    {
+      "category": "Parents' Preferences",
+      "subtitle": "The following charts and graphs illuminate crucial insights into parental perspectives regarding school food programs and their preferences for children’s participation, enrolment decisions, types of SFPs offered, timings, funding models, and affordability. These key insights help inform policymakers and educators about parental priorities when developing effective school food programs.",
+      "charts": [
+        {
+          "name": "For Children to Participate in SFPs",
           "url": "https://app.powerbi.com/view?r=eyJrIjoiNjA5MDc4ZjUtZjgwMi00OWE1LWE2MDItMGVhYWU0NjNiNGNmIiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
           "blurb": "This chart highlights parents' preference for their child(ren) to participate in School Food Programs."
         },
         {
-          "name": "Parental Comfort with SFP Food",
-          "url": "https://app.powerbi.com/view?r=eyJrIjoiOTZhM2QzMmEtYzAwYi00ZTRlLTgyYzMtYWI4MTBkMDVkMDgwIiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
-          "blurb": "This chart highlights how comfortable parents are with their child(ren) eating breakfast/lunch/snacks from a School Food Program at school."
+          "name": "For Enrolling Children in SFPs",
+          "url": "https://app.powerbi.com/view?r=eyJrIjoiZmE3NmNlYWUtZjkyYy00OTRjLThmYjgtZDZkZGVmYzlkNGVjIiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
+          "blurb": "This chart highlights parental enrollment of their children in School Food Programs categorized by the childrens' age."
         },
         {
-          "name": "Time & Effort for School Meal Prep",
-          "url": "https://app.powerbi.com/view?r=eyJrIjoiMGRlNjZjMDUtMDM3Ni00MTc2LWEwYzUtYWM1YzE1OTZhYjBiIiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
-          "blurb": "This chart highlights the intensity of the required time and labour from parents in preparing school meals for their child(ren)."
-        }
-      ]
-    },
-    {
-      "category": "Category 2.2",
-      "charts": [
-        {
-          "name": "Max Affordable Daily Meal Cost",
-          "url": "https://app.powerbi.com/view?r=eyJrIjoiNmM2YzFlM2MtNjFjNi00MDc2LTljMzAtNDk0ZTM0NjhiNWYwIiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
-          "blurb": "This chart highlights the maximum cost that caregivers can afford for Lunch/Breakfast Programs (per day)."
+          "name": "For Not Enrolling Children in SFPs",
+          "url": "https://app.powerbi.com/view?r=eyJrIjoiNDg2M2Y5NDAtZjM3YS00ZTZiLWFkMTYtZmI0YmI1MzlkMDI5IiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
+          "blurb": "This chart highlights parental refusal of enrollment of their children in School Food Programs categorized by the childrens' age."
         },
         {
-          "name": "Preferred SFP Funding Models",
-          "url": "https://app.powerbi.com/view?r=eyJrIjoiNzhjMWVmMDUtZDU4Yi00MTNjLThjYzItYjNkMmQyODE2MmI3IiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
-          "blurb": "This chart highlights parents' preferred funding models for School Food Programs."
-        },
-        {
-          "name": "Parental Preference for Offered SFPs",
+          "name": "For Types of SFPs to be Offered",
           "url":  "https://app.powerbi.com/view?r=eyJrIjoiZDY0YzExZjQtOGU4ZS00MDMxLTkwMmMtZGFmZGUwOTQ3YWRlIiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
           "blurb": "This chart highlights parents' preference of offered School Food Programs."
         },
         {
-          "name": "Parental Prefered Timings for SFPs",
+          "name": "For Times that SFPs are Offered",
           "url": "https://app.powerbi.com/view?r=eyJrIjoiMWM3ODA0YzEtOTE3Yi00NTgwLWJiNzEtMjdkNTM5MjA5Zjc3IiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
           "blurb": "This chart highlights parents' preference of the timings of School Food Programs to be offered."
+        },
+        {
+          "name": "For Types of SFP Funding Models",
+          "url": "https://app.powerbi.com/view?r=eyJrIjoiNzhjMWVmMDUtZDU4Yi00MTNjLThjYzItYjNkMmQyODE2MmI3IiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
+          "blurb": "This chart highlights parents' preferred funding models for School Food Programs."
+        },
+        {
+          "name": "For Max Affordable Daily Meal Cost",
+          "url": "https://app.powerbi.com/view?r=eyJrIjoiNmM2YzFlM2MtNjFjNi00MDc2LTljMzAtNDk0ZTM0NjhiNWYwIiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
+          "blurb": "This chart highlights the maximum cost that parents and caregivers can afford to pay for Lunch/Breakfast Programs (per day)."
         }
       ]
     },
     {
-      "category": "Category 2.3",
+      "category": "Parents' Opinions",
+      "subtitle": "The following charts and graphs explore the opinions of parents on various school food program related topics, including cultural and less processed foods, portion sizes, beverage inclusion, meal affordability, customization options, food accommodations, sustainability, nutrition education, and program evaluation. These insights help guide efforts to improve SFPs to better meet children's dietary needs and preferences.",
       "charts": [
         {
           "name": "Menu Aligns with Canada Food Guide",
@@ -171,51 +205,6 @@
           "name": "Feedback on School Food Programs",
           "url": "https://app.powerbi.com/view?r=eyJrIjoiYmFiNjgwZTgtNDMzZC00ZDI5LThhMTAtOTE0Zjk2ZmJkOGZlIiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
           "blurb": "This chart higlights parents' opinions on there being opportunity for caregivers and children to provide regular feedback on the School Food Program."
-        }
-      ]
-    },
-    {
-      "category": "Other",
-      "charts": [
-        {
-          "name": "Origins of GTA Kids' Meals",
-          "url": "https://app.powerbi.com/view?r=eyJrIjoiNzdjYzgzYjctYmE1OS00ZTI5LThmZjktODZmYWI1NGJkNThmIiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
-          "blurb": "This chart highlights and analyzes the various origins of meals of children in the GTA."
-        },
-        {
-          "name": "Serving Methods Across Meal Types",
-          "url": "https://app.powerbi.com/view?r=eyJrIjoiOGY2MDM3ODYtNmVlMC00MzU1LWIwZTMtZWI5MTNkOGQzNDBjIiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
-          "blurb": "This chart highlights the various serving methods across different meal types."
-        },
-        {
-          "name": "Factors Determining Food Served",
-          "url": "https://app.powerbi.com/view?r=eyJrIjoiYzA1YzY3YTYtZDk5MS00YWNkLWEzZGYtZjg0NzMyYTE2MzU2IiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
-          "blurb": "This chart highlights the various factors that determine and influence the food served in School Food Programs."
-        },
-        {
-          "name": "Number of SFPs Offered per School",
-          "url": "https://app.powerbi.com/view?r=eyJrIjoiOGNhYWRkZWItZjU5Mi00ZGE1LWI5NmEtMzcyZTUxODk1NzA4IiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
-          "blurb": "This chart highlights the number of School Food Programs offered at each school in the GTA."
-        },
-        {
-          "name": "Types of Nutrition Education",
-          "url": "https://app.powerbi.com/view?r=eyJrIjoiY2I2Mzk0NGQtYWY0Yy00NTdiLThlMjYtMjkxOTE2MDE0NjBlIiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
-          "blurb": "This chart higlights the various types of nutrition education offered in GTA schools."
-        },
-        {
-          "name": "Most Common SFP Payment Models",
-          "url": "https://app.powerbi.com/view?r=eyJrIjoiNmZiOTMwODUtYzdjYS00NDZlLWFlNTMtZWIyYTU1M2UxOGU4IiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
-          "blurb": "This chart highlights the most common School Food Program payment models in the GTA."
-        },
-        {
-          "name": "Most Common SFP Funding Models",
-          "url": "https://app.powerbi.com/view?r=eyJrIjoiOGU2ODQzZGMtNWI3YS00ZjM4LWFkNTQtMmQwYTUzNGNkZGYxIiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
-          "blurb": "This chart highlights the most common School Food Program funding models in the GTA."
-        },
-        {
-          "name": "Top 10 Energy-Rich Food Categories",
-          "url": "https://app.powerbi.com/view?r=eyJrIjoiM2IwMjBiZDMtMjI2OS00YmZiLTk1OTItZTAzZjdiZDk0ZGRiIiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
-          "blurb": "This chart higlights the top 10 food categories for energy at school."
         }
       ]
     }
