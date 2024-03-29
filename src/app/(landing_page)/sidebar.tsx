@@ -17,9 +17,24 @@ var pageList: Page[] = [
     href: "/school_food_programs/",
   },
   {
-    name: "Intake Visuals",
-    dataAttr: "nav_intake_visuals",
-    href: "/intake_visuals/",
+    name: "SFPs General Information",
+    dataAttr: "nav_sfps_general_information",
+    href: "/intake_visuals/SFPs_general_information/",
+  },
+  {
+    name: "SFPs Food Breakdown",
+    dataAttr: "nav_sfps_food_breakdown",
+    href: "/intake_visuals/SFPs_food_breakdown/",
+  },
+  {
+    name: "Parents' Preferences",
+    dataAttr: "nav_parents_preferences",
+    href: "/intake_visuals/parents_preferences/",
+  },
+  {
+    name: "Parents' Opinions",
+    dataAttr: "nav_parents_opinions",
+    href: "/intake_visuals/parents_opinions/",
   },
   {
     name: "Measurement Tool Assessment",

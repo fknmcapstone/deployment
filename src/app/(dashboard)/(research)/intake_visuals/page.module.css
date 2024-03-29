@@ -13,6 +13,28 @@
   }
 }
 
+.title {
+  font-size: var(--subtitle-font-size);
+}
+
+.subtext {
+  font-size: var(--small-paragraph-font-size);
+  margin-block: 2lvh;
+  width: 50lvw;
+}
+
+@media only screen and (max-width: 1000px) {
+  .subtext {
+    width: 60lvw;
+  }
+}
+
+@media only screen and (max-width: 892px) {
+  .subtext {
+    width: 80lvw;
+  }
+}
+
 .fixedMenuContainer {
   width: max-content;
   position: absolute;
@@ -29,8 +51,8 @@
   margin-block-start: 11rem;
   border-radius: 5px;
   width: 18rem;
-  height: 85vh;
-  max-height: 60rem;
+  height: fit-content;
+  max-height: 85vh;
   display: grid;
   grid-auto-rows: min-content;
   background: var(--background-color);
@@ -59,8 +81,8 @@
   height: 3px;
 }
 
-.spacing {
-  height: 1rem;
+.chartLink {
+  margin-bottom: 0.2lvh;
 }
 
 .shortcutCategoryHeader {
@@ -114,7 +136,7 @@
 }
 
 .chartArea {
-  margin-block-end: 3rem;
+  margin-block-end: 3.2lvw;
   border-style: solid;
   border-width: 1px;
   border-color: var(--primary-color);

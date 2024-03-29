@@ -72,6 +72,10 @@
   }
 }
 
+.marginBlock {
+  padding-block: 0.8rem;
+}
+
 .navigationbar {
   height: fit-content;
   padding-block: 0.7rem;
@@ -102,7 +106,19 @@
   margin-inline: 3vw;
 }
 
-.navBarSubMenu {
+.triangleLeft {
+  position: absolute;
+  left: -1.6rem;
+  top: 0;
+  width: 0;
+  height: 0;
+  border-top: 0.9rem solid transparent;
+  border-bottom: 0.9rem solid transparent;
+  border-right: 1.8rem solid var(--visuals-menu-color);
+}
+
+.navBarSubMenu,
+.intakeVisualsSubMenu {
   text-align: left;
   line-height: 100%;
   display: none;
@@ -113,17 +129,32 @@
   width: 12rem;
   height: fit-content;
   background-color: var(--secondary-color);
-  box-shadow: var(--card-shadow);
+  box-shadow: var(--menu-shadow);
   border-radius: 0px 0px 10px 10px;
-  padding: 1rem;
+  padding: 0 1rem 1rem 1rem;
   white-space: normal;
 }
-.researchNavItem {
+
+.intakeVisualsSubMenu {
+  position: absolute;
+  top: 0;
+  left: 14rem;
+  background-color: var(--visuals-menu-color);
+}
+
+.researchNavItem,
+.intakeVisualsNavItem {
   position: relative;
 }
 
+.intakeVisualsNavItem {
+  padding-block: 0.8rem;
+}
+
 .researchNavItem:hover .navBarSubMenu,
-.navBarSubMenu:hover {
+.navBarSubMenu:hover,
+.intakeVisualsSubMenu:hover,
+.intakeVisualsNavItem:hover .intakeVisualsSubMenu {
   display: block;
   z-index: 1;
 }
@@ -161,7 +192,7 @@
   grid-column: 1;
   background-color: rgb(216, 255, 221);
   width: 0.2rem;
-  height: 75%;
+  height: 85%;
   margin-block-start: 4.5rem;
   margin-inline-start: 3rem;
   justify-self: center;
