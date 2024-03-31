@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 /* eslint-disable react/react-in-jsx-scope */
 import Link from "next/link";
 import styles from "./page.module.css";

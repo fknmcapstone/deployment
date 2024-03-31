@@ -10,7 +10,7 @@ interface Page {
   name: string;
 }
 
-var pageList: Page[] = [
+const pageList: Page[] = [
   {
     name: "School Food Programs",
     dataAttr: "nav_school_food_programs",
@@ -63,7 +63,7 @@ const Sidebar = ({
   isOpen: boolean;
   toggle: () => void;
 }): JSX.Element => {
-  let pageElementsList = [];
+  const pageElementsList = [];
   for (let i = 0; i < pageList.length; i++) {
     pageElementsList.push(
       <Link

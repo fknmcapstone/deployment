@@ -1,3 +1,4 @@
+/* eslint-disable react/react-in-jsx-scope */
 import Link from "next/link";
 import { JSX } from "react";
 import styles from "./page.module.css";
