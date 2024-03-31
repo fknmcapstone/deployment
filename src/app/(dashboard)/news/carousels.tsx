@@ -147,10 +147,26 @@ export const AllNewsCarousel = () => {
       />,
     ];
   });
+  const [width, setWidth] = useState(0);
 
-  // TODO: Have this number per page change based on screen size
+  const updateWidth = () => {
+    const newWidth = window.innerWidth;
+    setWidth(newWidth);
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", updateWidth);
+    updateWidth();
+  }, []);
+
   const carouselSlides = [];
-  const articlesPerPage = 6;
+  let articlesPerPage = 0;
+
+  if (width < 1680) {
+    articlesPerPage = 4;
+  } else {
+    articlesPerPage = 6;
+  }
   for (let i = 0; i < articles.length; i += articlesPerPage) {
     const articlesInPage = articles.slice(i, i + articlesPerPage);
     carouselSlides.push(

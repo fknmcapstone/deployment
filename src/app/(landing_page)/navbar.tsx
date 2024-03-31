@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 /* eslint-disable react/react-in-jsx-scope */
 import Link from "next/link";
 import styles from "./page.module.css";
@@ -8,7 +9,6 @@ function Separator({ height = 1 }) {
     <hr
       style={{
         backgroundColor: "white",
-        marginBlock: "0.8rem",
         height: height,
         border: "none",
       }}
@@ -34,18 +34,64 @@ const Navbar = () => {
               data-cy="nav_research_submenu"
               className={styles.navBarSubMenu}
             >
-              <Link data-cy="nav_intake_visuals" href="/intake_visuals/">
+              <div
+                data-cy="nav_intake_visuals"
+                className={styles.intakeVisualsNavItem}
+              >
                 Intake Visuals
-              </Link>
+                <div
+                  data-cy="nav_intake_visuals_submenu"
+                  className={styles.intakeVisualsSubMenu}
+                >
+                  <div className={styles.triangleLeft} />
+                  <Link
+                    className={styles.marginBlock}
+                    data-cy="nav_sfps_general_information"
+                    href="/intake_visuals/SFPs_general_information/"
+                  >
+                    SFPs General Information
+                  </Link>
+                  <Separator />
+                  <Link
+                    className={styles.marginBlock}
+                    data-cy="nav_sfps_food_breakdown"
+                    href="/intake_visuals/SFPs_food_breakdown/"
+                  >
+                    SFPs Food Breakdown
+                  </Link>
+                  <Separator />
+                  <Link
+                    className={styles.marginBlock}
+                    data-cy="nav_parents_preferences"
+                    href="/intake_visuals/parents_preferences/"
+                  >
+                    Parents' Preferences
+                  </Link>
+                  <Separator />
+                  <Link
+                    className={styles.marginBlock}
+                    data-cy="nav_parents_opinions"
+                    href="/intake_visuals/parents_opinions/"
+                  >
+                    Parents' Opinions
+                  </Link>
+                  <Separator />
+                </div>
+              </div>
               <Separator />
               <Link
+                className={styles.marginBlock}
                 data-cy="nav_measurement_tool_assessment"
                 href="/measurement_tool_assessment/"
               >
                 Measurement Tool Assessment
               </Link>
               <Separator />
-              <Link data-cy="nav_sfp_components" href="/sfp_components/">
+              <Link
+                className={styles.marginBlock}
+                data-cy="nav_sfp_components"
+                href="/sfp_components/"
+              >
                 SFP Components
               </Link>
               <Separator />

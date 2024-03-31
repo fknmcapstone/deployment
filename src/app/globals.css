@@ -18,6 +18,7 @@
   --covid-blue: #007fad;
   --covid-green: #008572;
   --covid-red: #d36363;
+  --visuals-menu-color: #1a4689;
 
   /* Font sizes */
   --title-font-size: 2rem;
@@ -27,6 +28,7 @@
   --smaller-paragraph-font-size: 0.9rem;
 
   /* Card properties */
+  --menu-shadow: 0 10px 20px 0 rgba(2, 2, 2, 0.19);
   --card-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.2),
     0 3px 20px 0 rgba(0, 0, 0, 0.19);
   --card-border-radius: 25px;

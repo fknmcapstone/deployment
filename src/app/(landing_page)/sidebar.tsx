@@ -4,6 +4,58 @@
 import Link from "next/link";
 import styles from "./page.module.css";
 
+interface Page {
+  dataAttr: string;
+  href: string;
+  name: string;
+}
+
+const pageList: Page[] = [
+  {
+    name: "School Food Programs",
+    dataAttr: "nav_school_food_programs",
+    href: "/school_food_programs/",
+  },
+  {
+    name: "SFPs General Information",
+    dataAttr: "nav_sfps_general_information",
+    href: "/intake_visuals/SFPs_general_information/",
+  },
+  {
+    name: "SFPs Food Breakdown",
+    dataAttr: "nav_sfps_food_breakdown",
+    href: "/intake_visuals/SFPs_food_breakdown/",
+  },
+  {
+    name: "Parents' Preferences",
+    dataAttr: "nav_parents_preferences",
+    href: "/intake_visuals/parents_preferences/",
+  },
+  {
+    name: "Parents' Opinions",
+    dataAttr: "nav_parents_opinions",
+    href: "/intake_visuals/parents_opinions/",
+  },
+  {
+    name: "Measurement Tool Assessment",
+    dataAttr: "nav_measurement_tool_assessment",
+    href: "/measurement_tool_assessment/",
+  },
+  {
+    name: "SFP Components",
+    dataAttr: "nav_sfp_components",
+    href: "/sfp_components/",
+  },
+  { name: "News", dataAttr: "nav_news", href: "/news/" },
+  { name: "Manuscripts", dataAttr: "nav_manuscripts", href: "/manuscripts/" },
+  {
+    name: "Presentation",
+    dataAttr: "nav_presentations",
+    href: "/presentations/",
+  },
+  { name: "About FKNM", dataAttr: "nav_about_fknm", href: "/about_fknm/" },
+];
+
 const Sidebar = ({
   isOpen,
   toggle,
@@ -11,6 +63,22 @@ const Sidebar = ({
   isOpen: boolean;
   toggle: () => void;
 }): JSX.Element => {
+  const pageElementsList = [];
+  for (let i = 0; i < pageList.length; i++) {
+    pageElementsList.push(
+      <Link
+        data-cy={pageList[i].dataAttr}
+        href={pageList[i].href}
+        onClick={toggle}
+        className={styles.sidebarItem}
+      >
+        {pageList[i].name}
+      </Link>
+    );
+    if (i != pageList.length - 1) {
+      pageElementsList.push(<div className={styles.sidebarGridDivider} />);
+    }
+  }
   return (
     <div
       className={styles.backdrop}
@@ -32,70 +100,9 @@ const Sidebar = ({
           />
         </svg>
       </div>
-      <div className={styles.sidebarTitle}>Pages</div>
-      <Link
-        href="/school_food_programs/"
-        onClick={toggle}
-        className={styles.sidebarItem}
-      >
-        School Food Programs
-      </Link>
-      <Link
-        className={styles.sidebarItem}
-        onClick={toggle}
-        data-cy="nav_intake_visuals"
-        href="/intake_visuals/"
-      >
-        Intake Visuals
-      </Link>
-      <Link
-        className={styles.sidebarItem}
-        onClick={toggle}
-        data-cy="nav_measurement_tool_assessment"
-        href="/measurement_tool_assessment/"
-      >
-        Measurement Tool Assessment
-      </Link>
-      <Link
-        className={styles.sidebarItem}
-        onClick={toggle}
-        data-cy="nav_sfp_components"
-        href="/sfp_components/"
-      >
-        SFP Components
-      </Link>
-      <Link
-        className={styles.sidebarItem}
-        onClick={toggle}
-        data-cy="nav_news"
-        href="/news/"
-      >
-        News
-      </Link>
-      <Link
-        className={styles.sidebarItem}
-        onClick={toggle}
-        data-cy="nav_manuscripts"
-        href="/manuscripts/"
-      >
-        Manuscripts
-      </Link>
-      <Link
-        className={styles.sidebarItem}
-        onClick={toggle}
-        data-cy="nav_presentations"
-        href="/presentations/"
-      >
-        Presentations
-      </Link>
-      <Link
-        className={styles.sidebarItem}
-        onClick={toggle}
-        data-cy="nav_about_fknm"
-        href="/about_fknm/"
-      >
-        About FKNM
-      </Link>
+      <div className={styles.sidebarTitle}>Page Directory</div>
+      <div className={styles.sidebarLine} />
+      <div className={styles.sidebarGrid}>{pageElementsList}</div>
     </div>
   );
 };
