@@ -85,7 +85,7 @@ export default function CurrentPrograms() {
         <iframe
           data-cy="chart_frame"
           title="School Food Programs"
-          width="100%"
+          width="90%"
           height="100%"
           src="https://app.powerbi.com/view?r=eyJrIjoiYWI1NzhmYzYtYTQwZS00MjIwLWEyNDgtZTFiNDkzZmIzNTNhIiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9"
           frameBorder="0"
