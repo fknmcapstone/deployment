@@ -147,6 +147,7 @@
   width: 60lvw;
   justify-self: start;
   position: relative;
+  padding-bottom: 9%;
 }
 
 @media only screen and (max-width: 892px) {
@@ -157,6 +158,7 @@
   }
   .chartArea {
     width: 100%;
+    padding-bottom: 6%;
   }
 }
 
@@ -219,4 +221,10 @@
 
 .tooltipContainer:hover .tooltip {
   display: block;
+}
+
+@media only screen and (max-width: 570px) {
+  .tooltipContainer {
+    display: none;
+  }
 }
