@@ -147,7 +147,7 @@
   width: 60lvw;
   justify-self: start;
   position: relative;
-  padding-bottom: 9%;
+  padding-bottom: 9.10%;
 }
 
 @media only screen and (max-width: 892px) {
@@ -155,10 +155,13 @@
     transform: none;
     width: 85%;
     margin-block-start: 2rem;
+    row-gap: 2rem;
   }
+  
   .chartArea {
     width: 100%;
-    padding-bottom: 6.25%;
+    padding-bottom: 9%;
+    height: 100%;
   }
 }
 
