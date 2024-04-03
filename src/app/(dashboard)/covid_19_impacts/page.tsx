@@ -97,7 +97,6 @@ export default function COVID19Impacts() {
           styles.horizontalInfoBox,
           styles.backgroundRed,
           styles.centerAlign,
-          styles.impactCOVID19Box,
           styles.spanBothColumns,
         ].join(" ")}
       >

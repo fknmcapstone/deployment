@@ -44,6 +44,11 @@
   font-size: var(--small-paragraph-font-size);
   margin-top: 2vh;
 }
+@media only screen and (max-width: 1200px) {
+  .textContent {
+    width: 90%;
+  }
+}
 
 @media only screen and (max-width: 600px) {
   .textContent {

@@ -107,11 +107,19 @@ const Navbar = () => {
               data-cy="nav_publications_submenu"
               className={styles.navBarSubMenu}
             >
-              <Link data-cy="nav_manuscripts" href="/manuscripts/">
+              <Link
+                className={styles.marginBlock}
+                data-cy="nav_manuscripts"
+                href="/manuscripts/"
+              >
                 Manuscripts
               </Link>
               <Separator />
-              <Link data-cy="nav_presentations" href="/presentations/">
+              <Link
+                className={styles.marginBlock}
+                data-cy="nav_presentations"
+                href="/presentations/"
+              >
                 Presentations
               </Link>
               <Separator />
