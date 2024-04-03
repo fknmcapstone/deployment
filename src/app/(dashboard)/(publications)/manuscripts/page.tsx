@@ -15,6 +15,7 @@ export default function Manuscripts() {
   return (
     <main className={styles.main}>
       <ToTopButton />
+      <title>Manuscripts</title>
       <p data-cy="manuscripts_title" className={styles.publicationsTitle}>
         Manuscripts
       </p>

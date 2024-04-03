@@ -31,7 +31,11 @@ function ProfileCard({ name, subtitle, imageURL, content }: Person) {
 
   return (
     <>
-      <Button onPress={onOpen} className={styles.cardButton}>
+      <Button
+        onPress={onOpen}
+        className={styles.cardButton}
+        data-cy="profile_card"
+      >
         <div className={styles.cardContent}>
           <Image
             src={imageURL}
@@ -52,6 +56,7 @@ function ProfileCard({ name, subtitle, imageURL, content }: Person) {
         className={styles.modal}
         placement="top-center"
         scrollBehavior="outside"
+        data-cy="profile_modal"
       >
         <ModalContent>
           <ModalHeader className={styles.modalHeader}>
@@ -80,15 +85,16 @@ export default function AboutFKNM() {
 
   return (
     <main className={styles.main}>
+      <title>About FKNM</title>
       <div className={styles.heading} data-cy="what_is_header">
         What is Feeding Kids, Nourishing Minds?
       </div>
-      <div className={styles.textContent} data-cy="what_is_text">
+      <h1 className={styles.textContent} data-cy="what_is_text">
         The Feeding Kids, Nourishing Minds (FKNM) School-Based Nutrition
         Research Initiative is a project funded by a donation from President’s
         Choice Children’s Charity. The FKNM is informing the guidance of a
         framework for a national school food program policy.
-      </div>
+      </h1>
 
       <div className={styles.heading} data-cy="about_the_header">
         About the Feeding Kids, Nourishing Minds Dashboard

@@ -323,43 +323,6 @@
   }
 }
 
-.prevSVGButton {
-  width: 2rem;
-  height: 2rem;
-  position: absolute;
-  top: 20%;
-  transform: translateY(-50%);
-  left: 4rem;
-  color: #002254;
-}
-.nextSVGButton {
-  width: 2rem;
-  height: 2rem;
-  position: absolute;
-  top: 20%;
-  transform: translateY(-50%);
-  right: 4rem;
-  color: #002254;
-}
-
-@media only screen and (max-width: 600px) {
-  .prevSVGButton {
-    position: absolute;
-    width: 0.5rem;
-    height: 0.5rem;
-    bottom: 10%;
-    left: 1rem;
-    right: 1rem;
-  }
-  .nextSVGButton {
-    position: absolute;
-    width: 0.5rem;
-    height: 0.5rem;
-    bottom: 10%;
-    right: 1rem;
-  }
-}
-
 .componentRow {
   grid-row: 1;
   display: grid;
@@ -407,4 +370,3 @@
 .paginationDotSelected {
   background-color: var(--pagination-dots-selected);
 }
-

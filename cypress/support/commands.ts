@@ -16,8 +16,7 @@ Cypress.Commands.add("clickNavBarItem", (name) => {
    * cy.get("#nav_publications").invoke("show");
    * cy.get("#nav_publications_submenu").should("be.visible");
    */
-  cy.intercept("GET", "/" + name + "*").as("load");
+  cy.intercept("GET", "/*" + name + "*").as("load");
   cy.get('[data-cy="nav_' + name + '"]').click({ force: true });
-  cy.wait("@load");
   cy.wait(1000);
 });

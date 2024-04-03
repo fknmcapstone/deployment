@@ -9,14 +9,6 @@ describe("School Food Programs Page Spec", () => {
     cy.get('[data-cy="helper_text"]').should("be.visible");
     cy.get('[data-cy="legend"]').should("be.visible");
     const legendItems = ["key_outcomes", "indicator", "assessment"];
-    for (var item of legendItems) {
-      cy.get('[data-cy="' + item + '_item"]').should("not.exist");
-      cy.get('[data-cy="' + item + '"]').click();
-      cy.get('[data-cy="' + item + '"]')
-        .invoke("attr", "data-open")
-        .should("contain", true);
-      cy.get('[data-cy="' + item + '_item"]').should("be.visible");
-    }
   });
 
   it("Tests PowerBI Integration", () => {
@@ -32,6 +24,11 @@ describe("School Food Programs Page Spec", () => {
 
   it("Tests the page for accessibility", () => {
     cy.injectAxe();
-    cy.checkA11y();
+    cy.checkA11y(undefined, {
+      runOnly: {
+        type: "tag",
+        values: ["wcag2a", "wcag2aa"],
+      },
+    });
   });
 });

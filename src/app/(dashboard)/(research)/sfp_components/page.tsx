@@ -12,7 +12,7 @@ import { Chart as ChartJS, ArcElement, Title, Tooltip, Legend } from "chart.js";
 import { Doughnut } from "react-chartjs-2"; // For Donut Chart
 import ChartDataLabels from "chartjs-plugin-datalabels";
 import data from "./sfp_components.json";
-import { SFPComponent } from "./sfp_components_widgets_buttons";
+import { SFPComponent } from "./sfp_components_widgets";
 import ToTopButton from "../../common_elements";
 
 // Function to check if window is defined
@@ -375,10 +375,15 @@ export default function QualitativeData() {
   return (
     <main className={styles.main}>
       <ToTopButton />
+      <title>School Food Program Components</title>
       <div className={styles.doughnutChart}>
-        <Doughnut data={doughnutData} options={options} />
+        <Doughnut
+          data={doughnutData}
+          options={options}
+          aria-label="Doughnut navigation chart"
+        />
       </div>
-      <p id="food-literacy" className={styles.card1Title}>
+      <p id="food-literacy" data-cy="card_title1" className={styles.card1Title}>
         Added Program Components (Food Literacy)
       </p>
       <div className={styles.card1}>
@@ -411,7 +416,11 @@ export default function QualitativeData() {
         </p>
         <SFPComponentsCarousel componentList={components_info} />
       </div>
-      <p id="distribution-methods" className={styles.card2Title}>
+      <p
+        id="distribution-methods"
+        data-cy="card_title2"
+        className={styles.card2Title}
+      >
         Distribution Methods
       </p>
       <div className={styles.card2}>
@@ -443,7 +452,11 @@ export default function QualitativeData() {
         </p>
         <SFPComponentsCarousel componentList={distribution_info} />
       </div>
-      <p id="procurement-strategies" className={styles.card3Title}>
+      <p
+        id="procurement-strategies"
+        data-cy="card_title3"
+        className={styles.card3Title}
+      >
         Procurement Strategies
       </p>
       <div className={styles.card3}>
@@ -466,7 +479,11 @@ export default function QualitativeData() {
         </p>
         <SFPComponentsCarousel componentList={procurement_info} />
       </div>
-      <p id="food-type-variety" className={styles.card4Title}>
+      <p
+        id="food-type-variety"
+        data-cy="card_title4"
+        className={styles.card4Title}
+      >
         Food Type and Variety
       </p>
       <div className={styles.card4}>
@@ -498,7 +515,11 @@ export default function QualitativeData() {
         </p>
         <SFPComponentsCarousel componentList={food_type_info} />
       </div>
-      <p id="user-fee-model" className={styles.card5Title}>
+      <p
+        id="user-fee-model"
+        data-cy="card_title5"
+        className={styles.card5Title}
+      >
         User Fee Model
       </p>
       <div className={styles.card5}>
@@ -520,7 +541,11 @@ export default function QualitativeData() {
         </p>
         <SFPComponentsCarousel componentList={models_info} />
       </div>
-      <p id="cultural-aspects" className={styles.card6Title}>
+      <p
+        id="cultural-aspects"
+        data-cy="card_title6"
+        className={styles.card6Title}
+      >
         Cultural Aspects
       </p>
       <div className={styles.card6}>

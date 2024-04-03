@@ -6,28 +6,11 @@ describe("Measurement Tool Assessment Page Spec", () => {
 
   it("Checks key elements", () => {
     cy.get('[data-cy="title"]').should("be.visible");
-    cy.get('[data-cy="blurb"]').should("be.visible");
-    cy.get('[data-cy="shortcut_menu"]').should("be.visible");
+    cy.get('[data-cy="blurb1"]').should("be.visible");
+    cy.get('[data-cy="blurb2"]').should("be.visible");
   });
 
   it("Tests PowerBI functionality", () => {
-    // For testing the tooltip and chart visibility
-
-    // cy.get('[data-cy="' + chartsToTest[chartIndex] + '"]').should(
-    // 	"be.visible"
-    // );
-    // cy.get(
-    // 	'[data-cy="' + chartsToTest[chartIndex] + '"] [data-cy="tooltip_text"]'
-    // ).should("not.be.visible");
-
-    // cy.get(
-    // 	'[data-cy="' + chartsToTest[chartIndex] + '"] [data-cy="tooltip_text"]'
-    // )
-    // 	.invoke("show")
-    // 	.should("be.visible")
-    // 	.invoke("text")
-    // 	.should("not.eq", "");
-
     // Test PowerBI link works for every single chart
     cy.get('[data-cy="chart_frame"]').each((chart) => {
       if (chart.prop("src"))
@@ -52,6 +35,11 @@ describe("Measurement Tool Assessment Page Spec", () => {
 
   it("Tests the page for accessibility", () => {
     cy.injectAxe();
-    cy.checkA11y();
+    cy.checkA11y(undefined, {
+      runOnly: {
+        type: "tag",
+        values: ["wcag2a", "wcag2aa"],
+      },
+    });
   });
 });

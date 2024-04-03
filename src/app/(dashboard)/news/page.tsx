@@ -7,6 +7,7 @@ import React from "react";
 export default function News() {
   return (
     <main className={styles.main}>
+      <title>News Articles</title>
       <p data-cy="main_title" className={styles.newsTitle}>
         News
       </p>

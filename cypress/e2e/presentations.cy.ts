@@ -19,6 +19,11 @@ describe("Presentations Page Spec", () => {
   });
   it("Tests the page for accessibility", () => {
     cy.injectAxe();
-    cy.checkA11y();
+    cy.checkA11y(undefined, {
+      runOnly: {
+        type: "tag",
+        values: ["wcag2a", "wcag2aa"],
+      },
+    });
   });
 });

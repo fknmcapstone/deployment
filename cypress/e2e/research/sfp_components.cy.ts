@@ -1,18 +1,23 @@
-describe("Landing Page Spec", () => {
+describe("SFP Components Page Spec", () => {
   beforeEach(() => {
     cy.visit("/");
+    cy.clickNavBarItem("sfp_components");
   });
-  it("Smokes key elements", () => {
+
+  it("Checks key element functionality", () => {
+    // Check return to top button functionality
+    cy.get('[data-cy="return_to_top_button"]').should("not.be.visible");
+    cy.scrollTo("bottom");
+    cy.get('[data-cy="return_to_top_button"]').should("be.visible").click();
+    cy.window().its("scrollY").should("equal", 0);
+
     const texts = [
-      "header",
-      "header_logo",
-      "header_title",
-      "nav_bar",
-      "research_title",
-      "landing_text1",
-      "landing_text2",
-      "school_food_programs_text",
-      "research_text",
+      "card_title1",
+      "card_title2",
+      "card_title3",
+      "card_title4",
+      "card_title5",
+      "card_title6",
     ];
     for (var text of texts) {
       cy.get('[data-cy="' + text + '"]').should("be.visible");

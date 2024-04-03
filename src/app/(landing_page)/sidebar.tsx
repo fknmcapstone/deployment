@@ -13,47 +13,55 @@ interface Page {
 const pageList: Page[] = [
   {
     name: "School Food Programs",
-    dataAttr: "nav_school_food_programs",
+    dataAttr: "nav_sidebar_school_food_programs",
     href: "/school_food_programs/",
   },
   {
     name: "SFPs General Information",
-    dataAttr: "nav_sfps_general_information",
+    dataAttr: "nav_sidebar_sfps_general_information",
     href: "/intake_visuals/SFPs_general_information/",
   },
   {
     name: "SFPs Food Breakdown",
-    dataAttr: "nav_sfps_food_breakdown",
+    dataAttr: "nav_sidebar_sfps_food_breakdown",
     href: "/intake_visuals/SFPs_food_breakdown/",
   },
   {
     name: "Parents' Preferences",
-    dataAttr: "nav_parents_preferences",
+    dataAttr: "nav_sidebar_parents_preferences",
     href: "/intake_visuals/parents_preferences/",
   },
   {
     name: "Parents' Opinions",
-    dataAttr: "nav_parents_opinions",
+    dataAttr: "nav_sidebar_parents_opinions",
     href: "/intake_visuals/parents_opinions/",
   },
   {
     name: "Measurement Tool Assessment",
-    dataAttr: "nav_measurement_tool_assessment",
+    dataAttr: "nav_sidebar_measurement_tool_assessment",
     href: "/measurement_tool_assessment/",
   },
   {
     name: "SFP Components",
-    dataAttr: "nav_sfp_components",
+    dataAttr: "nav_sidebar_sfp_components",
     href: "/sfp_components/",
   },
-  { name: "News", dataAttr: "nav_news", href: "/news/" },
-  { name: "Manuscripts", dataAttr: "nav_manuscripts", href: "/manuscripts/" },
+  { name: "News", dataAttr: "nav_sidebar_news", href: "/news/" },
+  {
+    name: "Manuscripts",
+    dataAttr: "nav_sidebar_manuscripts",
+    href: "/manuscripts/",
+  },
   {
     name: "Presentation",
-    dataAttr: "nav_presentations",
+    dataAttr: "nav_sidebar_presentations",
     href: "/presentations/",
   },
-  { name: "About FKNM", dataAttr: "nav_about_fknm", href: "/about_fknm/" },
+  {
+    name: "About FKNM",
+    dataAttr: "nav_sidebar_about_fknm",
+    href: "/about_fknm/",
+  },
 ];
 
 const Sidebar = ({
