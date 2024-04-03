@@ -160,7 +160,7 @@
   
   .chartArea {
     width: 100%;
-    padding-bottom: 9%;
+    padding-bottom: 4.5%;
     height: 100%;
   }
 }
@@ -229,5 +229,10 @@
 @media only screen and (max-width: 570px) {
   .tooltipContainer {
     display: none;
+  }
+  .chartArea {
+    width: 100%;
+    padding-bottom: 9.10%;
+    height: 100%;
   }
 }
