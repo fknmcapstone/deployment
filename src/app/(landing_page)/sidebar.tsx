@@ -83,6 +83,7 @@ const Sidebar = ({
     <div
       className={styles.backdrop}
       style={{
+        overflow: isOpen ? "scroll" : "hidden",
         opacity: `${isOpen ? "1" : "0"}`,
         top: `${isOpen ? "0" : "-100%"}`,
       }}

@@ -2,27 +2,28 @@
   background-color: var(--background-color);
   width: 100%;
   padding-block-end: 5vh;
-  grid-template-columns: 50rem 50rem;
+  padding-inline: 5lvw;
+  grid-template-columns: 45lvw 45lvw;
   justify-content: center;
   column-gap: 3rem;
+  display: grid;
 }
-@media only screen and (min-width: 760px) {
-  .main {
-    display: grid ;
 
-  }
-}
 @media only screen and (max-width: 760px) {
   .main {
-      grid-template-columns: 50rem;
-      column-gap: 10rem;
-      padding-block-end: 3vh;
-
-
+    padding-inline: 0;
+    grid-template-columns: 1fr;
+    padding-block-end: 3vh;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .main {
+    grid-auto-rows: min-content;
   }
 }
 .title {
   grid-row: 1;
+  margin-inline: 2lvw;
   font-size: var(--subtitle-font-size);
   font-weight: bold;
   text-align: center;
@@ -31,10 +32,9 @@
 }
 @media only screen and (max-width: 600px) {
   .title {
-      display: grid ;
-      font-size: 20px;
-      font-weight: 800;
-
+    display: grid;
+    font-size: 20px;
+    font-weight: 800;
   }
 }
 
@@ -45,7 +45,7 @@
   width: 60%;
   display: grid;
   grid-template-rows: 4rem 1fr;
-  grid-template-columns: 1fr 1fr ;
+  grid-template-columns: 1fr 1fr;
   color: var(--light-text-color);
   padding: 2rem;
   border-radius: var(--blurb-border-radius);
@@ -53,35 +53,27 @@
 
 @media only screen and (max-width: 760px) {
   .horizontalInfoBox {
-    margin-block-start: 3rem;
-    grid-template-columns: 1fr ;
+    margin-block-start: 3lvh;
+    grid-template-columns: 1fr;
     height: auto;
-    width: 100%;
-    row-gap: 2rem;
+    width: 85lvw;
     justify-content: center;
-    grid-auto-rows: max-content;
     border-radius: var(--blurb-border-radius);
     text-align: center;
   }
 }
 
-
-
-.infoBox_rightAlign{
+.infoBox_rightAlign {
   justify-self: end;
 }
 
-@media only screen and (max-width: 760px) {
-  .infoBox_rightAlign {
-    justify-self: center;
-  }
-}
 .infoBox_leftAlign {
   justify-self: start;
 }
 
 @media only screen and (max-width: 760px) {
-  .infoBox_leftAlign {
+  .infoBox_leftAlign,
+  .infoBox_rightAlign {
     justify-self: center;
   }
 }
@@ -93,11 +85,6 @@
   z-index: 1;
   transform: translate(100%, -50%);
 }
-@media only screen and (max-width: 760px) {
-  .leafImg {
-    display: none;
-  }
-}
 
 .schoolImg {
   position: absolute;
@@ -105,12 +92,6 @@
   left: 0;
   z-index: 1;
   transform: translate(-90%, 20%);
-}
-
-@media only screen and (max-width: 760px) {
-  .schoolImg {
-    display: none;
-  }
 }
 
 .mapImg {
@@ -121,24 +102,12 @@
   transform: translate(95%, -25%);
 }
 
-@media only screen and (max-width: 760px) {
-  .mapImg {
-    display: none;
-  }
-}
-
 .lunchImg {
   position: absolute;
   bottom: 0;
   left: 0;
   z-index: 1;
   transform: translate(5%, 80%);
-}
-
-@media only screen and (max-width: 760px) {
-  .lunchImg {
-    display: none;
-  }
 }
 
 .maskImg {
@@ -148,10 +117,28 @@
   z-index: 1;
   transform: translate(50%, 90%);
 }
-@media only screen and (max-width: 760px) {
+
+@media only screen and (max-width: 1400px) {
   .maskImg {
-    padding-right: 5rem;
+    padding-right: 5lvw;
     right: 2rem;
+  }
+  .lunchImg,
+  .mapImg {
+    padding-right: 10lvw;
+  }
+  .schoolImg {
+    padding-left: 10lvw;
+  }
+}
+
+@media only screen and (max-width: 1130px) {
+  .lunchImg,
+  .mapImg {
+    padding-right: 15lvw;
+  }
+  .schoolImg {
+    padding-left: 15lvw;
   }
 }
 
@@ -159,15 +146,24 @@
   position: absolute;
 }
 
-.impactCOVID19Box {
-  width: 80%;
-}
-
 @media only screen and (max-width: 760px) {
-  .impactCOVID19Box {
-    width: 100%;
+  .lunchImg,
+  .mapImg,
+  .schoolImg,
+  .maskImg {
+    display: none;
+  }
+  .leafImg {
+    padding: 1lvw;
   }
 }
+
+@media only screen and (max-width: 600px) {
+  .leafImg {
+    display: none;
+  }
+}
+
 .spanBothColumns {
   grid-column: span 2;
 }
@@ -175,12 +171,12 @@
 .spanBothColumns_box {
   grid-column: span 2;
 }
+
 @media only screen and (max-width: 760px) {
   .spanBothColumns_box {
-    grid-column: span 1;    
+    grid-column: span 1;
   }
 }
-
 
 .backgroundBlue {
   background-color: var(--covid-blue);
@@ -192,6 +188,18 @@
 
 .backgroundRed {
   background-color: var(--covid-red);
+}
+
+.rightAlign {
+  justify-self: end;
+}
+
+.leftAlign {
+  justify-self: start;
+}
+
+.centerAlign {
+  justify-self: center;
 }
 
 .verticalInfoBox {
@@ -206,33 +214,37 @@
   justify-content: center;
   row-gap: 2rem;
   grid-auto-rows: max-content;
-  
+}
+
+@media only screen and (max-width: 1570px) {
+  .verticalInfoBox {
+    width: 65%;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .verticalInfoBox {
+    width: 85%;
+  }
 }
 
 @media only screen and (max-width: 760px) {
   .verticalInfoBox {
-    grid-template-columns: 1fr ;
     height: max-content;
-    width: 100%;
+    width: 95%;
     padding: 2rem;
     color: var(--light-text-color);
     margin-block-start: 3rem;
     border-radius: var(--blurb-border-radius);
     text-align: center;
-
   }
 }
 
-.rightAlign {
-  justify-self: end;
-}
-
-.leftAlign {
-  justify-self: start;
-}
-
-.centerAlign {
-  justify-self: center;
+@media only screen and (max-width: 600px) {
+  .verticalInfoBox {
+    grid-column: 1 / span 2;
+    justify-self: center;
+  }
 }
 
 .infoHeader {
@@ -249,14 +261,68 @@
   text-align: left;
   place-self: center;
 }
+@media only screen and (max-width: 1570px) {
+  .infoText {
+    width: 22lvw;
+    padding: 2rem;
+    font-size: var(--smaller-paragraph-font-size);
+  }
+}
+
+@media only screen and (max-width: 1165px) {
+  .infoText {
+    width: 85%;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .infoText {
+    width: 95%;
+    padding: 1.5rem;
+  }
+  .schoolImg {
+    padding-left: 30lvw;
+  }
+  .mapImg {
+    padding-right: 35lvw;
+  }
+  .horizontalInfoBox {
+    width: 70%;
+  }
+}
 
 @media only screen and (max-width: 760px) {
   .infoText {
-    width: 20rem;
+    margin-bottom: 2lvh;
+    width: 65lvw;
+    font-size: var(--small-paragraph-font-size);
   }
 }
 
 .verticalInfoWidth {
-  width: 20rem;
+  width: 20lvw;
 }
 
+@media only screen and (max-width: 1570px) {
+  .verticalInfoWidth {
+    width: 25lvw;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .verticalInfoWidth {
+    width: 25lvw;
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  .verticalInfoWidth {
+    width: 35lvw;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .verticalInfoWidth {
+    width: 60lvw;
+  }
+}
