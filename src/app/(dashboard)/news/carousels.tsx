@@ -5,15 +5,10 @@ import useEmblaCarousel from "embla-carousel-react";
 import { EmblaCarouselType } from "embla-carousel";
 import Autoplay from "embla-carousel-autoplay";
 import { useState, useEffect, useCallback } from "react";
-import {
-  Article,
-  DotButton,
-  NextButton,
-  PrevButton,
-  RecentArticle,
-} from "./article_widgets_buttons";
+import { Article, RecentArticle } from "./article_widgets";
 
 import data from "./articles.json";
+import { DotButton, NextButton, PrevButton } from "../common_elements";
 
 export const RecentNewsCarousel = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel(
@@ -76,8 +71,8 @@ export const RecentNewsCarousel = () => {
       >
         Recent News
       </p>
-      <PrevButton isSVG={true} onClick={scrollPrev} />
-      <NextButton isSVG={true} onClick={scrollNext} />
+      <PrevButton forSFP={false} isSVG={true} onClick={scrollPrev} />
+      <NextButton forSFP={false} isSVG={true} onClick={scrollNext} />
       <div className={styles.paginationAllDots}>
         {scrollSnaps.map((_, index) => (
           <DotButton
@@ -182,6 +177,7 @@ export const AllNewsCarousel = () => {
 
       <div className={styles.pageAllNumbers}>
         <PrevButton
+          forSFP={false}
           isSVG={false}
           onClick={scrollPrev}
           disabled={prevBtnDisabled}
@@ -200,6 +196,7 @@ export const AllNewsCarousel = () => {
           </DotButton>
         ))}
         <NextButton
+          forSFP={false}
           isSVG={false}
           onClick={scrollNext}
           disabled={nextBtnDisabled}

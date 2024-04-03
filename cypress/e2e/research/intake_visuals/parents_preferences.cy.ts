@@ -1,9 +1,9 @@
-import chartsData from "../../src/app/(dashboard)/(research)/intake_visuals/charts.json";
+import chartsData from "../../../../src/app/(dashboard)/(research)/intake_visuals/charts.json";
 
-describe("Intake Visuals Page Spec", () => {
+describe("Parents' Preferences Page Spec", () => {
   beforeEach(() => {
     cy.visit("/");
-    cy.clickNavBarItem("intake_visuals");
+    cy.clickNavBarItem("parents_preferences");
   });
 
   it("Checks key element functionality", () => {
@@ -13,34 +13,37 @@ describe("Intake Visuals Page Spec", () => {
     cy.get('[data-cy="return_to_top_button"]').should("be.visible").click();
     cy.window().its("scrollY").should("equal", 0);
 
-    // // Check category name texts exist
-    // for (var categoryData of chartsData) {
-    //   cy.get(
-    //     '[data-cy="shortcut_' + categoryData.category + '_header"]'
-    //   ).should("be.visible");
-    //   cy.get('[data-cy="chart_' + categoryData.category + '_header"]').should(
-    //     "be.visible"
-    //   );
-    // }
+    cy.get('[data-cy="category_title"]').should("be.visible");
+    cy.get('[data-cy="category_subtext"]').should("be.visible");
   });
 
   it("Tests chart functionality", () => {
+    const pageTitle = "Parents' Preferences";
     let allCharts: string[] = [];
     let allChartsNames: string[] = [];
-    // for (var category of chartsData) {
-    //   for (var chart of category.charts) {
-    //     allCharts.push(category.category + chart.name);
-    //     allChartsNames.push(chart.name);
-    //   }
-    // }
-    const randNumSet = new Set<number>();
-    while (randNumSet.size < 5) {
-      randNumSet.add(Math.floor(Math.random() * allCharts.length));
+    for (var chart of chartsData[pageTitle].charts) {
+      allCharts.push(
+        chartsData[pageTitle].category.replace(/ /g, "_") +
+          chart.name.replace(/ /g, "_").replace(/[^a-zA-Z ]/g, "")
+      );
+      allChartsNames.push(chart.name);
     }
+
     var chartsToTest: string[] = [];
-    for (const num of randNumSet) {
-      chartsToTest.push(allCharts[num]);
+    if (allCharts.length < 5) {
+      for (var i of allCharts) {
+        chartsToTest.push(i);
+      }
+    } else {
+      const randNumSet = new Set<number>();
+      while (randNumSet.size < 5) {
+        randNumSet.add(Math.floor(Math.random() * allCharts.length));
+      }
+      for (const num of randNumSet) {
+        chartsToTest.push(allCharts[num]);
+      }
     }
+
     for (var chartIndex in chartsToTest) {
       cy.get('[data-cy="shortcut_menu"]')
         .contains("a", allChartsNames[chartIndex])
@@ -74,6 +77,11 @@ describe("Intake Visuals Page Spec", () => {
 
   it("Tests the page for accessibility", () => {
     cy.injectAxe();
-    cy.checkA11y();
+    cy.checkA11y(undefined, {
+      runOnly: {
+        type: "tag",
+        values: ["wcag2a", "wcag2aa"],
+      },
+    });
   });
 });

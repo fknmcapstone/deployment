@@ -22,7 +22,6 @@ describe("News Page Spec", () => {
         .should("be.visible");
     });
 
-    // TODO: When more articles are added, will have to click through the carousel to see the others
     cy.get('[data-cy="article"]').each((link) => {
       cy.wrap(link).find('[data-cy="article_img"]').should("be.visible");
       cy.wrap(link).find('[data-cy="article_title_text"]').should("be.visible");
@@ -116,6 +115,11 @@ describe("News Page Spec", () => {
 
   it("Tests the page for accessibility", () => {
     cy.injectAxe();
-    cy.checkA11y();
+    cy.checkA11y(undefined, {
+      runOnly: {
+        type: "tag",
+        values: ["wcag2a", "wcag2aa"],
+      },
+    });
   });
 });

@@ -12,7 +12,7 @@ export default function ParentsPreferences() {
   return (
     <main className={styles.main}>
       <ToTopButton />
-
+      <title>School Food Programs Parents Preferences Charts</title>
       <h1
         className={styles.fixedMenuContainer}
         style={{ height: 33.6 * NUM_CHARTS + "lvw" }}
@@ -26,8 +26,12 @@ export default function ParentsPreferences() {
       </div>
 
       <div className={styles.chartColumn}>
-        <div className={styles.title}>{chartData[pageTitle].category}</div>
-        <div className={styles.subtext}>{chartData[pageTitle].subtitle}</div>
+        <div className={styles.title} data-cy="category_title">
+          {chartData[pageTitle].category}
+        </div>
+        <div className={styles.subtext} data-cy="category_subtext">
+          {chartData[pageTitle].subtitle}
+        </div>
         {chartList(chartData[pageTitle].category, chartData[pageTitle].charts)}
       </div>
     </main>

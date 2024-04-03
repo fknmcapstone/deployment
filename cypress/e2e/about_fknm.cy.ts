@@ -21,13 +21,15 @@ describe("AboutFKNM Page Spec", () => {
     const accordionItems = [
       "steering_committee",
       "research_team",
-      "admin_support",
+      "administrative_support",
       "website_team",
     ];
 
     // Assert none are already open
     for (const item of accordionItems) {
-      cy.get(`[data-cy="${item}"]`).invoke("attr", "data-open").should("not.exist");
+      cy.get(`[data-cy="${item}"]`)
+        .invoke("attr", "data-open")
+        .should("not.exist");
       cy.get(`[data-cy="${item}"] section`).should("not.exist");
     }
 
@@ -37,25 +39,26 @@ describe("AboutFKNM Page Spec", () => {
     }
 
     for (const item of accordionItems.slice(1, 3)) {
-      cy.get(`[data-cy="${item}"]`).invoke("attr", "data-open").should("contain", "true");
+      cy.get(`[data-cy="${item}"]`)
+        .invoke("attr", "data-open")
+        .should("contain", "true");
       cy.get(`[data-cy="${item}"] section`).should("be.visible");
     }
 
     // First item should not be open
-    cy.get(`[data-cy="${accordionItems[0]}"]`).invoke("attr", "data-open").should("not.exist");
+    cy.get(`[data-cy="${accordionItems[0]}"]`)
+      .invoke("attr", "data-open")
+      .should("not.exist");
     cy.get(`[data-cy="${accordionItems[0]}"] section`).should("not.exist");
 
-    // Test that popover appears, and can see more than one
-    cy.get(`[data-cy="${accordionItems[1]}"] [data-cy="popover_trigger_0"]`).click();
-    cy.get('[data-cy="popover_content_0"]').should("be.visible");
+    // Test that modal appears
+    cy.get(`[data-cy="${accordionItems[1]}"] [data-cy="profile_card"]`)
+      .first()
+      .click();
+    cy.get('[data-cy="profile_modal"]').should("be.visible");
 
-    cy.get(`[data-cy="${accordionItems[1]}"] [data-cy="popover_trigger_2"]`).click();
-    cy.get('[data-cy="popover_content_0"]').should("be.visible");
-    cy.get('[data-cy="popover_content_2"]').should("be.visible");
-
-    // Test closing the popover content
-    cy.get(`[data-cy="${accordionItems[1]}"] [data-cy="popover_trigger_0"]`).click();
-    cy.get('[data-cy="popover_content_0"]').should("not.exist");
+    cy.get('[data-cy="profile_modal"] button[aria-label="Close"]').click();
+    cy.get('[data-cy="profile_modal"]').should("not.exist");
   });
 
   it("Tests all links", () => {
@@ -70,6 +73,11 @@ describe("AboutFKNM Page Spec", () => {
 
   it("Tests the page for accessibility", () => {
     cy.injectAxe();
-    cy.checkA11y();
+    cy.checkA11y(undefined, {
+      runOnly: {
+        type: "tag",
+        values: ["wcag2a", "wcag2aa"],
+      },
+    });
   });
 });

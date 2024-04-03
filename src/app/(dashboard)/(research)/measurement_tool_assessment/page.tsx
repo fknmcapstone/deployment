@@ -23,6 +23,7 @@ function GraphCard({
   return (
     <div
       id={id}
+      data-cy={id}
       className={[
         column == Column.LEFT ? styles.columnLeft : styles.columnRight,
         styles.card,
@@ -80,6 +81,7 @@ const graphCardList = graphs.map((graph, index) => {
 export default function MeasurementToolAssessment() {
   return (
     <main className={styles.main}>
+      <title>Measurement Tool Assessment</title>
       <h1 className={styles.title}>
         <p data-cy="title">Measurement Tool Assessment</p>
       </h1>
@@ -97,7 +99,7 @@ export default function MeasurementToolAssessment() {
       </div>
 
       <div className={styles.subtext1}>
-        <p data-cy="blurb">
+        <p data-cy="blurb1">
           A comprehensive assessment of the dimensions of school food
           environments and determinants of student eating behaviours at school
           captured by existing measurement tools provided insight into the
@@ -158,7 +160,7 @@ export default function MeasurementToolAssessment() {
         </p>
       </div>
       <div className={styles.subtext2}>
-        <p data-cy="blurb">
+        <p data-cy="blurb2">
           Of the 73 articles included in this review, majority featured tools
           that were rated as either medium or low quality, while only 8 studies
           (11%) used tools rated as high quality. The dimensions and

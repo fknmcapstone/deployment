@@ -15,9 +15,10 @@ export default function Presentations() {
   return (
     <main className={styles.main}>
       <ToTopButton />
-      <p data-cy="presentations_title" className={styles.publicationsTitle}>
+      <title>Presentations</title>
+      <h1 data-cy="presentations_title" className={styles.publicationsTitle}>
         Presentations
-      </p>
+      </h1>
       <div className={styles.yearBtnList}>{yearBtnList(sources)}</div>
       {citationsList(sources)}
     </main>

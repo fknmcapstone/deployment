@@ -46,7 +46,8 @@ const qualityAssessmentElementList = qualityAssessment.map((assessment) => {
 export default function CurrentPrograms() {
   return (
     <main className={styles.main}>
-      <div id={styles.aboutText}>
+      <title>School Food Programs</title>
+      <div id={styles.aboutText} data-cy="about_text">
         <p>
           This systematic review aimed to synthesize and appraise literature on
           Canadian school food and nutrition interventions, policies and
@@ -56,7 +57,7 @@ export default function CurrentPrograms() {
           changes in nutrition.
         </p>
       </div>
-      <div id={styles.helperText}>
+      <div id={styles.helperText} data-cy="helper_text">
         Hover over the map to see more information.
       </div>
       <div data-cy="legend" id={styles.foldableLegend}>
