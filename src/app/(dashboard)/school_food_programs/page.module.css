@@ -46,9 +46,8 @@
   padding: 1rem 2rem 2rem 2rem;
   margin-inline-start: 1rem;
   border-radius: var(--small-card-border-radius);
-  width: 85%;
-  max-width: 20rem;
-  min-width: 15rem;
+  width: 100%;
+  max-width: 60lvw;
   height: min-content;
   box-shadow: var(--card-shadow);
   background: var(--secondary-color);
@@ -56,8 +55,31 @@
 }
 
 .item {
+  justify-self: center;
   background: var(--secondary-color);
+  color: var(--light-text-color);
+  grid-row: 4;
+  grid-column: 1;
+  display: grid;
+  grid-gap: 1rem;
+  display: flex;
+  max-height: fit-content;
+  max-width: 60lvw;
+  margin: 3rem;
 }
+.cardText{
+  display: grid;
+}
+.column1 {
+  grid-column: 1;
+  margin-right: 20px; /* Adjust as needed */
+}
+
+.column2 {
+  grid-column: 2;
+  margin-right: 20px; /* Adjust as needed */
+}
+
 
 #foldableLegend span {
   color: var(--light-text-color);
@@ -68,12 +90,22 @@
 }
 
 #foldableLegend p {
-  margin-bottom: 0.5rem;
+  /*margin-bottom: 0.5rem;*/
+  display: grid;
+  grid-template-columns: repeat(2, 1fr)
 }
+
 
 #legendTitle {
   font-size: var(--big-paragraph-font-size);
+  font-weight: 700;
+  grid-column: span 2;
+}
+#cardTitle{
+  font-size: var(--small-paragraph-font-size);
   font-weight: 500;
+  grid-column: span 2;
+  text-decoration: underline;
 }
 
 .greyRectangle {
@@ -103,5 +135,87 @@
   #map {
     height: 55lvw;
     width: 85lvw;
+  }
+}
+
+
+.tooltipContainer {
+  position: relative;
+}
+
+.tooltipButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  background-color: #27319e;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-decoration: solid;
+}
+
+.tooltip {
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  transform: translateY(-50%);
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: none;
+  width: 190vw;
+  height: fit-content;
+  z-index: 5;
+  grid-auto-flow: column;
+}
+@media only screen and (min-width: 1530px) {
+  .tooltip {
+    top: 6lvh;
+    left: none;
+    right: 0;
+    transform: translateX(-50%);
+    width: 30lvw;
+  }
+}
+
+@media only screen and (max-width: 1530px) {
+  .tooltip {
+    top: 6lvh;
+    left: none;
+    right: 0;
+    transform: translateX(-50%);
+    width: 30lvw;
+  }
+}
+
+@media only screen and (max-width: 1358px) {
+  .tooltip {
+    transform: translateX(-90%);
+  }
+}
+
+@media only screen and (max-width: 1250px) {
+  .tooltip {
+    transform: translateY(-110%);
+    transform: translateX(-100%);
+  }
+}
+
+.tooltipContainer:hover .tooltip {
+  display: grid;
+  grid-template-rows: 2rem auto;
+  grid-column-gap: 20px;
+}
+
+@media only screen and (max-width: 840px) {
+  .tooltipContainer {
+    display: none;
   }
 }
