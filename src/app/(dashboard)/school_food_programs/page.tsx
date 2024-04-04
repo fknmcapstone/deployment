@@ -1,6 +1,7 @@
 /* eslint-disable react/react-in-jsx-scope */
 /* eslint-disable react/jsx-key */
 "use client";
+import { Card, CardBody } from "@nextui-org/react";
 // This directive is required due to a bug with NextUI Accordion
 // See: https://github.com/nextui-org/nextui/issues/1403
 
@@ -59,29 +60,25 @@ export default function CurrentPrograms() {
       <div id={styles.helperText}>
         Hover over the map to see more information.
       </div>
-      <div data-cy="legend" id={styles.foldableLegend}>
-        <p id={styles.legendTitle}>Legend</p>
-        <Accordion selectionMode="multiple" className={styles.item}>
-          <AccordionItem data-cy="key_outcomes" key="1" title="Key Outcomes">
-            {keyOutcomesElementList}
-          </AccordionItem>
-          <AccordionItem
-            data-cy="indicator"
-            key="2"
-            title="Disaggregated Equity Indicators"
-          >
-            {equityIndicatorsElementList}
-          </AccordionItem>
-          <AccordionItem
-            data-cy="assessment"
-            key="3"
-            title="Quality Assessment"
-          >
-            {qualityAssessmentElementList}
-          </AccordionItem>
-        </Accordion>
-      </div>
       <div id={styles.map}>
+        <div className={styles.tooltipContainer}>
+          <button data-cy="tooltip_button" className={styles.tooltipButton}>
+            i
+          </button>
+          <div data-cy="tooltip_text" className={styles.tooltip}>
+            <p id={styles.legendTitle}>Legend</p>
+            <div id={styles.cardText}>
+              <p id={styles.cardTitle}>Key Outcomes</p>
+              {keyOutcomesElementList}
+            </div>
+            <div id={styles.cardText}>
+              <p id={styles.cardTitle}>Disaggregated Equity Indicators</p>
+              {equityIndicatorsElementList}
+              <p id={styles.cardTitle}>Quality Assessment</p>
+              {qualityAssessmentElementList}
+            </div>
+          </div>
+        </div>
         <iframe
           data-cy="chart_frame"
           title="School Food Programs"
@@ -92,7 +89,7 @@ export default function CurrentPrograms() {
           allowFullScreen={true}
         ></iframe>
         <div className={styles.greyRectangle} />
-        {/* grey rectangle */}
+        {/*grey rectangle */}
       </div>
     </main>
   );
