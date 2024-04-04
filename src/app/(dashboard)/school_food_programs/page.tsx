@@ -1,12 +1,10 @@
 /* eslint-disable react/react-in-jsx-scope */
 /* eslint-disable react/jsx-key */
 "use client";
-import { Card, CardBody } from "@nextui-org/react";
 // This directive is required due to a bug with NextUI Accordion
 // See: https://github.com/nextui-org/nextui/issues/1403
 
 import styles from "./page.module.css";
-import { Accordion, AccordionItem } from "@nextui-org/accordion";
 
 const keyOutcomes = [
   "A - Anthropometric",
