@@ -120,6 +120,24 @@
   color: #002254;
 }
 
+@media only screen and (max-width: 1099px) {
+  .prevSVGButtonSFP {
+    position: absolute;
+    width: 1.5rem;
+    height: 1.5rem;
+    bottom: 10%;
+    left: 1rem;
+    right: 1rem;
+  }
+  .nextSVGButtonSFP {
+    position: absolute;
+    width: 1.5rem;
+    height: 1.5rem;
+    bottom: 10%;
+    right: 1rem;
+  }
+}
+
 @media only screen and (max-width: 600px) {
   .prevSVGButtonSFP {
     position: absolute;

@@ -10,7 +10,7 @@
   grid-auto-rows: min-content;
   position: relative;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 600px) {
   .main {
     padding-inline: 10vw;
     padding-block-end: 3vh;
@@ -22,7 +22,7 @@
   width: 900px;
   height: 780px;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 600px) {
   .doughnutChart {
     justify-self: start;
     width: 880px;
@@ -157,7 +157,6 @@
   overflow: hidden;
   background-color: white;
   border-radius: var(--card-border-radius);
-  z-index: 1;
   border: 2px solid #082454;
 }
 .card2 {
@@ -209,6 +208,70 @@
   background-color: white;
   border-radius: var(--card-border-radius);
   border: 2px solid #082454;
+}
+
+@media only screen and (max-width: 1099px) {
+  .card1 {
+    grid-row: 210;
+    min-height: auto;
+    width: calc(55% - 3vh);
+    margin: 1.5vh 1.5vh 5vh 1.5vh;
+    padding-left: 1.5vh;
+    padding-right: 1.5vh;
+    border: 1px solid #082454;
+    justify-self: left;
+  }
+
+  .card2 {
+    grid-row: 360;
+    min-height: auto;
+    width: calc(55% - 3vh);
+    margin: 1.5vh 1.5vh 5vh 1.5vh;
+    padding-left: 1.5vh;
+    padding-right: 1.5vh;
+    border: 1px solid #082454;
+    justify-self: left;
+  }
+  .card3 {
+    grid-row: 460;
+    min-height: auto;
+    width: calc(55% - 3vh);
+    margin: 1.5vh 1.5vh 5vh 1.5vh;
+    padding-left: 1.5vh;
+    padding-right: 1.5vh;
+    border: 1px solid #082454;
+    justify-self: left;
+  }
+  .card4 {
+    grid-row: 560;
+    min-height: auto;
+    width: calc(55% - 3vh);
+    margin: 1.5vh 1.5vh 5vh 1.5vh;
+    padding-left: 1.5vh;
+    padding-right: 1.5vh;
+    border: 1px solid #082454;
+    justify-self: left;
+  }
+  .card5 {
+    grid-row: 660;
+    min-height: auto;
+    width: calc(55% - 3vh);
+    margin: 1.5vh 1.5vh 5vh 1.5vh;
+    padding-left: 1.5vh;
+    padding-right: 1.5vh;
+    border: 1px solid #082454;
+    justify-self: left;
+  }
+  .card6 {
+    grid-row: 760;
+    min-height: auto;
+    width: calc(55% - 3vh);
+    margin: 1.5vh 1.5vh 5vh 1.5vh;
+    padding-left: 1.5vh;
+    padding-right: 1.5vh;
+    border: 1px solid #082454;
+    justify-self: left;
+  }
 }
 
 @media only screen and (max-width: 600px) {
@@ -340,6 +403,17 @@
   font-size: 1rem;
   font-style: italic;
   text-align: center;
+}
+
+@media only screen and (max-width: 1099px) {
+  .quotationsText {
+    font-size: 0.9rem;
+    padding-inline-start: 2rem;
+    padding-inline-end: 0rem;
+    margin-block-start: 2.5rem;
+    margin-block-end: 1.5rem;
+    text-align: center;
+  }
 }
 
 @media only screen and (max-width: 600px) {
