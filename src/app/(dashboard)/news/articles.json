@@ -1,11 +1,11 @@
 {
   "recent_articles": [
     {
-      "title": "U of T Stakeholder Study Guides Research on Canada’s School Food Programs ",
-      "image": "https://childnutrition.utoronto.ca/sites/default/files/styles/scale_width_800/public/assets/news/image/_DSC0625.webp?itok=p9GD23xo",
-      "image_alt": "Selina Mae Quibrantar smiling and standing with her arms crossed",
-      "date": "Mar 30, 2023",
-      "link": "https://childnutrition.utoronto.ca/news/u-t-stakeholder-study-guides-research-canadas-school-food-programs"
+      "title": "What we know — and don't — about the national school food program",
+      "image": "https://i.cbc.ca/1.7161469.1712087596!/cpImage/httpImage/image.jpg_gen/derivatives/16x9_780/fresh-food-initiatives.jpg",
+      "image_alt": "Man wearing black gloves assembling healthy burrito with sprouts",
+      "date": "April 03, 2024",
+      "link": "https://www.cbc.ca/news/canada/national-food-program-schools-explain-1.7160901"
     },
     {
       "title": "Parents in Greater Toronto Area concerned about limited access to school food programs",
@@ -13,15 +13,22 @@
       "image_alt": "Healthy, nutritious vegetables",
       "date": "April 19, 2023",
       "link": "https://medicalxpress.com/news/2023-04-parents-greater-toronto-area-limited.html"
+    },
+    {
+      "title": "U of T Stakeholder Study Guides Research on Canada’s School Food Programs ",
+      "image": "https://childnutrition.utoronto.ca/sites/default/files/styles/scale_width_800/public/assets/news/image/_DSC0625.webp?itok=p9GD23xo",
+      "image_alt": "Selina Mae Quibrantar smiling and standing with her arms crossed",
+      "date": "Mar 30, 2023",
+      "link": "https://childnutrition.utoronto.ca/news/u-t-stakeholder-study-guides-research-canadas-school-food-programs"
     }
   ],
   "all_articles": [
     {
-      "title": "U of T Stakeholder Study Guides Research on Canada’s School Food Programs ",
-      "image": "https://childnutrition.utoronto.ca/sites/default/files/styles/scale_width_800/public/assets/news/image/_DSC0625.webp?itok=p9GD23xo",
-      "image_alt": "Selina Mae Quibrantar smiling and standing with her arms crossed",
-      "date": "Mar 30, 2023",
-      "link": "https://childnutrition.utoronto.ca/news/u-t-stakeholder-study-guides-research-canadas-school-food-programs"
+      "title": "What we know — and don't — about the national school food program",
+      "image": "https://i.cbc.ca/1.7161469.1712087596!/cpImage/httpImage/image.jpg_gen/derivatives/16x9_780/fresh-food-initiatives.jpg",
+      "image_alt": "Man wearing black gloves assembling healthy burrito with sprouts",
+      "date": "April 03, 2024",
+      "link": "https://www.cbc.ca/news/canada/national-food-program-schools-explain-1.7160901"
     },
     {
       "title": "Parents in Greater Toronto Area concerned about limited access to school food programs",
@@ -29,20 +36,20 @@
       "image_alt": "Healthy, nutritious vegetables",
       "date": "April 19, 2023",
       "link": "https://medicalxpress.com/news/2023-04-parents-greater-toronto-area-limited.html"
+    },
+    {
+      "title": "U of T Stakeholder Study Guides Research on Canada’s School Food Programs ",
+      "image": "https://childnutrition.utoronto.ca/sites/default/files/styles/scale_width_800/public/assets/news/image/_DSC0625.webp?itok=p9GD23xo",
+      "image_alt": "Selina Mae Quibrantar smiling and standing with her arms crossed",
+      "date": "Mar 30, 2023",
+      "link": "https://childnutrition.utoronto.ca/news/u-t-stakeholder-study-guides-research-canadas-school-food-programs"
     },
     {
       "title": "Q&A with Samy Cheng, Summer Research Student at University of Toronto’s Department of Nutritional Sciences",
       "image": "https://substackcdn.com/image/fetch/w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F284f2c4a-b593-42fc-b646-460f858d5fd8_1697x955.png",
       "image_alt": "FKNM Stakeholder Analysis & Content Validity Survey",
-      "date": "Nov 8, 2022",
+      "date": "Nov 08, 2022",
       "link": "https://invitehealth.substack.com/p/q-and-a-with-samy-cheng?r=lk9c6&utm_campaign=post&utm_medium=web"
-    },
-    {
-      "title": "Feeding Kids, Nourishing Minds: Researcher Mavra Ahmed studies school food programs in Canada",
-      "image": "https://www.utoronto.ca/sites/default/files/styles/news_banner_740/public/Mavra-Ahmed-2022-crop.jpg?h=afdc3185&itok=XFlIO2ae",
-      "image_alt": "Mavra Ahmed smiling and standing in front of a bookshelf",
-      "date": "April 29, 2022",
-      "link": "https://www.utoronto.ca/news/feeding-kids-nourishing-minds-researcher-mavra-ahmed-studies-school-food-programs-canada"
     },
     {
       "title": "President's Choice children’s charity and U of T aim to discover the impact of nutrition at school",
@@ -52,10 +59,17 @@
       "link": "https://www.pcchildrenscharity.ca/uoft-aim-to-discover-the-impact-of-nutrition-at-school/"
     },
     {
+      "title": "Feeding Kids, Nourishing Minds: Researcher Mavra Ahmed studies school food programs in Canada",
+      "image": "https://www.utoronto.ca/sites/default/files/styles/news_banner_740/public/Mavra-Ahmed-2022-crop.jpg?h=afdc3185&itok=XFlIO2ae",
+      "image_alt": "Mavra Ahmed smiling and standing in front of a bookshelf",
+      "date": "April 29, 2022",
+      "link": "https://www.utoronto.ca/news/feeding-kids-nourishing-minds-researcher-mavra-ahmed-studies-school-food-programs-canada"
+    },
+    {
       "title": "U of T Launches Study of School Food Programs Across Canada",
       "image": "https://childnutrition.utoronto.ca/sites/default/files/styles/scale_width_800/public/assets/news/image/Photo%20by%20Siarhei%20Shuntsikau%2C%20Dreamstime.webp?itok=Y753MSER",
       "image_alt": "Two children sitting on a bench with their school lunches in between them",
-      "date": "Dec 8, 2021 ",
+      "date": "Dec 08, 2021",
       "link": "https://childnutrition.utoronto.ca/news/u-t-launches-study-school-food-programs-across-canada1"
     }
   ]
