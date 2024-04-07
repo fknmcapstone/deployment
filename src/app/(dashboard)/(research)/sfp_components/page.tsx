@@ -331,7 +331,13 @@ const options: any = {
     }
   },
 };
-if (isWindowDefined() && window.innerWidth < 768) {
+if (isWindowDefined() && window.innerWidth < 1100) {
+  options.layout.padding.right = 420;
+  options.plugins.datalabels.font.size = 8.5;
+  options.plugins.datalabels.font.weight = "normal";
+  options.aspectRatio = 1.8;
+}
+if (isWindowDefined() && window.innerWidth < 601) {
   options.layout.padding.right = 550;
   options.plugins.datalabels.font.size = 8.5;
   options.plugins.datalabels.font.weight = "normal";
