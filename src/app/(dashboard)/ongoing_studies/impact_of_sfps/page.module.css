@@ -1,0 +1,22 @@
+.main {
+  display: grid;
+  background-color: var(--background-color);
+  color: var(--dark-text-color);
+  width: 100%;
+  min-height: 100lvh;
+  padding-inline: 20vw;
+  padding-block-end: 5vw;
+  grid-template-columns: 1fr;
+  grid-template-rows: 5rem min-content;
+  grid-auto-rows: min-content;
+}
+
+@media only screen and (max-width: 600px) {
+  .main {
+    padding-inline: 8vw;
+  }
+}
+
+.content {
+  margin-top: 2rem;
+} 

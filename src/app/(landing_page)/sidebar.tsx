@@ -62,6 +62,16 @@ const pageList: Page[] = [
     dataAttr: "nav_sidebar_about_fknm",
     href: "/about_fknm/",
   },
+  {
+    name: "Ongoing Studies",
+    dataAttr: "nav_sidebar_ongoing_studies",
+    href: "/ongoing_studies/",
+  },
+  {
+    name: "Impact of SFPs",
+    dataAttr: "nav_sidebar_impact_of_sfps",
+    href: "/ongoing_studies/impact_of_sfps/",
+  },
 ];
 
 const Sidebar = ({
