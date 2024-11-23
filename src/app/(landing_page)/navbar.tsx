@@ -60,10 +60,23 @@ const Navbar = () => {
                     SFPs Food Breakdown
                   </Link>
                   <Separator />
+                </div>
+              </div>
+              <Separator />
+              <div
+                data-cy="nav_intake_visuals"
+                className={styles.intakeVisualsNavItem}
+              >
+                Stakeholders Perception
+                <div
+                  data-cy="nav_intake_visuals_submenu"
+                  className={styles.intakeVisualsSubMenu}
+                >
+                  <div className={styles.triangleLeft} />
                   <Link
                     className={styles.marginBlock}
                     data-cy="nav_parents_preferences"
-                    href="/intake_visuals/parents_preferences/"
+                    href="/stakeholders_perception/parents_preferences/"
                   >
                     Parents' Preferences
                   </Link>
@@ -71,7 +84,7 @@ const Navbar = () => {
                   <Link
                     className={styles.marginBlock}
                     data-cy="nav_parents_opinions"
-                    href="/intake_visuals/parents_opinions/"
+                    href="/stakeholders_perception/parents_opinions/"
                   >
                     Parents' Opinions
                   </Link>

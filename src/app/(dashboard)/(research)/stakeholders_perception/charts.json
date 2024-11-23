@@ -1,0 +1,139 @@
+{
+  "Parents' Preferences": {
+    "category": "Parents' Preferences",
+    "subtitle": "The following charts and graphs illuminate crucial insights into parental perspectives regarding school food programs and their preferences for children’s participation, enrolment decisions, types of SFPs offered, timings, funding models, and affordability. These key insights help inform policymakers and educators about parental priorities when developing effective school food programs.",
+    "charts": [
+      {
+        "name": "For Children to Participate in SFPs",
+        "url": "https://app.powerbi.com/view?r=eyJrIjoiNjA5MDc4ZjUtZjgwMi00OWE1LWE2MDItMGVhYWU0NjNiNGNmIiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
+        "blurb": "This chart highlights parents' preference for their child(ren) to participate in School Food Programs."
+      },
+      {
+        "name": "For Enrolling Children in SFPs",
+        "url": "https://app.powerbi.com/view?r=eyJrIjoiZmE3NmNlYWUtZjkyYy00OTRjLThmYjgtZDZkZGVmYzlkNGVjIiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
+        "blurb": "This chart highlights parental enrollment of their children in School Food Programs categorized by the childrens' age."
+      },
+      {
+        "name": "For Not Enrolling Children in SFPs",
+        "url": "https://app.powerbi.com/view?r=eyJrIjoiNDg2M2Y5NDAtZjM3YS00ZTZiLWFkMTYtZmI0YmI1MzlkMDI5IiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
+        "blurb": "This chart highlights parental refusal of enrollment of their children in School Food Programs categorized by the childrens' age."
+      },
+      {
+        "name": "For Types of SFPs to be Offered",
+        "url": "https://app.powerbi.com/view?r=eyJrIjoiZDY0YzExZjQtOGU4ZS00MDMxLTkwMmMtZGFmZGUwOTQ3YWRlIiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
+        "blurb": "This chart highlights parents' preference of offered School Food Programs."
+      },
+      {
+        "name": "For Times that SFPs are Offered",
+        "url": "https://app.powerbi.com/view?r=eyJrIjoiMWM3ODA0YzEtOTE3Yi00NTgwLWJiNzEtMjdkNTM5MjA5Zjc3IiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
+        "blurb": "This chart highlights parents' preference of the timings of School Food Programs to be offered."
+      },
+      {
+        "name": "For Types of SFP Funding Models",
+        "url": "https://app.powerbi.com/view?r=eyJrIjoiNzhjMWVmMDUtZDU4Yi00MTNjLThjYzItYjNkMmQyODE2MmI3IiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
+        "blurb": "This chart highlights parents' preferred funding models for School Food Programs."
+      },
+      {
+        "name": "For Max Affordable Daily Meal Cost",
+        "url": "https://app.powerbi.com/view?r=eyJrIjoiNmM2YzFlM2MtNjFjNi00MDc2LTljMzAtNDk0ZTM0NjhiNWYwIiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
+        "blurb": "This chart highlights the maximum cost that parents and caregivers can afford to pay for Lunch/Breakfast Programs (per day)."
+      }
+    ]
+  },
+  "Parents' Opinions": {
+    "category": "Parents' Opinions",
+    "subtitle": "The following charts and graphs explore the opinions of parents on various school food program related topics, including cultural and less processed foods, portion sizes, beverage inclusion, meal affordability, customization options, food accommodations, sustainability, nutrition education, and program evaluation. These insights help guide efforts to improve SFPs to better meet children's dietary needs and preferences.",
+    "charts": [
+      {
+        "name": "Menu Aligns with Canada Food Guide",
+        "url": "https://app.powerbi.com/view?r=eyJrIjoiNjFmZGZkZTItNzBlMi00ZDRlLTkyYjMtZTIxMzdmOWJjOGFiIiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
+        "blurb": "This chart higlights parents' opinions on menu alignment with Canada's Food Guide in School Food Programs."
+      },
+      {
+        "name": "Importance of Cultural Food",
+        "url": "https://app.powerbi.com/view?r=eyJrIjoiMDY5ZDZkYzEtZWMzMy00ZGExLThhN2MtNGU0ZTM0OTc5NzMzIiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
+        "blurb": "This chart highlights parents' opinions on having culturally appropriate foods, focusing on vegetables, whole grains and fruits being served."
+      },
+      {
+        "name": "Importance of Less Processed Food",
+        "url": "https://app.powerbi.com/view?r=eyJrIjoiY2RmM2UyMTEtMWZmYy00ODhiLTk0MDQtMzExNzUxYjA0NjE2IiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
+        "blurb": "This chart higlights parents' opinions on having meals and snacks be minimally processed (fewer pre-packaged, ready-to-eat foods)."
+      },
+      {
+        "name": "Various Food Portions Offered",
+        "url": "https://app.powerbi.com/view?r=eyJrIjoiYWZmYmRkZjEtY2JlNi00OGQ1LWJiNDgtY2Q0ZjI5YzNhNTA0IiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
+        "blurb": "This chart higlights parents' opinions on having various food portions be offered."
+      },
+      {
+        "name": "Meals Coming With a Beverage",
+        "url": "https://app.powerbi.com/view?r=eyJrIjoiMWI3NThlMDAtZTE5NC00ZTQwLTk4MDktZDFmZjdjYmQ3NjI3IiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
+        "blurb": "This chart higlights parents' opinions on having meals be accompanied by a beverage."
+      },
+      {
+        "name": "Low-Sugar, Low-Salt, Low-Fat Meals",
+        "url": "https://app.powerbi.com/view?r=eyJrIjoiN2QyMGE2MjgtZTEyZi00Y2E4LTkwZDgtZTY3M2MwODBhNjNhIiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
+        "blurb": "This chart higlights parents' opinions on having meals with low sugar, salt and fat."
+      },
+      {
+        "name": "Free or Low-Cost Meals",
+        "url": "https://app.powerbi.com/view?r=eyJrIjoiMWQwMDU0MzUtOGRkOC00NjM1LWJhZGMtNzAzM2JiYmI3MjYxIiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
+        "blurb": "This chart higlights parents' opinions on having meals be offered for free or at a low cost."
+      },
+      {
+        "name": "Children's Ability to Participate",
+        "url": "https://app.powerbi.com/view?r=eyJrIjoiN2M4MjJiMDAtODczOS00ZjRjLTlhZjMtMzA5MjUzMzNmNzUxIiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
+        "blurb": "This chart higlights parents' opinions on having all or most children at school able to participate in School Food Programs."
+      },
+      {
+        "name": "SFPs Unique to Childrens' Needs ",
+        "url": "https://app.powerbi.com/view?r=eyJrIjoiOGMzNGIwMjktMWUzNS00NzQ5LTk4MTktZGVhOTIwY2U1ZWE0IiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
+        "blurb": "This chart higlights parents' opinions on having School Food Programs cater to childrens' specific needs."
+      },
+      {
+        "name": "Customizable Food Selection",
+        "url": "https://app.powerbi.com/view?r=eyJrIjoiYjNmMWY2MmEtNDY5NS00MDQ2LWI1OWEtMTNlZThiMGU5NDlhIiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
+        "blurb": "This chart higlights parents' opinions on having them and their child(ren) choose the type of food served."
+      },
+      {
+        "name": "Food Accomodations & Flexibility",
+        "url": "https://app.powerbi.com/view?r=eyJrIjoiNDYyOWJhNzItNWU3Yy00ZTkyLWJkYzEtMjhhNjgzMjkwYjAzIiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
+        "blurb": "This chart higlights parents' opinions on there being accomodations made for childrens' allergies, intolerances, and/or religious dietary practices."
+      },
+      {
+        "name": "Locally Grown & Sustainable Food",
+        "url": "https://app.powerbi.com/view?r=eyJrIjoiOWE3N2Q2YmMtZTA2ZS00OGY4LTgxODItMDQ1MDdiNzZjYzEwIiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
+        "blurb": "This chart higlights parents' opinions on having food purchased for the program be locally grown and sustainably produced."
+      },
+      {
+        "name": "Children Nutrition Education",
+        "url": "https://app.powerbi.com/view?r=eyJrIjoiZTc5NmRmZjktMmUzYy00MTkzLTg5N2MtYzU4MzgyMDVmYjIyIiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
+        "blurb": "This chart higlights parents' opinions on children learning how food is grown and ends up on their plate."
+      },
+      {
+        "name": "Children Involvement in Food Prep",
+        "url": "https://app.powerbi.com/view?r=eyJrIjoiNmEwNjM5MmQtOTE5Yi00M2MxLWJiMTctODNlZWI3Yzc2N2MyIiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
+        "blurb": "This chart higlights parents' opinions on children becoming involved in the preparation of the food."
+      },
+      {
+        "name": "Children Socializing while Eating",
+        "url": "https://app.powerbi.com/view?r=eyJrIjoiY2ViYTc3YjMtMjE1NS00OGVjLTk0MTYtZTQ4ZjE1ZDlhYjhmIiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
+        "blurb": "This chart higlights parents' opinions on children eating together with an adult and socializing during the meals."
+      },
+      {
+        "name": "Canadian Nutritional Standards",
+        "url": "https://app.powerbi.com/view?r=eyJrIjoiMDVhZTg1NDgtZGIyNC00OTRkLThjNjEtYjZiYTFmZDU1YTUwIiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
+        "blurb": "This chart higlights parents' opinions on following Canada-wide nutritional standards to ensure food safety."
+      },
+      {
+        "name": "National Program Evaluation",
+        "url": "https://app.powerbi.com/view?r=eyJrIjoiZmZhNzFhYTUtNjFmMi00ZjMzLTg2YWItYTJlYzc1NTI0MzM3IiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
+        "blurb": "This chart higlights parents' opinions on there being consistent Canada-wide School Food Program evaluation."
+      },
+      {
+        "name": "Feedback on School Food Programs",
+        "url": "https://app.powerbi.com/view?r=eyJrIjoiYmFiNjgwZTgtNDMzZC00ZDI5LThhMTAtOTE0Zjk2ZmJkOGZlIiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
+        "blurb": "This chart higlights parents' opinions on there being opportunity for caregivers and children to provide regular feedback on the School Food Program."
+      }
+    ]
+  }
+}
