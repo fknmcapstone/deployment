@@ -111,6 +111,23 @@ const Navbar = () => {
             </div>
           </div>
 
+          <div data-cy="nav_ongoing_studies" className={styles.researchNavItem}>
+            Ongoing Studies
+            <div
+              data-cy="nav_ongoing_studies_submenu"
+              className={styles.navBarSubMenu}
+            >
+              <Link
+                className={styles.marginBlock}
+                data-cy="nav_impact_of_sfps"
+                href="/ongoing_studies/impact_of_sfps/"
+              >
+                Impact of SFPs
+              </Link>
+              <Separator />
+            </div>
+          </div>
+
           <Link data-cy="nav_news" href="/news/">
             News
           </Link>
