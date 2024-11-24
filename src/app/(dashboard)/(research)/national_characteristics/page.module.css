@@ -1,0 +1,58 @@
+.main {
+  display: grid;
+  width: 100%;
+  padding-top: 4rem;
+  padding-bottom: 7rem;
+  background-color: var(--background-color);
+  color: var(--dark-text-color);
+}
+
+.chartColumn {
+  justify-self: center;
+  width: 60%;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: var(--subtitle-font-size);
+  margin-bottom: 1rem;
+}
+
+.subtext {
+  font-size: var(--small-paragraph-font-size);
+  margin-block: 2lvh;
+  width: 50lvw;
+}
+
+.chartArea {
+  margin-block-end: 3.2lvw;
+  border-style: solid;
+  border-width: 1px;
+  border-color: var(--primary-color);
+  background-color: white;
+  max-width: 55rem;
+  max-height: 35rem;
+  height: 35lvw;
+  width: 60lvw;
+  justify-self: start;
+  position: relative;
+  padding-bottom: 9.10%;
+}
+
+@media only screen and (max-width: 892px) {
+  .chartColumn {
+    width: 85%;
+    margin-block-start: 2rem;
+    row-gap: 2rem;
+  }
+  
+  .chartArea {
+    width: 100%;
+    padding-bottom: 4.5%;
+    height: 100%;
+  }
+
+  .subtext {
+    width: 80lvw;
+  }
+} 

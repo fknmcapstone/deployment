@@ -1,0 +1,18 @@
+{
+  "National Characteristics": {
+    "category": "National Characteristics of School Food Programs",
+    "subtitle": "Description of the tab .....",
+    "charts": [
+      {
+        "name": "National Overview",
+        "url": "https://app.powerbi.com/view?r=eyJrIjoiZjg4YjNkZDgtYmM4MS00NDJkLWJkYWEtZmI4ODA4MDVhMzk3IiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
+        "blurb": "Overview of national school food program characteristics"
+      },
+      {
+        "name": "Regional Comparison",
+        "url": "https://app.powerbi.com/view?r=eyJrIjoiZjg4YjNkZDgtYmM4MS00NDJkLWJkYWEtZmI4ODA4MDVhMzk3IiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
+        "blurb": "Comparison of school food programs across different regions"
+      }
+    ]
+  }
+}
