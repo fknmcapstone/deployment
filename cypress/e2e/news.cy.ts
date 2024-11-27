@@ -1,3 +1,4 @@
+/* eslint-disable quotes */
 import data from "../../src/app/(dashboard)/news/articles.json";
 
 describe("News Page Spec", () => {
@@ -7,7 +8,7 @@ describe("News Page Spec", () => {
   });
   it("Smokes key elements", () => {
     const texts = ["main_title", "recent_news_title", "all_news_title"];
-    for (var text of texts) {
+    for (const text of texts) {
       cy.get('[data-cy="' + text + '"]').should("be.visible");
     }
 

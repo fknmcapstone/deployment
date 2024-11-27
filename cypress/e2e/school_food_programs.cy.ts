@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable quotes */
 describe("School Food Programs Page Spec", () => {
   beforeEach(() => {
     cy.visit("/");

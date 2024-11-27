@@ -1,3 +1,4 @@
+/* eslint-disable quotes */
 describe("SFP Components Page Spec", () => {
   beforeEach(() => {
     cy.visit("/");
@@ -19,7 +20,7 @@ describe("SFP Components Page Spec", () => {
       "card_title5",
       "card_title6",
     ];
-    for (var text of texts) {
+    for (const text of texts) {
       cy.get('[data-cy="' + text + '"]').should("be.visible");
     }
   });
