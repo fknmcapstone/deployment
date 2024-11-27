@@ -1,17 +1,22 @@
 {
   "National Characteristics": {
     "category": "National Characteristics of School Food Programs",
-    "subtitle": "Description of the tab .....",
+    "subtitle": "The following charts and graphs provide a summary of the characteristics of school food programs across Canada.",
     "charts": [
       {
-        "name": "National Overview",
-        "url": "https://app.powerbi.com/view?r=eyJrIjoiZjg4YjNkZDgtYmM4MS00NDJkLWJkYWEtZmI4ODA4MDVhMzk3IiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
-        "blurb": "Overview of national school food program characteristics"
+        "name": "Food Provided",
+        "url": "https://app.powerbi.com/view?r=eyJrIjoiZmRlMzVmY2QtMjI2ZS00ZjA2LTg3NDktZDQwNjcwN2U2NWU0IiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9&embedImagePlaceholder=true",
+        "blurb": "Sum of Count by Type of Food Provided"
       },
       {
-        "name": "Regional Comparison",
-        "url": "https://app.powerbi.com/view?r=eyJrIjoiZjg4YjNkZDgtYmM4MS00NDJkLWJkYWEtZmI4ODA4MDVhMzk3IiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
-        "blurb": "Comparison of school food programs across different regions"
+        "name": "Food Funding",
+        "url": "https://app.powerbi.com/view?r=eyJrIjoiOTA2NTVmM2ItZGYwNC00OTkxLTk3NTYtZmE3MzNhZjQ4OTljIiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9&embedImagePlaceholder=true",
+        "blurb": "Sum of Percentage by Type of Food Funding"
+      },
+      {
+        "name": "Food Price",
+        "url": "https://app.powerbi.com/view?r=eyJrIjoiMWUzNWZhMjItOWEzYi00ZDNhLWIyNmUtY2RmZjdhNjNhNzY5IiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9&embedImagePlaceholder=true",
+        "blurb": "Sum of Number of Facilities of Food Price"
       }
     ]
   }
