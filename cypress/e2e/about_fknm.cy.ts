@@ -1,3 +1,4 @@
+/* eslint-disable quotes */
 describe("AboutFKNM Page Spec", () => {
   beforeEach(() => {
     cy.visit("/");

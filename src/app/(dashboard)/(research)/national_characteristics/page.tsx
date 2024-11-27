@@ -25,8 +25,8 @@ export default function NationalCharacteristics() {
         </div>
 
         {chartData[pageTitle].charts.map((chart) => (
-          <div 
-            key={chart.name} 
+          <div
+            key={chart.name}
             id={`${chartData[pageTitle].category.replace(/ /g, "_")}${chart.name.replace(/ /g, "_").replace(/[^a-zA-Z ]/g, "")}`}
             className={styles.chartArea}
           >

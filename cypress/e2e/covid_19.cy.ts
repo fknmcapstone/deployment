@@ -30,7 +30,7 @@ describe("COVID-19 Page spec", () => {
       "infotext_chall5",
       "infotext_chall6",
     ];
-    for (var text of texts) {
+    for (const text of texts) {
       cy.get('[data-cy="' + text + '"]').should("be.visible");
     }
   });
