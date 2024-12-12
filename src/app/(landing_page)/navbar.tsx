@@ -128,9 +128,9 @@ const Navbar = () => {
               <Link
                 className={styles.marginBlock}
                 data-cy="nav_impact_of_sfps"
-                href="/ongoing_studies/impact_of_sfps/"
+                href="/ongoing_studies/uoft_school_food_study/"
               >
-                Impact of SFPs
+                University of Toronto, School Food Study
               </Link>
               <Separator />
             </div>
