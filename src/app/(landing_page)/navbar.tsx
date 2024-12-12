@@ -4,16 +4,8 @@ import Link from "next/link";
 import styles from "./page.module.css";
 
 // eslint-disable-next-line react/prop-types
-function Separator({ height = 1 }) {
-  return (
-    <hr
-      style={{
-        backgroundColor: "white",
-        height: height,
-        border: "none",
-      }}
-    />
-  );
+function Separator() {
+  return <div className={styles.separator} />;
 }
 
 const Navbar = () => {
