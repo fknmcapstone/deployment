@@ -117,51 +117,89 @@
   border-right: 1.8rem solid var(--visuals-menu-color);
 }
 
+/* Base styles for dropdown menus */
 .navBarSubMenu,
 .intakeVisualsSubMenu {
-  text-align: left;
-  line-height: 100%;
   display: none;
   position: absolute;
-  top: 100%;
-  transform: translateX(-25%);
-  height: min-content;
-  width: 12rem;
-  height: fit-content;
   background-color: var(--secondary-color);
-  box-shadow: var(--menu-shadow);
-  border-radius: 0px 0px 10px 10px;
-  padding: 0 1rem 1rem 1rem;
-  white-space: normal;
+  min-width: 12rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 0.3rem;
+  padding: 0.4rem 0;
+  z-index: 100;
 }
 
+/* Position the main dropdown */
+.navBarSubMenu {
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Position the nested dropdown */
 .intakeVisualsSubMenu {
-  position: absolute;
-  top: 0;
-  left: 14rem;
-  background-color: var(--visuals-menu-color);
+  top: -0.4rem; /* Align with parent menu item */
+  left: 100%;
+  margin-left: 1px;
 }
 
+/* Show dropdowns on hover */
+.researchNavItem:hover .navBarSubMenu,
+.intakeVisualsNavItem:hover .intakeVisualsSubMenu {
+  display: block;
+}
+
+/* Keep submenu visible when hovering over it */
+.navBarSubMenu:hover,
+.intakeVisualsSubMenu:hover {
+  display: block;
+}
+
+/* Menu items styling */
 .researchNavItem,
 .intakeVisualsNavItem {
   position: relative;
+  padding: 0.3rem 0.8rem;
+  cursor: pointer;
 }
 
-.intakeVisualsNavItem {
-  padding-block: 0.8rem;
-}
-
-.researchNavItem:hover .navBarSubMenu,
-.navBarSubMenu:hover,
-.intakeVisualsSubMenu:hover,
-.intakeVisualsNavItem:hover .intakeVisualsSubMenu {
-  display: block;
-  z-index: 1;
-}
-
-.navBarSubMenu a {
+/* Dropdown arrows */
+.researchNavItem:after,
+.intakeVisualsNavItem:after {
+  content: '▼';
+  font-size: 0.6em;
   margin-left: 0.3rem;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.intakeVisualsNavItem:after {
+  content: '▶';
+}
+
+/* Menu item links */
+.navBarSubMenu a,
+.intakeVisualsSubMenu a {
   display: block;
+  padding: 0.4rem 0.8rem;
+  color: var(--light-text-color);
+  transition: background-color 0.2s ease;
+  white-space: nowrap;
+  font-size: 0.9em;
+}
+
+/* Hover effect for menu items */
+.navBarSubMenu a:hover,
+.intakeVisualsSubMenu a:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+/* Separator styling */
+.separator {
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.08);
+  margin: 0.3rem 0;
 }
 
 /* CSS for Sidebar component */
