@@ -4,11 +4,11 @@
 import React from "react";
 import styles from "./page.module.css";
 
-export default function ImpactOfSFPs() {
+export default function UofTSchoolFoodStudy() {
   return (
     <div className={styles.pageContainer}>
       <nav className={styles.topTableOfContents}>
-        <h2>Impact of SFPs</h2>
+        <h2>University of Toronto, School Food Study</h2>
         <div className={styles.tocGrid}>
           <div className={styles.tocSection}>
             <div className={styles.tocHeader}>
@@ -122,29 +122,61 @@ export default function ImpactOfSFPs() {
           <div className={styles.videoGrid}>
             <div id="elementary-video" className={styles.videoCard}>
               <h3>Study Overview Video (Elementary)</h3>
-              <div className={styles.videoPlaceholder}>
-                {/* Video embed will go here */}
+              <div className={styles.videoContainer}>
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/VW0hKAEIn4I"
+                  title="Elementary School Study Overview"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
               </div>
             </div>
 
             <div id="highschool-video" className={styles.videoCard}>
               <h3>Study Overview Video (High School)</h3>
-              <div className={styles.videoPlaceholder}>
-                {/* Video embed will go here */}
+              <div className={styles.videoContainer}>
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/SWM1_sSlQb8"
+                  title="High School Study Overview"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
               </div>
             </div>
 
             <div id="food-record-video" className={styles.videoCard}>
               <h3>Food Record Instructional Video</h3>
-              <div className={styles.videoPlaceholder}>
-                {/* Video embed will go here */}
+              <div className={styles.videoContainer}>
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/3xV2JYCzU7Q"
+                  title="3 Day Food Record Instructions"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
               </div>
             </div>
 
             <div id="consent-video" className={styles.videoCard}>
               <h3>Consent Form Instructional Video</h3>
-              <div className={styles.videoPlaceholder}>
-                {/* Video embed will go here */}
+              <div className={styles.videoContainer}>
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/EGnMxq-VUPc"
+                  title="Consent Form Instructions"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
               </div>
             </div>
           </div>
