@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable quotes */
 import chartsData from "../../../../src/app/(dashboard)/(research)/intake_visuals/charts.json";
 
 describe("Parents' Opinions Page Spec", () => {
@@ -19,19 +21,21 @@ describe("Parents' Opinions Page Spec", () => {
 
   it("Tests chart functionality", () => {
     const pageTitle = "Parents' Opinions";
-    let allCharts: string[] = [];
-    let allChartsNames: string[] = [];
-    for (var chart of chartsData[pageTitle].charts) {
+    const allCharts: string[] = [];
+    const allChartsNames: string[] = [];
+    const categoryData =
+      chartsData["Parents' Opinions" as keyof typeof chartsData];
+    for (const chart of categoryData.charts) {
       allCharts.push(
-        chartsData[pageTitle].category.replace(/ /g, "_") +
+        categoryData.category.replace(/ /g, "_") +
           chart.name.replace(/ /g, "_").replace(/[^a-zA-Z ]/g, "")
       );
       allChartsNames.push(chart.name);
     }
 
-    var chartsToTest: string[] = [];
+    const chartsToTest: string[] = [];
     if (allCharts.length < 5) {
-      for (var i of allCharts) {
+      for (const i of allCharts) {
         chartsToTest.push(i);
       }
     } else {
@@ -44,7 +48,7 @@ describe("Parents' Opinions Page Spec", () => {
       }
     }
 
-    for (var chartIndex in chartsToTest) {
+    for (const chartIndex in chartsToTest) {
       cy.get('[data-cy="shortcut_menu"]')
         .contains("a", allChartsNames[chartIndex])
         .click();

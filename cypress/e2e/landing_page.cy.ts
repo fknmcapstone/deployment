@@ -1,3 +1,4 @@
+/* eslint-disable quotes */
 describe("Landing Page Spec", () => {
   beforeEach(() => {
     cy.visit("/");
@@ -14,7 +15,7 @@ describe("Landing Page Spec", () => {
       "school_food_programs_text",
       "research_text",
     ];
-    for (var text of texts) {
+    for (const text of texts) {
       cy.get('[data-cy="' + text + '"]').should("be.visible");
     }
   });

@@ -19,9 +19,9 @@ describe("SFPs General Information Page Spec", () => {
 
   it("Tests chart functionality", () => {
     const pageTitle = "SFPs General Information";
-    let allCharts: string[] = [];
-    let allChartsNames: string[] = [];
-    for (var chart of chartsData[pageTitle].charts) {
+    const allCharts: string[] = [];
+    const allChartsNames: string[] = [];
+    for (const chart of chartsData[pageTitle].charts) {
       allCharts.push(
         chartsData[pageTitle].category.replace(/ /g, "_") +
           chart.name.replace(/ /g, "_").replace(/[^a-zA-Z ]/g, "")
@@ -29,9 +29,9 @@ describe("SFPs General Information Page Spec", () => {
       allChartsNames.push(chart.name);
     }
 
-    var chartsToTest: string[] = [];
+    const chartsToTest: string[] = [];
     if (allCharts.length < 5) {
-      for (var i of allCharts) {
+      for (const i of allCharts) {
         chartsToTest.push(i);
       }
     } else {
@@ -44,7 +44,7 @@ describe("SFPs General Information Page Spec", () => {
       }
     }
 
-    for (var chartIndex in chartsToTest) {
+    for (const chartIndex in chartsToTest) {
       cy.get('[data-cy="shortcut_menu"]')
         .contains("a", allChartsNames[chartIndex])
         .click();
