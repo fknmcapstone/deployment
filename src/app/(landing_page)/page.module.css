@@ -597,9 +597,6 @@
   transition: transform 330ms ease-in-out;
 }
 
-.sectionLink {
-}
-
 .sectionLink:hover .linkArrow {
   transform: translate(10px, 0);
 }
