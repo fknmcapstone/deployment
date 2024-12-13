@@ -155,3 +155,57 @@
     right: 1rem;
   }
 }
+
+.searchJumpContainer {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  gap: 1rem;
+  z-index: 1000;
+}
+
+.searchForm {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.searchInput {
+  padding: 0.5rem;
+  padding-right: 2.5rem;
+  border: 1px solid var(--primary-color);
+  border-radius: 4px;
+  width: 200px;
+  font-size: 0.9rem;
+}
+
+.searchButton {
+  position: absolute;
+  right: 0.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--primary-color);
+}
+
+.jumpSelect {
+  padding: 0.5rem;
+  border: 1px solid var(--primary-color);
+  border-radius: 4px;
+  background-color: white;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+  .searchJumpContainer {
+    position: static;
+    padding: 1rem;
+    flex-direction: column;
+  }
+
+  .searchInput {
+    width: 100%;
+  }
+}

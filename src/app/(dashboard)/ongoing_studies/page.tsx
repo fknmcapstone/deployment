@@ -2,7 +2,7 @@
 
 import React from "react";
 import styles from "./page.module.css";
-import ToTopButton from "../common_elements";
+import { ToTopButton } from "../common_elements";
 
 export default function OngoingStudies() {
   return (
@@ -11,7 +11,6 @@ export default function OngoingStudies() {
       <title>Ongoing Studies</title>
       <div className={styles.content}>
         <h1>Ongoing Studies</h1>
-        {/* Add content for ongoing studies here */}
       </div>
     </main>
   );

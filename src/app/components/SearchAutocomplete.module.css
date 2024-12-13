@@ -1,0 +1,40 @@
+.autocompleteContainer {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: white;
+  border: 1px solid var(--primary-color);
+  border-top: none;
+  border-radius: 0 0 4px 4px;
+  max-height: 300px;
+  overflow-y: auto;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.suggestionItem {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border: none;
+  background: none;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.suggestionItem:hover {
+  background-color: rgba(var(--primary-color-rgb), 0.1);
+}
+
+.suggestionTitle {
+  color: var(--dark-text-color);
+  font-size: 0.9rem;
+}
+
+.suggestionCategory {
+  color: var(--secondary-color);
+  font-size: 0.8rem;
+} 

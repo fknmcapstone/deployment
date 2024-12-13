@@ -1,0 +1,128 @@
+.searchJumpContainer {
+  display: flex;
+  gap: 1rem;
+  align-items: stretch;
+  margin-left: auto;
+  height: 38px;
+  padding: 0 1rem;
+}
+
+.searchContainer {
+  position: relative;
+  display: flex;
+  background: white;
+}
+
+.searchForm {
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  height: 100%;
+}
+
+.searchInput {
+  padding: 0 12px;
+  border: none;
+  width: 200px;
+  font-size: 0.95rem;
+  color: var(--dark-text-color);
+}
+
+.searchInput:focus {
+  outline: none;
+}
+
+.searchInput::placeholder {
+  color: #666;
+  opacity: 0.8;
+}
+
+.jumpContainer {
+  position: relative;
+  height: 100%;
+}
+
+.jumpButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0 16px;
+  border: none;
+  background: var(--secondary-color);
+  color: white;
+  font-size: 0.95rem;
+  cursor: pointer;
+  height: 100%;
+  min-width: 120px;
+  transition: background-color 0.2s ease;
+}
+
+.jumpButton:hover {
+  background: var(--secondary-color-hover);
+}
+
+.jumpArrow {
+  transition: transform 0.2s ease;
+  margin-left: auto;
+}
+
+.jumpArrowUp {
+  transform: rotate(180deg);
+}
+
+.jumpMenu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: white;
+  border: none;
+  min-width: 280px;
+  max-width: 320px;
+  max-height: 450px;
+  overflow-y: auto;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  margin-top: 1px;
+}
+
+.jumpMenuItem {
+  width: 100%;
+  text-align: left;
+  padding: 10px 16px;
+  border: none;
+  background: none;
+  color: var(--dark-text-color);
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-left: 3px solid transparent;
+}
+
+.jumpMenuItem:hover {
+  background-color: #f8f9fa;
+  border-left-color: var(--secondary-color);
+}
+
+/* Custom scrollbar for the jump menu */
+.jumpMenu::-webkit-scrollbar {
+  width: 8px;
+}
+
+.jumpMenu::-webkit-scrollbar-track {
+  background: #f8f9fa;
+}
+
+.jumpMenu::-webkit-scrollbar-thumb {
+  background: #cfd8dc;
+  border-radius: 4px;
+}
+
+.jumpMenu::-webkit-scrollbar-thumb:hover {
+  background: #b0bec5;
+}
+
+@media only screen and (max-width: 768px) {
+  .searchJumpContainer {
+    display: none;
+  }
+} 

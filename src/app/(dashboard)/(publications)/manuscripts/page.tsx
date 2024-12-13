@@ -6,7 +6,7 @@ import {
   sortPublications,
   yearBtnList,
 } from "../citations_year_buttons";
-import ToTopButton from "../../common_elements";
+import { ToTopButton } from "../../common_elements";
 
 const sources: { [key: string]: { [key: string]: string }[] } =
   sortPublications(data.manuscripts);

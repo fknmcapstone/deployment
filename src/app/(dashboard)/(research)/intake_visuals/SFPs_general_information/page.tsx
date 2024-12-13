@@ -1,6 +1,6 @@
 /* eslint-disable react/react-in-jsx-scope */
 import styles from "../page.module.css";
-import ToTopButton from "../../../common_elements";
+import { ToTopButton } from "../../../common_elements";
 
 import chartData from "../charts.json";
 import { shortcutMenuList, chartList } from "../common_visual_elements";

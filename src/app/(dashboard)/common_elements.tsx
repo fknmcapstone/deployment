@@ -48,8 +48,6 @@ const ToTopButton = () => {
   );
 };
 
-export default ToTopButton;
-
 type PropType = {
   slides?: number[];
   options?: EmblaOptionsType;
@@ -137,3 +135,5 @@ export const DotButton: React.FC<PropType> = (props) => {
     ></button>
   );
 };
+
+export { ToTopButton };
