@@ -68,7 +68,7 @@ export const searchData: SearchItem[] = [
     url: "/national_characteristics/",
     category: "Research",
     description: "Analysis of school food programs across different regions.",
-    tags: ["national", "characteristics", "comparison"],
+    tags: ["national", "characteristics"],
   },
   {
     id: "uoft-study",
@@ -77,6 +77,6 @@ export const searchData: SearchItem[] = [
     category: "Ongoing Studies",
     description:
       "Current research on school food programs at University of Toronto.",
-    tags: ["ongoing", "research", "university", "toronto"],
+    tags: ["ongoing", "research", "university", "toronto", "uoft"],
   },
 ];
