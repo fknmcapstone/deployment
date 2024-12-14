@@ -2,6 +2,8 @@
 /* eslint-disable react/react-in-jsx-scope */
 import Link from "next/link";
 import styles from "./page.module.css";
+import SearchAndJump from "../components/SearchAndJump";
+import { useState } from "react";
 
 // eslint-disable-next-line react/prop-types
 function Separator() {
@@ -9,8 +11,50 @@ function Separator() {
 }
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const toggle = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <>
+      <div data-cy="nav_bar" className={styles.header}>
+        <Link href="/">
+          <div data-cy="header_logo">
+            <img
+              src="/fknm_logo.png"
+              alt="FKNM Logo"
+              className={styles.headerLogo}
+            />
+          </div>
+        </Link>
+        <Link data-cy="header_title" href="/">
+          <p>
+            Feeding Kids,
+            <br className={styles.headerBreak} />
+            Nourishing Minds
+          </p>
+        </Link>
+
+        <SearchAndJump />
+
+        <div className={styles.menuButtonContainer}>
+          <div className={styles.menuButton} onClick={toggle}>
+            {/* Menu icon */}
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="40"
+              height="40"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="#fff"
+                d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
       <div data-cy="nav_bar" className={styles.navigationbar}>
         <div className={styles.navigationbarContent}>
           <Link

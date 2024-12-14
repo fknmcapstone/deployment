@@ -13,7 +13,7 @@ import { Doughnut } from "react-chartjs-2"; // For Donut Chart
 import ChartDataLabels from "chartjs-plugin-datalabels";
 import data from "./sfp_components.json";
 import { SFPComponent } from "./sfp_components_widgets";
-import ToTopButton from "../../common_elements";
+import { ToTopButton } from "../../common_elements";
 
 // Function to check if window is defined
 const isWindowDefined = () => typeof window !== "undefined";

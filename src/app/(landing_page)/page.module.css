@@ -17,9 +17,9 @@
   display: flex;
   align-items: center;
   height: 5rem;
-  flex-direction: row;
   padding: 2rem;
   background-color: var(--primary-color);
+  justify-content: flex-start;
 }
 
 .headerLogo {
@@ -53,6 +53,9 @@
   .header p {
     font-size: 1rem;
     padding-inline-start: 0.8rem;
+  }
+  .menuButtonContainer {
+    margin-left: auto;
   }
 }
 
@@ -592,9 +595,6 @@
   display: inline-block;
   margin-left: 0.5rem;
   transition: transform 330ms ease-in-out;
-}
-
-.sectionLink {
 }
 
 .sectionLink:hover .linkArrow {
