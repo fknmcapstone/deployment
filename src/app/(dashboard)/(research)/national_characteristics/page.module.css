@@ -42,9 +42,9 @@
 }
 
 .chartColumn {
-  justify-self: center;
+  justify-self: start;
   width: 90%;
-  margin: 0 auto;
+  margin: 0 2rem;
 }
 
 .title {
@@ -59,18 +59,22 @@
 }
 
 .chartArea {
-  margin-block-end: 3.2lvw;
-  border-style: solid;
-  border-width: 1px;
-  border-color: var(--primary-color);
-  background-color: white;
-  max-width: 55rem;
-  max-height: 35rem;
-  height: 35lvw;
-  width: 60lvw;
-  justify-self: start;
+  width: 80%;
+  max-width: 1000;
+  margin: 0 0 2rem 0; /* Change from margin: 0 auto to align left */
   position: relative;
-  padding-bottom: 9.10%;
+  aspect-ratio: 16/9;
+  margin-bottom: 2rem;
+}
+
+.chartArea iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: none;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 @media only screen and (max-width: 892px) {
@@ -86,14 +90,14 @@
 
   .chartColumn {
     width: 85%;
-    margin-block-start: 2rem;
+    margin: 2rem 2rem 0 2rem; /* Add left margin here too */
     row-gap: 2rem;
   }
   
   .chartArea {
     width: 100%;
-    padding-bottom: 4.5%;
-    height: 100%;
+    aspect-ratio: 16/9;
+    margin: 0 0 2rem 0; /* Maintain left alignment on mobile */
   }
 
   .subtext {
