@@ -16,28 +16,32 @@
 .header {
   display: flex;
   align-items: center;
-  height: 5rem;
+  height: 7rem;
   padding: 2rem;
-  background-color: var(--primary-color);
+  background-color: white;
   justify-content: flex-start;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .headerLogo {
-  width: 70px;
-  height: 70px;
+  width: 90px;
+  height: 90px;
 }
 
 .header p {
-  color: var(--light-text-color);
-  font-size: 2rem;
-  font-weight: bold;
+  color: #25355A;
+  font-size: 1.5rem;
+  font-weight: 400;
   white-space: nowrap;
-  padding-inline-start: 2rem;
+  padding-inline-start: 1rem;
+  font-family: var(--bembo);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  /* Add these new properties: */
+  line-height: 0.6; /* Reduces space between lines */
+  padding-block: 0.35rem; /* Adds vertical padding to the entire title block */
 }
 
-.headerBreak {
-  display: none;
-}
 
 @media only screen and (max-width: 768px) {
   .headerLogo {
@@ -51,8 +55,8 @@
     display: block;
   }
   .header p {
-    font-size: 1rem;
-    padding-inline-start: 0.8rem;
+    font-size: 0.9rem;
+    padding-inline-start: 0.5rem;
   }
   .menuButtonContainer {
     margin-left: auto;

@@ -29,11 +29,8 @@ const Navbar = () => {
           </div>
         </Link>
         <Link data-cy="header_title" href="/">
-          <p>
-            Feeding Kids,
-            <br className={styles.headerBreak} />
-            Nourishing Minds
-          </p>
+          <p>Feeding Kids</p>
+          <p>Nourishing Minds</p>
         </Link>
 
         <SearchAndJump />
