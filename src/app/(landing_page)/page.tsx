@@ -4,22 +4,6 @@ import styles from "./page.module.css";
 import Link from "next/link";
 import { Metadata } from "next";
 
-// eslint-disable-next-line react/prop-types
-function Separator({ height = 2 }) {
-  return (
-    <hr
-      style={{
-        backgroundColor: "#002253",
-        marginInline: "10rem",
-        marginBlockStart: "4rem",
-        marginBlockEnd: "1rem",
-        height: height,
-        border: "none",
-      }}
-    />
-  );
-}
-
 export const metadata: Metadata = {
   title: "Feeding Kids, Nourishing Minds Dashboard",
   description: "ECE496 Capstone Project",
@@ -35,7 +19,8 @@ export default function Home() {
               Nourishing Young Minds, One Meal at a Time
             </h1>
             <p className={styles.heroSubheading}>
-              Explore data-driven insights and programs empowering child nutrition
+              Explore data-driven insights and programs empowering child
+              nutrition
             </p>
             <div className={styles.ctaContainer}>
               <Link href="/school_food_programs/">
@@ -44,7 +29,9 @@ export default function Home() {
                 </button>
               </Link>
               <Link href="/about_fknm/">
-                <button className={`${styles.ctaButton} ${styles.ctaSecondary}`}>
+                <button
+                  className={`${styles.ctaButton} ${styles.ctaSecondary}`}
+                >
                   Learn More
                 </button>
               </Link>
@@ -152,7 +139,7 @@ export default function Home() {
           </div>
         </section>
       </div>
-      
+
       <footer className={styles.collabContainer}>
         <a
           href="https://childnutrition.utoronto.ca/"
