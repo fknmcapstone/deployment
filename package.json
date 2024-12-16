@@ -16,7 +16,7 @@
     "Cypress": "npm:cypress@^13.6.4",
     "embla-carousel-autoplay": "^8.0.0-rc19",
     "embla-carousel-react": "^8.0.0-rc19",
-    "framer-motion": "^10.18.0",
+    "framer-motion": "^11.14.4",
     "next": "^14.2.18",
     "react": "^18",
     "react-chartjs-2": "^5.2.0",
