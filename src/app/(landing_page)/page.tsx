@@ -22,7 +22,7 @@ export default function Home() {
               nutrition
             </p>
             <div className={styles.ctaContainer}>
-              <Link href="/school_food_programs/">
+              <Link href="/overview/">
                 <button className={`${styles.ctaButton} ${styles.ctaPrimary}`}>
                   Explore Dashboard
                 </button>
@@ -43,10 +43,7 @@ export default function Home() {
             className={styles.schoolFoodSectionImg}
             title="Globe container opened up with 2 apples sitting inside"
           ></div>
-          <Link
-            data-cy="school_food_programs_link"
-            href={"/school_food_programs/"}
-          >
+          <Link data-cy="overview_link" href={"/overview/"}>
             <div
               className={[
                 styles.sectionTitleLinkContainer0,
@@ -54,7 +51,7 @@ export default function Home() {
                 styles.sectionLink,
               ].join(" ")}
             >
-              {"School Food Programs"}
+              {"Overview"}
               <svg className={styles.linkArrow} viewBox="0 -100 800 600">
                 <path
                   fill="#d32a32"
@@ -65,10 +62,7 @@ export default function Home() {
               </svg>
             </div>
           </Link>
-          <div
-            data-cy="school_food_programs_text"
-            className={styles.sectionBlurb}
-          >
+          <div data-cy="overview_text" className={styles.sectionBlurb}>
             Explore national data on an interactive map and learn more about
             Canadian school food and nutrition interventions, policies and
             programs and their effects on diets and nutritional status. Current
