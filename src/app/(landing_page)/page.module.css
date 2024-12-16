@@ -659,49 +659,6 @@
   }
 }
 
-/* Update footer styling */
-.collabContainer {
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 2rem;
-  padding: 3rem 2rem;
-  background: var(--secondary-color);
-  margin-top: auto;
-}
-
-.logo {
-  align-self: center;
-  padding: 1rem;
-  transition: all 0.3s ease;
-  filter: brightness(0) invert(1);
-  opacity: 1;
-  max-width: 300px;
-  margin: 0 auto;
-}
-
-.logo:hover {
-  transform: translateY(-5px);
-  opacity: 1;
-}
-
-/* Update separator before footer */
-.separator {
-  display: none; /* Remove the separator since footer has distinct background */
-}
-
-@media only screen and (max-width: 768px) {
-  .collabContainer {
-    padding: 2rem 1rem;
-    gap: 1.5rem;
-  }
-  
-  .logo {
-    max-width: 150px;
-    padding: 0.5rem;
-  }
-}
-
 /* Responsive improvements */
 @media only screen and (max-width: 768px) {
   .landingPageContent {
