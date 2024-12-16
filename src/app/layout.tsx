@@ -9,6 +9,7 @@ import Navbar from "./(landing_page)/navbar";
 import { useState } from "react";
 import Sidebar from "./(landing_page)/sidebar";
 import localFont from "next/font/local";
+import Footer from "./components/Footer";
 const TradeGothic = localFont({ src: "./TradeGothic.woff2" });
 
 export default function RootLayout({
@@ -40,6 +41,7 @@ export default function RootLayout({
             {children}
           </section>
         </Providers>
+        <Footer />
       </body>
     </html>
   );

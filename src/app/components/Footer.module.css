@@ -1,0 +1,149 @@
+.footer {
+  background-color: #002A5C;
+  color: white;
+  padding: 3rem 0;
+  width: 100%;
+}
+
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.footerContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 4rem;
+}
+
+.logosSection {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 1rem;
+  flex: 0 0 350px;
+}
+
+.logo {
+  width: 100%;
+  height: auto;
+  filter: brightness(0) invert(1);
+  transition: opacity 0.3s ease;
+  max-width: 350px;
+}
+
+.logo:hover {
+  opacity: 0.8;
+}
+
+.rightContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2rem;
+}
+
+.socialLinks {
+  display: flex;
+  gap: 2rem;
+  font-size: 1.5rem;
+}
+
+.socialLinks a {
+  color: white;
+  transition: opacity 0.2s ease;
+}
+
+.socialLinks a:hover {
+  opacity: 0.8;
+}
+
+.addressSection {
+  text-align: right;
+}
+
+.addressSection h2 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  font-weight: normal;
+}
+
+.addressSection p {
+  margin: 0.3rem 0;
+  font-size: 1rem;
+}
+
+.landAcknowledgement {
+  text-align: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding-top: 2rem;
+}
+
+.landAcknowledgement h3 {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  font-weight: normal;
+}
+
+.landAcknowledgement p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+    padding: 2rem 0;
+  }
+
+  .inner {
+    padding: 0 1rem;
+    gap: 2rem;
+  }
+
+  .footerContent {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .logosSection {
+    width: 100%;
+    max-width: 300px;
+    align-items: center;
+  }
+
+  .rightContent {
+    align-items: center;
+    width: 100%;
+  }
+
+  .socialLinks {
+    font-size: 1.2rem;
+    gap: 1.5rem;
+  }
+
+  .addressSection {
+    text-align: center;
+  }
+
+  .addressSection h2 {
+    font-size: 1.1rem;
+  }
+
+  .addressSection p {
+    font-size: 0.9rem;
+  }
+
+  .landAcknowledgement p {
+    font-size: 0.85rem;
+  }
+} 
