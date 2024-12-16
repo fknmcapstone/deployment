@@ -28,62 +28,31 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <main className={styles.main}>
-      <h1 className={styles.landingPageContent}>
-        <div className={styles.landingBlurbContainer}>
-          <div data-cy="landing_text1" className={styles.landingBlurb1}>
-            <div
-              data-cy="landing_text_title"
-              className={styles.landingBlurbTitle}
-            >
-              Our Initiative
+      <div className={styles.landingPageContent}>
+        <section className={styles.landingBlurbContainer}>
+          <div className={styles.heroContent}>
+            <h1 className={styles.heroTagline}>
+              Nourishing Young Minds, One Meal at a Time
+            </h1>
+            <p className={styles.heroSubheading}>
+              Explore data-driven insights and programs empowering child nutrition
+            </p>
+            <div className={styles.ctaContainer}>
+              <Link href="/school_food_programs/">
+                <button className={`${styles.ctaButton} ${styles.ctaPrimary}`}>
+                  Explore Dashboard
+                </button>
+              </Link>
+              <Link href="/about_fknm/">
+                <button className={`${styles.ctaButton} ${styles.ctaSecondary}`}>
+                  Learn More
+                </button>
+              </Link>
             </div>
-            The Feeding Kids, Nourishing Minds (FKNM) School-Based Nutrition
-            Research Initiative is a project funded by a donation from
-            President’s Choice Children’s Charity. Through a landscape policy
-            analysis and series of systematic reviews, a comprehensive overview
-            of school meal and snack programs in Canada is being organised in an
-            interactive dashboard including consideration of equity indicators.
           </div>
+        </section>
 
-          <div data-cy="landing_text2" className={styles.landingBlurb2}>
-            The impact of the COVID-19 pandemic, including changes in policies
-            and programs, highlight the lessons learned and opportunities for
-            leveraging these programs and improving resiliency in marginalized
-            communities. The FKNM is informing the guidance of a framework for a
-            national school food program policy.
-          </div>
-
-          <div data-cy="landing_text3" className={styles.landingBlurb3}>
-            <div
-              data-cy="landing_text_title"
-              className={styles.landingBlurbTitle}
-            >
-              Our Initiative
-            </div>
-            The Feeding Kids, Nourishing Minds (FKNM) School-Based Nutrition
-            Research Initiative is a project funded by a donation from
-            President’s Choice Children’s Charity. Through a landscape policy
-            analysis and series of systematic reviews, a comprehensive overview
-            of school meal and snack programs in Canada is being organised in an
-            interactive dashboard including consideration of equity indicators.
-            The impact of the COVID-19 pandemic, including changes in policies
-            and programs, highlight the lessons learned and opportunities for
-            leveraging these programs and improving resiliency in marginalized
-            communities. The FKNM is informing the guidance of a framework for a
-            national school food program policy.
-          </div>
-          <Link
-            data-cy="covid_link"
-            href="/covid_19_impacts/"
-            className={styles.covid19Link}
-          >
-            Learn more about the impacts of COVID-19
-          </Link>
-        </div>
-        <div data-cy="research_title" className={styles.researchTitle}>
-          Our Research
-        </div>
-        <div className={styles.researchSection}>
+        <section className={styles.researchSection}>
           <div
             className={styles.schoolFoodSectionImg}
             title="Globe container opened up with 2 apples sitting inside"
@@ -121,8 +90,8 @@ export default function Home() {
             and uncovering important evidence gaps that require careful
             examination for future evaluations.
           </div>
-        </div>
-        <div className={styles.researchSection}>
+        </section>
+        <section className={styles.researchSection}>
           <div
             className={styles.researchSectionImg}
             title="Several lunch containers with food in them on a table with piled notebooks"
@@ -181,71 +150,63 @@ export default function Home() {
             and overall well-being.These pages bring together the qualitative
             and quantitative data collected by the FKNM team.
           </div>
-        </div>
-        <Separator />
-        <div className={styles.collabContainer}>
-          <a
-            href="https://childnutrition.utoronto.ca/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/Lawson_logo.png"
-              alt={
-                "Logo of the University of Toronto's Joannah & Brian Lawson Centre for Child Nutrition"
-              }
-              width="300"
-              height="300"
-            ></Image>
-          </a>
-          <a
-            href="https://cgen.utoronto.ca/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/CGEN_UT_Signature_P655_RGB.png"
-              alt={
-                "Logo of the University of Toronto's Centre for Global Engineering"
-              }
-              width="300"
-              height="300"
-            ></Image>
-          </a>
-          <a
-            href="https://www.ece.utoronto.ca/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/ECE_UT_Signature_P655_RGB.png"
-              alt={
-                "Logo of the University of Toronto's Electrical & Computer Engineering Department"
-              }
-              width="300"
-              height="300"
-            ></Image>
-          </a>
-          <a
-            href="https://www.engineering.utoronto.ca/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/FASE_UT_Signature_RGB_P655_RGB.png"
-              alt={
-                "Logo of the University of Toronto's Faculty of Applied Science and Engineering"
-              }
-              width="300"
-              height="300"
-            ></Image>
-          </a>
-        </div>
-      </h1>
+        </section>
+      </div>
+      
+      <footer className={styles.collabContainer}>
+        <a
+          href="https://childnutrition.utoronto.ca/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Image
+            className={styles.logo}
+            src="/Lawson_logo.png"
+            alt="Logo of the University of Toronto's Joannah & Brian Lawson Centre for Child Nutrition"
+            width="300"
+            height="300"
+          />
+        </a>
+        <a
+          href="https://cgen.utoronto.ca/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Image
+            className={styles.logo}
+            src="/CGEN_UT_Signature_P655_RGB.png"
+            alt="Logo of the University of Toronto's Centre for Global Engineering"
+            width="300"
+            height="300"
+          />
+        </a>
+        <a
+          href="https://www.ece.utoronto.ca/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Image
+            className={styles.logo}
+            src="/ECE_UT_Signature_P655_RGB.png"
+            alt="Logo of the University of Toronto's Electrical & Computer Engineering Department"
+            width="300"
+            height="300"
+          />
+        </a>
+        <a
+          href="https://www.engineering.utoronto.ca/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Image
+            className={styles.logo}
+            src="/FASE_UT_Signature_RGB_P655_RGB.png"
+            alt="Logo of the University of Toronto's Faculty of Applied Science and Engineering"
+            width="300"
+            height="300"
+          />
+        </a>
+      </footer>
     </main>
   );
 }
