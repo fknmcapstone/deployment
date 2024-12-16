@@ -1,5 +1,4 @@
 /* eslint-disable react/react-in-jsx-scope */
-import Image from "next/image";
 import styles from "./page.module.css";
 import Link from "next/link";
 import { Metadata } from "next";
