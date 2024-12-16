@@ -79,9 +79,10 @@ export function chartList(
           data-cy="chart_frame"
           title={`${category} - ${chart.name}`}
           width="100%"
-          height="118%"
+          height="100%"
           src={chart.url}
           allowFullScreen
+          style={{ border: "none" }}
         ></iframe>
       </div>
     );

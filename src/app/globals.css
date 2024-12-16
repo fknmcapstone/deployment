@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Pragati+Narrow:wght@400;700&family=Crimson+Text:wght@400;700&display=swap');
+
 :root {
   /* Colors */
   --primary-color: #002253;
@@ -19,6 +22,10 @@
   --covid-green: #008572;
   --covid-red: #d36363;
   --visuals-menu-color: #1a4689;
+
+  /* Fonts */
+  --trade-gothic: 'Pragati Narrow', sans-serif;
+  --bembo: 'Crimson Text', serif;
 
   /* Font sizes */
   --title-font-size: 2rem;
@@ -103,4 +110,13 @@ a {
     color-scheme: light;
     font-family: var(--font-outfit);
   }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  background-color: transparent;
+}
+
+/* Update the header text font */
+.header p {
+  font-family: var(--trade-gothic);
 }

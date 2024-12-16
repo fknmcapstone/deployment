@@ -3,7 +3,7 @@
   gap: 1rem;
   align-items: stretch;
   margin-left: auto;
-  height: 38px;
+  height: 42px;
   padding: 0 1rem;
 }
 
@@ -11,6 +11,15 @@
   position: relative;
   display: flex;
   background: white;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: all 0.2s ease;
+}
+
+.searchContainer:focus-within {
+  border-color: var(--secondary-color);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
 }
 
 .searchForm {
@@ -18,18 +27,22 @@
   display: flex;
   align-items: stretch;
   height: 100%;
+  width: 100%;
 }
 
 .searchInput {
-  padding: 0 12px;
+  padding: 12px 16px;
   border: none;
-  width: 200px;
+  width: 240px;
   font-size: 0.95rem;
   color: var(--dark-text-color);
+  border-radius: 8px;
+  transition: width 0.2s ease;
 }
 
 .searchInput:focus {
   outline: none;
+  width: 280px;
 }
 
 .searchInput::placeholder {
@@ -45,24 +58,37 @@
 .jumpButton {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 0.5rem;
   padding: 0 16px;
+  height: 100%;
+  min-width: 140px;
   border: none;
   background: var(--secondary-color);
   color: white;
   font-size: 0.95rem;
+  font-weight: 500;
   cursor: pointer;
-  height: 100%;
-  min-width: 120px;
-  transition: background-color 0.2s ease;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .jumpButton:hover {
-  background: var(--secondary-color-hover);
+  background: var(--secondary-color);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  filter: brightness(110%);
+}
+
+.jumpButton:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  filter: brightness(100%);
 }
 
 .jumpArrow {
-  transition: transform 0.2s ease;
+  transition: transform 0.3s ease;
   margin-left: auto;
 }
 
@@ -72,35 +98,43 @@
 
 .jumpMenu {
   position: absolute;
-  top: 100%;
+  top: calc(100% + 8px);
   right: 0;
   background: white;
-  border: none;
+  border: 1px solid rgba(0, 0, 0, 0.1);
   min-width: 280px;
   max-width: 320px;
   max-height: 450px;
   overflow-y: auto;
   z-index: 1000;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  margin-top: 1px;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  padding: 8px 0;
 }
 
 .jumpMenuItem {
   width: 100%;
   text-align: left;
-  padding: 10px 16px;
+  padding: 12px 16px;
   border: none;
   background: none;
   color: var(--dark-text-color);
   font-size: 0.95rem;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: all 0.15s ease;
   border-left: 3px solid transparent;
+  display: flex;
+  align-items: center;
+  position: relative;
 }
 
 .jumpMenuItem:hover {
-  background-color: #f8f9fa;
+  background-color: rgba(var(--secondary-color-rgb), 0.08);
   border-left-color: var(--secondary-color);
+}
+
+.jumpMenuItem:active {
+  background-color: rgba(var(--secondary-color-rgb), 0.12);
 }
 
 /* Custom scrollbar for the jump menu */
@@ -110,6 +144,7 @@
 
 .jumpMenu::-webkit-scrollbar-track {
   background: #f8f9fa;
+  border-radius: 4px;
 }
 
 .jumpMenu::-webkit-scrollbar-thumb {
@@ -123,6 +158,64 @@
 
 @media only screen and (max-width: 768px) {
   .searchJumpContainer {
-    display: none;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0.5rem;
+    gap: 0.5rem;
+    height: 38px;
+    background: transparent;
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .searchContainer {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .searchInput {
+    width: 100%;
+    min-width: 0;
+    padding: 8px 12px;
+  }
+
+  .searchInput:focus {
+    width: 100%;
+  }
+
+  .jumpButton {
+    min-width: auto;
+    padding: 0 12px;
+    white-space: nowrap;
+  }
+
+  .jumpMenu {
+    position: absolute;
+    top: calc(100% + 4px);
+    left: 0;
+    right: 0;
+    max-height: 300px;
+    border-radius: 8px;
+  }
+}
+
+/* Add smaller screen adjustments */
+@media only screen and (max-width: 480px) {
+  .searchJumpContainer {
+    flex-direction: column;
+    height: auto;
+    gap: 0.5rem;
+  }
+
+  .searchContainer,
+  .jumpContainer {
+    width: 100%;
+  }
+
+  .jumpButton {
+    width: 100%;
+    justify-content: center;
   }
 } 
