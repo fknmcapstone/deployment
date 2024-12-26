@@ -54,11 +54,8 @@ const Navbar = () => {
       </div>
       <div data-cy="nav_bar" className={styles.navigationbar}>
         <div className={styles.navigationbarContent}>
-          <Link
-            data-cy="nav_school_food_programs"
-            href="/school_food_programs/"
-          >
-            <p>School Food Programs</p>
+          <Link data-cy="nav_overview" href="/overview/">
+            <p>Overview</p>
           </Link>
 
           <div data-cy="nav_research" className={styles.researchNavItem}>
