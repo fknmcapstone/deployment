@@ -1,176 +1,244 @@
 .main {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   width: 100%;
-  padding-bottom: 7rem;
-  background-color: var(--background-color);
-  grid-template-columns: 40vw 1fr;
-  grid-template-rows: 5rem min-content min-content min-content;
-  color: var(--dark-text-color);
+  background-color: #FFFFFF;
+  color: #000000;
+}
+
+.heroSection {
+  background-color: #002A5C;
+  color: white;
+  padding: 6rem 2rem;
+  text-align: center;
 }
 
 .title {
-  grid-row: 1;
-  font-size: var(--subtitle-font-size);
-  grid-column: 1;
-  align-self: center;
-  margin-left: 10%;
-  justify-items: start;
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
 }
 
-.subtext1 {
-  grid-row: 2;
-  grid-column: 1;
-  align-self: top;
-  margin-inline: 4rem;
-  margin-top: 2lvh;
-  justify-items: end;
-  font-size: var(--small-paragraph-font-size);
+.subtitle {
+  font-size: 1.5rem;
+  max-width: 800px;
+  margin: 0 auto;
+  opacity: 0.9;
 }
 
-.subtext2 {
-  grid-row: 3;
-  grid-column: span 2;
-  margin-inline: 8rem;
-  font-size: var(--small-paragraph-font-size);
+.overviewSection {
+  padding: 5rem 2rem;
+  background: #F2F2F2;
 }
 
-.map {
-  position: relative;
-  grid-row: span 2;
-  margin-block-start: 2rem;
-  margin-block-end: 2rem;
-  margin-inline-end: 3rem;
-  grid-column: 2;
-  height: 40lvw;
-  width: 58lvw;
+.overviewContent {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.subtext2_extra {
-  display: none;
-}
-.subtext1_extra {
-  display: none;
-}
-
-@media screen and (max-width: 1750px) {
-  .subtext1 {
-    transform: none;
-    margin-bottom: 5%;
-  }
-}
-
-@media screen and (max-width: 1314px) and (min-width: 1110px) {
-  .subtext2_extra {
-    display: block;
-    grid-row: 3;
-    grid-column: span 2;
-    margin-inline: 8rem;
-    font-size: var(--small-paragraph-font-size);
-  }
-  .subtext1_extra {
-    display: block;
-    grid-row: 2;
-    grid-column: 1;
-    align-self: top;
-    margin-inline: 4rem;
-    margin-top: 2lvh;
-    justify-items: end;
-    font-size: var(--small-paragraph-font-size);
-  }
-  .subtext1 {
-    display: none;
-  }
-  .subtext2 {
-    display: none;
-  }
-}
-
-.chartGrid {
-  display: grid;
-  justify-self: center;
-  grid-row: 4;
-  grid-column: span 2;
-  grid-template-columns: max-content max-content;
-  grid-template-rows: max-content max-content;
-}
-
-.card {
-  justify-self: center;
-  padding: 1rem;
-  margin: 2rem;
-  border-radius: 2px;
-  border-width: 1px;
-  border-color: var(--tertiary-color);
-  width: 43lvw;
-  height: 30lvw;
-  background: white;
+.overviewContent h2 {
+  color: #002A5C;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
   font-weight: 600;
-  font-size: var(--subtitle-font-size);
 }
 
-.greyRectangle {
-  position: absolute;
-  bottom: 0;
-  left: 0;
+.overviewContent p {
+  font-size: 1.25rem;
+  line-height: 1.8;
+  max-width: 800px;
+}
+
+.mapSection {
+  padding: 4rem 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
   width: 100%;
-  z-index: 4;
-  height: 2.5rem;
-  background-color: var(--background-color);
-  /* transform: translateY(37lvw); */
 }
 
-@media screen and (max-width: 1110px) {
-  .main {
-    grid-template-columns: 1fr;
-    grid-template-rows: 5rem min-content min-content min-content;
-  }
+.mapControls {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.mapButton {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 1.5rem;
+  border: 2px solid #002A5C;
+  border-radius: 8px;
+  background: transparent;
+  color: #002A5C;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.mapButton:hover {
+  background: rgba(0, 42, 92, 0.1);
+}
+
+.mapButton.active {
+  background: #002A5C;
+  color: white;
+}
+
+.mapDisplay {
+  height: 650px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  background: white;
+  padding: 2rem;
+}
+
+.mapDisplay iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.findingsSection {
+  padding: 6rem 2rem;
+  background: #F8F8F8;
+}
+
+.findingsSection h2 {
+  color: #002A5C;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.findingsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.findingCard {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 12px;
+  position: relative;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.findingCard:hover {
+  transform: translateY(-5px);
+}
+
+.cardNumber {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  font-size: 1.5rem;
+  color: rgba(0, 42, 92, 0.2);
+  font-weight: 700;
+}
+
+.findingCard h3 {
+  color: #002A5C;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.findingCard p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+.analysisSection {
+  padding: 6rem 2rem;
+  background: #F8F8F8;
+}
+
+.analysisSection h2 {
+  color: #002A5C;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.chartContainer {
+  height: 808px;
+  max-width: 1200px;
+  margin: 0 auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  background: white;
+  padding: 2rem 3rem;
+}
+
+.chartContainer iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+@media screen and (max-width: 1024px) {
   .title {
-    grid-row: 1;
+    font-size: 2.8rem;
   }
-  .subtext1 {
-    grid-row: 2;
-    overflow-wrap: break-word;
+  
+  .subtitle {
+    font-size: 1.3rem;
+  }
+  
+  .mapDisplay {
+    height: 500px;
+  }
+  
+  .chartContainer {
+    padding: 1.5rem 2rem;
+  }
+  
+  .mapDisplay {
+    padding: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .heroSection {
+    padding: 4rem 1rem;
   }
 
-  .map {
-    position: relative;
-    grid-row: 3 / span 1;
-    margin-block-start: 1lvh;
-    margin-block-end: 2rem;
-    grid-column: 1;
-    height: 50lvw;
-    width: 70lvw;
-    justify-self: center;
-    margin-inline: 3rem;
+  .title {
+    font-size: 2.2rem;
   }
 
-  .subtext2 {
-    display: block;
-    grid-row: 4;
-    grid-column: span 2;
-    margin-inline: 4rem;
-    font-size: var(--small-paragraph-font-size);
-  }
-  .subtext2_extra {
-    display: none;
+  .subtitle {
+    font-size: 1.1rem;
   }
 
-  .chartGrid {
-    display: grid;
-    justify-self: center;
-    grid-row: 5 / span 4;
-    grid-column: span 1;
-    grid-template-columns: 1fr;
-    grid-template-rows: max-content max-content;
+  .overviewSection,
+  .mapSection,
+  .findingsSection,
+  .analysisSection {
+    padding: 3rem 1rem;
   }
 
-  .card {
+  .findingCard {
+    padding: 2rem;
+  }
+
+  .chartContainer {
+    height: 600px;
     padding: 1rem;
-    margin: 2rem;
-    height: 50lvw;
-    width: 70lvw;
   }
-  .greyRectangle {
-    display: none;
+  
+  .mapDisplay {
+    padding: 1rem;
   }
 }
