@@ -194,7 +194,10 @@ const Navbar = () => {
             </div>
           </div>
           <Link data-cy="nav_about_fknm" href="/about_fknm/">
-            About FKNM
+            <p>About FKNM</p>
+          </Link>
+          <Link data-cy="nav_contact" href="/about_fknm/contact/">
+            <p>Contact</p>
           </Link>
         </div>
       </div>
