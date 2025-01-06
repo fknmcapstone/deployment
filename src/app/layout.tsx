@@ -3,7 +3,6 @@
 "use client";
 
 import "./globals.css";
-import styles from "./(landing_page)/page.module.css";
 import { Providers } from "./providers";
 import Navbar from "./(landing_page)/navbar";
 import { useState } from "react";
