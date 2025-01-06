@@ -4,44 +4,24 @@
     "subtitle": "The following charts and graphs offer a multifaceted exploration of the landscape of school food programs to better understand their implications for student nutrition and well-being. These visuals provide a comprehensive view of how schools approach the vital task of nourishing their students, and the potential impacts of these programs on children's dietary habits, academic performance, and overall health.",
     "charts": [
       {
-        "name": "Offered School Food Programs",
-        "url": "https://app.powerbi.com/view?r=eyJrIjoiZjg4YjNkZDgtYmM4MS00NDJkLWJkYWEtZmI4ODA4MDVhMzk3IiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
-        "blurb": "This chart highlights the distribution of the School Food Programs offered in the GTA."
+        "name": "General SFPs Info",
+        "url": "https://flo.uri.sh/visualisation/21039346/embed",
+        "blurb": "This chart provides general information about School Food Programs in the GTA."
       },
       {
-        "name": "School Food Program Timings",
-        "url": "https://app.powerbi.com/view?r=eyJrIjoiZDg3NmMyODAtOGQ2Mi00OTQwLTg1YTMtNTE4NzY3YTllYjk4IiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
-        "blurb": "This chart highlights the various times throughout the school day that School Food Programs are offered."
+        "name": "Food Programs Offering in GTA",
+        "url": "https://flo.uri.sh/visualisation/21040113/embed",
+        "blurb": "This chart shows the distribution and types of food programs offered across the GTA."
       },
       {
-        "name": "% of Schools Implementing SFPs",
-        "url": "https://app.powerbi.com/view?r=eyJrIjoiMThlZWUyMWUtNDg0MS00ODFlLTk2YzMtMmE5OTlhYWQ2YWIyIiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
-        "blurb": "This chart highlights the percentage of schools implementing School Food Programs."
+        "name": "Nutrition Education in GTA Schools",
+        "url": "https://flo.uri.sh/visualisation/21039987/embed",
+        "blurb": "This chart illustrates the state of nutrition education programs in GTA schools."
       },
       {
-        "name": "Frequency of SFPs Offered Per Week",
-        "url": "https://app.powerbi.com/view?r=eyJrIjoiZjc2ODk0YmMtNDBmYS00YTgyLTk2ZGUtYmMzYWQ1NGZkMTkzIiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
-        "blurb": "This chart highlights the frequency of School Food Programs offered in a week."
-      },
-      {
-        "name": "Number of SFPs Offered per School",
-        "url": "https://app.powerbi.com/view?r=eyJrIjoiOGNhYWRkZWItZjU5Mi00ZGE1LWI5NmEtMzcyZTUxODk1NzA4IiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
-        "blurb": "This chart highlights the number of School Food Programs offered at each school in the GTA."
-      },
-      {
-        "name": "Types of School Nutrition Education",
-        "url": "https://app.powerbi.com/view?r=eyJrIjoiY2I2Mzk0NGQtYWY0Yy00NTdiLThlMjYtMjkxOTE2MDE0NjBlIiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
-        "blurb": "This chart higlights the various types of nutrition education offered in GTA schools."
-      },
-      {
-        "name": "Most Common SFP Payment Models",
-        "url": "https://app.powerbi.com/view?r=eyJrIjoiNmZiOTMwODUtYzdjYS00NDZlLWFlNTMtZWIyYTU1M2UxOGU4IiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
-        "blurb": "This chart highlights the most common School Food Program payment models in the GTA."
-      },
-      {
-        "name": "Most Common SFP Funding Models",
-        "url": "https://app.powerbi.com/view?r=eyJrIjoiOGU2ODQzZGMtNWI3YS00ZjM4LWFkNTQtMmQwYTUzNGNkZGYxIiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
-        "blurb": "This chart highlights the most common School Food Program funding models in the GTA."
+        "name": "Financial Overview",
+        "url": "https://flo.uri.sh/visualisation/21041053/embed",
+        "blurb": "This chart provides a financial overview of School Food Programs in the GTA."
       }
     ]
   },

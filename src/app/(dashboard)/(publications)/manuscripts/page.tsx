@@ -1,4 +1,5 @@
 /* eslint-disable react/react-in-jsx-scope */
+"use client";
 import styles from "../page.module.css";
 import data from "../publications.json";
 import {

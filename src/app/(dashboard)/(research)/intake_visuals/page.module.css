@@ -1,238 +1,237 @@
 .main {
-  display: grid;
-  width: 100%;
-  padding-top: 4rem;
-  padding-bottom: 7rem;
-  background-color: var(--background-color);
-  color: var(--dark-text-color);
+  min-height: 100vh;
+  background-color: #FFFFFF;
+  color: var(--uoft-text);
+  padding: 3rem 2rem;
+  font-family: system-ui, -apple-system, sans-serif;
 }
 
-@media only screen and (max-width: 892px) {
-  .main {
-    padding-top: 2rem;
-  }
+.pageContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  position: relative;
+}
+
+.content {
+  width: 100%;
 }
 
 .title {
-  font-size: var(--subtitle-font-size);
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: var(--uoft-navy);
+  line-height: 1.2;
 }
 
 .subtext {
-  font-size: var(--small-paragraph-font-size);
-  margin-block: 2lvh;
-  width: 50lvw;
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: var(--uoft-text);
+  opacity: 0.9;
+  margin-bottom: 2rem;
+  max-width: 800px;
 }
 
-@media only screen and (max-width: 1000px) {
-  .subtext {
-    width: 60lvw;
-  }
-}
-
-@media only screen and (max-width: 892px) {
-  .subtext {
-    width: 80lvw;
-  }
-}
-
-.fixedMenuContainer {
-  width: max-content;
-  position: absolute;
-  top: 0;
-  right: 65lvw;
-  pointer-events: none;
-}
-
-.shortcutMenu {
-  pointer-events: all;
-  /* transform: translateX(-80%); */
-  padding: 1rem 2rem 2rem 1rem;
-  margin-inline-end: 3rem;
-  margin-block-start: 11rem;
-  border-radius: 5px;
-  width: 18rem;
-  height: fit-content;
-  max-height: 85vh;
-  display: grid;
-  grid-auto-rows: min-content;
-  background: var(--background-color);
-  color: var(--dark-text-color);
-  font-size: var(--smaller-paragraph-font-size);
-  border-style: solid;
-  border-width: 1px;
-  border-color: var(--primary-color);
-  overflow: auto;
-  position: -webkit-sticky;
+.stickyTabs {
   position: sticky;
-  top: 2rem;
-  overflow-wrap: break-word;
+  top: 0;
+  z-index: 10;
+  background: white;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--uoft-border);
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  margin-bottom: 2rem;
 }
 
-@media only screen and (max-width: 1020px) {
-  .shortcutMenu {
-    width: 27lvw;
-  }
-}
-
-.shortcutMenuSeparator {
-  background-color: var(--primary-color);
-  margin-block-start: 0.5rem;
-  margin-block-end: 1rem;
-  height: 3px;
-}
-
-.chartLink {
-  margin-bottom: 0.2lvh;
-}
-
-.shortcutCategoryHeader {
-  font-weight: 500;
-  font-size: var(--small-paragraph-font-size);
-}
-
-.mobileShortcutMenu {
+.stickyTabs::-webkit-scrollbar {
   display: none;
 }
 
-@media only screen and (max-width: 892px) {
-  .fixedMenuContainer,
-  .shortcutMenu {
-    display: none;
-  }
-  .mobileShortcutMenu {
-    justify-self: center;
-
-    width: 85%;
-    padding: 1rem 2rem 2rem 1rem;
-    border-radius: 5px;
-    height: min-content;
-    display: grid;
-    grid-auto-rows: min-content;
-    background: var(--background-color);
-    color: var(--dark-text-color);
-    font-size: 15px;
-    border-style: solid;
-    border-width: 1px;
-    border-color: var(--primary-color);
-    overflow: auto;
-    overflow-wrap: break-word;
-  }
-  .shortcutCategoryHeader {
-    font-size: 17px;
-  }
+.tab {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  background: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  color: var(--uoft-text);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s ease;
 }
 
-.chartColumn {
-  justify-self: center;
-  transform: translateX(23%);
-  height: max-content;
+.tab:hover {
+  background-color: var(--uoft-light-blue);
+  color: var(--uoft-blue);
+}
+
+.activeTab {
+  background-color: var(--uoft-blue);
+  color: white;
+}
+
+.activeTab:hover {
+  background-color: var(--uoft-navy);
+  color: white;
+}
+
+.horizontalScroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: 1rem 0;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.chartsGrid {
   display: grid;
-  grid-template-rows: auto;
-}
-
-.chartCategoryHeader {
-  font-weight: 500;
-  font-size: var(--small-paragraph-font-size);
+  grid-auto-flow: column;
+  grid-auto-columns: 100%;
+  gap: 2rem;
+  padding: 0 1rem;
 }
 
 .chartArea {
-  margin-block-end: 3.2lvw;
-  border-style: solid;
-  border-width: 1px;
-  border-color: var(--primary-color);
-  background-color: white;
-  max-width: 55rem;
-  max-height: 35rem;
-  height: 35lvw;
-  width: 60lvw;
-  justify-self: start;
-  position: relative;
-  padding-bottom: 9.10%;
+  background: white;
+  border-radius: 8px;
+  border: 1px solid var(--uoft-border);
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s ease;
 }
 
-@media only screen and (max-width: 892px) {
-  .chartColumn {
-    transform: none;
-    width: 85%;
-    margin-block-start: 2rem;
-    row-gap: 2rem;
-  }
-  
-  .chartArea {
-    width: 100%;
-    padding-bottom: 4.5%;
-    height: 100%;
-  }
+.chartVisible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-.tooltipContainer {
-  position: relative;
+.chartHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 1.5rem;
+  background-color: var(--uoft-light-blue);
+  border-bottom: 1px solid var(--uoft-border);
+}
+
+.chartTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0;
+  color: var(--uoft-navy);
 }
 
 .tooltipButton {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  width: 30px;
-  height: 30px;
-  background-color: #27319e;
-  border: none;
+  width: 28px;
+  height: 28px;
   border-radius: 50%;
+  border: none;
+  background-color: var(--uoft-blue);
+  color: white;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #fff;
-  text-decoration: solid;
+  transition: all 0.2s ease;
+  font-size: 0.9rem;
+}
+
+.tooltipButton:hover {
+  transform: scale(1.05);
+  background-color: var(--uoft-navy);
 }
 
 .tooltip {
+  background: white;
+  border-radius: 6px;
+  padding: 1.25rem;
+  margin: 1rem 1.5rem;
+  border: 1px solid var(--uoft-border);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--uoft-text);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.chartContainer {
+  position: relative;
+  padding-top: 50%;
+  background-color: white;
+}
+
+.chartFrame {
   position: absolute;
-  top: 50%;
-  left: 100%;
-  transform: translateY(-50%);
-  background-color: #fff;
-  border: 1px solid #ccc;
-  padding: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  display: none;
-  width: 10lvw;
-  height: fit-content;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
 }
 
-@media only screen and (max-width: 1530px) {
+@media (max-width: 1024px) {
+  .pageContainer {
+    gap: 1.5rem;
+  }
+
+  .content {
+    padding: 0;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .subtext {
+    font-size: 1rem;
+  }
+
+  .tab {
+    padding: 0.5rem 1rem;
+    font-size: 0.95rem;
+  }
+
+  .horizontalScroll {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .main {
+    padding: 1.5rem 1rem;
+  }
+
+  .title {
+    font-size: 1.75rem;
+  }
+
+  .stickyTabs {
+    padding: 0.75rem 0;
+  }
+
+  .tab {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.9rem;
+  }
+
+  .chartHeader {
+    padding: 1rem 1.25rem;
+  }
+
+  .chartTitle {
+    font-size: 1.1rem;
+  }
+
   .tooltip {
-    top: 6lvh;
-    left: none;
-    right: 0;
-    transform: translateX(-80%);
-    width: 30lvw;
-  }
-}
-
-@media only screen and (max-width: 1358px) {
-  .tooltip {
-    transform: translateX(-90%);
-  }
-}
-
-@media only screen and (max-width: 1250px) {
-  .tooltip {
-    transform: translateX(-100%);
-  }
-}
-
-.tooltipContainer:hover .tooltip {
-  display: block;
-}
-
-@media only screen and (max-width: 570px) {
-  .tooltipContainer {
-    display: none;
-  }
-  .chartArea {
-    width: 100%;
-    padding-bottom: 9.10%;
-    height: 100%;
+    margin: 0.75rem 1rem;
+    padding: 1rem;
   }
 }

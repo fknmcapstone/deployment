@@ -1,7 +1,8 @@
 /* eslint-disable react/react-in-jsx-scope */
 import Link from "next/link";
-import { JSX } from "react";
 import styles from "./page.module.css";
+import { useInView } from "react-intersection-observer";
+import { useState } from "react";
 
 export function shortcutMenuList(categoryCharts: {
   category: string;
@@ -12,37 +13,79 @@ export function shortcutMenuList(categoryCharts: {
     blurb: string;
   }[];
 }) {
-  const shortcuts: JSX.Element[] = [];
-
-  shortcuts.push(
-    <p
-      key={categoryCharts.category}
-      data-cy={"shortcut_" + categoryCharts.category + "_header"}
-      className={styles.shortcutCategoryHeader}
-    >
-      {categoryCharts.category} Chart Menu
-    </p>,
-    <div
-      key={`${categoryCharts.category}-separator`}
-      className={styles.shortcutMenuSeparator}
-    />
+  return (
+    <nav className={styles.shortcutMenuNav}>
+      <p className={styles.shortcutCategoryHeader}>
+        {categoryCharts.category} Chart Menu
+      </p>
+      <div className={styles.shortcutMenuSeparator} />
+      {categoryCharts.charts.map((chart) => (
+        <Link
+          className={styles.chartLink}
+          key={chart.name.replace(/ /g, "_").replace(/[^a-zA-Z ]/g, "")}
+          href={`#${categoryCharts.category.replace(/ /g, "_")}${chart.name
+            .replace(/ /g, "_")
+            .replace(/[^a-zA-Z ]/g, "")}`}
+        >
+          {chart.name}
+        </Link>
+      ))}
+    </nav>
   );
+}
 
-  categoryCharts.charts.forEach((chart) => {
-    shortcuts.push(
-      <Link
-        className={styles.chartLink}
-        key={chart.name.replace(/ /g, "_").replace(/[^a-zA-Z ]/g, "")}
-        href={`#${categoryCharts.category.replace(/ /g, "_")}${chart.name
-          .replace(/ /g, "_")
-          .replace(/[^a-zA-Z ]/g, "")}`}
-      >
-        {chart.name}
-      </Link>
-    );
+function ChartCard({
+  chart,
+  category,
+}: {
+  chart: { name: string; url: string; blurb: string };
+  category: string;
+}) {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
   });
+  const [isTooltipVisible, setIsTooltipVisible] = useState(false);
 
-  return shortcuts;
+  return (
+    <div
+      ref={ref}
+      id={`${category.replace(/ /g, "_")}${chart.name
+        .replace(/ /g, "_")
+        .replace(/[^a-zA-Z ]/g, "")}`}
+      className={`${styles.chartArea} ${inView ? styles.chartVisible : ""}`}
+    >
+      <div className={styles.chartHeader}>
+        <h3 className={styles.chartTitle}>{chart.name}</h3>
+        <button
+          className={styles.tooltipButton}
+          onClick={() => setIsTooltipVisible(!isTooltipVisible)}
+          aria-label="Toggle chart information"
+        >
+          <span>i</span>
+        </button>
+      </div>
+
+      {isTooltipVisible && (
+        <div className={styles.tooltip}>
+          <p>{chart.blurb}</p>
+        </div>
+      )}
+
+      {inView && (
+        <div className={styles.chartContainer}>
+          <iframe
+            title={`${category} - ${chart.name}`}
+            width="100%"
+            height="100%"
+            src={chart.url}
+            className={styles.chartFrame}
+            allowFullScreen
+          />
+        </div>
+      )}
+    </div>
+  );
 }
 
 export function chartList(
@@ -53,39 +96,11 @@ export function chartList(
     blurb: string;
   }[]
 ) {
-  const charts: JSX.Element[] = [];
-
-  jsonCharts.forEach((chart) => {
-    charts.push(
-      <div
-        id={`${category.replace(/ /g, "_")}${chart.name
-          .replace(/ /g, "_")
-          .replace(/[^a-zA-Z ]/g, "")}`}
-        data-cy={`${category.replace(/ /g, "_")}${chart.name
-          .replace(/ /g, "_")
-          .replace(/[^a-zA-Z ]/g, "")}`}
-        className={styles.chartArea}
-      >
-        <div className={styles.tooltipContainer}>
-          <button data-cy="tooltip_button" className={styles.tooltipButton}>
-            i
-          </button>
-          <div data-cy="tooltip_text" className={styles.tooltip}>
-            <p>{chart.blurb}</p>
-          </div>
-        </div>
-
-        <iframe
-          data-cy="chart_frame"
-          title={`${category} - ${chart.name}`}
-          width="100%"
-          height="118%"
-          src={chart.url}
-          allowFullScreen
-        ></iframe>
-      </div>
-    );
-  });
-
-  return charts;
+  return (
+    <div className={styles.chartsGrid}>
+      {jsonCharts.map((chart) => (
+        <ChartCard key={chart.name} chart={chart} category={category} />
+      ))}
+    </div>
+  );
 }

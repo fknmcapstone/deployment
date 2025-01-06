@@ -17,13 +17,14 @@
     "Cypress": "npm:cypress@^13.6.4",
     "embla-carousel-autoplay": "^8.0.0-rc19",
     "embla-carousel-react": "^8.0.0-rc19",
-    "framer-motion": "^11.14.4",
+    "framer-motion": "^11.15.0",
     "next": "^14.2.18",
     "nodemailer": "^6.9.16",
     "react": "^18",
     "react-chartjs-2": "^5.2.0",
     "react-dom": "^18",
-    "react-icons": "^5.4.0"
+    "react-icons": "^5.4.0",
+    "react-intersection-observer": "^9.14.1"
   },
   "devDependencies": {
     "@types/node": "^20",
