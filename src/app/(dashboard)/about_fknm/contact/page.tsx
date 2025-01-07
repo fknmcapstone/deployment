@@ -72,7 +72,8 @@ export default function Contact() {
       <div className={styles.heroSection}>
         <h1>Contact Us</h1>
         <p>
-          Have a question or want to collaborate? We'd love to hear from you.
+          Have a question or want to participate in our research? We'd love to 
+          hear from you.
         </p>
       </div>
 
