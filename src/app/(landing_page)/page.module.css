@@ -85,128 +85,261 @@
 
 .navigationbar {
   height: fit-content;
-  padding-block: 0.7rem;
+  padding: 0;
   display: flex;
-  font-size: var(--small-paragraph-font-size);
-  font-weight: bold;
-  justify-content: space-around;
-  background-color: var(--secondary-color);
-  place-items: center;
-}
-
-@media only screen and (max-width: 768px) {
-  .navigationbar {
-    display: none;
-  }
+  justify-content: center;
+  background-color: #002A5C;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
 }
 
 .navigationbarContent {
   height: fit-content;
   display: flex;
+  gap: 3.5rem;
   white-space: nowrap;
-  color: var(--light-text-color);
+  color: white;
   align-items: center;
   justify-content: center;
+  padding: 0.75rem 3rem;
+  max-width: 1200px;
+  width: 100%;
 }
 
 .navigationbarContent > * {
-  margin-inline: 3vw;
+  padding: 0.75rem 0;
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: white;
+  text-decoration: none;
+  position: relative;
+  letter-spacing: 0.02em;
 }
 
-.triangleLeft {
+.navigationbarContent > *:hover {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.navigationbarContent > *:after {
+  content: '';
   position: absolute;
-  left: -1.6rem;
-  top: 0;
-  width: 0;
-  height: 0;
-  border-top: 0.9rem solid transparent;
-  border-bottom: 0.9rem solid transparent;
-  border-right: 1.8rem solid var(--visuals-menu-color);
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.2s ease-out;
 }
 
-/* Base styles for dropdown menus */
-.navBarSubMenu,
-.intakeVisualsSubMenu {
+.navigationbarContent > *:hover:after {
+  transform: scaleX(1);
+}
+
+/* Dropdown menu styles */
+.navBarSubMenu {
   display: none;
   position: absolute;
-  background-color: var(--secondary-color);
-  min-width: 12rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  border-radius: 0.3rem;
-  padding: 0.4rem 0;
-  z-index: 100;
-}
-
-/* Position the main dropdown */
-.navBarSubMenu {
   top: 100%;
   left: 50%;
   transform: translateX(-50%);
+  background-color: white;
+  width: 320px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  padding: 8px 0;
+  z-index: 100;
+  margin-top: 0;
+  border-top: 3px solid #007FA3;  /* UofT secondary blue */
 }
 
-/* Position the nested dropdown */
-.intakeVisualsSubMenu {
-  top: -0.4rem; /* Align with parent menu item */
-  left: 100%;
-  margin-left: 1px;
+/* Create a safe hover area */
+.researchNavItem {
+  position: relative;
+  cursor: pointer;
+  padding: 0.75rem 0;
 }
 
-/* Show dropdowns on hover */
+.researchNavItem:before {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background: transparent;
+}
+
+/* Show menu on hover */
 .researchNavItem:hover .navBarSubMenu,
-.intakeVisualsNavItem:hover .intakeVisualsSubMenu {
-  display: block;
-}
-
-/* Keep submenu visible when hovering over it */
-.navBarSubMenu:hover,
-.intakeVisualsSubMenu:hover {
+.navBarSubMenu:hover {
   display: block;
 }
 
 /* Menu items styling */
-.researchNavItem,
-.intakeVisualsNavItem {
-  position: relative;
-  padding: 0.3rem 0.8rem;
-  cursor: pointer;
-}
-
-/* Dropdown arrows */
-.researchNavItem:after,
-.intakeVisualsNavItem:after {
-  content: '▼';
-  font-size: 0.6em;
-  margin-left: 0.3rem;
-  display: inline-block;
-  vertical-align: middle;
-}
-
-.intakeVisualsNavItem:after {
-  content: '▶';
-}
-
-/* Menu item links */
-.navBarSubMenu a,
-.intakeVisualsSubMenu a {
+.navBarSubMenu a {
   display: block;
-  padding: 0.4rem 0.8rem;
-  color: var(--light-text-color);
-  transition: background-color 0.2s ease;
-  white-space: nowrap;
-  font-size: 0.9em;
+  padding: 12px 24px;
+  color: #002A5C;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  line-height: 1.4;
+  position: relative;
+  overflow: hidden;  /* Contain the hover effect */
 }
 
-/* Hover effect for menu items */
-.navBarSubMenu a:hover,
+.navBarSubMenu a:hover {
+  background-color: #f5f8fa;
+  color: #007FA3;
+}
+
+.navBarSubMenu a:before {
+  display: none;
+}
+
+/* Add a new, contained hover indicator */
+.navBarSubMenu a:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 4px;
+  height: 100%;
+  background-color: #007FA3;
+  transform: translateX(-100%);
+  transition: transform 0.2s ease;
+}
+
+.navBarSubMenu a:hover:after {
+  transform: translateX(0);
+}
+
+/* Section headers in dropdown */
+.intakeVisualsNavItem {
+  color: #002A5C;
+  font-weight: 600;
+  padding: 16px 24px 8px;
+  font-size: 0.95rem;
+  display: block;
+  letter-spacing: 0.02em;
+}
+
+/* Nested submenu */
+.intakeVisualsSubMenu {
+  padding: 0;
+  background: white;
+}
+
+.intakeVisualsSubMenu a {
+  padding: 10px 24px 10px 40px;
+  font-size: 0.9rem;
+}
+
+/* Remove the old line indicator */
+.intakeVisualsSubMenu a:before {
+  display: none;
+}
+
+/* Add subtle indent on hover instead of line */
 .intakeVisualsSubMenu a:hover {
-  background-color: rgba(255, 255, 255, 0.08);
+  padding-left: 44px;
+  background-color: #f5f8fa;
+  color: #007FA3;
 }
 
-/* Separator styling */
+@media only screen and (max-width: 768px) {
+  .navBarSubMenu a:after {
+    background-color: white;
+    opacity: 0.3;
+  }
+  
+  .navBarSubMenu a:hover {
+    padding-left: 28px;
+  }
+  
+  .intakeVisualsSubMenu a:hover {
+    padding-left: 44px;
+  }
+}
+
+/* Separator */
 .separator {
   height: 1px;
-  background-color: rgba(255, 255, 255, 0.08);
-  margin: 0.3rem 0;
+  background-color: #e5e5e5;
+  margin: 8px 0;
+}
+
+/* Dropdown arrow */
+.researchNavItem:after {
+  content: '';
+  display: inline-block;
+  width: 0.4rem;
+  height: 0.4rem;
+  margin-left: 0.5rem;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  transform: rotate(45deg);
+  position: relative;
+  top: -2px;
+  transition: transform 0.2s ease;
+}
+
+.researchNavItem:hover:after {
+  transform: rotate(225deg);
+  top: 0;
+}
+
+/* Add description text for menu items */
+.navBarSubMenu a:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 3px;
+  height: 0;
+  background-color: #002A5C;
+  transition: height 0.2s ease;
+}
+
+.navBarSubMenu a:hover:before {
+  height: 100%;
+}
+
+@media only screen and (max-width: 1024px) {
+  .navBarSubMenu {
+    min-width: 500px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .navBarSubMenu {
+    position: static;
+    width: 100%;
+    transform: none;
+    box-shadow: none;
+    border: none;
+    border-radius: 0;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+  
+  .navBarSubMenu a,
+  .intakeVisualsNavItem,
+  .intakeVisualsSubMenu a {
+    color: white;
+  }
+  
+  .navBarSubMenu a:hover,
+  .intakeVisualsSubMenu a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+  }
+  
+  .separator {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
 }
 
 /* CSS for Sidebar component */

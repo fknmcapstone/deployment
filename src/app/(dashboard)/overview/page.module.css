@@ -89,7 +89,7 @@
 .statsSection {
   background: var(--secondary-color);
   padding: 3rem;
-  border-radius: 12px;
+  border-radius: 0px;
   color: var(--light-text-color);
   margin-top: 3rem;
 }
