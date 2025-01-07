@@ -232,7 +232,7 @@ const options: any = {
     },
   },
   // Redirect User to relevant section of page is any Donut Chart slice is clicked
-  onClick: (_event: any, elements: string | any[], _chart: any) => {
+  onClick: (_event: any, elements: string | any[]) => {
     // Check if the click event is on a chart element
     if (elements.length > 0) {
       const firstElement = elements[0];

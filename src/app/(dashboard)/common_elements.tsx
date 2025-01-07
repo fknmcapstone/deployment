@@ -62,7 +62,7 @@ type PropType = {
 
 export const PrevButton: React.FC<PropType> = (props) => {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const { forSFP, isSVG, children, ...restProps } = props;
+  const { forSFP, isSVG, ...restProps } = props;
 
   return (
     <button
@@ -94,7 +94,7 @@ export const PrevButton: React.FC<PropType> = (props) => {
 
 export const NextButton: React.FC<PropType> = (props) => {
   //eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const { forSFP, isSVG, children, ...restProps } = props;
+  const { forSFP, isSVG, ...restProps } = props;
 
   return (
     <button

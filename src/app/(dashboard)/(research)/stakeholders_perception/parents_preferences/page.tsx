@@ -1,39 +1,112 @@
 /* eslint-disable react/react-in-jsx-scope */
-import styles from "../page.module.css";
+"use client";
+import styles from "../../intake_visuals/page.module.css";
 import { ToTopButton } from "../../../common_elements";
-
 import chartData from "../charts.json";
-import { shortcutMenuList, chartList } from "../common_visual_elements";
+import { chartList } from "../../intake_visuals/common_visual_elements";
+import { motion } from "framer-motion";
+import { useState } from "react";
 
 const pageTitle = "Parents' Preferences";
-const NUM_CHARTS = chartData[pageTitle].charts.length;
+
+const tabsConfig = {
+  participation: {
+    id: "participation",
+    label: "Participation",
+    chartName: "For Children to Participate in SFPs",
+  },
+  enrollment: {
+    id: "enrollment",
+    label: "Enrollment",
+    chartName: "For Enrolling Children in SFPs",
+  },
+  nonenrollment: {
+    id: "nonenrollment",
+    label: "Non-Enrollment",
+    chartName: "For Not Enrolling Children in SFPs",
+  },
+  types: {
+    id: "types",
+    label: "Program Types",
+    chartName: "For Types of SFPs to be Offered",
+  },
+  timing: {
+    id: "timing",
+    label: "Timing",
+    chartName: "For Times that SFPs are Offered",
+  },
+  funding: {
+    id: "funding",
+    label: "Funding",
+    chartName: "For Types of SFP Funding Models",
+  },
+  cost: {
+    id: "cost",
+    label: "Cost",
+    chartName: "For Max Affordable Daily Meal Cost",
+  },
+};
+
+const tabs = Object.values(tabsConfig);
+
+const fadeIn = {
+  initial: { opacity: 0, y: 20 },
+  animate: { opacity: 1, y: 0 },
+  transition: { duration: 0.7 },
+};
 
 export default function ParentsPreferences() {
-  return (
-    <main className={styles.main}>
-      <ToTopButton />
-      <title>School Food Programs Parents Preferences Charts</title>
-      <h1
-        className={styles.fixedMenuContainer}
-        style={{ height: 33.6 * NUM_CHARTS + "lvw" }}
-      >
-        <div data-cy="shortcut_menu" className={styles.shortcutMenu}>
-          {shortcutMenuList(chartData[pageTitle])}
-        </div>
-      </h1>
-      <div data-cy="mobile_shortcut_menu" className={styles.mobileShortcutMenu}>
-        {shortcutMenuList(chartData[pageTitle])}
-      </div>
+  const [activeTab, setActiveTab] = useState("participation");
 
-      <div className={styles.chartColumn}>
-        <div className={styles.title} data-cy="category_title">
-          {chartData[pageTitle].category}
-        </div>
-        <div className={styles.subtext} data-cy="category_subtext">
-          {chartData[pageTitle].subtitle}
-        </div>
-        {chartList(chartData[pageTitle].category, chartData[pageTitle].charts)}
+  // Filter charts based on active tab
+  const getTabCharts = () => {
+    const allCharts = chartData[pageTitle].charts;
+    const activeTabInfo = tabsConfig[activeTab as keyof typeof tabsConfig];
+
+    if (!activeTabInfo) return [];
+
+    return allCharts.filter((chart) => chart.name === activeTabInfo.chartName);
+  };
+
+  return (
+    <motion.main
+      className={styles.main}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}
+    >
+      <ToTopButton />
+      <title>Parents&apos; Preferences for School Food Programs</title>
+
+      <div className={styles.pageContainer}>
+        <section className={styles.content}>
+          <motion.div {...fadeIn} transition={{ delay: 0.3, duration: 0.7 }}>
+            <h1 className={styles.title}>{chartData[pageTitle].category}</h1>
+            <p className={styles.subtext}>{chartData[pageTitle].subtitle}</p>
+          </motion.div>
+
+          <div className={styles.stickyTabs}>
+            {tabs.map((tab) => (
+              <button
+                key={tab.id}
+                className={`${styles.tab} ${activeTab === tab.id ? styles.activeTab : ""}`}
+                onClick={() => setActiveTab(tab.id)}
+              >
+                {tab.label}
+              </button>
+            ))}
+          </div>
+
+          <motion.div
+            className={styles.horizontalScroll}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.5, duration: 0.7 }}
+          >
+            {chartList(chartData[pageTitle].category, getTabCharts())}
+          </motion.div>
+        </section>
       </div>
-    </main>
+    </motion.main>
   );
 }

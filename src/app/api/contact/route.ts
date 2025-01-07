@@ -3,10 +3,8 @@ import nodemailer from "nodemailer";
 
 export async function POST(req: Request) {
   try {
-    const { firstName, lastName, email, phone, message } = await req.json();
-    console.log("Received data:", { firstName, lastName, email, phone }); // Debug log
+    const { name, email, message } = await req.json();
 
-    // Create transporter
     const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
@@ -15,35 +13,33 @@ export async function POST(req: Request) {
       },
     });
 
-    // Email content
     const mailOptions = {
       from: process.env.EMAIL_USER,
-      to: "lalalayilia@gmail.com",
-      subject: `New Contact Form Submission from ${firstName} ${lastName}`,
+      to: process.env.EMAIL_TO,
+      subject: `New Contact Form Submission from ${name}`,
+      text: `
+        Name: ${name}
+        Email: ${email}
+        Message: ${message}
+      `,
       html: `
-        <h2>New Contact Form Submission</h2>
-        <p><strong>Name:</strong> ${firstName} ${lastName}</p>
+        <h3>New Contact Form Submission</h3>
+        <p><strong>Name:</strong> ${name}</p>
         <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Phone:</strong> ${phone || "Not provided"}</p>
-        <p><strong>Message:</strong></p>
-        <p>${message}</p>
+        <p><strong>Message:</strong> ${message}</p>
       `,
     };
 
-    // Send email
-    const result = await transporter.sendMail(mailOptions);
-    console.log("Email sent:", result); // Debug log
+    await transporter.sendMail(mailOptions);
 
     return NextResponse.json(
       { message: "Email sent successfully" },
       { status: 200 }
     );
   } catch (error) {
-    console.error("Error sending email:", error);
+    console.error("Failed to send email:", error);
     return NextResponse.json(
-      {
-        error: error instanceof Error ? error.message : "Failed to send email",
-      },
+      { error: "Failed to send email" },
       { status: 500 }
     );
   }

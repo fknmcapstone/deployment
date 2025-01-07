@@ -16,7 +16,7 @@ export function sortPublications(data: any): {
     [K in keyof T]: [K, T[K]];
   }[keyof T][];
 
-  (Object.entries(data) as Entries<typeof data>).map(([_, year]) => {
+  (Object.entries(data) as Entries<typeof data>).map(([, year]) => {
     (Object.entries(year) as Entries<typeof year>).map(([y, citationData]) => {
       yearToCitationsMap[y] = citationData;
     });
