@@ -4,7 +4,7 @@ import useEmblaCarousel from "embla-carousel-react";
 import { EmblaCarouselType } from "embla-carousel";
 import Autoplay from "embla-carousel-autoplay";
 import { useState, useEffect, useCallback } from "react";
-import { DotButton, NextButton, PrevButton } from "../../common_elements";
+import { DotButton } from "../../common_elements";
 
 export function SFPComponentsCarousel({
   componentList,
@@ -23,12 +23,6 @@ export function SFPComponentsCarousel({
   );
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [scrollSnaps, setScrollSnaps] = useState<number[]>([]);
-  const scrollPrev = useCallback(() => {
-    if (emblaApi) emblaApi.scrollPrev();
-  }, [emblaApi]);
-  const scrollNext = useCallback(() => {
-    if (emblaApi) emblaApi.scrollNext();
-  }, [emblaApi]);
   const scrollTo = useCallback(
     (index: number) => emblaApi && emblaApi.scrollTo(index),
     [emblaApi]
@@ -53,8 +47,6 @@ export function SFPComponentsCarousel({
   return (
     <div className={styles.carousel} ref={emblaRef}>
       <div className={styles.carouselContainer}>{componentList}</div>
-      <PrevButton forSFP={true} isSVG={true} onClick={scrollPrev} />
-      <NextButton forSFP={true} isSVG={true} onClick={scrollNext} />
       <div className={styles.paginationDots}>
         {scrollSnaps.map((_, index) => (
           <DotButton
