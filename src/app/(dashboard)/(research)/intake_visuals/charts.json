@@ -30,24 +30,19 @@
     "subtitle": "The following charts and graphs shed light on various aspects of children's nutrition. These visuals delve into the origins of GTA children's meals, serving methods, factors determining food choices, and the top energy-rich food categories, all of which influence policies and initiatives working to improve children's health and well-being.",
     "charts": [
       {
-        "name": "Origins of GTA Childrens' Meals",
-        "url": "https://app.powerbi.com/view?r=eyJrIjoiNzdjYzgzYjctYmE1OS00ZTI5LThmZjktODZmYWI1NGJkNThmIiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
-        "blurb": "This chart highlights and analyzes the various origins of meals of children in the GTA."
+        "name": "Analyzing the Origins of GTA Kids' Meals and Factors Determining Food Served", 
+        "url": "https://flo.uri.sh/visualisation/21119944/embed",
+        "blurb": "Meal Origins: Highlights where meals come from, such as home-cooked meals, school cafeterias, and fast food. Influencing Factors: Shows what factors determine meal selection, such as nutritional quality, cost, and preparation capacity."
       },
       {
         "name": "Serving Methods Across Meal Types",
-        "url": "https://app.powerbi.com/view?r=eyJrIjoiOGY2MDM3ODYtNmVlMC00MzU1LWIwZTMtZWI5MTNkOGQzNDBjIiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
+        "url": "https://flo.uri.sh/visualisation/21119505/embed",
         "blurb": "This chart highlights the various serving methods across different meal types."
       },
       {
-        "name": "Factors Determining Food Served",
-        "url": "https://app.powerbi.com/view?r=eyJrIjoiYzA1YzY3YTYtZDk5MS00YWNkLWEzZGYtZjg0NzMyYTE2MzU2IiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
-        "blurb": "This chart highlights the various factors that determine and influence the food served in School Food Programs."
-      },
-      {
         "name": "Top 10 Energy-Rich Food Categories",
-        "url": "https://app.powerbi.com/view?r=eyJrIjoiM2IwMjBiZDMtMjI2OS00YmZiLTk1OTItZTAzZjdiZDk0ZGRiIiwidCI6IjU1MjQxYmEwLTBiNjgtNGRkYi05ZjE5LWZmNjQ5MjExZTkyMiJ9",
-        "blurb": "This chart higlights the top 10 food categories for energy at school."
+        "url": "https://flo.uri.sh/visualisation/21120035/embed",
+        "blurb": "This chart highlights the top 10 food categories served at school."
       }
     ]
   }

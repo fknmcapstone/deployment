@@ -12,6 +12,19 @@ import {
 
 export default function MeasurementToolAssessment() {
   const [mapView, setMapView] = useState("world");
+  const [isMobile, setIsMobile] = useState(false);
+
+  React.useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
   const mapSrc = {
     world: "https://datawrapper.dwcdn.net/3l2tr/2/",
     "north-america": "https://datawrapper.dwcdn.net/gDOMc/1/",
@@ -143,7 +156,7 @@ export default function MeasurementToolAssessment() {
             src="https://datawrapper.dwcdn.net/yqHt4/2/"
             width="100%"
             height="100%"
-            scrolling="no"
+            scrolling={isMobile ? "yes" : "no"}
             frameBorder="0"
           />
         </div>
