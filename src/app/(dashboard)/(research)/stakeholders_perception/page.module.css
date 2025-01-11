@@ -236,3 +236,55 @@
     height: 100%;
   }
 }
+
+.flourishContainer {
+  width: 100%;
+  margin: 2rem 0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.flourishEmbed {
+  border: none;
+  width: 100%;
+  height: 600px;
+}
+
+.flourishCredit {
+  width: 100%;
+  margin-top: 4px;
+  text-align: right;
+  padding: 4px;
+  background-color: #f5f5f5;
+}
+
+.chartsContainer {
+  width: 100%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.chartWrapper {
+  width: 100%;
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.chartTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.chartBlurb {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
