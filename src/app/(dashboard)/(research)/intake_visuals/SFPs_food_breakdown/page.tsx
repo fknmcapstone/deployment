@@ -12,18 +12,13 @@ const pageTitle = "SFPs Food Breakdown";
 const tabsConfig = {
   origins: {
     id: "origins",
-    label: "Meal Origins",
-    chartName: "Origins of GTA Childrens' Meals",
+    label: "Meal Origins and Factors",
+    chartName: "Analyzing the Origins of GTA Kids' Meals and Factors Determining Food Served",
   },
   serving: {
     id: "serving",
     label: "Serving Methods",
     chartName: "Serving Methods Across Meal Types",
-  },
-  factors: {
-    id: "factors",
-    label: "Food Factors",
-    chartName: "Factors Determining Food Served",
   },
   categories: {
     id: "categories",
