@@ -1,15 +1,16 @@
 .main {
   display: grid;
-  background-color: var(--background-color);
+  background: #FFFFFF;
   width: 100%;
   padding-inline: 18vw;
   padding-block-end: 5vh;
-
   grid-template-columns: 1fr;
   grid-template-rows: repeat(3, auto);
   grid-auto-rows: min-content;
   position: relative;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
+
 @media only screen and (max-width: 600px) {
   .main {
     padding-inline: 10vw;
@@ -22,6 +23,7 @@
   width: 900px;
   height: 780px;
 }
+
 @media only screen and (max-width: 600px) {
   .doughnutChart {
     justify-self: start;
@@ -30,417 +32,280 @@
   }
 }
 
-.card1Title {
-  grid-row: 200;
-  font-size: var(--subtitle-font-size);
-  font-weight: bold;
+.card1Title,
+.card2Title,
+.card3Title,
+.card4Title,
+.card5Title,
+.card6Title {
+  font-size: 1.75rem;
+  font-weight: 600;
   margin-top: 5vh;
   margin-bottom: 1.5vh;
-  color: #082454;
+  color: #002A5C;
+  position: relative;
+  letter-spacing: -0.02em;
 }
-.card2Title {
-  grid-row: 350;
-  font-size: var(--subtitle-font-size);
-  font-weight: bold;
-  margin-top: 6vh;
-  margin-bottom: 1.5vh;
-  color: #082454;
+
+.card1Title::after,
+.card2Title::after,
+.card3Title::after,
+.card4Title::after,
+.card5Title::after,
+.card6Title::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: #002A5C;
 }
-.card3Title {
-  grid-row: 450;
-  font-size: var(--subtitle-font-size);
-  font-weight: bold;
-  margin-top: 6vh;
-  margin-bottom: 1.5vh;
-  color: #082454;
-}
-.card4Title {
-  grid-row: 550;
-  font-size: var(--subtitle-font-size);
-  font-weight: bold;
-  margin-top: 6vh;
-  margin-bottom: 1.5vh;
-  color: #082454;
-}
-.card5Title {
-  grid-row: 650;
-  font-size: var(--subtitle-font-size);
-  font-weight: bold;
-  margin-top: 6vh;
-  margin-bottom: 1.5vh;
-  color: #082454;
-}
-.card6Title {
-  grid-row: 750;
-  font-size: var(--subtitle-font-size);
-  font-weight: bold;
-  margin-top: 6vh;
-  margin-bottom: 1.5vh;
-  color: #082454;
-}
-@media only screen and (max-width: 600px) {
-  .card1Title {
-    grid-row: 200;
-    font-size: 16px;
-    font-weight: bold;
-    margin-top: 1vh;
-    margin-bottom: 0vh;
-    color: #082454;
-  }
-  .card2Title {
-    grid-row: 350;
-    font-size: 16px;
-    font-weight: bold;
-    margin-top: 1vh;
-    margin-bottom: 0vh;
-    color: #082454;
-  }
-  .card3Title {
-    grid-row: 450;
-    font-size: 16px;
-    font-weight: bold;
-    margin-top: 1vh;
-    margin-bottom: 0vh;
-    color: #082454;
-  }
-  .card4Title {
-    grid-row: 550;
-    font-size: 16px;
-    font-weight: bold;
-    margin-top: 1vh;
-    margin-bottom: 0vh;
-    color: #082454;
-  }
-  .card5Title {
-    grid-row: 650;
-    font-size: 16px;
-    font-weight: bold;
-    margin-top: 1vh;
-    margin-bottom: 0vh;
-    color: #082454;
-  }
-  .card6Title {
-    grid-row: 750;
-    font-size: 16px;
-    font-weight: bold;
-    margin-top: 1vh;
-    margin-bottom: 0vh;
-    color: #082454;
-  }
+
+.card1,
+.card2,
+.card3,
+.card4,
+.card5,
+.card6 {
+  grid-row: auto;
+  min-height: fit-content;
+  width: 100%;
+  justify-self: center;
+  overflow: hidden;
+  background-color: white;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 42, 92, 0.1);
+  box-shadow: 0 4px 16px rgba(0, 42, 92, 0.08);
+  padding: 2rem;
+  margin-bottom: 2rem;
 }
 
 .cardSubtitle {
   margin-inline-start: 2rem;
-  margin-block-start: 1rem;
-  margin-block-end: 0;
-  color: #000000;
-  font-size: var(--small-paragraph-font-size);
-  font-weight: 500;
-}
-@media only screen and (max-width: 600px) {
-  .cardSubtitle {
-    font-size: 15px;
-    font-weight: bold;
-    margin-top: 1.5vh;
-    margin-bottom: 0.5vh;
-    margin-inline-start: 1rem;
-    margin-block-start: 1rem;
-    color: #000000;
-  }
+  margin-block-start: 1.5rem;
+  margin-block-end: 0.75rem;
+  color: #00204E;
+  font-size: 1.25rem;
+  font-weight: 600;
+  position: relative;
+  padding-left: 1rem;
+  letter-spacing: -0.01em;
 }
 
-.card1 {
-  grid-row: 300;
-  min-height: fit-content;
-  width: 100%;
-  justify-self: center;
-  overflow: hidden;
-  background-color: white;
-  border-radius: var(--card-border-radius);
-  border: 2px solid #082454;
-}
-.card2 {
-  grid-row: 400;
-  min-height: fit-content;
-  width: 100%;
-  justify-self: center;
-  overflow: hidden;
-  background-color: white;
-  border-radius: var(--card-border-radius);
-  border: 2px solid #082454;
-}
-.card3 {
-  grid-row: 500;
-  min-height: fit-content;
-  width: 100%;
-  justify-self: center;
-  overflow: hidden;
-  background-color: white;
-  border-radius: var(--card-border-radius);
-  border: 2px solid #082454;
-}
-.card4 {
-  grid-row: 600;
-  min-height: fit-content;
-  width: 100%;
-  justify-self: center;
-  overflow: hidden;
-  background-color: white;
-  border-radius: var(--card-border-radius);
-  border: 2px solid #082454;
-}
-.card5 {
-  grid-row: 700;
-  min-height: fit-content;
-  width: 100%;
-  justify-self: center;
-  overflow: hidden;
-  background-color: white;
-  border-radius: var(--card-border-radius);
-  border: 2px solid #082454;
-}
-.card6 {
-  grid-row: 800;
-  min-height: fit-content;
-  width: 100%;
-  justify-self: center;
-  overflow: hidden;
-  background-color: white;
-  border-radius: var(--card-border-radius);
-  border: 2px solid #082454;
-}
-
-@media only screen and (max-width: 1099px) {
-  .card1 {
-    grid-row: 210;
-    min-height: auto;
-    width: calc(55% - 3vh);
-    margin: 1.5vh 1.5vh 5vh 1.5vh;
-    padding-left: 1.5vh;
-    padding-right: 1.5vh;
-    border: 1px solid #082454;
-    justify-self: left;
-  }
-
-  .card2 {
-    grid-row: 360;
-    min-height: auto;
-    width: calc(55% - 3vh);
-    margin: 1.5vh 1.5vh 5vh 1.5vh;
-    padding-left: 1.5vh;
-    padding-right: 1.5vh;
-    border: 1px solid #082454;
-    justify-self: left;
-  }
-  .card3 {
-    grid-row: 460;
-    min-height: auto;
-    width: calc(55% - 3vh);
-    margin: 1.5vh 1.5vh 5vh 1.5vh;
-    padding-left: 1.5vh;
-    padding-right: 1.5vh;
-    border: 1px solid #082454;
-    justify-self: left;
-  }
-  .card4 {
-    grid-row: 560;
-    min-height: auto;
-    width: calc(55% - 3vh);
-    margin: 1.5vh 1.5vh 5vh 1.5vh;
-    padding-left: 1.5vh;
-    padding-right: 1.5vh;
-    border: 1px solid #082454;
-    justify-self: left;
-  }
-  .card5 {
-    grid-row: 660;
-    min-height: auto;
-    width: calc(55% - 3vh);
-    margin: 1.5vh 1.5vh 5vh 1.5vh;
-    padding-left: 1.5vh;
-    padding-right: 1.5vh;
-    border: 1px solid #082454;
-    justify-self: left;
-  }
-  .card6 {
-    grid-row: 760;
-    min-height: auto;
-    width: calc(55% - 3vh);
-    margin: 1.5vh 1.5vh 5vh 1.5vh;
-    padding-left: 1.5vh;
-    padding-right: 1.5vh;
-    border: 1px solid #082454;
-    justify-self: left;
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  .card1 {
-    grid-row: 210;
-    min-height: auto;
-    width: 35%;
-    margin-top: 1.5vh;
-    margin-bottom: 5vh;
-    margin-left: 1.5vh;
-    border: 1px solid #082454;
-    justify-self: left;
-  }
-  .card2 {
-    grid-row: 360;
-    min-height: auto;
-    width: 35%;
-    margin-top: 1.5vh;
-    margin-bottom: 5vh;
-    margin-left: 1.5vh;
-    border: 1px solid #082454;
-    justify-self: left;
-  }
-  .card3 {
-    grid-row: 460;
-    min-height: auto;
-    width: 35%;
-    margin-top: 1.5vh;
-    margin-bottom: 5vh;
-    margin-left: 1.5vh;
-    border: 1px solid #082454;
-    justify-self: left;
-  }
-  .card4 {
-    grid-row: 560;
-    min-height: auto;
-    width: 35%;
-    margin-top: 1.5vh;
-    margin-bottom: 5vh;
-    margin-left: 1.5vh;
-    border: 1px solid #082454;
-    justify-self: left;
-  }
-  .card5 {
-    grid-row: 660;
-    min-height: auto;
-    width: 35%;
-    margin-top: 1.5vh;
-    margin-bottom: 5vh;
-    margin-left: 1.5vh;
-    border: 1px solid #082454;
-    justify-self: left;
-  }
-  .card6 {
-    grid-row: 760;
-    min-height: auto;
-    width: 35%;
-    margin-top: 1.5vh;
-    margin-bottom: 5vh;
-    margin-left: 1.5vh;
-    border: 1px solid #082454;
-    justify-self: left;
-  }
+.cardSubtitle::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 4px;
+  height: 20px;
+  background: #002A5C;
+  transform: translateY(-50%);
+  border-radius: 2px;
 }
 
 .definitionsText {
+  margin-inline-start: 3rem;
+  margin-block-end: 1.5rem;
+  color: #2F3437;
   font-size: 1rem;
-  color: #333;
-  text-align: left;
-  margin: 0;
-  padding-inline-start: 2rem;
-  padding-inline-end: 2rem;
-  padding-block-start: 0;
-  padding-block-end: 0;
-}
-
-@media only screen and (max-width: 600px) {
-  .definitionsText {
-    font-size: 0.8rem;
-    padding-inline-start: 1rem;
-    padding-inline-end: 1rem;
-  }
+  line-height: 1.6;
+  opacity: 0.95;
+  font-weight: 400;
 }
 
 .carousel {
-  overflow: hidden;
+  margin-top: 3rem;
   position: relative;
-  height: 100%;
-}
-.carouselContainer {
-  display: flex;
-  height: 100%;
-  padding-block-end: 1rem;
+  background: linear-gradient(to bottom, rgba(0, 42, 92, 0.02), rgba(0, 42, 92, 0.04));
+  border-radius: 16px;
+  padding: 2rem 1rem;
 }
 
-@media only screen and (max-width: 600px) {
-  .carouselContainer {
-    padding-block-end: 0;
-  }
+.carouselContainer {
+  overflow: hidden;
+  padding: 1rem;
 }
 
 .carouselSlide {
-  flex: 0 0 100%;
-  display: grid;
-  padding-inline: 1vw;
-  grid-template-rows: 1fr;
-}
-
-@media only screen and (max-width: 600px) {
-  .carouselSlide {
-    padding-inline: 0;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
 }
 
 .componentRow {
-  grid-row: 1;
-  display: grid;
-  grid-template-columns: 45fr 0vw 4fr;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .quotationsText {
-  padding-inline-start: 7rem;
-  padding-inline-end: 2rem;
-  padding-block-start: 2;
-  padding-block-end: 2;
-
-  margin-block-start: 3rem;
-  color: var(--grey-text-color);
-  font-size: 1rem;
   font-style: italic;
-  text-align: center;
+  color: #2F3437;
+  line-height: 1.8;
+  padding: 2rem 2.5rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 42, 92, 0.08);
+  position: relative;
+  font-size: 1.125rem;
+  margin: 0;
+}
+
+/* Fancy quote marks */
+.quotationsText::before,
+.quotationsText::after {
+  content: '"';
+  position: absolute;
+  font-family: 'Georgia', serif;
+  font-size: 4rem;
+  color: #002A5C;
+  opacity: 0.15;
+  line-height: 1;
+}
+
+.quotationsText::before {
+  top: 1rem;
+  left: 1rem;
+}
+
+.quotationsText::after {
+  bottom: -0.5rem;
+  right: 1rem;
+  transform: rotate(180deg);
+}
+
+/* Navigation dots */
+.paginationDots {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 2rem;
+}
+
+.paginationDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(0, 42, 92, 0.15);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.paginationDot:hover {
+  background: rgba(0, 42, 92, 0.3);
+}
+
+.paginationDotSelected {
+  background: #002A5C;
+  transform: scale(1.2);
+}
+
+/* Responsive adjustments */
+@media only screen and (max-width: 768px) {
+  .carousel {
+    padding: 1.5rem 0.75rem;
+  }
+
+  .quotationsText {
+    padding: 1.75rem 2rem;
+    font-size: 1rem;
+  }
+
+  .quotationsText::before {
+    font-size: 3rem;
+    top: 0.75rem;
+    left: 0.75rem;
+  }
+
+  .quotationsText::after {
+    font-size: 3rem;
+    bottom: -0.25rem;
+    right: 0.75rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .carousel {
+    padding: 1rem 0.5rem;
+  }
+
+  .quotationsText {
+    padding: 1.5rem 1.75rem;
+    font-size: 0.9375rem;
+  }
+
+  .quotationsText::before {
+    font-size: 2.5rem;
+    top: 0.5rem;
+    left: 0.5rem;
+  }
+
+  .quotationsText::after {
+    font-size: 2.5rem;
+    bottom: -0.25rem;
+    right: 0.5rem;
+  }
+
+  .paginationDots {
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+  }
+
+  .paginationDot {
+    width: 8px;
+    height: 8px;
+  }
+}
+
+.activeCard {
+  border-color: #002A5C;
+  box-shadow: 0 8px 24px rgba(0, 42, 92, 0.15);
 }
 
 @media only screen and (max-width: 1099px) {
-  .quotationsText {
-    font-size: 0.9rem;
-    padding-inline-start: 2rem;
-    padding-inline-end: 0rem;
-    margin-block-start: 2.5rem;
-    margin-block-end: 1.5rem;
-    text-align: center;
+  .card1,
+  .card2,
+  .card3,
+  .card4,
+  .card5,
+  .card6 {
+    width: calc(55% - 3vh);
+    margin: 1.5vh;
+    padding: 1.5rem;
   }
 }
 
 @media only screen and (max-width: 600px) {
-  .quotationsText {
-    font-size: 0.8rem;
-    padding-inline-start: 2rem;
-    padding-inline-end: 1rem;
-    margin-block-start: 2.5rem;
-    margin-block-end: 1.5rem;
-    text-align: center;
+  .card1,
+  .card2,
+  .card3,
+  .card4,
+  .card5,
+  .card6 {
+    width: 100%;
+    margin: 1rem 0;
+    padding: 1rem;
   }
-}
+  
+  .cardSubtitle {
+    font-size: 1.125rem;
+    margin-inline-start: 1rem;
+  }
+  
+  .definitionsText {
+    margin-inline-start: 2rem;
+    font-size: 0.9375rem;
+  }
 
-.paginationDots {
-  height: 1rem;
-  bottom: 1rem;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-}
-.paginationDot {
-  height: 0.5rem;
-  width: 0.5rem;
-  margin-inline: 0.2rem;
-  border-radius: 1rem;
-  background-color: var(--pagination-dots-unselected);
-}
-.paginationDotSelected {
-  background-color: var(--pagination-dots-selected);
+  .card1Title,
+  .card2Title,
+  .card3Title,
+  .card4Title,
+  .card5Title,
+  .card6Title {
+    font-size: 1.5rem;
+  }
 }
