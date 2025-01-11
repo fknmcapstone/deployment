@@ -9,6 +9,7 @@ import { useState } from "react";
 import Sidebar from "./(landing_page)/sidebar";
 import localFont from "next/font/local";
 import Footer from "./components/Footer";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 const TradeGothic = localFont({ src: "./TradeGothic.woff2" });
 
 export default function RootLayout({
@@ -39,6 +40,7 @@ export default function RootLayout({
             </nav>
             {children}
           </section>
+          <SpeedInsights />
         </Providers>
         <Footer />
       </body>
