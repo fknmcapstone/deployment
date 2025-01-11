@@ -176,7 +176,7 @@ const options: any = {
   plugins: {
     title: {
       display: true,
-      text: "School Food Program Components",
+      text: "Core Elements of an Effective School Food Program",
       position: "top",
       align: "start",
       color: "#002A5C",
@@ -414,6 +414,12 @@ export default function QualitativeData() {
     <main className={styles.main}>
       <ToTopButton />
       <title>School Food Program Components</title>
+      <div className={styles.heroSection}>
+        <h1 className={styles.title}>School Food Program Components</h1>
+        <p className={styles.subtitle}>
+        Building inclusive and effective school food systems through research-driven strategies
+        </p>
+      </div> 
       
       <div className={styles.doughnutChart}>
         <Doughnut

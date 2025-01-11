@@ -10,40 +10,20 @@ import { useState } from "react";
 const pageTitle = "Parents' Preferences";
 
 const tabsConfig = {
-  participation: {
-    id: "participation",
-    label: "Participation",
-    chartName: "For Children to Participate in SFPs",
+  engagement: {
+    id: "engagement",
+    label: "Engagement",
+    chartName: "Parental Engagement",
   },
-  enrollment: {
-    id: "enrollment",
-    label: "Enrollment",
-    chartName: "For Enrolling Children in SFPs",
-  },
-  nonenrollment: {
-    id: "nonenrollment",
-    label: "Non-Enrollment",
-    chartName: "For Not Enrolling Children in SFPs",
-  },
-  types: {
-    id: "types",
-    label: "Program Types",
-    chartName: "For Types of SFPs to be Offered",
-  },
-  timing: {
-    id: "timing",
-    label: "Timing",
-    chartName: "For Times that SFPs are Offered",
+  preferences: {
+    id: "preferences",
+    label: "Program Preferences",
+    chartName: "Program Preferences",
   },
   funding: {
     id: "funding",
     label: "Funding",
-    chartName: "For Types of SFP Funding Models",
-  },
-  cost: {
-    id: "cost",
-    label: "Cost",
-    chartName: "For Max Affordable Daily Meal Cost",
+    chartName: "Funding and Affordability",
   },
 };
 
@@ -56,7 +36,7 @@ const fadeIn = {
 };
 
 export default function ParentsPreferences() {
-  const [activeTab, setActiveTab] = useState("participation");
+  const [activeTab, setActiveTab] = useState("engagement");
 
   // Filter charts based on active tab
   const getTabCharts = () => {
