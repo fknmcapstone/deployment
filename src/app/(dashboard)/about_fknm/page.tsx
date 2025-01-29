@@ -150,67 +150,6 @@ export default function AboutFKNM() {
           </AccordionItem>
         ))}
       </Accordion>
-
-      <hr className={styles.separator} data-cy="separator" />
-
-      <div className={styles.collabContainer} data-cy="collab_container">
-        <a
-          href="https://childnutrition.utoronto.ca/"
-          target="_blank"
-          rel="noopener noreferrer"
-          data-cy="collab_link_1"
-        >
-          <Image
-            className={styles.logo}
-            src="/Lawson_logo.png"
-            alt="Logo of the University of Toronto's Joannah & Brian Lawson Centre for Child Nutrition"
-            width="300"
-            height="300"
-          />
-        </a>
-        <a
-          href="https://cgen.utoronto.ca/"
-          target="_blank"
-          rel="noopener noreferrer"
-          data-cy="collab_link_2"
-        >
-          <Image
-            className={styles.logo}
-            src="/CGEN_UT_Signature_P655_RGB.png"
-            alt="Logo of the University of Toronto's Centre for Global Engineering"
-            width="300"
-            height="300"
-          />
-        </a>
-        <a
-          href="https://www.ece.utoronto.ca/"
-          target="_blank"
-          rel="noopener noreferrer"
-          data-cy="collab_link_3"
-        >
-          <Image
-            className={styles.logo}
-            src="/ECE_UT_Signature_P655_RGB.png"
-            alt="Logo of the University of Toronto's Electrical & Computer Engineering Department"
-            width="300"
-            height="300"
-          />
-        </a>
-        <a
-          href="https://www.engineering.utoronto.ca/"
-          target="_blank"
-          rel="noopener noreferrer"
-          data-cy="collab_link_4"
-        >
-          <Image
-            className={styles.logo}
-            src="/FASE_UT_Signature_RGB_P655_RGB.png"
-            alt="Logo of the University of Toronto's Faculty of Applied Science and Engineering"
-            width="300"
-            height="300"
-          />
-        </a>
-      </div>
     </main>
   );
 }
