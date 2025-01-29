@@ -146,16 +146,24 @@ export const AllNewsCarousel = () => {
   useEffect(() => {
     window.addEventListener("resize", updateWidth);
     updateWidth();
+    return () => window.removeEventListener("resize", updateWidth);
   }, []);
 
   const carouselSlides = [];
-  let articlesPerPage = 0;
+  let articlesPerPage = 6;  // Default for large screens
 
-  if (width < 1680) {
-    articlesPerPage = 4;
+  if (width <= 640) {
+    articlesPerPage = 1;  // Mobile view
+  } else if (width <= 900) {
+    articlesPerPage = 2;  // Tablet view
+  } else if (width <= 1200) {
+    articlesPerPage = 3;  // Small desktop
+  } else if (width <= 1400) {
+    articlesPerPage = 4;  // Medium desktop
   } else {
-    articlesPerPage = 6;
+    articlesPerPage = 6;  // Large desktop
   }
+
   for (let i = 0; i < articles.length; i += articlesPerPage) {
     const articlesInPage = articles.slice(i, i + articlesPerPage);
     carouselSlides.push(

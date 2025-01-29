@@ -1,6 +1,13 @@
 {
   "recent_articles": [
     {
+      "title": "Canada's national school food program: promise, and work to do",
+      "image": "https://temertymedicine.utoronto.ca/sites/default/files/styles/scale_width_1750/public/assets/news/image/dreamstime_l_68295162%20copy.webp?itok=ubGQPg8N",
+      "image_alt": "Students eating lunch at school",
+      "date": "May 29, 2024",
+      "link": "https://temertymedicine.utoronto.ca/news/canadas-national-school-food-program-promise-and-work-do"
+    },
+    {
       "title": "What we know — and don't — about the national school food program",
       "image": "https://i.cbc.ca/1.7161469.1712087596!/cpImage/httpImage/image.jpg_gen/derivatives/16x9_780/fresh-food-initiatives.jpg",
       "image_alt": "Man wearing black gloves assembling healthy burrito with sprouts",
@@ -15,7 +22,7 @@
       "link": "https://medicalxpress.com/news/2023-04-parents-greater-toronto-area-limited.html"
     },
     {
-      "title": "U of T Stakeholder Study Guides Research on Canada’s School Food Programs ",
+      "title": "U of T Stakeholder Study Guides Research on Canada's School Food Programs ",
       "image": "https://childnutrition.utoronto.ca/sites/default/files/styles/scale_width_800/public/assets/news/image/_DSC0625.webp?itok=p9GD23xo",
       "image_alt": "Selina Mae Quibrantar smiling and standing with her arms crossed",
       "date": "Mar 30, 2023",
@@ -24,6 +31,13 @@
   ],
   "all_articles": [
     {
+      "title": "Canada's national school food program: promise, and work to do",
+      "image": "https://temertymedicine.utoronto.ca/sites/default/files/styles/scale_width_1750/public/assets/news/image/dreamstime_l_68295162%20copy.webp?itok=ubGQPg8N",
+      "image_alt": "Students eating lunch at school",
+      "date": "May 29, 2024",
+      "link": "https://temertymedicine.utoronto.ca/news/canadas-national-school-food-program-promise-and-work-do"
+    },
+    {
       "title": "What we know — and don't — about the national school food program",
       "image": "https://i.cbc.ca/1.7161469.1712087596!/cpImage/httpImage/image.jpg_gen/derivatives/16x9_780/fresh-food-initiatives.jpg",
       "image_alt": "Man wearing black gloves assembling healthy burrito with sprouts",
@@ -38,21 +52,21 @@
       "link": "https://medicalxpress.com/news/2023-04-parents-greater-toronto-area-limited.html"
     },
     {
-      "title": "U of T Stakeholder Study Guides Research on Canada’s School Food Programs ",
+      "title": "U of T Stakeholder Study Guides Research on Canada's School Food Programs ",
       "image": "https://childnutrition.utoronto.ca/sites/default/files/styles/scale_width_800/public/assets/news/image/_DSC0625.webp?itok=p9GD23xo",
       "image_alt": "Selina Mae Quibrantar smiling and standing with her arms crossed",
       "date": "Mar 30, 2023",
       "link": "https://childnutrition.utoronto.ca/news/u-t-stakeholder-study-guides-research-canadas-school-food-programs"
     },
     {
-      "title": "Q&A with Samy Cheng, Summer Research Student at University of Toronto’s Department of Nutritional Sciences",
+      "title": "Q&A with Samy Cheng, Summer Research Student at University of Toronto's Department of Nutritional Sciences",
       "image": "https://substackcdn.com/image/fetch/w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F284f2c4a-b593-42fc-b646-460f858d5fd8_1697x955.png",
       "image_alt": "FKNM Stakeholder Analysis & Content Validity Survey",
       "date": "Nov 08, 2022",
       "link": "https://invitehealth.substack.com/p/q-and-a-with-samy-cheng?r=lk9c6&utm_campaign=post&utm_medium=web"
     },
     {
-      "title": "President's Choice children’s charity and U of T aim to discover the impact of nutrition at school",
+      "title": "President's Choice children's charity and U of T aim to discover the impact of nutrition at school",
       "image": "https://images.ctfassets.net/y9kx4mbdq4n2/1Ct2vQnPUFt4QgbQyZyyff/d44d60e22e4c218828a7bf40643bfed3/Kids_Eating_at_School.jpg?fm=webp&w=692",
       "image_alt": "Several children sitting at a long table and eating lunch",
       "date": "June 22, 2022",
