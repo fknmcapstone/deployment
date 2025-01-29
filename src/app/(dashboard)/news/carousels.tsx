@@ -65,12 +65,6 @@ export const RecentNewsCarousel = () => {
   return (
     <div className={styles.carousel} ref={emblaRef}>
       <div className={styles.carouselContainer}>{articles}</div>
-      <p
-        data-cy="recent_news_title"
-        className={[styles.cardTitle, styles.recentNewsTitle].join(" ")}
-      >
-        Recent News
-      </p>
       <PrevButton forSFP={false} isSVG={true} onClick={scrollPrev} />
       <NextButton forSFP={false} isSVG={true} onClick={scrollNext} />
       <div className={styles.paginationAllDots}>
@@ -176,31 +170,37 @@ export const AllNewsCarousel = () => {
       <div className={styles.carouselContainer}>{carouselSlides}</div>
 
       <div className={styles.pageAllNumbers}>
-        <PrevButton
-          forSFP={false}
-          isSVG={false}
+        <button
           onClick={scrollPrev}
           disabled={prevBtnDisabled}
-        />
+          className="prev-button"
+          aria-label="Previous page"
+        >
+          ←
+        </button>
         {scrollSnaps.map((_, index) => (
-          <DotButton
+          <button
             data-cy={"dot_number_button_" + index}
             key={index}
             onClick={() => scrollTo(index)}
             className={[
               styles.pageNumber,
-              index === selectedIndex ? styles.pageSelectedNumber : null,
+              index === selectedIndex ? styles.pageSelectedNumber : "",
             ].join(" ")}
+            aria-label={`Go to page ${index + 1}`}
+            aria-current={index === selectedIndex ? "page" : undefined}
           >
             {index + 1}
-          </DotButton>
+          </button>
         ))}
-        <NextButton
-          forSFP={false}
-          isSVG={false}
+        <button
           onClick={scrollNext}
           disabled={nextBtnDisabled}
-        />
+          className="next-button"
+          aria-label="Next page"
+        >
+          →
+        </button>
       </div>
     </div>
   );
