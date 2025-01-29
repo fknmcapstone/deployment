@@ -10,20 +10,30 @@ import { useState } from "react";
 const pageTitle = "National Characteristics";
 
 const tabsConfig = {
-  provided: {
-    id: "provided",
-    label: "Food Provided",
-    chartName: "Food Provided",
+  mealTypes: {
+    id: "mealTypes",
+    label: "Meal Types",
+    chartName: "Meals Provided & How They Are Served",
+  },
+  support: {
+    id: "support",
+    label: "Support & Education",
+    chartName: "School Meal Prep Facilities & Nutrition Education",
   },
   funding: {
     id: "funding",
-    label: "Food Funding",
-    chartName: "Food Funding",
+    label: "Payment & Funding",
+    chartName: "How School Meals Are Paid For",
   },
-  price: {
-    id: "price",
-    label: "Food Price",
-    chartName: "Food Price",
+  operations: {
+    id: "operations",
+    label: "Operations",
+    chartName: "How School Meal Programs Work",
+  },
+  determinants: {
+    id: "determinants",
+    label: "Food Determinants",
+    chartName: "What Affects Food Choices in Schools",
   },
 };
 
@@ -36,7 +46,7 @@ const fadeIn = {
 };
 
 export default function NationalCharacteristics() {
-  const [activeTab, setActiveTab] = useState("provided");
+  const [activeTab, setActiveTab] = useState("mealTypes");
 
   // Filter charts based on active tab
   const getTabCharts = () => {

@@ -155,8 +155,8 @@ export default function Contact() {
                 )}
                 <p className={styles.disclaimer}>
                   By submitting this form you agree to our{" "}
-                  <a href="#">terms and conditions</a> and our{" "}
-                  <a href="#">privacy policy</a>.
+                  <a href="https://www.utoronto.ca/privacy">terms and conditions</a> and our{" "}
+                  <a href="https://www.utoronto.ca/privacy">privacy policy</a>.
                 </p>
               </div>
             </form>

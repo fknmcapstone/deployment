@@ -3,21 +3,30 @@
     "category": "National Characteristics of School Food Programs",
     "subtitle": "The following charts and graphs provide a summary of the characteristics of school food programs across Canada.",
     "charts": [
-
       {
-        "name": "Food Provided",
-        "url": "https://flo.uri.sh/visualisation/20787102/embed",
-        "blurb": "Sum of Count by Type of Food Provided"
+        "name": "Meals Provided & How They Are Served",
+        "url": "https://flo.uri.sh/visualisation/21145940/embed",
+        "blurb": "Overview of different meal types and services provided"
       },
       {
-        "name": "Food Funding",
-        "url": "https://flo.uri.sh/visualisation/20787200/embed",
-        "blurb": "Sum of Percentage by Type of Food Funding"
+        "name": "School Meal Prep Facilities & Nutrition Education",
+        "url": "https://flo.uri.sh/visualisation/21364061/embed",
+        "blurb": "Analysis of school meal support systems and educational components"
       },
       {
-        "name": "Food Price",
-        "url": "https://flo.uri.sh/visualisation/20787403/embed",
-        "blurb": "Sum of Number of Facilities of Food Price"
+        "name": "How School Meals Are Paid For",
+        "url": "https://flo.uri.sh/visualisation/21244726/embed",
+        "blurb": "Breakdown of payment methods and funding sources"
+      },
+      {
+        "name": "How School Meal Programs Work",
+        "url": "https://flo.uri.sh/visualisation/21244858/embed",
+        "blurb": "Key operational metrics and insights"
+      },
+      {
+        "name": "What Affects Food Choices in Schools",
+        "url": "https://flo.uri.sh/visualisation/21364511/embed",
+        "blurb": "Analysis of factors determining food choices and availability"
       }
     ]
   }

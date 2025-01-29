@@ -79,9 +79,9 @@ export default function Home() {
 
           <div className={[styles.sectionTitleLinkContainer].join(" ")}>
             <p className={styles.sectionTitle}>Research</p>
-            <Link data-cy="intake_visuals_link" href={"/intake_visuals/"}>
+            <Link data-cy="intake_visuals_link" href={"/intake_visuals/SFPs_general_information/"}>
               <p className={styles.sectionLink}>
-                {"Intake Visuals "}
+                {"SFPs General Info "}
                 <svg className={styles.linkArrow} viewBox="0 -100 800 600">
                   <path
                     fill="#d32a32"
@@ -97,7 +97,7 @@ export default function Home() {
               href={"/measurement_tool_assessment/"}
             >
               <p className={styles.sectionLink}>
-                {"Measurement Tool Assessment "}
+                {"Measurement Tool"}
                 <svg className={styles.linkArrow} viewBox="0 -100 800 600">
                   <path
                     fill="#d32a32"

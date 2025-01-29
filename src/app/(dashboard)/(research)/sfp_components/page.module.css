@@ -11,10 +11,92 @@
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
+.heroSection {
+  background-color: #002A5C;
+  color: white;
+  padding: 6rem 2rem;
+  text-align: center;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  width: 100vw;
+}
+
+.title {
+  font-size: 4rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: #FFFFFF;
+}
+
+.subtitle {
+  font-size: 1.3rem;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.5;
+  font-weight: 300;
+  opacity: 1;
+  color: #FFFFFF;
+}
+
+.overviewSection {
+  padding: 5rem 2rem;
+  background: #F2F2F2;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  width: 100vw;
+}
+
+.overviewContent {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.overviewContent h2 {
+  color: #002A5C;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  font-weight: 600;
+}
+
+.overviewContent p {
+  font-size: 1.25rem;
+  line-height: 1.8;
+  max-width: 800px;
+}
+
 @media only screen and (max-width: 600px) {
   .main {
     padding-inline: 10vw;
     padding-block-end: 3vh;
+  }
+
+  .heroSection {
+    width: 100vw;
+    margin-left: calc(-10vw);
+  }
+
+  .overviewSection {
+    width: 100vw;
+    margin-left: calc(-10vw);
+  }
+
+  .card1,
+  .card2,
+  .card3,
+  .card4,
+  .card5,
+  .card6 {
+    width: 100%;
+    margin: 1rem 0;
+    padding: 1rem;
   }
 }
 
@@ -114,7 +196,6 @@
   opacity: 0.95;
   font-weight: 400;
 }
-
 .carousel {
   margin-top: 3rem;
   position: relative;
@@ -264,7 +345,6 @@
   border-color: #002A5C;
   box-shadow: 0 8px 24px rgba(0, 42, 92, 0.15);
 }
-
 @media only screen and (max-width: 1099px) {
   .card1,
   .card2,
@@ -288,6 +368,7 @@
     width: 100%;
     margin: 1rem 0;
     padding: 1rem;
+    margin-inline: 10vw;
   }
   
   .cardSubtitle {
@@ -309,3 +390,5 @@
     font-size: 1.5rem;
   }
 }
+
+

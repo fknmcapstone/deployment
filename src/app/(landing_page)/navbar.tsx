@@ -54,6 +54,14 @@ const ResearchMenu = () => (
       </div>
     </div>
     <Separator />
+      <Link
+        className={styles.marginBlock}
+        data-cy="nav_national_characteristics"
+        href="/national_characteristics/"
+      >
+        National Characteristics of SFPs
+      </Link>
+    <Separator />
     <div>
       <Link
         className={styles.marginBlock}
@@ -69,14 +77,6 @@ const ResearchMenu = () => (
         href="/sfp_components/"
       >
         SFP Components
-      </Link>
-      <Separator />
-      <Link
-        className={styles.marginBlock}
-        data-cy="nav_national_characteristics"
-        href="/national_characteristics/"
-      >
-        National Characteristics of SFPs
       </Link>
     </div>
   </div>
@@ -184,7 +184,7 @@ const Navbar = () => {
             <p>About FKNM</p>
           </Link>
 
-          <Link data-cy="nav_contact" href="/about_fknm/contact/">
+          <Link data-cy="nav_contact" href="/contact/">
             <p>Contact</p>
           </Link>
         </div>
