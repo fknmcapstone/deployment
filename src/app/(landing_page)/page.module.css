@@ -448,7 +448,7 @@
     rgba(0, 0, 0, 0.3) 0%,
     rgba(0, 0, 0, 0.1) 100%
   ),
-  url("/stock_landing_visual.jpg");
+  url("/stock_landing_visual.webp");
   background-size: cover;
   background-position: center;
 }
@@ -630,89 +630,188 @@
 .researchSection {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  padding: 2rem;
+  gap: 3rem;
+  padding: 3rem;
   background: rgba(255, 255, 255, 0.98);
   border-radius: 24px;
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.06);
   max-width: 1200px;
-  margin: 0.5rem auto;
-  transition: transform 0.2s ease;
+  margin: 1rem auto;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
 }
 
 .researchSection:hover {
   transform: translateY(-4px);
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.12);
 }
 
-@media only screen and (max-width: 768px) {
-  .researchTitle {
-    color: var(--dark-text-color);
-    margin-block-start: 2rem;
-    width: 100%;
-    font-weight: 600;
-    font-size: 20px;
-    text-align: center;
-  }
-
-  .researchSection {
-    color: var(--dark-text-color);
-    height: auto;
-    align-self: center;
-    justify-self: center;
-    width: 90%;
-    max-width: 400px;
-    margin-block-start: 0.5rem;
-    display: grid;
-    grid-template-rows: min-content 15rem;
-    grid-template-columns: 1fr;
-    background: rgba(255, 255, 255, 0.65);
-    padding: 1.5rem;
-    padding-bottom: 0rem;
-  }
-}
-
-.schoolFoodSectionImg {
+.imageContainer {
   grid-row: span 2;
-  background: linear-gradient(
-      to right,
-      rgba(255, 255, 255, 0) 70%,
-      rgba(246, 246, 246, 1) 100%
-    ),
-    url("/stock_school_food_programs.jpg");
-
-  background-repeat: no-repeat;
-  background-size: cover;
-  margin-inline-end: 3rem;
+  position: relative;
+  height: 500px;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
-.researchSectionImg {
-  grid-row: span 2;
-  background: linear-gradient(
-      to right,
-      rgba(255, 255, 255, 0) 70%,
-      rgba(246, 246, 246, 1) 100%
-    ),
-    url("/stock_research.jpg");
-
-  background-repeat: no-repeat;
-  background-size: cover;
-  margin-inline-end: 3rem;
+.sectionImage {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease;
 }
+
+.imageContainer:hover .sectionImage {
+  transform: scale(1.05);
+}
+
+.imageContainer::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 40%;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.95) 100%
+  );
+  z-index: 1;
+  pointer-events: none;
+}
+
+.sectionTitleLinkContainer,
+.sectionTitleLinkContainer0 {
+  font-weight: 500;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.sectionTitle,
+.sectionTitle0 {
+  font-family: var(--bembo);
+  color: var(--dark-text-color);
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.sectionTitle::after,
+.sectionTitle0::after {
+  content: '';
+  position: absolute;
+  bottom: -0.5rem;
+  left: 0;
+  width: 3rem;
+  height: 3px;
+  background-color: var(--primary-color);
+  border-radius: 2px;
+}
+
+.sectionLink {
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  color: var(--primary-color);
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  background: rgba(211, 42, 50, 0.05);
+  margin-bottom: 0.5rem;
+}
+
+.sectionLink:hover {
+  background: rgba(211, 42, 50, 0.1);
+  transform: translateX(4px);
+}
+
+.linkArrow {
+  width: 1rem;
+  height: 1rem;
+  margin-left: 0.75rem;
+  transition: transform 0.3s ease;
+}
+
+.sectionLink:hover .linkArrow {
+  transform: translateX(6px);
+}
+
+.sectionBlurb {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #4a5568;
+  margin-top: 1.5rem;
+  padding-right: 2rem;
+}
+
 @media only screen and (max-width: 1024px) {
   .researchSection {
-    grid-template-columns: 2fr 3fr;
-    width: 90%;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 2rem;
+    padding: 2rem;
+    margin: 1rem 2rem;
+  }
+
+  .imageContainer {
+    height: 400px;
+  }
+
+  .sectionTitle,
+  .sectionTitle0 {
+    font-size: 1.75rem;
+  }
+
+  .sectionBlurb {
+    font-size: 1rem;
+    padding-right: 1rem;
   }
 }
 
 @media only screen and (max-width: 768px) {
-  .schoolFoodSectionImg,
-  .researchSectionImg {
-    display: none;
-  }
   .researchSection {
     grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    width: calc(100% - 2rem);
+    margin: 1rem;
+    padding: 1.5rem;
+    gap: 1.5rem;
+    background: rgba(255, 255, 255, 0.95);
   }
+
+  .imageContainer {
+    display: none;
+  }
+
+  .sectionTitle,
+  .sectionTitle0 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .sectionLink {
+    font-size: 1.1rem;
+    padding: 0.75rem 1rem;
+    width: 100%;
+  }
+
+  .sectionBlurb {
+    font-size: 0.95rem;
+    margin-top: 1rem;
+    padding-right: 0;
+  }
+}
+
+/* Remove old image styles */
+.schoolFoodSectionImg,
+.researchSectionImg {
+  display: none;
 }
 
 .sectionTitleLinkContainer {
