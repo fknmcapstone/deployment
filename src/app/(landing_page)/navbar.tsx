@@ -116,8 +116,15 @@ const PublicationsMenu = () => (
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
+
   const toggle = () => {
     setIsOpen(!isOpen);
+    setActiveSubmenu(null); // Reset active submenu when toggling menu
+  };
+
+  const toggleSubmenu = (menu: string) => {
+    setActiveSubmenu(activeSubmenu === menu ? null : menu);
   };
 
   return (
@@ -137,58 +144,71 @@ const Navbar = () => {
           <p>Nourishing Minds</p>
         </Link>
 
-        <SearchAndJump />
+        <div className={styles.searchContainer}>
+          <SearchAndJump />
+        </div>
 
         <div className={styles.menuButtonContainer}>
-          <div className={styles.menuButton} onClick={toggle}>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="40"
-              height="40"
-              viewBox="0 0 24 24"
-            >
-              <path
-                fill="#fff"
-                d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"
-              />
-            </svg>
-          </div>
+          <button className={styles.menuButton} onClick={toggle} aria-label="Toggle menu">
+            {isOpen ? (
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <path fill="#002A5C" d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+              </svg>
+            ) : (
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <path fill="#002A5C" d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+              </svg>
+            )}
+          </button>
         </div>
       </div>
-      <div data-cy="nav_bar" className={styles.navigationbar}>
+      <div data-cy="nav_bar" className={`${styles.navigationbar} ${isOpen ? styles.mobileOpen : ''}`}>
         <div className={styles.navigationbarContent}>
-          <Link data-cy="nav_overview" href="/overview/">
+          <Link data-cy="nav_overview" href="/overview/" onClick={() => setIsOpen(false)}>
             <p>Overview</p>
           </Link>
 
-          <div data-cy="nav_research" className={styles.researchNavItem}>
+          <div 
+            data-cy="nav_research" 
+            className={`${styles.researchNavItem} ${activeSubmenu === 'research' ? styles.active : ''}`}
+            onClick={() => toggleSubmenu('research')}
+          >
             Research
             <ResearchMenu />
           </div>
 
-          <div data-cy="nav_ongoing_studies" className={styles.researchNavItem}>
+          <div 
+            data-cy="nav_ongoing_studies" 
+            className={`${styles.researchNavItem} ${activeSubmenu === 'ongoing' ? styles.active : ''}`}
+            onClick={() => toggleSubmenu('ongoing')}
+          >
             Ongoing Studies
             <OngoingStudiesMenu />
           </div>
 
-          <Link data-cy="nav_news" href="/news/">
+          <Link data-cy="nav_news" href="/news/" onClick={() => setIsOpen(false)}>
             News
           </Link>
 
-          <div data-cy="nav_publications" className={styles.researchNavItem}>
+          <div 
+            data-cy="nav_publications" 
+            className={`${styles.researchNavItem} ${activeSubmenu === 'publications' ? styles.active : ''}`}
+            onClick={() => toggleSubmenu('publications')}
+          >
             Publications
             <PublicationsMenu />
           </div>
 
-          <Link data-cy="nav_about_fknm" href="/about_fknm/">
+          <Link data-cy="nav_about_fknm" href="/about_fknm/" onClick={() => setIsOpen(false)}>
             <p>About FKNM</p>
           </Link>
 
-          <Link data-cy="nav_contact" href="/contact/">
+          <Link data-cy="nav_contact" href="/contact/" onClick={() => setIsOpen(false)}>
             <p>Contact</p>
           </Link>
         </div>
       </div>
+      {isOpen && <div className={styles.backdrop} onClick={toggle} />}
     </>
   );
 };
