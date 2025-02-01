@@ -21,6 +21,8 @@
   background-color: white;
   justify-content: flex-start;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1001; /* Ensure header stays on top */
 }
 
 .headerLogo {
@@ -37,7 +39,6 @@
   font-family: var(--bembo);
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  /* Add these new properties: */
   line-height: 0.6; /* Reduces space between lines */
   padding-block: 0.35rem; /* Adds vertical padding to the entire title block */
 }
@@ -318,34 +319,248 @@
 }
 
 @media only screen and (max-width: 768px) {
-  .navBarSubMenu {
-    position: static;
-    width: 100%;
-    transform: none;
-    box-shadow: none;
+  .header {
+    height: 4rem;
+    padding: 0.75rem 1.25rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1001;
+    background-color: white;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    display: flex;
+    align-items: center;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+
+  .headerLogo {
+    width: 36px;
+    height: 36px;
+  }
+
+  .header p {
+    font-size: 0.8rem;
+    line-height: 1.2;
+    padding-inline-start: 0.75rem;
+    color: #002A5C;
+    font-weight: 500;
+  }
+
+  .menuButtonContainer {
+    margin-left: auto;
+    z-index: 1002;
+  }
+
+  .menuButton {
+    background: none;
     border: none;
-    border-radius: 0;
+    width: 40px;
+    height: 40px;
+    padding: 0.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+  }
+
+  .menuButton svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .navigationbar {
+    position: fixed;
+    top: 4rem;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 4rem);
+    transform: translateX(-100%);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1000;
+    background-color: #002A5C;
+    overflow-y: auto;
+    box-shadow: 4px 0 24px rgba(0, 0, 0, 0.15);
+  }
+
+  .mobileOpen {
+    transform: translateX(0);
+  }
+
+  .navigationbarContent {
+    flex-direction: column;
+    padding: 1rem 0;
+    height: 100%;
+    background-color: #002A5C;
+    display: flex;
+    gap: 0.25rem;
+  }
+
+  /* Main menu items */
+  .navigationbarContent > * {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    font-size: 1.1rem;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.2s ease;
+    border: none;
     margin: 0;
+    white-space: normal;
+    line-height: 1.4;
+    text-decoration: none;
+    border-radius: 0;
+  }
+
+  .navigationbarContent > *:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+  }
+
+  /* Research items with dropdown */
+  .researchNavItem {
+    position: relative;
+    cursor: pointer;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+    white-space: normal;
+    font-weight: 500;
+  }
+
+  .researchNavItem:after {
+    content: '›';
+    font-size: 1.75rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-left: 0.5rem;
+    line-height: 1;
+    transition: transform 0.2s ease;
+  }
+
+  .researchNavItem.active {
+    background-color: rgba(255, 255, 255, 0.08);
+  }
+
+  /* Submenu container */
+  .navBarSubMenu {
+    position: fixed;
+    top: 4rem;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 4rem);
+    background-color: #002A5C;
+    transform: translateX(100%);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1000;
+    overflow-y: auto;
     padding: 0;
+    visibility: hidden;
+    box-shadow: -4px 0 24px rgba(0, 0, 0, 0.15);
+  }
+
+  .active .navBarSubMenu {
+    transform: translateX(0);
+    visibility: visible;
+  }
+
+  /* Back button */
+  .navBarSubMenu:before {
+    content: '← MAIN MENU';
+    display: flex;
+    align-items: center;
+    padding: 1.25rem 1.5rem;
+    color: white;
+    font-size: 0.95rem;
+    font-weight: 600;
+    background-color: #001F45;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    transition: background-color 0.2s ease;
+  }
+
+  .navBarSubMenu:before:hover {
     background-color: rgba(255, 255, 255, 0.05);
   }
-  
-  .navBarSubMenu a,
-  .intakeVisualsNavItem,
-  .intakeVisualsSubMenu a {
-    color: white;
-    font-weight: normal;
-    -webkit-font-smoothing: antialiased;
+
+  /* Section headers in submenu */
+  .intakeVisualsNavItem {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 1.25rem 1.5rem;
+    letter-spacing: 0.5px;
+    background-color: #001F45;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    text-transform: uppercase;
   }
-  
+
+  /* All submenu links */
+  .navBarSubMenu a,
+  .intakeVisualsSubMenu a {
+    padding: 1rem 1.5rem;
+    color: white;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    position: relative;
+    white-space: normal;
+    line-height: 1.5;
+    word-wrap: break-word;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    text-decoration: none;
+    transition: all 0.2s ease;
+  }
+
   .navBarSubMenu a:hover,
   .intakeVisualsSubMenu a:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-    color: white;
+    background-color: rgba(255, 255, 255, 0.08);
+    padding-left: 1.75rem;
   }
-  
-  .separator {
-    background-color: rgba(255, 255, 255, 0.1);
+
+  /* Nested submenu */
+  .intakeVisualsSubMenu {
+    background-color: rgba(0, 0, 0, 0.15);
+    padding: 0.5rem 0;
+  }
+
+  .intakeVisualsSubMenu a {
+    padding: 0.875rem 2rem;
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  .intakeVisualsSubMenu a:hover {
+    padding-left: 2.25rem;
+  }
+
+  /* Backdrop */
+  .backdrop {
+    position: fixed;
+    top: 4rem;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 4rem);
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .mobileOpen + .backdrop {
+    opacity: 1;
+  }
+
+  /* Hide search in mobile */
+  .searchContainer {
+    display: none;
   }
 }
 
