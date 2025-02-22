@@ -21,13 +21,16 @@
   background-color: white;
   justify-content: flex-start;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  position: relative;
-  z-index: 1001; /* Ensure header stays on top */
 }
 
 .headerLogo {
   width: 90px;
   height: 90px;
+}
+
+.searchContainer {
+  margin-left: auto;
+  padding-right: 1rem;
 }
 
 .header p {
@@ -322,7 +325,6 @@
   .header {
     height: 4rem;
     padding: 0.75rem 1.25rem;
-    position: fixed;
     top: 0;
     left: 0;
     right: 0;
