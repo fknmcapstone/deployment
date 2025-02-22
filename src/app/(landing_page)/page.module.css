@@ -30,7 +30,6 @@
 
 .searchContainer {
   margin-left: auto;
-  padding-right: 1rem;
 }
 
 .header p {
@@ -558,9 +557,9 @@
     width: 100%;
     height: calc(100vh - 4rem);
     background-color: rgba(0, 0, 0, 0.5);
-    z-index: 999;
-    backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    z-index: 999;
     opacity: 0;
     transition: opacity 0.3s ease;
   }
@@ -1151,5 +1150,30 @@
     grid-template-columns: repeat(2, 1fr);
     padding: 1.25rem;
     gap: 1.25rem;
+  }
+}
+
+/* Add responsive styles for navigation bar */
+@media only screen and (max-width: 1024px) and (min-width: 769px) {
+  .navigationbarContent {
+    gap: 2rem;
+    padding: 0.75rem 1.5rem;
+  }
+
+  .navigationbarContent > * {
+    font-size: 1rem;
+  }
+
+  /* Adjust dropdown positioning for medium screens */
+  .navBarSubMenu {
+    width: 280px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  /* Ensure dropdowns don't overflow viewport */
+  .researchNavItem:hover .navBarSubMenu {
+    max-height: calc(100vh - 150px);
+    overflow-y: auto;
   }
 }

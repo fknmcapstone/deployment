@@ -10,7 +10,7 @@ function Separator() {
   return <div className={styles.separator} />;
 }
 
-const ResearchMenu = () => (
+const ResearchMenu = ({ onLinkClick }: { onLinkClick: () => void }) => (
   <div data-cy="nav_research_submenu" className={styles.navBarSubMenu}>
     <div>
       <div data-cy="nav_intake_visuals" className={styles.intakeVisualsNavItem}>
@@ -20,6 +20,7 @@ const ResearchMenu = () => (
             className={styles.marginBlock}
             data-cy="nav_sfps_general_information"
             href="/intake_visuals/SFPs_general_information/"
+            onClick={onLinkClick}
           >
             SFPs General Information
           </Link>
@@ -27,6 +28,7 @@ const ResearchMenu = () => (
             className={styles.marginBlock}
             data-cy="nav_sfps_food_breakdown"
             href="/intake_visuals/SFPs_food_breakdown/"
+            onClick={onLinkClick}
           >
             SFPs Food Breakdown
           </Link>
@@ -40,6 +42,7 @@ const ResearchMenu = () => (
             className={styles.marginBlock}
             data-cy="nav_parents_preferences"
             href="/stakeholders_perception/parents_preferences/"
+            onClick={onLinkClick}
           >
             Parents' Preferences
           </Link>
@@ -47,6 +50,7 @@ const ResearchMenu = () => (
             className={styles.marginBlock}
             data-cy="nav_parents_opinions"
             href="/stakeholders_perception/parents_opinions/"
+            onClick={onLinkClick}
           >
             Parents' Opinions
           </Link>
@@ -58,6 +62,7 @@ const ResearchMenu = () => (
         className={styles.marginBlock}
         data-cy="nav_national_characteristics"
         href="/national_characteristics/"
+        onClick={onLinkClick}
       >
         National Characteristics of SFPs
       </Link>
@@ -67,6 +72,7 @@ const ResearchMenu = () => (
         className={styles.marginBlock}
         data-cy="nav_measurement_tool_assessment"
         href="/measurement_tool_assessment/"
+        onClick={onLinkClick}
       >
         Measurement Tool Assessment
       </Link>
@@ -75,6 +81,7 @@ const ResearchMenu = () => (
         className={styles.marginBlock}
         data-cy="nav_sfp_components"
         href="/sfp_components/"
+        onClick={onLinkClick}
       >
         SFP Components
       </Link>
@@ -83,24 +90,26 @@ const ResearchMenu = () => (
   </div>
 );
 
-const OngoingStudiesMenu = () => (
+const OngoingStudiesMenu = ({ onLinkClick }: { onLinkClick: () => void }) => (
   <div data-cy="nav_ongoing_studies_submenu" className={styles.navBarSubMenu}>
     <Link
       className={styles.marginBlock}
       data-cy="nav_impact_of_sfps"
       href="/ongoing_studies/uoft_school_food_study/"
+      onClick={onLinkClick}
     >
       University of Toronto, School Food Study
     </Link>
   </div>
 );
 
-const PublicationsMenu = () => (
+const PublicationsMenu = ({ onLinkClick }: { onLinkClick: () => void }) => (
   <div data-cy="nav_publications_submenu" className={styles.navBarSubMenu}>
     <Link
       className={styles.marginBlock}
       data-cy="nav_manuscripts"
       href="/manuscripts/"
+      onClick={onLinkClick}
     >
       Manuscripts
     </Link>
@@ -109,6 +118,7 @@ const PublicationsMenu = () => (
       className={styles.marginBlock}
       data-cy="nav_presentations"
       href="/presentations/"
+      onClick={onLinkClick}
     >
       Presentations
     </Link>
@@ -124,6 +134,11 @@ const Navbar = () => {
     setActiveSubmenu(null); // Reset active submenu when toggling menu
   };
 
+  const closeMenu = () => {
+    setIsOpen(false);
+    setActiveSubmenu(null);
+  };
+
   const toggleSubmenu = (menu: string) => {
     setActiveSubmenu(activeSubmenu === menu ? null : menu);
   };
@@ -131,7 +146,7 @@ const Navbar = () => {
   return (
     <>
       <div data-cy="nav_bar" className={styles.header}>
-        <Link href="/">
+        <Link href="/" onClick={closeMenu}>
           <div data-cy="header_logo">
             <img
               src="/fknm_logo.png"
@@ -140,7 +155,7 @@ const Navbar = () => {
             />
           </div>
         </Link>
-        <Link data-cy="header_title" href="/">
+        <Link data-cy="header_title" href="/" onClick={closeMenu}>
           <p>Feeding Kids</p>
           <p>Nourishing Minds</p>
         </Link>
@@ -165,7 +180,7 @@ const Navbar = () => {
       </div>
       <div data-cy="nav_bar" className={`${styles.navigationbar} ${isOpen ? styles.mobileOpen : ''}`}>
         <div className={styles.navigationbarContent}>
-          <Link data-cy="nav_overview" href="/overview/" onClick={() => setIsOpen(false)}>
+          <Link data-cy="nav_overview" href="/overview/" onClick={closeMenu}>
             <p>Overview</p>
           </Link>
 
@@ -175,7 +190,7 @@ const Navbar = () => {
             onClick={() => toggleSubmenu('research')}
           >
             Research
-            <ResearchMenu />
+            <ResearchMenu onLinkClick={closeMenu} />
           </div>
 
           <div 
@@ -184,10 +199,10 @@ const Navbar = () => {
             onClick={() => toggleSubmenu('ongoing')}
           >
             Ongoing Studies
-            <OngoingStudiesMenu />
+            <OngoingStudiesMenu onLinkClick={closeMenu} />
           </div>
 
-          <Link data-cy="nav_news" href="/news/" onClick={() => setIsOpen(false)}>
+          <Link data-cy="nav_news" href="/news/" onClick={closeMenu}>
             News
           </Link>
 
@@ -197,14 +212,14 @@ const Navbar = () => {
             onClick={() => toggleSubmenu('publications')}
           >
             Publications
-            <PublicationsMenu />
+            <PublicationsMenu onLinkClick={closeMenu} />
           </div>
 
-          <Link data-cy="nav_about_fknm" href="/about_fknm/" onClick={() => setIsOpen(false)}>
+          <Link data-cy="nav_about_fknm" href="/about_fknm/" onClick={closeMenu}>
             <p>About FKNM</p>
           </Link>
 
-          <Link data-cy="nav_contact" href="/contact/" onClick={() => setIsOpen(false)}>
+          <Link data-cy="nav_contact" href="/contact/" onClick={closeMenu}>
             <p>Contact</p>
           </Link>
         </div>
