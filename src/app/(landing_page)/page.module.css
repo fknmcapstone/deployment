@@ -5,13 +5,6 @@
   background-color: var(--background-color);
 }
 
-@media only screen and (max-width: 768px) {
-  .main {
-    padding-inline: 10vw;
-    padding-block-end: 3vh;
-  }
-}
-
 /* CSS for Header and Navigation Bar component */
 .header {
   display: flex;
@@ -1127,12 +1120,10 @@
 @media only screen and (max-width: 768px) {
   .landingPageContent {
     gap: 1rem;
-    padding: 0 1rem;
   }
 
   .landingBlurbContainer {
     padding: 1.5rem 1rem;
-    margin-top: 0.5rem;
   }
 
   .landingBlurb1, .landingBlurb2 {
