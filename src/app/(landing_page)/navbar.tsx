@@ -79,6 +79,7 @@ const ResearchMenu = () => (
         SFP Components
       </Link>
     </div>
+    <Separator />
   </div>
 );
 

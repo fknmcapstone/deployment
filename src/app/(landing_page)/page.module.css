@@ -396,6 +396,8 @@
     background-color: #002A5C;
     display: flex;
     gap: 0.25rem;
+    align-items: flex-start;
+    justify-content: flex-start;
   }
 
   /* Main menu items */
@@ -428,7 +430,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem 1.5rem;
+    padding: 1.5rem;
     white-space: normal;
     font-weight: 500;
   }
@@ -455,16 +457,19 @@
     height: calc(100vh - 4rem);
     background-color: #002A5C;
     transform: translateX(100%);
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     z-index: 1000;
     overflow-y: auto;
     padding: 0;
     visibility: hidden;
     box-shadow: -4px 0 24px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .active .navBarSubMenu {
     transform: translateX(0);
+    transform: translateY(-65px);
     visibility: visible;
   }
 
@@ -477,7 +482,7 @@
     color: white;
     font-size: 0.95rem;
     font-weight: 600;
-    background-color: #001F45;
+    background-color: var(--primary-color);
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     cursor: pointer;
     letter-spacing: 0.5px;
@@ -495,7 +500,7 @@
     font-weight: 600;
     padding: 1.25rem 1.5rem;
     letter-spacing: 0.5px;
-    background-color: #001F45;
+    background-color: #002A5C;
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     text-transform: uppercase;
   }
@@ -515,6 +520,9 @@
     border-bottom: 1px solid rgba(255, 255, 255, 0.04);
     text-decoration: none;
     transition: all 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .navBarSubMenu a:hover,
@@ -525,8 +533,9 @@
 
   /* Nested submenu */
   .intakeVisualsSubMenu {
-    background-color: rgba(0, 0, 0, 0.15);
+    background-color: #002A5C;
     padding: 0.5rem 0;
+    padding-bottom: 0rem;
   }
 
   .intakeVisualsSubMenu a {
