@@ -167,10 +167,10 @@ const options: any = {
   cutoutPercentage: 50,
   layout: {
     padding: {
-      top: 20,
-      left: 0,
-      right: 0,
-      bottom: 10,
+      top: isWindowDefined() && window.innerWidth < 768 ? 10 : 20,
+      left: isWindowDefined() && window.innerWidth < 768 ? 5 : 0,
+      right: isWindowDefined() && window.innerWidth < 768 ? 5 : 0,
+      bottom: isWindowDefined() && window.innerWidth < 768 ? 5 : 10,
     },
   },
   plugins: {
@@ -181,13 +181,13 @@ const options: any = {
       align: "start",
       color: "#002A5C",
       font: {
-        size: 24,
+        size: isWindowDefined() && window.innerWidth < 768 ? 18 : 24,
         weight: "bold",
         family: "'Inter', sans-serif"
       },
       padding: {
-        top: 10,
-        bottom: 30,
+        top: isWindowDefined() && window.innerWidth < 768 ? 5 : 10,
+        bottom: isWindowDefined() && window.innerWidth < 768 ? 15 : 30,
       },
     },
     legend: {
@@ -201,8 +201,8 @@ const options: any = {
       borderColor: 'rgba(0, 42, 92, 0.1)',
       borderWidth: 1,
       cornerRadius: 8,
-      padding: 12,
-      boxPadding: 6,
+      padding: isWindowDefined() && window.innerWidth < 768 ? 8 : 12,
+      boxPadding: isWindowDefined() && window.innerWidth < 768 ? 4 : 6,
       usePointStyle: true,
       callbacks: {
         label: function(context: any) {
@@ -217,29 +217,29 @@ const options: any = {
       textAlign: "center",
       font: {
         weight: "600",
-        size: 12,
+        size: isWindowDefined() && window.innerWidth < 768 ? 10 : 12,
         family: "'Inter', sans-serif"
       },
       formatter: (value: any, context: { datasetIndex: number; dataIndex: number }) => {
-        // Check which dataset we're in to choose the correct set of labels
+        const isMobile = isWindowDefined() && window.innerWidth < 768;
         if (context.datasetIndex === 1) {
           // Inner dataset
-          const middle = Math.ceil(innerLabels[context.dataIndex].length / 2);
-          const firstHalf = innerLabels[context.dataIndex].substr(0, middle);
-          const secondHalf = innerLabels[context.dataIndex].substr(middle);
-
-          // Return the label in two lines
-          return firstHalf + "\n" + secondHalf;
+          const label = innerLabels[context.dataIndex];
+          if (isMobile) {
+            return label.length > 15 ? label.substring(0, 15) + '...' : label;
+          }
+          const middle = Math.ceil(label.length / 2);
+          return label.substr(0, middle) + "\n" + label.substr(middle);
         } else if (context.datasetIndex === 0) {
           // Outer dataset
-          const middle = Math.ceil(outerLabels[context.dataIndex].length / 2);
-          const firstHalf = outerLabels[context.dataIndex].substr(0, middle);
-          const secondHalf = outerLabels[context.dataIndex].substr(middle);
-
-          // Return the label in two lines
-          return firstHalf + "\n" + secondHalf;
+          const label = outerLabels[context.dataIndex];
+          if (isMobile) {
+            return label.length > 12 ? label.substring(0, 12) + '...' : label;
+          }
+          const middle = Math.ceil(label.length / 2);
+          return label.substr(0, middle) + "\n" + label.substr(middle);
         }
-        return value; // In case there are more datasets with no specific label handling
+        return value;
       },
     },
   },
@@ -343,16 +343,71 @@ const options: any = {
   },
 };
 if (isWindowDefined() && window.innerWidth < 1100) {
-  options.layout.padding.right = 420;
-  options.plugins.datalabels.font.size = 8.5;
+  options.layout.padding = {
+    top: 10,
+    bottom: 10,
+    left: 10,
+    right: 10
+  };
+  options.plugins.datalabels.font.size = 9;
   options.plugins.datalabels.font.weight = "normal";
-  options.aspectRatio = 1.8;
+  options.aspectRatio = 1;
 }
-if (isWindowDefined() && window.innerWidth < 601) {
-  options.layout.padding.right = 550;
-  options.plugins.datalabels.font.size = 8.5;
-  options.plugins.datalabels.font.weight = "normal";
-  options.aspectRatio = 1.8;
+if (isWindowDefined() && window.innerWidth < 768) {
+  options.layout.padding = {
+    top: 5,
+    bottom: 5,
+    left: 5,
+    right: 5
+  };
+  options.plugins.datalabels.font.size = 8;
+  options.plugins.title.font.size = 16;
+  options.aspectRatio = 1;
+  options.plugins.datalabels.display = function(context: any) {
+    // Show all labels on both inner and outer rings
+    return true;
+  };
+  // Adjust formatter to show shorter text for better fit
+  options.plugins.datalabels.formatter = (value: any, context: { datasetIndex: number; dataIndex: number }) => {
+    if (context.datasetIndex === 1) {
+      // Inner dataset
+      const label = innerLabels[context.dataIndex];
+      return label.length > 12 ? label.substring(0, 12) + '...' : label;
+    } else if (context.datasetIndex === 0) {
+      // Outer dataset
+      const label = outerLabels[context.dataIndex];
+      return label.length > 10 ? label.substring(0, 10) + '...' : label;
+    }
+    return value;
+  };
+}
+if (isWindowDefined() && window.innerWidth < 480) {
+  options.layout.padding = {
+    top: 0,
+    bottom: 0,
+    left: 0,
+    right: 0
+  };
+  options.plugins.datalabels.font.size = 6;
+  options.plugins.title.font.size = 14;
+  options.aspectRatio = 0.9;
+  options.plugins.datalabels.display = function(context: any) {
+    // Show all labels on both inner and outer rings
+    return true;
+  };
+  // Further reduce text length for smallest screens
+  options.plugins.datalabels.formatter = (value: any, context: { datasetIndex: number; dataIndex: number }) => {
+    if (context.datasetIndex === 1) {
+      // Inner dataset
+      const label = innerLabels[context.dataIndex];
+      return label.length > 10 ? label.substring(0, 10) + '...' : label;
+    } else if (context.datasetIndex === 0) {
+      // Outer dataset
+      const label = outerLabels[context.dataIndex];
+      return label.length > 8 ? label.substring(0, 8) + '...' : label;
+    }
+    return value;
+  };
 }
 
 ChartJS.register(ArcElement, Title, Tooltip, Legend, ChartDataLabels);

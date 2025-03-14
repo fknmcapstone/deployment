@@ -80,7 +80,6 @@
 
   .heroSection {
     width: 100vw;
-    margin-left: calc(-10vw);
   }
 
   .overviewSection {
@@ -102,15 +101,41 @@
 
 .doughnutChart {
   justify-self: center;
-  width: 900px;
+  width: 100%;
+  max-width: 900px;
   height: 780px;
+  margin: 0 auto;
+  padding: 1rem;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1100px) {
   .doughnutChart {
-    justify-self: start;
-    width: 880px;
-    height: 750px;
+    width: 100%;
+    height: 600px;
+    padding: 0.5rem;
+    overflow: visible;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .doughnutChart {
+    width: 100%;
+    height: 500px;
+    padding: 0;
+    margin: 1rem auto;
+    overflow: visible;
+    transform: scale(0.9);
+    transform-origin: center center;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .doughnutChart {
+    width: 100%;
+    height: 400px;
+    transform: scale(0.85);
+    margin: 0 auto;
+    padding: 0;
   }
 }
 
@@ -286,48 +311,149 @@
 
 /* Responsive adjustments */
 @media only screen and (max-width: 768px) {
+  .main {
+    padding-inline: 5vw;
+    padding-block-end: 3vh;
+  }
+
+  .heroSection {
+    padding: 4rem 1rem;
+  }
+
+  .title {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .subtitle {
+    font-size: 1.1rem;
+    padding: 0 1rem;
+  }
+
+  .overviewSection {
+    padding: 3rem 1rem;
+  }
+
+  .overviewContent h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .overviewContent p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+
+  .doughnutChart {
+    width: 100%;
+    height: 500px;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+
+  .card1,
+  .card2,
+  .card3,
+  .card4,
+  .card5,
+  .card6 {
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    width: 100%;
+  }
+
+  .card1Title,
+  .card2Title,
+  .card3Title,
+  .card4Title,
+  .card5Title,
+  .card6Title {
+    font-size: 1.5rem;
+    margin-top: 3vh;
+  }
+
+  .cardSubtitle {
+    font-size: 1.1rem;
+    margin-inline-start: 1rem;
+    margin-block-start: 1rem;
+  }
+
+  .definitionsText {
+    margin-inline-start: 1.5rem;
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
   .carousel {
-    padding: 1.5rem 0.75rem;
+    margin-top: 2rem;
+    padding: 1.5rem 0.5rem;
+  }
+
+  .carouselContainer {
+    padding: 0.5rem;
+  }
+
+  .carouselSlide {
+    padding: 0.5rem;
   }
 
   .quotationsText {
-    padding: 1.75rem 2rem;
+    padding: 1.5rem;
     font-size: 1rem;
-  }
-
-  .quotationsText::before {
-    font-size: 3rem;
-    top: 0.75rem;
-    left: 0.75rem;
-  }
-
-  .quotationsText::after {
-    font-size: 3rem;
-    bottom: -0.25rem;
-    right: 0.75rem;
+    margin: 0.5rem;
   }
 }
 
 @media only screen and (max-width: 480px) {
-  .carousel {
-    padding: 1rem 0.5rem;
+  .main {
+    padding-inline: 3vw;
+  }
+
+  .heroSection {
+    padding: 3rem 1rem;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .doughnutChart {
+    height: 400px;
+    padding: 0.5rem;
+  }
+
+  .card1,
+  .card2,
+  .card3,
+  .card4,
+  .card5,
+  .card6 {
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .cardSubtitle {
+    margin-inline-start: 0.75rem;
+    font-size: 1rem;
+  }
+
+  .definitionsText {
+    margin-inline-start: 1rem;
+    font-size: 0.9rem;
   }
 
   .quotationsText {
-    padding: 1.5rem 1.75rem;
-    font-size: 0.9375rem;
+    padding: 1.25rem;
+    font-size: 0.95rem;
   }
 
-  .quotationsText::before {
-    font-size: 2.5rem;
-    top: 0.5rem;
-    left: 0.5rem;
-  }
-
+  .quotationsText::before,
   .quotationsText::after {
-    font-size: 2.5rem;
-    bottom: -0.25rem;
-    right: 0.5rem;
+    font-size: 3rem;
   }
 
   .paginationDots {
