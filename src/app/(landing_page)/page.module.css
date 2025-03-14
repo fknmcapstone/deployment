@@ -5,13 +5,6 @@
   background-color: var(--background-color);
 }
 
-@media only screen and (max-width: 768px) {
-  .main {
-    padding-inline: 10vw;
-    padding-block-end: 3vh;
-  }
-}
-
 /* CSS for Header and Navigation Bar component */
 .header {
   display: flex;
@@ -28,6 +21,10 @@
   height: 90px;
 }
 
+.searchContainer {
+  margin-left: auto;
+}
+
 .header p {
   color: #25355A;
   font-size: 1.5rem;
@@ -37,7 +34,6 @@
   font-family: var(--bembo);
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  /* Add these new properties: */
   line-height: 0.6; /* Reduces space between lines */
   padding-block: 0.35rem; /* Adds vertical padding to the entire title block */
 }
@@ -318,34 +314,256 @@
 }
 
 @media only screen and (max-width: 768px) {
-  .navBarSubMenu {
-    position: static;
-    width: 100%;
-    transform: none;
-    box-shadow: none;
+  .header {
+    height: 4rem;
+    padding: 0.75rem 1.25rem;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1001;
+    background-color: white;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    display: flex;
+    align-items: center;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+
+  .headerLogo {
+    width: 36px;
+    height: 36px;
+  }
+
+  .header p {
+    font-size: 0.8rem;
+    line-height: 1.2;
+    padding-inline-start: 0.75rem;
+    color: #002A5C;
+    font-weight: 500;
+  }
+
+  .menuButtonContainer {
+    margin-left: auto;
+    z-index: 1002;
+  }
+
+  .menuButton {
+    background: none;
     border: none;
-    border-radius: 0;
+    width: 40px;
+    height: 40px;
+    padding: 0.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+  }
+
+  .menuButton svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .navigationbar {
+    position: fixed;
+    top: 4rem;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 4rem);
+    transform: translateX(-100%);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1000;
+    background-color: #002A5C;
+    overflow-y: auto;
+    box-shadow: 4px 0 24px rgba(0, 0, 0, 0.15);
+  }
+
+  .mobileOpen {
+    transform: translateX(0);
+  }
+
+  .navigationbarContent {
+    flex-direction: column;
+    padding: 1rem 0;
+    height: 100%;
+    background-color: #002A5C;
+    display: flex;
+    gap: 0.25rem;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  /* Main menu items */
+  .navigationbarContent > * {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    font-size: 1.1rem;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.2s ease;
+    border: none;
     margin: 0;
+    white-space: normal;
+    line-height: 1.4;
+    text-decoration: none;
+    border-radius: 0;
+  }
+
+  .navigationbarContent > *:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+  }
+
+  /* Research items with dropdown */
+  .researchNavItem {
+    position: relative;
+    cursor: pointer;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem;
+    white-space: normal;
+    font-weight: 500;
+  }
+
+  .researchNavItem:after {
+    content: '›';
+    font-size: 1.75rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-left: 0.5rem;
+    line-height: 1;
+    transition: transform 0.2s ease;
+  }
+
+  .researchNavItem.active {
+    background-color: rgba(255, 255, 255, 0.08);
+  }
+
+  /* Submenu container */
+  .navBarSubMenu {
+    position: fixed;
+    top: 4rem;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 4rem);
+    background-color: #002A5C;
+    transform: translateX(100%);
+    z-index: 1000;
+    overflow-y: auto;
     padding: 0;
+    visibility: hidden;
+    box-shadow: -4px 0 24px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .active .navBarSubMenu {
+    transform: translateX(0);
+    transform: translateY(-65px);
+    visibility: visible;
+  }
+
+  /* Back button */
+  .navBarSubMenu:before {
+    content: '← MAIN MENU';
+    display: flex;
+    align-items: center;
+    padding: 1.25rem 1.5rem;
+    color: white;
+    font-size: 0.95rem;
+    font-weight: 600;
+    background-color: var(--primary-color);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    transition: background-color 0.2s ease;
+  }
+
+  .navBarSubMenu:before:hover {
     background-color: rgba(255, 255, 255, 0.05);
   }
-  
-  .navBarSubMenu a,
-  .intakeVisualsNavItem,
-  .intakeVisualsSubMenu a {
-    color: white;
-    font-weight: normal;
-    -webkit-font-smoothing: antialiased;
+
+  /* Section headers in submenu */
+  .intakeVisualsNavItem {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 1.25rem 1.5rem;
+    letter-spacing: 0.5px;
+    background-color: #002A5C;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    text-transform: uppercase;
   }
-  
+
+  /* All submenu links */
+  .navBarSubMenu a,
+  .intakeVisualsSubMenu a {
+    padding: 1rem 1.5rem;
+    color: white;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    position: relative;
+    white-space: normal;
+    line-height: 1.5;
+    word-wrap: break-word;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    text-decoration: none;
+    transition: all 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
   .navBarSubMenu a:hover,
   .intakeVisualsSubMenu a:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-    color: white;
+    background-color: rgba(255, 255, 255, 0.08);
+    padding-left: 1.75rem;
   }
-  
-  .separator {
-    background-color: rgba(255, 255, 255, 0.1);
+
+  /* Nested submenu */
+  .intakeVisualsSubMenu {
+    background-color: #002A5C;
+    padding: 0.5rem 0;
+    padding-bottom: 0rem;
+  }
+
+  .intakeVisualsSubMenu a {
+    padding: 0.875rem 2rem;
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  .intakeVisualsSubMenu a:hover {
+    padding-left: 2.25rem;
+  }
+
+  /* Backdrop */
+  .backdrop {
+    position: fixed;
+    top: 4rem;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 4rem);
+    background-color: rgba(0, 0, 0, 0.5);
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    z-index: 999;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .mobileOpen + .backdrop {
+    opacity: 1;
+  }
+
+  /* Hide search in mobile */
+  .searchContainer {
+    display: none;
   }
 }
 
@@ -448,7 +666,7 @@
     rgba(0, 0, 0, 0.3) 0%,
     rgba(0, 0, 0, 0.1) 100%
   ),
-  url("/stock_landing_visual.jpg");
+  url("/stock_landing_visual.webp");
   background-size: cover;
   background-position: center;
 }
@@ -630,89 +848,188 @@
 .researchSection {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  padding: 2rem;
+  gap: 3rem;
+  padding: 3rem;
   background: rgba(255, 255, 255, 0.98);
   border-radius: 24px;
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.06);
   max-width: 1200px;
-  margin: 0.5rem auto;
-  transition: transform 0.2s ease;
+  margin: 1rem auto;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
 }
 
 .researchSection:hover {
   transform: translateY(-4px);
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.12);
 }
 
-@media only screen and (max-width: 768px) {
-  .researchTitle {
-    color: var(--dark-text-color);
-    margin-block-start: 2rem;
-    width: 100%;
-    font-weight: 600;
-    font-size: 20px;
-    text-align: center;
-  }
-
-  .researchSection {
-    color: var(--dark-text-color);
-    height: auto;
-    align-self: center;
-    justify-self: center;
-    width: 90%;
-    max-width: 400px;
-    margin-block-start: 0.5rem;
-    display: grid;
-    grid-template-rows: min-content 15rem;
-    grid-template-columns: 1fr;
-    background: rgba(255, 255, 255, 0.65);
-    padding: 1.5rem;
-    padding-bottom: 0rem;
-  }
-}
-
-.schoolFoodSectionImg {
+.imageContainer {
   grid-row: span 2;
-  background: linear-gradient(
-      to right,
-      rgba(255, 255, 255, 0) 70%,
-      rgba(246, 246, 246, 1) 100%
-    ),
-    url("/stock_school_food_programs.jpg");
-
-  background-repeat: no-repeat;
-  background-size: cover;
-  margin-inline-end: 3rem;
+  position: relative;
+  height: 500px;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
-.researchSectionImg {
-  grid-row: span 2;
-  background: linear-gradient(
-      to right,
-      rgba(255, 255, 255, 0) 70%,
-      rgba(246, 246, 246, 1) 100%
-    ),
-    url("/stock_research.jpg");
-
-  background-repeat: no-repeat;
-  background-size: cover;
-  margin-inline-end: 3rem;
+.sectionImage {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease;
 }
+
+.imageContainer:hover .sectionImage {
+  transform: scale(1.05);
+}
+
+.imageContainer::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 40%;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.95) 100%
+  );
+  z-index: 1;
+  pointer-events: none;
+}
+
+.sectionTitleLinkContainer,
+.sectionTitleLinkContainer0 {
+  font-weight: 500;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.sectionTitle,
+.sectionTitle0 {
+  font-family: var(--bembo);
+  color: var(--dark-text-color);
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.sectionTitle::after,
+.sectionTitle0::after {
+  content: '';
+  position: absolute;
+  bottom: -0.5rem;
+  left: 0;
+  width: 3rem;
+  height: 3px;
+  background-color: var(--primary-color);
+  border-radius: 2px;
+}
+
+.sectionLink {
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  color: var(--primary-color);
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  background: rgba(211, 42, 50, 0.05);
+  margin-bottom: 0.5rem;
+}
+
+.sectionLink:hover {
+  background: rgba(211, 42, 50, 0.1);
+  transform: translateX(4px);
+}
+
+.linkArrow {
+  width: 1rem;
+  height: 1rem;
+  margin-left: 0.75rem;
+  transition: transform 0.3s ease;
+}
+
+.sectionLink:hover .linkArrow {
+  transform: translateX(6px);
+}
+
+.sectionBlurb {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #4a5568;
+  margin-top: 1.5rem;
+  padding-right: 2rem;
+}
+
 @media only screen and (max-width: 1024px) {
   .researchSection {
-    grid-template-columns: 2fr 3fr;
-    width: 90%;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 2rem;
+    padding: 2rem;
+    margin: 1rem 2rem;
+  }
+
+  .imageContainer {
+    height: 400px;
+  }
+
+  .sectionTitle,
+  .sectionTitle0 {
+    font-size: 1.75rem;
+  }
+
+  .sectionBlurb {
+    font-size: 1rem;
+    padding-right: 1rem;
   }
 }
 
 @media only screen and (max-width: 768px) {
-  .schoolFoodSectionImg,
-  .researchSectionImg {
-    display: none;
-  }
   .researchSection {
     grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    width: calc(100% - 2rem);
+    margin: 1rem;
+    padding: 1.5rem;
+    gap: 1.5rem;
+    background: rgba(255, 255, 255, 0.95);
   }
+
+  .imageContainer {
+    display: none;
+  }
+
+  .sectionTitle,
+  .sectionTitle0 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .sectionLink {
+    font-size: 1.1rem;
+    padding: 0.75rem 1rem;
+    width: 100%;
+  }
+
+  .sectionBlurb {
+    font-size: 0.95rem;
+    margin-top: 1rem;
+    padding-right: 0;
+  }
+}
+
+/* Remove old image styles */
+.schoolFoodSectionImg,
+.researchSectionImg {
+  display: none;
 }
 
 .sectionTitleLinkContainer {
@@ -803,12 +1120,10 @@
 @media only screen and (max-width: 768px) {
   .landingPageContent {
     gap: 1rem;
-    padding: 0 1rem;
   }
 
   .landingBlurbContainer {
     padding: 1.5rem 1rem;
-    margin-top: 0.5rem;
   }
 
   .landingBlurb1, .landingBlurb2 {
@@ -826,5 +1141,30 @@
     grid-template-columns: repeat(2, 1fr);
     padding: 1.25rem;
     gap: 1.25rem;
+  }
+}
+
+/* Add responsive styles for navigation bar */
+@media only screen and (max-width: 1024px) and (min-width: 769px) {
+  .navigationbarContent {
+    gap: 2rem;
+    padding: 0.75rem 1.5rem;
+  }
+
+  .navigationbarContent > * {
+    font-size: 1rem;
+  }
+
+  /* Adjust dropdown positioning for medium screens */
+  .navBarSubMenu {
+    width: 280px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  /* Ensure dropdowns don't overflow viewport */
+  .researchNavItem:hover .navBarSubMenu {
+    max-height: calc(100vh - 150px);
+    overflow-y: auto;
   }
 }

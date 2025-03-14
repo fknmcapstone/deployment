@@ -10,7 +10,7 @@ function Separator() {
   return <div className={styles.separator} />;
 }
 
-const ResearchMenu = () => (
+const ResearchMenu = ({ onLinkClick }: { onLinkClick: () => void }) => (
   <div data-cy="nav_research_submenu" className={styles.navBarSubMenu}>
     <div>
       <div data-cy="nav_intake_visuals" className={styles.intakeVisualsNavItem}>
@@ -20,6 +20,7 @@ const ResearchMenu = () => (
             className={styles.marginBlock}
             data-cy="nav_sfps_general_information"
             href="/intake_visuals/SFPs_general_information/"
+            onClick={onLinkClick}
           >
             SFPs General Information
           </Link>
@@ -27,6 +28,7 @@ const ResearchMenu = () => (
             className={styles.marginBlock}
             data-cy="nav_sfps_food_breakdown"
             href="/intake_visuals/SFPs_food_breakdown/"
+            onClick={onLinkClick}
           >
             SFPs Food Breakdown
           </Link>
@@ -40,6 +42,7 @@ const ResearchMenu = () => (
             className={styles.marginBlock}
             data-cy="nav_parents_preferences"
             href="/stakeholders_perception/parents_preferences/"
+            onClick={onLinkClick}
           >
             Parents' Preferences
           </Link>
@@ -47,6 +50,7 @@ const ResearchMenu = () => (
             className={styles.marginBlock}
             data-cy="nav_parents_opinions"
             href="/stakeholders_perception/parents_opinions/"
+            onClick={onLinkClick}
           >
             Parents' Opinions
           </Link>
@@ -58,6 +62,7 @@ const ResearchMenu = () => (
         className={styles.marginBlock}
         data-cy="nav_national_characteristics"
         href="/national_characteristics/"
+        onClick={onLinkClick}
       >
         National Characteristics of SFPs
       </Link>
@@ -67,6 +72,7 @@ const ResearchMenu = () => (
         className={styles.marginBlock}
         data-cy="nav_measurement_tool_assessment"
         href="/measurement_tool_assessment/"
+        onClick={onLinkClick}
       >
         Measurement Tool Assessment
       </Link>
@@ -75,31 +81,35 @@ const ResearchMenu = () => (
         className={styles.marginBlock}
         data-cy="nav_sfp_components"
         href="/sfp_components/"
+        onClick={onLinkClick}
       >
         SFP Components
       </Link>
     </div>
+    <Separator />
   </div>
 );
 
-const OngoingStudiesMenu = () => (
+const OngoingStudiesMenu = ({ onLinkClick }: { onLinkClick: () => void }) => (
   <div data-cy="nav_ongoing_studies_submenu" className={styles.navBarSubMenu}>
     <Link
       className={styles.marginBlock}
       data-cy="nav_impact_of_sfps"
       href="/ongoing_studies/uoft_school_food_study/"
+      onClick={onLinkClick}
     >
       University of Toronto, School Food Study
     </Link>
   </div>
 );
 
-const PublicationsMenu = () => (
+const PublicationsMenu = ({ onLinkClick }: { onLinkClick: () => void }) => (
   <div data-cy="nav_publications_submenu" className={styles.navBarSubMenu}>
     <Link
       className={styles.marginBlock}
       data-cy="nav_manuscripts"
       href="/manuscripts/"
+      onClick={onLinkClick}
     >
       Manuscripts
     </Link>
@@ -108,6 +118,7 @@ const PublicationsMenu = () => (
       className={styles.marginBlock}
       data-cy="nav_presentations"
       href="/presentations/"
+      onClick={onLinkClick}
     >
       Presentations
     </Link>
@@ -116,14 +127,26 @@ const PublicationsMenu = () => (
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
+
   const toggle = () => {
     setIsOpen(!isOpen);
+    setActiveSubmenu(null); // Reset active submenu when toggling menu
+  };
+
+  const closeMenu = () => {
+    setIsOpen(false);
+    setActiveSubmenu(null);
+  };
+
+  const toggleSubmenu = (menu: string) => {
+    setActiveSubmenu(activeSubmenu === menu ? null : menu);
   };
 
   return (
     <>
       <div data-cy="nav_bar" className={styles.header}>
-        <Link href="/">
+        <Link href="/" onClick={closeMenu}>
           <div data-cy="header_logo">
             <img
               src="/fknm_logo.png"
@@ -132,63 +155,76 @@ const Navbar = () => {
             />
           </div>
         </Link>
-        <Link data-cy="header_title" href="/">
+        <Link data-cy="header_title" href="/" onClick={closeMenu}>
           <p>Feeding Kids</p>
           <p>Nourishing Minds</p>
         </Link>
 
-        <SearchAndJump />
+        <div className={styles.searchContainer}>
+          <SearchAndJump />
+        </div>
 
         <div className={styles.menuButtonContainer}>
-          <div className={styles.menuButton} onClick={toggle}>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="40"
-              height="40"
-              viewBox="0 0 24 24"
-            >
-              <path
-                fill="#fff"
-                d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"
-              />
-            </svg>
-          </div>
+          <button className={styles.menuButton} onClick={toggle} aria-label="Toggle menu">
+            {isOpen ? (
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <path fill="#002A5C" d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+              </svg>
+            ) : (
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <path fill="#002A5C" d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+              </svg>
+            )}
+          </button>
         </div>
       </div>
-      <div data-cy="nav_bar" className={styles.navigationbar}>
+      <div data-cy="nav_bar" className={`${styles.navigationbar} ${isOpen ? styles.mobileOpen : ''}`}>
         <div className={styles.navigationbarContent}>
-          <Link data-cy="nav_overview" href="/overview/">
+          <Link data-cy="nav_overview" href="/overview/" onClick={closeMenu}>
             <p>Overview</p>
           </Link>
 
-          <div data-cy="nav_research" className={styles.researchNavItem}>
+          <div 
+            data-cy="nav_research" 
+            className={`${styles.researchNavItem} ${activeSubmenu === 'research' ? styles.active : ''}`}
+            onClick={() => toggleSubmenu('research')}
+          >
             Research
-            <ResearchMenu />
+            <ResearchMenu onLinkClick={closeMenu} />
           </div>
 
-          <div data-cy="nav_ongoing_studies" className={styles.researchNavItem}>
+          <div 
+            data-cy="nav_ongoing_studies" 
+            className={`${styles.researchNavItem} ${activeSubmenu === 'ongoing' ? styles.active : ''}`}
+            onClick={() => toggleSubmenu('ongoing')}
+          >
             Ongoing Studies
-            <OngoingStudiesMenu />
+            <OngoingStudiesMenu onLinkClick={closeMenu} />
           </div>
 
-          <Link data-cy="nav_news" href="/news/">
+          <Link data-cy="nav_news" href="/news/" onClick={closeMenu}>
             News
           </Link>
 
-          <div data-cy="nav_publications" className={styles.researchNavItem}>
+          <div 
+            data-cy="nav_publications" 
+            className={`${styles.researchNavItem} ${activeSubmenu === 'publications' ? styles.active : ''}`}
+            onClick={() => toggleSubmenu('publications')}
+          >
             Publications
-            <PublicationsMenu />
+            <PublicationsMenu onLinkClick={closeMenu} />
           </div>
 
-          <Link data-cy="nav_about_fknm" href="/about_fknm/">
+          <Link data-cy="nav_about_fknm" href="/about_fknm/" onClick={closeMenu}>
             <p>About FKNM</p>
           </Link>
 
-          <Link data-cy="nav_contact" href="/contact/">
+          <Link data-cy="nav_contact" href="/contact/" onClick={closeMenu}>
             <p>Contact</p>
           </Link>
         </div>
       </div>
+      {isOpen && <div className={styles.backdrop} onClick={toggle} />}
     </>
   );
 };
