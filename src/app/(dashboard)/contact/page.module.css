@@ -4,7 +4,7 @@
 }
 
 .heroSection {
-  background: #002a5c;
+  background: var(--uoft-navy);
   padding: 6rem 2rem;
   text-align: center;
   color: white;

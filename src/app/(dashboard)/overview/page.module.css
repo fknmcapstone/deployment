@@ -219,7 +219,7 @@
 }
 
 .hero {
-  background: #002a5c;
+  background: var(--uoft-navy);
   padding: 4rem 2rem;
   color: white;
 }

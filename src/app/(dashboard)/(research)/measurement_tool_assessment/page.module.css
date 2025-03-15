@@ -7,7 +7,7 @@
 }
 
 .heroSection {
-  background-color: #002A5C;
+  background-color: var(--uoft-navy);
   color: white;
   padding: 6rem 2rem;
   text-align: center;
