@@ -49,38 +49,38 @@ export default function Footer() {
           <div className={styles.rightContent}>
             <div className={styles.socialLinks}>
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/school/university-of-toronto/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <FaLinkedin />
               </a>
-              <a href="https://x.com" target="_blank" rel="noopener noreferrer">
+              <a href="https://x.com/uoftmedicine" target="_blank" rel="noopener noreferrer">
                 <FaXTwitter />
               </a>
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/uoftmedicine/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <FaInstagram />
               </a>
               <a
-                href="https://facebook.com"
+                href="https://www.facebook.com/UofTMedicine/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <FaFacebook />
               </a>
-              <a
+              {/* <a
                 href="https://tiktok.com"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <FaTiktok />
-              </a>
+              </a> */}
               <a
-                href="https://youtube.com"
+                href="https://www.youtube.com/channel/UCz0-cY52F-7-tAW35-sgdGg"
                 target="_blank"
                 rel="noopener noreferrer"
               >
