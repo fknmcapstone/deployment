@@ -1,6 +1,6 @@
 .main {
   display: grid;
-  background-color: var(--background-color);
+  background-color: var(--background-color-white);
   color: var(--dark-text-color);
   width: 100%;
   min-height: 100lvh;
