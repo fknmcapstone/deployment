@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState, useRef, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { searchItems, SearchResult } from "../utils/searchUtils";
@@ -8,7 +8,7 @@ import { searchData, SearchItem } from "../utils/searchData";
 import styles from "./search.module.css";
 import NotFoundSearch from "./not-found-search";
 
-const SearchPage = () => {
+const SearchPageContent = () => {
   const searchParams = useSearchParams();
   const query = searchParams.get("q") || "";
   const categoryParam = searchParams.get("category");
@@ -441,6 +441,28 @@ const SearchPage = () => {
         </div>
       )}
     </div>
+  );
+};
+
+// Loading fallback component
+const SearchLoading = () => {
+  return (
+    <div className={styles.searchContainer}>
+      <h1 className={styles.searchTitle}>Loading search results...</h1>
+      <div className={styles.loadingContainer}>
+        <div className={styles.loadingSpinner}></div>
+        <p>Loading...</p>
+      </div>
+    </div>
+  );
+};
+
+// Main page component that wraps the client component with Suspense
+const SearchPage = () => {
+  return (
+    <Suspense fallback={<SearchLoading />}>
+      <SearchPageContent />
+    </Suspense>
   );
 };
 
