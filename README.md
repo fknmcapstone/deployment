@@ -14,7 +14,7 @@ Next.js, PowerBI, Typescript, and React were used to create this website.
 2. Install `npm`
 3. Clone this repository
 ```
-$ git clone https://github.com/fknmcapstone/fknmdashboard.git
+$ git clone https://github.com/fknmcapstone/deployment.git
 ```
 5. Change directory into the project's folder  
 ```
@@ -93,3 +93,28 @@ $ npx cypress open
     Other:
     	jQuery (jquery.com)
     	Responsive Tools (github.com/ajlkn/responsive-tools)
+
+## ESLint Integration
+
+This project uses ESLint to catch code issues and enforce coding standards. To see ESLint errors directly in your editor:
+
+### VS Code Setup
+
+1. Install the [ESLint extension](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) for VS Code
+2. The project includes a `.vscode/settings.json` file that configures ESLint integration
+3. With the extension installed, ESLint errors will appear directly in your editor
+
+### Running ESLint Manually
+
+You can run ESLint manually with these commands:
+
+```bash
+# Run ESLint and show errors
+npm run lint
+
+# Run ESLint and fix auto-fixable issues
+npm run lint:fix
+
+# Run ESLint with detailed reporting
+npm run lint:report
+```

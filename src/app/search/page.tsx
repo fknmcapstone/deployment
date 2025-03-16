@@ -3,7 +3,7 @@
 import React, { useEffect, useState, useRef, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
-import { searchItems, SearchResult } from "../utils/searchUtils";
+import { searchItems } from "../utils/searchUtils";
 import { searchData, SearchItem } from "../utils/searchData";
 import styles from "./search.module.css";
 import NotFoundSearch from "./not-found-search";
@@ -315,7 +315,7 @@ const SearchPageContent = () => {
   if (loading) {
     return (
       <div className={styles.searchContainer}>
-        <h1 className={styles.searchTitle}>Searching for "{query}"</h1>
+        <h1 className={styles.searchTitle}>Searching for &quot;{query}&quot;</h1>
         <div className={styles.loadingContainer}>
           <div className={styles.loadingSpinner}></div>
           <p>Searching...</p>
@@ -354,7 +354,7 @@ const SearchPageContent = () => {
       </div>
       
       <h1 className={styles.searchTitle}>
-        Search Results for "{query}" {selectedCategory ? `in ${selectedCategory}` : ''} ({totalItems})
+        Search Results for &quot;{query}&quot; {selectedCategory ? `in ${selectedCategory}` : ''} ({totalItems})
       </h1>
       
       {/* Category filter */}
@@ -380,8 +380,8 @@ const SearchPageContent = () => {
       
       {showEmptyResults ? (
         <div className={styles.noResultsInCategory}>
-          <p>No results found in the category "{selectedCategory}".</p>
-          <p>Try searching in "All Categories" or try a different search term.</p>
+          <p>No results found in the category &quot;{selectedCategory}&quot;.</p>
+          <p>Try searching in &quot;All Categories&quot; or try a different search term.</p>
         </div>
       ) : (
         <div className={styles.resultsContainer}>
