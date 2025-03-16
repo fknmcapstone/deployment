@@ -77,6 +77,79 @@
   left: 0;
 }
 
+.tooltipContainer {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 10;
+}
+
+.tooltipButton {
+  width: 30px;
+  height: 30px;
+  background-color: #27319e;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-decoration: solid;
+  transition: all 0.2s ease;
+}
+
+.tooltipButton:hover {
+  transform: scale(1.05);
+}
+
+.tooltipButtonActive {
+  background-color: #1a2070;
+  box-shadow: 0 0 0 2px white, 0 0 0 4px #27319e;
+}
+
+.tooltipPopup {
+  position: absolute;
+  top: 45px;
+  right: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  width: 250px;
+  z-index: 100;
+  border-radius: 6px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+.tooltipPinned {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  border: 1px solid #27319e;
+}
+
+.tooltipPopup::before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid white;
+}
+
+.tooltipPopup.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.tooltip {
+  display: none;
+}
+
 @media only screen and (max-width: 892px) {
   .main {
     grid-template-columns: 1fr;
@@ -102,5 +175,14 @@
 
   .subtext {
     width: 80lvw;
+  }
+  
+  .tooltipPopup {
+    width: 200px;
+    right: -40px;
+  }
+  
+  .tooltipPopup::before {
+    right: 50px;
   }
 } 

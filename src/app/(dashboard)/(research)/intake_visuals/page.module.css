@@ -150,6 +150,49 @@
   background-color: var(--uoft-navy);
 }
 
+.tooltipButtonActive {
+  background-color: var(--uoft-navy);
+  box-shadow: 0 0 0 2px white, 0 0 0 4px var(--uoft-blue);
+}
+
+.tooltipContainer {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltipPopup {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  background: white;
+  border-radius: 6px;
+  padding: 1.25rem;
+  width: 250px;
+  border: 1px solid var(--uoft-border);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--uoft-text);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 100;
+}
+
+.tooltipPinned {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  border: 1px solid var(--uoft-blue);
+}
+
+.tooltipPopup::before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid white;
+}
+
 .tooltip {
   background: white;
   border-radius: 6px;
@@ -211,6 +254,15 @@
   .horizontalScroll {
     max-width: 100%;
   }
+  
+  .tooltipPopup {
+    width: 220px;
+    right: -20px;
+  }
+  
+  .tooltipPopup::before {
+    right: 30px;
+  }
 }
 
 @media (max-width: 640px) {
@@ -242,5 +294,16 @@
   .tooltip {
     margin: 0.75rem 1rem;
     padding: 1rem;
+  }
+  
+  .tooltipPopup {
+    width: 200px;
+    padding: 1rem;
+    font-size: 0.9rem;
+    right: -80px;
+  }
+  
+  .tooltipPopup::before {
+    right: 90px;
   }
 }
