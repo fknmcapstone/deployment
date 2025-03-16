@@ -5,8 +5,32 @@
 // See: https://github.com/nextui-org/nextui/issues/1403
 
 import styles from "./page.module.css";
+import { useEffect, useState } from "react";
 
 export default function CurrentPrograms() {
+  const [mapLoaded, setMapLoaded] = useState(false);
+
+  // Handle Datawrapper iframe resizing
+  useEffect(() => {
+    const handleMessage = (event: MessageEvent) => {
+      if (typeof event.data === 'object' && event.data['datawrapper-height']) {
+        const iframes = document.querySelectorAll('iframe');
+        for (const key in event.data['datawrapper-height']) {
+          for (let i = 0; i < iframes.length; i++) {
+            if (iframes[i].contentWindow === event.source) {
+              const height = event.data['datawrapper-height'][key] + 'px';
+              iframes[i].style.height = height;
+              setMapLoaded(true);
+            }
+          }
+        }
+      }
+    };
+
+    window.addEventListener('message', handleMessage);
+    return () => window.removeEventListener('message', handleMessage);
+  }, []);
+
   return (
     <main className={styles.main}>
       <title>Overview</title>
@@ -42,18 +66,30 @@ export default function CurrentPrograms() {
       </div>
 
       <div className={styles.mapSection}>
+        <h2 className={styles.mapTitle}>Geographic Distribution of School Food Programs</h2>
+        <p className={styles.mapDescription}>
+          Click on data points to see detailed information.
+        </p>
         <div id={styles.map}>
-          <iframe
-            data-cy="chart_frame"
-            title="School Food Programs"
-            width="100%"
-            height="100%"
-            src="https://flo.uri.sh/visualisation/20806345/embed"
-            frameBorder="0"
-            allowFullScreen={true}
-          ></iframe>
+          <iframe 
+            title="Canadian School Food Programs" 
+            aria-label="Map" 
+            id="datawrapper-chart-ryRrf" 
+            src="https://datawrapper.dwcdn.net/ryRrf/7/" 
+            scrolling="no" 
+            frameBorder="0" 
+            style={{ border: "none", width: "100%", maxWidth: "100%" }} 
+            height="519" 
+            data-external="1"
+            loading="lazy"
+            onLoad={() => setMapLoaded(true)}
+          />
           <div className={styles.greyRectangle} />
         </div>
+
+        <p className={styles.mapDescription}>
+          A - Anthropometric | D - Dietary Intake | E - Environment | I - Implementation KAP - Knowledge, Attitudes, and Practices | P - Prevalence | PA - Physical Activity PR - Promotion and Advertisements | S - Food Sold | ROB - Risk of Bias
+        </p>
       </div>
 
       <div className={styles.statsSection}>

@@ -1,6 +1,6 @@
 /* eslint-disable react/react-in-jsx-scope */
 import Link from "next/link";
-import { JSX } from "react";
+import { JSX, useState, useEffect } from "react";
 import styles from "./page.module.css";
 
 export function shortcutMenuList(categoryCharts: {
@@ -56,36 +56,98 @@ export function chartList(
   const charts: JSX.Element[] = [];
 
   jsonCharts.forEach((chart) => {
-    charts.push(
-      <div
-        id={`${category.replace(/ /g, "_")}${chart.name
-          .replace(/ /g, "_")
-          .replace(/[^a-zA-Z ]/g, "")}`}
-        data-cy={`${category.replace(/ /g, "_")}${chart.name
-          .replace(/ /g, "_")
-          .replace(/[^a-zA-Z ]/g, "")}`}
-        className={styles.chartArea}
-      >
-        <div className={styles.tooltipContainer}>
-          <button data-cy="tooltip_button" className={styles.tooltipButton}>
-            i
-          </button>
-          <div data-cy="tooltip_text" className={styles.tooltip}>
-            <p>{chart.blurb}</p>
+    // Create a component for each chart with its own state
+    const ChartWithTooltip = () => {
+      const [isTooltipPinned, setIsTooltipPinned] = useState(false);
+      
+      // Effect to add a click event listener to the document to close pinned tooltips
+      useEffect(() => {
+        const handleClickOutside = (event: MouseEvent) => {
+          if (isTooltipPinned) {
+            const tooltipContainer = document.querySelector(`.${styles.tooltipContainer}`);
+            if (tooltipContainer && !tooltipContainer.contains(event.target as Node)) {
+              setIsTooltipPinned(false);
+              const tooltip = tooltipContainer.querySelector(`.${styles.tooltipPopup}`);
+              if (tooltip) {
+                tooltip.classList.remove(styles.visible);
+              }
+            }
+          }
+        };
+        
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => {
+          document.removeEventListener('mousedown', handleClickOutside);
+        };
+      }, [isTooltipPinned]);
+      
+      return (
+        <div
+          id={`${category.replace(/ /g, "_")}${chart.name
+            .replace(/ /g, "_")
+            .replace(/[^a-zA-Z ]/g, "")}`}
+          data-cy={`${category.replace(/ /g, "_")}${chart.name
+            .replace(/ /g, "_")
+            .replace(/[^a-zA-Z ]/g, "")}`}
+          className={styles.chartArea}
+        >
+          <div 
+            className={styles.tooltipContainer}
+            onMouseEnter={(e) => {
+              if (!isTooltipPinned) {
+                const tooltip = e.currentTarget.querySelector(`.${styles.tooltipPopup}`);
+                if (tooltip) {
+                  tooltip.classList.add(styles.visible);
+                }
+              }
+            }}
+            onMouseLeave={(e) => {
+              if (!isTooltipPinned) {
+                const tooltip = e.currentTarget.querySelector(`.${styles.tooltipPopup}`);
+                if (tooltip) {
+                  tooltip.classList.remove(styles.visible);
+                }
+              }
+            }}
+          >
+            <button 
+              data-cy="tooltip_button" 
+              className={`${styles.tooltipButton} ${isTooltipPinned ? styles.tooltipButtonActive : ''}`}
+              onClick={(e) => {
+                e.stopPropagation();
+                const tooltip = e.currentTarget.parentElement?.querySelector(`.${styles.tooltipPopup}`);
+                if (tooltip) {
+                  if (isTooltipPinned) {
+                    setIsTooltipPinned(false);
+                    tooltip.classList.remove(styles.visible);
+                  } else {
+                    setIsTooltipPinned(true);
+                    tooltip.classList.add(styles.visible);
+                  }
+                }
+              }}
+            >
+              i
+            </button>
+            <div data-cy="tooltip_text" className={`${styles.tooltipPopup} ${isTooltipPinned ? styles.tooltipPinned : ''}`}>
+              <p>{chart.blurb}</p>
+            </div>
           </div>
-        </div>
 
-        <iframe
-          data-cy="chart_frame"
-          title={`${category} - ${chart.name}`}
-          width="100%"
-          height="100%"
-          src={chart.url}
-          allowFullScreen
-          style={{ border: "none" }}
-        ></iframe>
-      </div>
-    );
+          <iframe
+            data-cy="chart_frame"
+            title={`${category} - ${chart.name}`}
+            width="100%"
+            height="100%"
+            src={chart.url}
+            allowFullScreen
+            style={{ border: "none" }}
+          ></iframe>
+        </div>
+      );
+    };
+    
+    charts.push(<ChartWithTooltip key={chart.name} />);
   });
 
   return charts;

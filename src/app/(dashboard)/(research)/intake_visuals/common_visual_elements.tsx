@@ -2,7 +2,7 @@
 import Link from "next/link";
 import styles from "./page.module.css";
 import { useInView } from "react-intersection-observer";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export function shortcutMenuList(categoryCharts: {
   category: string;
@@ -46,6 +46,26 @@ function ChartCard({
     threshold: 0.1,
   });
   const [isTooltipVisible, setIsTooltipVisible] = useState(false);
+  const [isTooltipPinned, setIsTooltipPinned] = useState(false);
+  
+  // Effect to add a click event listener to the document to close pinned tooltips
+  // when clicking outside the tooltip container
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (isTooltipPinned) {
+        const tooltipContainer = document.querySelector(`.${styles.tooltipContainer}`);
+        if (tooltipContainer && !tooltipContainer.contains(event.target as Node)) {
+          setIsTooltipPinned(false);
+          setIsTooltipVisible(false);
+        }
+      }
+    };
+    
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [isTooltipPinned]);
 
   return (
     <div
@@ -57,20 +77,34 @@ function ChartCard({
     >
       <div className={styles.chartHeader}>
         <h3 className={styles.chartTitle}>{chart.name}</h3>
-        <button
-          className={styles.tooltipButton}
-          onClick={() => setIsTooltipVisible(!isTooltipVisible)}
-          aria-label="Toggle chart information"
+        <div 
+          className={styles.tooltipContainer}
+          onMouseEnter={() => !isTooltipPinned && setIsTooltipVisible(true)}
+          onMouseLeave={() => !isTooltipPinned && setIsTooltipVisible(false)}
         >
-          <span>i</span>
-        </button>
-      </div>
-
-      {isTooltipVisible && (
-        <div className={styles.tooltip}>
-          <p>{chart.blurb}</p>
+          <button
+            className={`${styles.tooltipButton} ${isTooltipPinned ? styles.tooltipButtonActive : ''}`}
+            aria-label="Chart information"
+            onClick={(e) => {
+              e.stopPropagation();
+              if (isTooltipPinned) {
+                setIsTooltipPinned(false);
+                setIsTooltipVisible(false);
+              } else {
+                setIsTooltipPinned(true);
+                setIsTooltipVisible(true);
+              }
+            }}
+          >
+            <span>i</span>
+          </button>
+          {(isTooltipVisible || isTooltipPinned) && (
+            <div className={`${styles.tooltipPopup} ${isTooltipPinned ? styles.tooltipPinned : ''}`}>
+              <p>{chart.blurb}</p>
+            </div>
+          )}
         </div>
-      )}
+      </div>
 
       {inView && (
         <div className={styles.chartContainer}>

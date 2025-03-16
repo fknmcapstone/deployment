@@ -184,6 +184,54 @@
   justify-content: center;
   color: #fff;
   text-decoration: solid;
+  transition: all 0.2s ease;
+}
+
+.tooltipButton:hover {
+  transform: scale(1.05);
+}
+
+.tooltipButtonActive {
+  background-color: #1a2070;
+  box-shadow: 0 0 0 2px white, 0 0 0 4px #27319e;
+}
+
+.tooltipPopup {
+  position: absolute;
+  top: 45px;
+  right: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  width: 250px;
+  z-index: 100;
+  border-radius: 6px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+.tooltipPinned {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  border: 1px solid #27319e;
+}
+
+.tooltipPopup::before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid white;
+}
+
+.tooltipPopup.visible {
+  opacity: 1;
+  visibility: visible;
 }
 
 .tooltip {
@@ -208,6 +256,15 @@
     transform: translateX(-80%);
     width: 30lvw;
   }
+  
+  .tooltipPopup {
+    width: 220px;
+    right: -20px;
+  }
+  
+  .tooltipPopup::before {
+    right: 30px;
+  }
 }
 
 @media only screen and (max-width: 1358px) {
@@ -218,7 +275,16 @@
 
 @media only screen and (max-width: 1250px) {
   .tooltip {
-    transform: translateX(-100%);
+    width: 40lvw;
+  }
+  
+  .tooltipPopup {
+    width: 200px;
+    right: -40px;
+  }
+  
+  .tooltipPopup::before {
+    right: 50px;
   }
 }
 
@@ -230,10 +296,23 @@
   .tooltipContainer {
     display: none;
   }
+  
   .chartArea {
     width: 100%;
-    padding-bottom: 9.10%;
     height: 100%;
+    padding-bottom: 0;
+    margin-bottom: 2rem;
+  }
+  
+  .tooltipPopup {
+    width: 180px;
+    padding: 10px;
+    font-size: 0.9rem;
+    right: -60px;
+  }
+  
+  .tooltipPopup::before {
+    right: 70px;
   }
 }
 
