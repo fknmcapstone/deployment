@@ -3,7 +3,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import styles from "./SearchAndJump.module.css";
 import { useRouter } from "next/navigation";
-import { searchItems } from "../utils/searchUtils";
+import { searchItems, simpleSearchItems } from "../utils/searchUtils";
 import { searchData, SearchItem } from "../utils/searchData";
 import SearchAutocomplete from "./SearchAutocomplete";
 
@@ -41,6 +41,7 @@ const SearchAndJump = () => {
     if (searchValue.trim()) {
       router.push(`/search?q=${encodeURIComponent(searchValue.trim())}`);
       setShowSuggestions(false);
+      setSearchValue("");
     }
   };
 
@@ -49,7 +50,7 @@ const SearchAndJump = () => {
     setSearchValue(value);
 
     if (value.trim()) {
-      const searchResults = searchItems(value, searchData).slice(0, 5); // Limit to 5 suggestions
+      const searchResults = simpleSearchItems(value, searchData).slice(0, 5); // Limit to 5 suggestions
       setSuggestions(searchResults);
       setShowSuggestions(true);
     } else {
