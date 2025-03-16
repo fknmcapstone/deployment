@@ -68,7 +68,7 @@ export default function CurrentPrograms() {
       <div className={styles.mapSection}>
         <h2 className={styles.mapTitle}>Geographic Distribution of School Food Programs</h2>
         <p className={styles.mapDescription}>
-          Click on regions to see detailed information.
+          Click on data points to see detailed information.
         </p>
         <div id={styles.map}>
           <iframe 
@@ -86,6 +86,10 @@ export default function CurrentPrograms() {
           />
           <div className={styles.greyRectangle} />
         </div>
+
+        <p className={styles.mapDescription}>
+          A - Anthropometric | D - Dietary Intake | E - Environment | I - Implementation KAP - Knowledge, Attitudes, and Practices | P - Prevalence | PA - Physical Activity PR - Promotion and Advertisements | S - Food Sold | ROB - Risk of Bias
+        </p>
       </div>
 
       <div className={styles.statsSection}>
