@@ -97,7 +97,7 @@
   color: white;
   align-items: center;
   justify-content: center;
-  padding: 0.75rem 3rem;
+  padding: 0.4rem 3rem;
   max-width: 1200px;
   width: 100%;
 }
@@ -110,6 +110,7 @@
   text-decoration: none;
   position: relative;
   letter-spacing: 0.02em;
+  font-family: trade-gothic-next, 'Open Sans', sans-serif;
 }
 
 .navigationbarContent > *:hover {
@@ -155,6 +156,7 @@
   position: relative;
   cursor: pointer;
   padding: 0.75rem 0;
+  font-family: trade-gothic-next, 'Open Sans', sans-serif;
 }
 
 .researchNavItem:before {
@@ -186,6 +188,7 @@
   position: relative;
   overflow: hidden;
   -webkit-font-smoothing: antialiased;
+  font-family: trade-gothic-next, 'Open Sans', sans-serif;
 }
 
 .navBarSubMenu a:hover {
@@ -223,6 +226,7 @@
   display: block;
   letter-spacing: 0.02em;
   -webkit-font-smoothing: antialiased;
+  font-family: trade-gothic-next, 'Open Sans', sans-serif;
 }
 
 /* Nested submenu */
@@ -236,6 +240,7 @@
   font-size: 0.9rem;
   font-weight: normal;
   -webkit-font-smoothing: antialiased;
+  font-family: trade-gothic-next, 'Open Sans', sans-serif;
 }
 
 /* Remove the old line indicator */
@@ -410,6 +415,7 @@
     line-height: 1.4;
     text-decoration: none;
     border-radius: 0;
+    font-family: trade-gothic-next, 'Open Sans', sans-serif;
   }
 
   .navigationbarContent > *:hover {
@@ -427,6 +433,7 @@
     padding: 1.5rem;
     white-space: normal;
     font-weight: 500;
+    font-family: trade-gothic-next, 'Open Sans', sans-serif;
   }
 
   .researchNavItem:after {
@@ -481,6 +488,7 @@
     cursor: pointer;
     letter-spacing: 0.5px;
     transition: background-color 0.2s ease;
+    font-family: trade-gothic-next, 'Open Sans', sans-serif;
   }
 
   .navBarSubMenu:before:hover {
@@ -497,6 +505,7 @@
     background-color: #002A5C;
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     text-transform: uppercase;
+    font-family: trade-gothic-next, 'Open Sans', sans-serif;
   }
 
   /* All submenu links */
@@ -517,6 +526,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    font-family: trade-gothic-next, 'Open Sans', sans-serif;
   }
 
   .navBarSubMenu a:hover,

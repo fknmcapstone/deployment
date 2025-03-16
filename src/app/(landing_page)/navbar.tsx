@@ -98,7 +98,7 @@ const OngoingStudiesMenu = ({ onLinkClick }: { onLinkClick: () => void }) => (
       href="/ongoing_studies/uoft_school_food_study/"
       onClick={onLinkClick}
     >
-      University of Toronto, School Food Study
+      U of T, School Food Study
     </Link>
   </div>
 );
