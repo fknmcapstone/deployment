@@ -89,12 +89,29 @@
 }
 
 .mapDisplay {
-  height: 650px;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   background: white;
   padding: 2rem;
+  transition: height 0.1s ease-in-out;
+}
+
+/* Map height classes for different views */
+.mapHeight-world {
+  height: 650px;
+}
+
+.mapHeight-north-america {
+  height: 650px;
+}
+
+.mapHeight-south-america {
+  height: 600px;
+}
+
+.mapHeight-europe {
+  height: 600px;
 }
 
 .mapDisplay iframe {
@@ -197,10 +214,6 @@
     font-size: 1.3rem;
   }
   
-  .mapDisplay {
-    height: 500px;
-  }
-  
   .chartContainer {
     padding: 1.5rem 2rem;
   }
@@ -248,5 +261,22 @@
   
   .mapDisplay {
     padding: 1rem;
+  }
+  
+  /* Mobile map heights */
+  .mapHeight-world {
+    height: 370px;
+  }
+
+  .mapHeight-north-america {
+    height: 520px;
+  }
+
+  .mapHeight-south-america {
+    height: 520px;
+  }
+
+  .mapHeight-europe {
+    height: 620px;
   }
 }

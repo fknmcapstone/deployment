@@ -94,7 +94,7 @@ export default function MeasurementToolAssessment() {
             <span>Europe</span>
           </button>
         </div>
-        <div className={styles.mapDisplay}>
+        <div className={`${styles.mapDisplay} ${styles[`mapHeight-${mapView}`]}`}>
           <iframe
             title={`Food Environment Assessment - ${mapView
               .split("-")
