@@ -1,6 +1,6 @@
 describe("Contact Page", () => {
   beforeEach(() => {
-    cy.visit("/about_fknm/contact");
+    cy.visit("/contact");
   });
 
   it("displays contact form and information", () => {
