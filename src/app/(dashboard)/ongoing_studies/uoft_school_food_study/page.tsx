@@ -11,7 +11,13 @@ export default function UofTSchoolFoodStudy() {
         <div className={styles.heroContent}>
           <div className={styles.brandBar}>
             <div className={styles.uoftLogo}>
-              <div className={styles.uoftShield}></div>
+              <Image 
+                src="/images/uoft_logo.png"
+                alt="University of Toronto Logo"
+                width={50}
+                height={50}
+                className={styles.uoftImage}
+              />
               <span>University of Toronto</span>
             </div>
             <div className={styles.facultyName}>Joannah & Brian Lawson Center for Child Nutrition</div>

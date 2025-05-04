@@ -2,7 +2,7 @@
 "use client";
 import React, { useState } from "react";
 import styles from "./page.module.css";
-import { FaEnvelope, FaMapMarkerAlt, FaBuilding } from "react-icons/fa";
+import { FaEnvelope, FaMapMarkerAlt, FaBuilding, FaPaperPlane } from "react-icons/fa";
 
 export default function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -141,10 +141,14 @@ export default function Contact() {
               <div className={styles.formFooter}>
                 <button
                   type="submit"
-                  className={styles.submitButton}
+                  className={`${styles.submitButton} ${isSubmitting ? styles.sending : ''}`}
                   disabled={isSubmitting}
                 >
-                  {isSubmitting ? "Sending..." : "Send Message"}
+                  {isSubmitting ? "Sending..." : (
+                    <>
+                      Send Message <FaPaperPlane />
+                    </>
+                  )}
                 </button>
                 {submitStatus.type && (
                   <div

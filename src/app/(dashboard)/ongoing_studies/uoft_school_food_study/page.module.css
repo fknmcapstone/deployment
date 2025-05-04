@@ -45,14 +45,9 @@
   font-weight: 500;
 }
 
-.uoftShield {
-  width: 32px;
-  height: 32px;
-  background-color: white;
-  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2L2 6v3c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V6l-8-4zm0 2.6l6 3v2.4c0 4.44-3.07 8.59-7 9.67V10H9v9.67c-3.93-1.08-7-5.23-7-9.67V7.6l6-3v2.9h2V4.6z'/%3E%3C/svg%3E") no-repeat center center;
-  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2L2 6v3c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V6l-8-4zm0 2.6l6 3v2.4c0 4.44-3.07 8.59-7 9.67V10H9v9.67c-3.93-1.08-7-5.23-7-9.67V7.6l6-3v2.9h2V4.6z'/%3E%3C/svg%3E") no-repeat center center;
-  -webkit-mask-size: contain;
-  mask-size: contain;
+.uoftImage {
+  object-fit: contain;
+  border-radius: 2px;
 }
 
 .facultyName {
